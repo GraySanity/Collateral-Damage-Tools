@@ -4,7 +4,7 @@ var http = require('http');
 var path = require('path');
 
 /*Port number for webserver*/
-const port = 3000;
+const port = process.env.PORT;
 
 /*Set server, app and socket.io up*/
 var app = express();
