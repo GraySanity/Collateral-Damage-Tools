@@ -1,0 +1,127 @@
+{
+	"_meta": {
+		"internalCopies": [
+			"item"
+		]
+	},
+	"item": [
+	{
+		"name": "+1 All-Purpose Tool",
+		"source": "DMG",
+		"page": 119,
+		"rarity": "uncommon",
+		"property": [
+			"iron"
+		],
+
+		"edr": "100",
+		"ac": 16,
+		"dr": 5,
+		"reqAttune": "by an artificer",
+		"reqAttuneTags": [
+			{
+				"class": "artificer|tce"
+			}
+		],
+		"wondrous": true,
+		"bonusSpellAttack": "+1",
+		"bonusSpellSaveDc": "+1",
+		"entries": [
+			"This simple screwdriver can transform into a variety of tools; as an action, you can touch the item and transform it into any type of artisan's tool of your choice (see the \"Equipment\" chapter in the {@book Player's Handbook|PHB} for a list of {@item artisan's tools|PHB}. Whatever form the tool takes, you are proficient with it.",
+			"While holding this tool, you gain a +1 bonus to the spell attack rolls and the saving throw DCs of your artificer spells.",
+			"As an action, you can focus on the tool to channel your creative forces. Choose a cantrip that you don't know from any class list. For 8 hours, you can cast that cantrip, and it counts as an artificer cantrip for you. Once this property is used, it can't be used again until the next dawn."
+		]
+	},
+	{
+		"name": "Unbreakable Arrow",
+		"source": "CDPM",
+		"type": "Ammo",
+		"tier": "minor",
+		"rarity": "common",
+		"entries": [
+			"This arrow can't be broken, except when it is within an {@spell antimagic field}."
+		],
+		"hasFluffImages": true
+	},
+	{
+		"name": "Clean Up",
+		"source": "CDPM",
+		"type": "Mod",
+		"cability": "WM",
+		"MC": "1 MP",
+		"entries": [
+			"You keep your weapon extremely clean on the daily." ,
+			"Damage rolls with your weapon gain +1 Damage."
+		]
+	},
+	{
+		"name": "Redistributing Weight",
+		"source": "CDPM",
+		"type": "Mod",
+		"cability": "WM",
+		"MC": "0 MP",
+		"entries": [
+			"You redistribute the weight of your weapon to make it more handleable.", 
+			"Attack rolls with your weapon gain +1 to hit."
+		]
+	},
+	{
+		"name": "Loosen the Trigger - (Ranged Weapons Only)",
+		"source": "CDPM",
+		"type": "Mod",
+		"cability": "WM",
+		"MC": "2 MP",
+		"entries": [
+			"You loosen the trigger of your firearm, making it more responsive for firing on reaction.",
+			"Attack rolls with your weapon gain +2 to hit when you use your Hold Action to attack."
+		]
+	},
+	{
+		"name": "Sanding - (Melee Weapons Only)",
+		"source": "CDPM",
+		"type": "Mod",
+		"cability": "WM",
+		"MC": "2 MP",
+		"entries": [
+			"You sand your weapon on the daily to keep it as sharp as it can be, making it better at cutting through armor.",
+			"Your weapon gains +3 DR penetration."
+		]
+	},
+	{
+		"name": "Improvised Silencer - (Guns Only)",
+		"source": "CDPM",
+		"type": "Mod",
+		"cability": "IA",
+		"MC": "2 MP",
+		"entries": [
+			"You add an improvised silencer to the barrel of your weapon, making it a lot quiter when you shoot with it.<br>This effects all gun types that aren't based on energenetic damage, but works the best on pressure based guns."
+		]
+	},
+	{
+		"name": "Hoverboard",
+		"source": "CDPM",
+		"type": "VEHL",
+		"entries": [
+			"A small hovering vehicle, which can be used like a skateboard from the olden days.<br>You can use half a day of practice to learn how to use this item, and an extra two full days of practice to gain proficiency.",
+			"While using the hoverboard your movement speed becomes 8 meters, or double that when proficient.<br>You gain disadvantage on Dexterity Saving Throws, Dexterity based Skill Checks and Attack Rolls if you are riding the hoverboard while you aren't proficient in using it.",
+			"The hoverboard can hover over solid ground at a hight of XXXXXXXXX cm, and it cannot hover over liquids deeper than half a meter. It can hold a maximum of 250 kg.",
+			{
+				"type": "entries",
+				"name": "Overdrive [X MP]",
+				"entries": [
+					"<br>You can overdrive the hoverboard to make it perform better.<br>For every point of maintenance you use on this item, it gains 2 meter movement, can fly an extra XXXXXX cm higher, and can hold 25 kg more."
+				]
+			}
+		]
+	},
+	{
+		"name": "Sonic Screwdriver",
+		"source": "CDPH",
+		"type": "Tool",
+		"entries":[
+			
+		]
+	}
+],
+	"itemGroup": []
+}
