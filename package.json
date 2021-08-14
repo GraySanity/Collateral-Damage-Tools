@@ -5,7 +5,7 @@
 	"license": "MIT",
 	"description": "A site dedicated to making playing games with your friends as easy as possible.",
 	"scripts": {
-		"start": "http-server -c-1 --cors --port 5000",
+		"start": "http-server",
 		"version-bump": "npm version -m \"chore(version): bump\"",
 		"gen-all": "node node/generate-all.js",
 		"clean-jsons": "node node/clean-jsons.js",
