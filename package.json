@@ -1,10 +1,11 @@
 {
 	"name": "5etools",
-	"author": "Gray Sanity",
+	"author": "TheGiddyLimit",
 	"version": "1.133.1",
 	"license": "MIT",
 	"description": "A site dedicated to making playing games with your friends as easy as possible.",
 	"scripts": {
+		"start": "http-server -c-1 --cors --port 5000",
 		"version-bump": "npm version -m \"chore(version): bump\"",
 		"gen-all": "node node/generate-all.js",
 		"clean-jsons": "node node/clean-jsons.js",
@@ -23,8 +24,7 @@
 		"build": "npm run clean-jsons && npm run gen-all && npm run build:css && npm run build:sw",
 		"preversion": "npm test",
 		"version": "node node/version-bump.js",
-		"serve:dev": "http-server -c-1 --cors --port 5000",
-		"start": "http-server -c-1 --cors"
+		"serve:dev": "http-server -c-1 --cors"		
 	},
 	"repository": {
 		"type": "git",
