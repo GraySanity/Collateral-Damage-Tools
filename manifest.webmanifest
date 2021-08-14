@@ -1,8 +1,8 @@
 {
 	"manifest_version": 2,
 	"default_locale": "en",
-	"name": "5etools",
-	"short_name": "5etools",
+	"name": "Collateral Damage Tools",
+	"short_name": "Collateral Damage Tools",
 	"description": "A suite of browser-based tools for the homebrew 5e modification called Collateral Damage.",
 	"icons": [
 		{
