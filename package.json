@@ -1,8 +1,8 @@
 {
-	"name": "Collateral Damage Tools",
+	"name": "5etools",
 	"author": "Gray Sanity",
-	"version": "0.0.1",
-	"license": "",
+	"version": "1.133.1",
+	"license": "MIT",
 	"description": "A site dedicated to making playing games with your friends as easy as possible.",
 	"scripts": {
 		"version-bump": "npm version -m \"chore(version): bump\"",
