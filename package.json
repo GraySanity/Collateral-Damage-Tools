@@ -4,9 +4,6 @@
 	"version": "1.133.1",
 	"license": "MIT",
 	"description": "A site dedicated to making playing games with your friends as easy as possible.",
-	"engines": {
-		"node": "12.17.x"
-	},
 	"scripts": {
 		"start": "http-server",
 		"version-bump": "npm version -m \"chore(version): bump\"",
@@ -27,7 +24,7 @@
 		"build": "npm run clean-jsons && npm run gen-all && npm run build:css && npm run build:sw",
 		"preversion": "npm test",
 		"version": "node node/version-bump.js",
-		"serve:dev": "http-server -c-1 --cors"
+		"serve:dev": "http-server -c-1 --cors --port 5000"
 	},
 	"repository": {
 		"type": "git",
@@ -54,11 +51,5 @@
 	"directories": {
 		"lib": "lib",
 		"test": "test"
-	},
-	"dependencies": {
-		"bufferutil": "^4.0.3",
-		"express": "^4.17.1",
-		"utf-8-validate": "^5.0.5",
-		"ws": "^8.1.0"
 	}
 }
