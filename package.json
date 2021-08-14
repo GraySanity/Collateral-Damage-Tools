@@ -1,9 +1,9 @@
 {
-	"name": "5etools",
-	"author": "TheGiddyLimit",
-	"version": "1.133.1",
+	"name": "collateraldamagetools",
+	"author": "Gray Sanity",
+	"version": "0.0.1",
 	"license": "MIT",
-	"description": "A site dedicated to making playing games with your friends as easy as possible.",
+	"description": "THE Collateral Damage site for all it's needed information",
 	"scripts": {
 		"start": "node server.js",
 		"version-bump": "npm version -m \"chore(version): bump\"",
