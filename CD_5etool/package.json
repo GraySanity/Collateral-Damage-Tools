@@ -1,8 +1,8 @@
 {
-	"name": "CollateralDamageTools",
-	"author": "GraySanity",
-	"version": "0.0.1",
-	"license": "",
+	"name": "5etools",
+	"author": "TheGiddyLimit",
+	"version": "1.133.1",
+	"license": "MIT",
 	"description": "A site dedicated to making playing games with your friends as easy as possible.",
 	"scripts": {
 		"version-bump": "npm version -m \"chore(version): bump\"",
@@ -27,7 +27,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/GraySanity/Collateral-Damage-Tools.git"
+		"url": "git+https://github.com/TheGiddyLimit/TheGiddyLimit.github.io.git"
 	},
 	"devDependencies": {
 		"ajv": "^7.1.0",
@@ -42,7 +42,10 @@
 		"terser": "^5.6.0-beta",
 		"xmlbuilder": "^15.1.1"
 	},
-	"homepage": "https://github.com/GraySanity/Collateral-Damage-Tools",
+	"bugs": {
+		"url": "https://github.com/TheGiddyLimit/TheGiddyLimit.github.io/issues"
+	},
+	"homepage": "https://github.com/TheGiddyLimit/TheGiddyLimit.github.io#readme",
 	"main": ".eslintrc.js",
 	"directories": {
 		"lib": "lib",
