@@ -861,21 +861,34 @@ Parser.itemRechargeToFull = function (recharge) {
 	return Parser._parse_aToB(Parser.ITEM_RECHARGE_TO_FULL, recharge);
 };
 
-Parser.ITEM_MAINTENENCECOST_TO_FULL = {
-	"0MP": "0MP",
-	"1MP": "1MP",
-	"2MP": "2MP",
-	"3MP": "3MP",
-	"4MP": "4MP",
-	"5MP": "5MP",
-	"6MP": "6MP",
-	"7MP": "7MP",
-	"8MP": "8MP",
-	"9MP": "9MP",
-	"10MP": "10MP"
+Parser.ITEM_CABILITY_TO_FULL = {
+	"WM":"From Watchmaker",
+	"IA":"From Improvised Attachments",
+	"AA":"From Advanced Attachments",
+	"EA":"From Experimental Attachments",
+	"MHO":"From Magister Horologium Opus",
+	"DIM":"From Deus Intus Machina",
+	"FN":"From Fraudulentus Naturae"
 };
-Parser.itemMaintenenceCostToFull = function (maintenenceCost) {
-	return Parser._parse_aToB(Parser.ITEM_MAINTENENCECOST_TO_FULL, maintenenceCost);
+Parser.itemCabilityToFull = function (cability) {
+	return Parser._parse_aToB(Parser.ITEM_CABILITY_TO_FULL, cability);
+};
+
+Parser.ITEM_MAINTENENCECOST_TO_FULL = {
+	"0 MP": "0 MP",
+	"1 MP": "1 MP",
+	"2 MP": "2 MP",
+	"3 MP": "3 MP",
+	"4 MP": "4 MP",
+	"5 MP": "5 MP",
+	"6 MP": "6 MP",
+	"7 MP": "7 MP",
+	"8 MP": "8 MP",
+	"9 MP": "9 MP",
+	"10 MP": "10 MP"
+};
+Parser.itemMaintenenceCostToFull = function (MC) {
+	return Parser._parse_aToB(Parser.ITEM_MAINTENENCECOST_TO_FULL, MC);
 };
 
 Parser._decimalSeparator = (0.1).toLocaleString().substring(1, 2);
@@ -1701,7 +1714,8 @@ Parser.OPT_FEATURE_TYPE_TO_FULL = {
 	"PB": "Pact Boon",
 	"OR": "Onomancy Resonant",
 	"RN": "Rune Knight Rune",
-	"AF": "Alchemical Formula"
+	"AF": "Alchemical Formula",
+	"S": "Song"
 };
 
 Parser.optFeatureTypeToFull = function (type) {
@@ -3226,38 +3240,31 @@ Parser.getTagSource = function (tag, source) {
 };
 
 Parser.ITEM_TYPE_JSON_TO_ABV = {
-	"A": "ammunition",
-	"AF": "ammunition",
-	"AT": "artisan's tools",
-	"EM": "eldritch machine",
-	"EXP": "explosive",
-	"FD": "food and drink",
-	"G": "adventuring gear",
-	"GS": "gaming set",
-	"HA": "heavy armor",
-	"INS": "instrument",
-	"LA": "light armor",
-	"M": "melee weapon",
-	"MA": "medium armor",
-	"MNT": "mount",
-	"MR": "master rune",
-	"GV": "generic variant",
-	"P": "potion",
-	"R": "ranged weapon",
-	"RD": "rod",
-	"RG": "ring",
-	"S": "shield",
-	"SC": "scroll",
-	"SCF": "spellcasting focus",
-	"OTH": "other",
-	"T": "tools",
-	"TAH": "tack and harness",
-	"TG": "trade good",
-	"$": "treasure",
-	"VEH": "vehicle (land)",
-	"SHP": "vehicle (water)",
-	"AIR": "vehicle (air)",
-	"WD": "wand",
+	"Ammo": "Ammunition",
+	"AmmoR": "Uses Recoverable Ammunition",
+	"ArtT": "Artisan's Tools",
+	"Expl": "Explosive",
+	"Food": "Food and Drink",
+	"Gear": "Gear",
+	"Mod": "Modification",
+	"PGS" : "Physical Gaming Set",
+	"ArmorL": "Light Armor",
+	"ArmorM": "Medium Armor",
+	"ArmorH": "Heavy Armor",
+	"ArmorP": "Power Armor",
+	"INS": "Instrument",
+	"WeaponM": "Melee Weapon",
+	"WeaponR": "Ranged Weapon",
+	"Shield": "Shield",
+	"Other": "Other",
+	"Tool": "Tool",
+	"Trade": "Trade Good",
+	"treasure": "Treasure",
+	"VEHL": "Land Vehicle",
+	"VEHF": "Liquid Vehicle",
+	"VEHA": "Air Vehicle",
+	"VEHS": "Space Vehicle",
+	"VEHAR": "General Use Space Vehicle"
 };
 
 Parser.DMGTYPE_JSON_TO_FULL = {
@@ -3293,6 +3300,7 @@ Parser.DMGTYPE_JSON_TO_FULL = {
 
 Parser.DMG_TYPES = ["acid", "bludgeoning", "cold", "constitution", "energy", "energenetic", "dark", "light", "time", "space", "chaos", "magic", "psychic", "electromagnetic", "electric", "explosion", "fire", "heat", "kinetic", "knockout", "photonic", "laser", "piercing", "cold plasma", "plasma", "slashing", "true damage", "temperature"];
 Parser.CONDITIONS = ["blinded", "charmed", "deafened", "exhaustion", "frightened", "grappled", "incapacitated", "invisible", "paralyzed", "petrified", "poisoned", "prone", "restrained", "stunned", "unconscious"];
+Parser.ENERGENETICS = ["Dark","Light","Time","Space","Chaos","Magic","Psychic"];
 
 Parser.SKILL_JSON_TO_FULL = {
 	"Acrobatics": [

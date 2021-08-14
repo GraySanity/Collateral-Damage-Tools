@@ -9,6 +9,7 @@ class RenderFeats {
 			${Renderer.utils.getBorderTr()}
 			${Renderer.utils.getExcludedTr(feat, "feat")}
 			${Renderer.utils.getNameTr(feat, {page: UrlUtil.PG_FEATS})}
+			<tr><td colspan=6>${Renderer.utils.getClassabilHtml(feat)}</td></tr>
 			${prerequisite ? `<tr><td colspan="6"><span class="prerequisite">${prerequisite}</span></td></tr>` : ""}
 			<tr><td class="divider" colspan="6"><div></div></td></tr>
 			<tr class="text"><td colspan="6">${renderStack.join("")}</td></tr>

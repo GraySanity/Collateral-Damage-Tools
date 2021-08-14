@@ -1329,7 +1329,7 @@
 			],
 			"classFeatures": [
 				"Optional Rule: Firearm Proficiency|Artificer|TCE|1",
-				"Magical Tinkering|Artificer|TCE|1",
+				"Magical Tinkering|Artificer|TCE",
 				"Spellcasting|Artificer|TCE|1",
 				"Infuse Item|Artificer|TCE|2",
 				{
@@ -1343,7 +1343,7 @@
 					"classFeature": "Artificer Specialist Feature|Artificer|TCE|5",
 					"gainSubclassFeature": true
 				},
-				"Tool Expertise|Artificer|TCE|6",
+				"Tool Expertise|Artificer|TCE|0",
 				"Flash of Genius|Artificer|TCE|7",
 				"Ability Score Improvement|Artificer|TCE|8",
 				"Proficiency Versatility|Artificer|TCE|8|UAClassFeatureVariants",
@@ -1827,7 +1827,6 @@
 			],
 			"className": "Artificer",
 			"classSource": "TCE",
-			"level": 1,
 			"entries": [
 				"At 1st level, you learn how to invest a spark of magic into mundane objects. To use this ability, you must have {@item thieves' tools|PHB} or {@item artisan's tools|PHB} in hand. You then touch a Tiny nonmagical object as an action and give it one of the following magical properties of your choice:",
 				{
@@ -2095,7 +2094,7 @@
 			],
 			"className": "Artificer",
 			"classSource": "TCE",
-			"level": 6,
+			"level": 0,
 			"entries": [
 				"Starting at 6th level, your proficiency bonus is doubled for any ability check you make that uses your proficiency with a tool."
 			]

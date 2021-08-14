@@ -2694,6 +2694,9 @@ Renderer.utils = {
 		end = end.replace().replace(/[aeiou]/g, "");
 		return `${start}${end}`.toTitleCase();
 	},
+	getClassabilHtml: (classabil) => {
+		return `From the ${classabil.class} Abilities`
+	},
 	getPrerequisiteHtml: (prerequisites, {isListMode = false, blacklistKeys = new Set(), isTextOnly = false, isSkipPrefix = false} = {}) => {
 		if (!prerequisites) return isListMode ? "\u2014" : "";
 
@@ -2837,6 +2840,8 @@ Renderer.utils = {
 						case "spellcasting": return isListMode ? "Spellcasting" : "The ability to cast at least one spell";
 						case "spellcasting2020": return isListMode ? "Spellcasting" : "Spellcasting or Pact Magic feature";
 						case "psionics": return isListMode ? "Psionics" : (isTextOnly ? Renderer.stripTags : Renderer.get().render.bind(Renderer.get()))("Psionic Talent feature or {@feat Wild Talent|UA2020PsionicOptionsRevisited} feat");
+						case "class" : return v.joinConjunct(", ");
+						case "Main Energy": return "Main Energy: "+v;
 						default: throw new Error(`Unhandled key: ${k}`);
 					}
 				})
@@ -3350,7 +3355,7 @@ Renderer.feat = {
 
 		const renderer = Renderer.get().setFirstSection(true);
 		const renderStack = [];
-
+		console.log(feat.prerequisite);
 		const prerequisite = Renderer.utils.getPrerequisiteHtml(feat.prerequisite);
 		Renderer.feat.mergeAbilityIncrease(feat);
 		renderStack.push(`
@@ -4502,7 +4507,7 @@ Renderer.object = {
 				${obj.conditionImmune ? `<b>Condition Immunities:</b> ${Parser.getFullCondImm(obj.conditionImmune)}<br>` : ""}
 			</td></tr>
 			<tr class="text"><td colspan="6">
-			${obj.entries ? renderer.render({entries: obj.entries}, 2) : ""}
+			${obj.entries ? renderer.render({entries: obj.entries}, 20) : ""}
 			${obj.actionEntries ? renderer.render({entries: obj.actionEntries}, 2) : ""}
 			</td></tr>
 		`;
@@ -5446,7 +5451,6 @@ Renderer.item = {
 
 	getDamageAndPropertiesText: function (item) {
 		const damageParts = [];
-
 		if (item.dmg1) damageParts.push(Renderer.item._renderDamage(item.dmg1));
 
 		// armor
@@ -5501,7 +5505,7 @@ Renderer.item = {
 		const typeRarity = [
 			item._typeHtml === "other" ? "" : item._typeHtml,
 			(item.rarity && Renderer.item.doRenderRarity(item.rarity) ? item.rarity : ""),
-		].filter(Boolean).join(", ");
+		].filter(Boolean).join("<br>");
 
 		return [
 			item.reqAttune ? `${typeRarity} ${item._attunement}` : typeRarity,
@@ -5538,12 +5542,16 @@ Renderer.item = {
 
 		let showingBase = false;
 		if (item.wondrous) {
-			typeHtml.push(`wondrous item${item.tattoo ? ` (tattoo)` : ""}`);
+			typeHtml.push(`Wondrous Item${item.tattoo ? ` (tattoo)` : ""}`);
 			typeListText.push("wondrous item");
 		}
-		if (item.maintenenceCost) {
-			typeHtml.push(`Maintenence [${item.maintenenceCost}]`);
+		if (item.MC) {
+			typeHtml.push(`Maintenence [${item.MC}]`);
 			typeListText.push("maintenence");
+		}
+		if (item.cability) {
+			typeHtml.push(`${Parser.itemCabilityToFull(item.cability)}`);
+			typeListText.push("From Ability");
 		}
 		if (item.tattoo) {
 			typeListText.push("tattoo");
@@ -5552,13 +5560,13 @@ Renderer.item = {
 			typeHtml.push("staff");
 			typeListText.push("staff");
 		}
-		if (item.ammo) {
-			typeHtml.push(`ammunition`);
-			typeListText.push("ammunition");
+		if (item.Ammo) {
+			typeHtml.push(`Ammunition`);
+			typeListText.push("Ammunition");
 		}
 		if (item.firearm) {
-			subTypeHtml.push("firearm");
-			typeListText.push("firearm");
+			subTypeHtml.push("Firearm");
+			typeListText.push("Firearm");
 		}
 		if (item.age) {
 			subTypeHtml.push(item.age);
@@ -5571,8 +5579,8 @@ Renderer.item = {
 			showingBase = true;
 		}
 		if (item.staff && (item.type !== "M" && item.typeAlt !== "M")) { // DMG p140: "Unless a staff's description says otherwise, a staff can be used as a quarterstaff."
-			subTypeHtml.push("melee weapon");
-			typeListText.push("melee weapon");
+			subTypeHtml.push("Melee Weapon");
+			typeListText.push("Melee Weapon");
 		}
 		if (item.type) Renderer.item._getHtmlAndTextTypes_type({type: item.type, typeHtml, typeListText, subTypeHtml, showingBase, item});
 		if (item.typeAlt) Renderer.item._getHtmlAndTextTypes_type({type: item.typeAlt, typeHtml, typeListText, subTypeHtml, showingBase, item});
@@ -5580,7 +5588,7 @@ Renderer.item = {
 			typeHtml.push(`poison${item.poisonTypes ? ` (${item.poisonTypes.joinConjunct(", ", " or ")})` : ""}`);
 			typeListText.push("poison");
 		}
-		return [typeListText, typeHtml.join(", "), subTypeHtml.join(", ")];
+		return [typeListText, typeHtml.join("<br>"), subTypeHtml.join("<br>")];
 	},
 
 	_getHtmlAndTextTypes_type ({type, typeHtml, typeListText, subTypeHtml, showingBase, item}) {
@@ -5730,7 +5738,7 @@ Renderer.item = {
 	_addProperty (p) {
 		if (Renderer.item.propertyMap[p.abbreviation]) return;
 		Renderer.item.propertyMap[p.abbreviation] = p.name ? MiscUtil.copy(p) : {
-			name: p.entries[0].name.toLowerCase(),
+			name: p.entries[0].name,
 			entries: p.entries,
 			template: p.template,
 		};
@@ -5761,12 +5769,6 @@ Renderer.item = {
 		// Convert the property and type list JSONs into look-ups, i.e. use the abbreviation as a JSON property name
 		baseItemData.itemProperty.forEach(p => Renderer.item._addProperty(p));
 		baseItemData.itemType.forEach(t => {
-			// air/water vehicles share a type
-			if (t.abbreviation === "SHP") {
-				const cpy = MiscUtil.copy(t);
-				cpy.abbreviation = "AIR";
-				Renderer.item._addType(cpy);
-			}
 			Renderer.item._addType(t);
 		});
 		baseItemData.itemEntry.forEach(ent => Renderer.item._addEntry(ent));

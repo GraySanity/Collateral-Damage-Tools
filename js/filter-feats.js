@@ -22,11 +22,19 @@ class PageFilterFeats extends PageFilter {
 		});
 		this._otherPrereqFilter = new Filter({
 			header: "Other",
-			items: ["Ability", "Race", "Psionics", "Proficiency", "Special", "Spellcasting"],
+			items: ["Ability", "Race", "Psionics", "Proficiency","Main Energy","Special"],
+		});
+		this._energyPrereqFilter = new Filter({
+			header: "Main Energy Requirement",
+			items: Parser.ENERGENETICS,
 		});
 		this._levelFilter = new Filter({
 			header: "Level",
 			itemSortFn: SortUtil.ascSortNumericalSuffix,
+		});
+		this._classfilter = new Filter({
+			header: "Ability from",
+			items: ["General", "Multiclass", "Barbarian", "Bard", "Doctor", "Energenetic Specialist", "Engineer", "Martial Fighter", "Monk", "Ranger", "Rogue"]
 		});
 		this._prerequisiteFilter = new MultiFilter({header: "Prerequisite", filters: [this._otherPrereqFilter, this._levelFilter]});
 		this._benefitsFilter = new Filter({
@@ -39,7 +47,7 @@ class PageFilterFeats extends PageFilter {
 				"Weapon Proficiency",
 			],
 		});
-		this._miscFilter = new Filter({header: "Miscellaneous", items: ["SRD"], isSrdFilter: true});
+		this._miscFilter = new Filter({header: "Misc", items: ["Mastery","Free"], isSrdFilter: true});
 	}
 
 	static mutateForFilters (feat) {
@@ -62,7 +70,7 @@ class PageFilterFeats extends PageFilter {
 			feat.weaponProficiencies ? "Weapon Proficiency" : null,
 			feat.toolProficiencies ? "Tool Proficiency" : null,
 		].filter(it => it);
-		feat._fMisc = feat.srd ? ["SRD"] : [];
+		feat._fMisc = [feat.mastery ? "Mastery" : null, feat.free ? "Free" : null].filter(it=>it);
 
 		feat._slAbility = ability.asText || VeCt.STR_NONE;
 		feat._slPrereq = prereqText;
@@ -77,9 +85,11 @@ class PageFilterFeats extends PageFilter {
 
 	async _pPopulateBoxOptions (opts) {
 		opts.filters = [
+			this._classfilter,
 			this._sourceFilter,
 			this._asiFilter,
 			this._prerequisiteFilter,
+			this._energyPrereqFilter,
 			this._benefitsFilter,
 			this._miscFilter,
 		];
@@ -88,6 +98,7 @@ class PageFilterFeats extends PageFilter {
 	toDisplay (values, ft) {
 		return this._filterBox.toDisplay(
 			values,
+			ft.class,
 			ft.source,
 			ft._fAbility,
 			[
@@ -121,7 +132,7 @@ class ModalFilterFeats extends ModalFilter {
 			{sort: "name", text: "Name", width: "4"},
 			{sort: "ability", text: "Ability", width: "3"},
 			{sort: "prerequisite", text: "Prerequisite", width: "3"},
-			{sort: "source", text: "Source", width: "1"},
+			{sort: "class", text: "Class", width: "3"}
 		];
 		return ModalFilter._$getFilterColumnHeaders(btnMeta);
 	}
@@ -150,7 +161,7 @@ class ModalFilterFeats extends ModalFilter {
 			<div class="col-4 ${this._getNameStyle()}">${feat.name}</div>
 			<span class="col-3 ${feat._slAbility === VeCt.STR_NONE ? "italic" : ""}">${feat._slAbility}</span>
 				<span class="col-3 ${feat._slPrereq === VeCt.STR_NONE ? "italic" : ""}">${feat._slPrereq}</span>
-			<div class="col-1 pr-0 text-center ${Parser.sourceJsonToColor(feat.source)}" title="${Parser.sourceJsonToFull(feat.source)}" ${BrewUtil.sourceJsonToStyle(feat.source)}>${source}</div>
+			<div class="col-1 pr-0 text-center ${feat.class}" title="${feat.class}" ${feat.class}>${feat.class}</div>
 		</div>`;
 
 		const btnShowHidePreview = eleRow.firstElementChild.children[1].firstElementChild;

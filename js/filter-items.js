@@ -132,8 +132,9 @@ class PageFilterItems extends PageFilterEquipment {
 		else if (o.sortBy === "rarity") return SortUtil.ascSort(PageFilterItems._rarityValue(a.values.rarity), PageFilterItems._rarityValue(b.values.rarity)) || SortUtil.compareListNames(a, b);
 		else if (o.sortBy === "attunement") return SortUtil.ascSort(a.values.attunement, b.values.attunement) || SortUtil.compareListNames(a, b);
 		else if (o.sortBy === "count") return SortUtil.ascSort(a.values.count, b.values.count) || SortUtil.compareListNames(a, b);
-		else if (o.sortBy === "maintenenceCost") return SortUtil.ascSort(a.values.maintenenceCost, b.values.maintenenceCost) || SortUtil.compareListNames(a, b);
+		else if (o.sortBy === "MC") return SortUtil.ascSort(a.values.MC, b.values.MC) || SortUtil.compareListNames(a, b);
 		else if (o.sortBy === "weight") return SortUtil.ascSort(a.values.weight, b.values.weight) || SortUtil.compareListNames(a, b);
+		else if (o.sortBy === "cability") return SortUtil.ascSort(a.values.cability, b.values.cability) || SortUtil.compareListNames(a, b);
 		else if (o.sortBy === "cost") return SortUtil.ascSort(a.values.cost, b.values.cost) || SortUtil.compareListNames(a, b);
 		else return 0;
 	}
@@ -214,9 +215,10 @@ class PageFilterItems extends PageFilterEquipment {
 		this._attunementFilter = new Filter({header: "Attunement", items: [...PageFilterItems._FILTER_BASE_ITEMS_ATTUNEMENT], itemSortFn: PageFilterItems._sortAttunementFilter});
 		this._bonusFilter = new Filter({header: "Bonus", items: ["Armor Class", "Proficiency Bonus", "Spell Attacks", "Spell Save DC", "Saving Throws", "Weapon Attack and Damage Rolls", "Weapon Attack Rolls", "Weapon Damage Rolls"]});
 		this._rechargeTypeFilter = new Filter({header: "Recharge Type", displayFn: Parser.itemRechargeToFull});
-		this._maintenenceCostFilter = new Filter({header: "Maintenence Cost", displayFn: Parser.itemMaintenenceCostToFull});
+		this._MCFilter = new Filter({header: "Maintenence Cost", displayFn: Parser.itemMaintenenceCostToFull});
 		this._miscFilter = new Filter({header: "Miscellaneous", items: ["Ability Score Adjustment", "Charges", "Cursed", "Grants Proficiency", "Has Images", "Has Info", "Item Group", "Magic", "Mundane", "Sentient", "SRD"], isSrdFilter: true});
 		this._baseSourceFilter = new SourceFilter({header: "Base Source", selFn: null});
+		this._cabilityFilter = new Filter({header: "From Ability", displayFn: Parser.itemCabilityToFull});
 		this._baseItemFilter = new Filter({header: "Base Item", displayFn: this.constructor._getBaseItemDisplay.bind(this.constructor)});
 	}
 
@@ -260,14 +262,15 @@ class PageFilterItems extends PageFilterEquipment {
 		super.addToFilters(item, isExcluded);
 
 		this._sourceFilter.addItem(item.source);
-		this._tierFilter.addItem(item._fTier)
+		this._tierFilter.addItem(item._fTier);
+		this._cabilityFilter.addItem(item.cability);
 		this._attachedSpellsFilter.addItem(item.attachedSpells);
 		this._lootTableFilter.addItem(item.lootTables);
 		this._baseItemFilter.addItem(item._fBaseItem);
 		this._baseSourceFilter.addItem(item._baseSource);
 		this._attunementFilter.addItem(item._fAttunement);
 		this._rechargeTypeFilter.addItem(item.recharge);
-		this._maintenenceCostFilter.addItem(item.maintenenceCost);
+		this._MCFilter.addItem(item.MC);
 	}
 
 	async _pPopulateBoxOptions (opts) {
@@ -276,6 +279,7 @@ class PageFilterItems extends PageFilterEquipment {
 		opts.filters = [
 			this._sourceFilter,
 			this._typeFilter,
+			this._cabilityFilter,
 			this._tierFilter,
 			this._rarityFilter,
 			this._propertyFilter,
@@ -288,7 +292,7 @@ class PageFilterItems extends PageFilterEquipment {
 			this._bonusFilter,
 			this._miscFilter,
 			this._rechargeTypeFilter,
-			this._maintenenceCostFilter,
+			this._MCFilter,
 			this._poisonTypeFilter,
 			this._lootTableFilter,
 			this._baseItemFilter,
@@ -302,6 +306,7 @@ class PageFilterItems extends PageFilterEquipment {
 			values,
 			it.source,
 			it._typeListText,
+			it.cability,
 			it._fTier,
 			it.rarity,
 			it._fProperties,
@@ -314,7 +319,7 @@ class PageFilterItems extends PageFilterEquipment {
 			it._fBonus,
 			it._fMisc,
 			it.recharge,
-			it.maintenenceCost,
+			it.MC,
 			it.poisonTypes,
 			it.lootTables,
 			it._fBaseItemAll,
@@ -324,7 +329,7 @@ class PageFilterItems extends PageFilterEquipment {
 	}
 }
 PageFilterItems._DEFAULT_HIDDEN_TYPES = new Set(["treasure"]);
-PageFilterItems._DEFAULT_HIDDEN_SOURCES = new Set(["DMG"]);
+PageFilterItems._DEFAULT_HIDDEN_SOURCES = new Set(["DMG", "PHB"]);
 PageFilterItems._FILTER_BASE_ITEMS_ATTUNEMENT = ["Requires Attunement", "Requires Attunement By...", "Attunement Optional", VeCt.STR_NO_ATTUNEMENT];
 
 class ModalFilterItems extends ModalFilter {

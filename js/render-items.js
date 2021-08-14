@@ -4,8 +4,7 @@ class RenderItems {
 		const [typeRarityText, subTypeText, tierText] = Renderer.item.getTypeRarityAndAttunementText(item);
 
 		const renderedText = Renderer.item.getRenderedEntries(item);
-
-		const textLeft = [Parser.itemValueToFullMultiCurrency(item), Parser.itemWeightToFull(item)].filter(Boolean).join(", ").uppercaseFirst();
+		const textLeft = [Parser.itemValueToFullMultiCurrency(item), Parser.itemWeightToFull(item)].filter(Boolean).join("<br>").uppercaseFirst();
 		const textRight = [damage, damageType, propertiesTxt].filter(Boolean).join(" ");
 
 		return $$`
