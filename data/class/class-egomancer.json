@@ -1,9 +1,8 @@
 {
 	"class": [
 		{
-			"name": "Barbarian",
-			"source": "PHB",
-			"page": 46,
+			"name": "Egomancer",
+			"source": "CDPH",
 			"srd": true,
 			"proficiency": [
 				"str",
@@ -21,6 +20,7 @@
 				],
 				"skills": [
 					{
+						"acrobatics":true,
 						"choose": {
 							"from": [
 								"animal handling",
@@ -33,8 +33,7 @@
 							"count": 2
 						}
 					}
-				]
-			},
+				]			},
 			"startingEquipment": {
 				"additionalFromBackground": true,
 				"default": [
@@ -42,7 +41,7 @@
 					"(a) two {@item handaxe|phb|handaxes} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
 					"An {@item explorer's pack|phb}, and four {@item javelin|phb|javelins}"
 				],
-				"goldAlternative": "{@dice 2d4 × 10|2d4 × 10|Starting Gold}",
+				"goldAlternative": 500,
 				"defaultData": [
 					{
 						"a": [
@@ -89,13 +88,12 @@
 					]
 				}
 			},
-			"subclassTitle": "Primal Path",
 			"fluff": [
 				{
-					"name": "Barbarian",
+					"name": "Egomancer",
 					"type": "section",
 					"entries": [
-						"The Barbarian abilities can be found in the {@filter list of Feats|feats|Ability From=Barbarian}.",
+						"The Egomancer abilities can be found in the {@filter list of Feats|feats|Ability From=Egomancer}.",
 						"A half-orc snarls at the latest challenger to her authority over their savage tribe, ready to break his neck with her bare hands as she did to the last six rivals.",
 						"Frothing at the mouth, a dwarf slams his helmet into the face of his drow foe, then turns to drive his armored elbow into the gut of another.",
 						"These barbarians, different as they might be, are defined by their rage: unbridled, unquenchable, and unthinking fury. More than a mere emotion, their anger is the ferocity of a cornered predator, the unrelenting assault of a storm, the churning turmoil of the sea.",
@@ -116,9 +114,7 @@
 								"Their courage in the face of danger makes barbarians perfectly suited for adventuring. Wandering is often a way of life for their native tribes, and the rootless life of the adventurer is little hardship for a barbarian. Some barbarians miss the close-knit family structures of the tribe, but eventually find them replaced by the bonds formed among the members of their adventuring parties."
 							]
 						}
-					],
-					"source": "PHB",
-					"page": 46
+					]
 				},
 				{
 					"type": "section",

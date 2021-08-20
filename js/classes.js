@@ -593,7 +593,7 @@ class ClassesPage extends BaseComponent {
 		// endregion
 
 		// region rendering
-		this._render_renderClassTable();
+		/// this._render_renderClassTable();
 		this._render_renderSidebar();
 		await this._render_pRenderSubclassTabs();
 		this._render_renderClassContent();
@@ -695,177 +695,177 @@ class ClassesPage extends BaseComponent {
 			.map(sc => asStateKeys ? UrlUtil.getStateKeySubclass(sc) : sc);
 	}
 
-	_render_renderClassTable () {
-		const $wrpTblClass = $(`#classtable`).empty();
-		const cls = this.activeClass;
+	// _render_renderClassTable () {
+	// 	const $wrpTblClass = $(`#statsprof`).empty();
+	// 	const cls = this.activeClass;
 
-		Renderer.get().resetHeaderIndex();
+	// 	Renderer.get().resetHeaderIndex();
 
-		const $tblGroupHeaders = [];
-		const $tblHeaders = [];
+	// 	const $tblGroupHeaders = [];
+	// 	const $tblHeaders = [];
 
-		const renderTableGroupHeader = (tableGroup, stateKey) => {
-			// Render titles (top section)
-			let $thGroupHeader;
-			if (tableGroup.title) {
-				$thGroupHeader = $(`<th class="cls-tbl__col-group" colspan="${tableGroup.colLabels.length}">${tableGroup.title}</th>`);
-			} else {
-				// if there's no title, add a spacer
-				$thGroupHeader = $(`<th colspan="${tableGroup.colLabels.length}"/>`);
-			}
-			$tblGroupHeaders.push($thGroupHeader);
+	// 	const renderTableGroupHeader = (tableGroup, stateKey) => {
+	// 		// Render titles (top section)
+	// 		let $thGroupHeader;
+	// 		if (tableGroup.title) {
+	// 			$thGroupHeader = $(`<th class="cls-tbl__col-group" colspan="${tableGroup.colLabels.length}">${tableGroup.title}</th>`);
+	// 		} else {
+	// 			// if there's no title, add a spacer
+	// 			$thGroupHeader = $(`<th colspan="${tableGroup.colLabels.length}"/>`);
+	// 		}
+	// 		$tblGroupHeaders.push($thGroupHeader);
 
-			// Render column headers (bottom section)
-			const $tblHeadersGroup = [];
-			tableGroup.colLabels.forEach(lbl => {
-				const $tblHeader = $(`<th class="cls-tbl__col-generic-center"><div class="cls__squash_header"/></th>`)
-					.fastSetHtml(Renderer.get().render(lbl));
-				$tblHeadersGroup.push($tblHeader);
-				$tblHeaders.push($tblHeader);
-			});
+	// 		// Render column headers (bottom section)
+	// 		const $tblHeadersGroup = [];
+	// 		tableGroup.colLabels.forEach(lbl => {
+	// 			const $tblHeader = $(`<th class="cls-tbl__col-generic-center"><div class="cls__squash_header"/></th>`)
+	// 				.fastSetHtml(Renderer.get().render(lbl));
+	// 			$tblHeadersGroup.push($tblHeader);
+	// 			$tblHeaders.push($tblHeader);
+	// 		});
 
-			// If there is a state key, this is a subclass table group, and may therefore need to be hidden
-			if (!stateKey) return;
-			const hkShowHide = () => {
-				$thGroupHeader.toggleVe(!!this._state[stateKey]);
-				$tblHeadersGroup.forEach($tblHeader => $tblHeader.toggleVe(!!this._state[stateKey]))
-			};
-			this._addHookBase(stateKey, hkShowHide);
-			MiscUtil.pDefer(hkShowHide);
-		};
+	// 		// If there is a state key, this is a subclass table group, and may therefore need to be hidden
+	// 		if (!stateKey) return;
+	// 		const hkShowHide = () => {
+	// 			$thGroupHeader.toggleVe(!!this._state[stateKey]);
+	// 			$tblHeadersGroup.forEach($tblHeader => $tblHeader.toggleVe(!!this._state[stateKey]))
+	// 		};
+	// 		this._addHookBase(stateKey, hkShowHide);
+	// 		MiscUtil.pDefer(hkShowHide);
+	// 	};
 
-		if (cls.classTableGroups) {
-			cls.classTableGroups.forEach(tableGroup => renderTableGroupHeader(tableGroup));
-		}
+	// 	if (cls.classTableGroups) {
+	// 		cls.classTableGroups.forEach(tableGroup => renderTableGroupHeader(tableGroup));
+	// 	}
 
-		cls.subclasses.forEach(sc => {
-			if (!sc.subclassTableGroups) return;
-			const stateKey = UrlUtil.getStateKeySubclass(sc);
-			sc.subclassTableGroups.forEach(tableGroup => renderTableGroupHeader(tableGroup, stateKey));
-		});
+	// 	cls.subclasses.forEach(sc => {
+	// 		if (!sc.subclassTableGroups) return;
+	// 		const stateKey = UrlUtil.getStateKeySubclass(sc);
+	// 		sc.subclassTableGroups.forEach(tableGroup => renderTableGroupHeader(tableGroup, stateKey));
+	// 	});
 
-		const metasTblRows = cls.classFeatures.map((lvlFeatures, ixLvl) => {
-			const pb = Math.ceil((ixLvl + 1) / 4) + 1;
+	// 	const metasTblRows = cls.classFeatures.map((lvlFeatures, ixLvl) => {
+	// 		const pb = Math.ceil((ixLvl + 1) / 4) + 1;
 
-			const lvlFeaturesFilt = lvlFeatures
-				.filter(it => it.name && it.type !== "inset"); // don't add inset entry names to class table
-			const metasFeatureLinks = lvlFeaturesFilt
-				.map((it, ixFeature) => {
-					const featureId = `${ixLvl}-${ixFeature}`;
+	// 		const lvlFeaturesFilt = lvlFeatures
+	// 			.filter(it => it.name && it.type !== "inset"); // don't add inset entry names to class table
+	// 		const metasFeatureLinks = lvlFeaturesFilt
+	// 			.map((it, ixFeature) => {
+	// 				const featureId = `${ixLvl}-${ixFeature}`;
 
-					const $lnk = $(`<a>${it.name}</a>`)
-						.click(() => {
-							this._lastScrollFeature = null;
-							this._state.feature = null;
-							this._state.feature = featureId;
-						});
+	// 				const $lnk = $(`<a>${it.name}</a>`)
+	// 					.click(() => {
+	// 						this._lastScrollFeature = null;
+	// 						this._state.feature = null;
+	// 						this._state.feature = featureId;
+	// 					});
 
-					const hkSetHref = () => {
-						// defer this for performance
-						setTimeout(() => {
-							// these will modify this._state.feature when clicked
-							const curState = MiscUtil.copy(this.__state);
-							curState.feature = featureId;
-							const href = `#${this._getHashState({state: curState})}`;
-							$lnk.attr("href", href);
-						}, 5);
-					};
-					this._addHookAll("state", hkSetHref);
-					hkSetHref();
+	// 				const hkSetHref = () => {
+	// 					// defer this for performance
+	// 					setTimeout(() => {
+	// 						// these will modify this._state.feature when clicked
+	// 						const curState = MiscUtil.copy(this.__state);
+	// 						curState.feature = featureId;
+	// 						const href = `#${this._getHashState({state: curState})}`;
+	// 						$lnk.attr("href", href);
+	// 					}, 5);
+	// 				};
+	// 				this._addHookAll("state", hkSetHref);
+	// 				hkSetHref();
 
-					// Make a dummy for the last item
-					const $dispComma = ixFeature === lvlFeaturesFilt.length - 1 ? $(`<span/>`) : $(`<span class="mr-1">,</span>`);
-					return {
-						$wrpLink: $$`<div class="inline-block">${$lnk}${$dispComma}</div>`,
-						$dispComma,
-						source: it.source,
-						isHidden: false,
-					};
-				});
+	// 				// Make a dummy for the last item
+	// 				const $dispComma = ixFeature === lvlFeaturesFilt.length - 1 ? $(`<span/>`) : $(`<span class="mr-1">,</span>`);
+	// 				return {
+	// 					$wrpLink: $$`<div class="inline-block">${$lnk}${$dispComma}</div>`,
+	// 					$dispComma,
+	// 					source: it.source,
+	// 					isHidden: false,
+	// 				};
+	// 			});
 
-			const $ptTableGroups = [];
+	// 		const $ptTableGroups = [];
 
-			const renderTableGroupRow = (tableGroup, stateKey) => {
-				const row = tableGroup.rows[ixLvl] || [];
-				const $cells = row.map(cell => $(`<td class="cls-tbl__col-generic-center"/>`).fastSetHtml(cell === 0 ? "\u2014" : Renderer.get().render(cell)));
-				$ptTableGroups.push(...$cells);
+	// 		const renderTableGroupRow = (tableGroup, stateKey) => {
+	// 			const row = tableGroup.rows[ixLvl] || [];
+	// 			const $cells = row.map(cell => $(`<td class="cls-tbl__col-generic-center"/>`).fastSetHtml(cell === 0 ? "\u2014" : Renderer.get().render(cell)));
+	// 			$ptTableGroups.push(...$cells);
 
-				// If there is a state key, this is a subclass table group, and may therefore need to be hidden
-				if (!stateKey) return;
-				const hkShowHide = () => $cells.forEach($cell => $cell.toggleVe(!!this._state[stateKey]));
-				this._addHookBase(stateKey, hkShowHide);
-				MiscUtil.pDefer(hkShowHide); // saves ~10ms
-			};
+	// 			// If there is a state key, this is a subclass table group, and may therefore need to be hidden
+	// 			if (!stateKey) return;
+	// 			const hkShowHide = () => $cells.forEach($cell => $cell.toggleVe(!!this._state[stateKey]));
+	// 			this._addHookBase(stateKey, hkShowHide);
+	// 			MiscUtil.pDefer(hkShowHide); // saves ~10ms
+	// 		};
 
-			if (cls.classTableGroups) {
-				cls.classTableGroups.forEach(tableGroup => renderTableGroupRow(tableGroup));
-			}
+	// 		if (cls.classTableGroups) {
+	// 			cls.classTableGroups.forEach(tableGroup => renderTableGroupRow(tableGroup));
+	// 		}
 
-			cls.subclasses.forEach(sc => {
-				if (!sc.subclassTableGroups) return;
-				const stateKey = UrlUtil.getStateKeySubclass(sc);
-				sc.subclassTableGroups.forEach(tableGroup => renderTableGroupRow(tableGroup, stateKey));
-			});
+	// 		cls.subclasses.forEach(sc => {
+	// 			if (!sc.subclassTableGroups) return;
+	// 			const stateKey = UrlUtil.getStateKeySubclass(sc);
+	// 			sc.subclassTableGroups.forEach(tableGroup => renderTableGroupRow(tableGroup, stateKey));
+	// 		});
 
-			return {
-				$row: $$`<tr class="cls-tbl__stripe-odd">
-					<td class="cls-tbl__col-level">${Parser.getOrdinalForm(ixLvl + 1)}</td>
-					<td class="cls-tbl__col-prof-bonus">+${pb}</td>
-					<td>${metasFeatureLinks.length ? metasFeatureLinks.map(it => it.$wrpLink) : `\u2014`}</td>
-					${$ptTableGroups}
-				</tr>`,
-				metasFeatureLinks,
-			}
-		});
+	// 		return {
+	// 			$row: $$`<tr class="cls-tbl__stripe-odd">
+	// 				<td class="cls-tbl__col-level">${Parser.getOrdinalForm(ixLvl + 1)}</td>
+	// 				<td class="cls-tbl__col-prof-bonus">+${pb}</td>
+	// 				<td>${metasFeatureLinks.length ? metasFeatureLinks.map(it => it.$wrpLink) : `\u2014`}</td>
+	// 				${$ptTableGroups}
+	// 			</tr>`,
+	// 			metasFeatureLinks,
+	// 		}
+	// 	});
 
-		this._fnTableHandleFilterChange = (filterValues) => {
-			const cpyCls = MiscUtil.copy(this.activeClassRaw);
-			const isUseSubclassSources = !this._pageFilter.isClassNaturallyDisplayed(filterValues, cpyCls) && this._pageFilter.isAnySubclassDisplayed(filterValues, cpyCls);
+	// 	this._fnTableHandleFilterChange = (filterValues) => {
+	// 		const cpyCls = MiscUtil.copy(this.activeClassRaw);
+	// 		const isUseSubclassSources = !this._pageFilter.isClassNaturallyDisplayed(filterValues, cpyCls) && this._pageFilter.isAnySubclassDisplayed(filterValues, cpyCls);
 
-			metasTblRows.forEach(metaTblRow => {
-				metaTblRow.metasFeatureLinks.forEach(metaFeatureLink => {
-					if (metaFeatureLink.source) {
-						const isHidden = !this.filterBox.toDisplayByFilters(
-							filterValues,
-							{
-								filter: this._pageFilter.sourceFilter,
-								value: isUseSubclassSources && metaFeatureLink.source === cpyCls.source ? this._pageFilter.getActiveSource(filterValues) : metaFeatureLink.source,
-							},
-						);
-						metaFeatureLink.isHidden = isHidden;
-						metaFeatureLink.$wrpLink.toggleVe(!isHidden);
-					}
-				});
+	// 		metasTblRows.forEach(metaTblRow => {
+	// 			metaTblRow.metasFeatureLinks.forEach(metaFeatureLink => {
+	// 				if (metaFeatureLink.source) {
+	// 					const isHidden = !this.filterBox.toDisplayByFilters(
+	// 						filterValues,
+	// 						{
+	// 							filter: this._pageFilter.sourceFilter,
+	// 							value: isUseSubclassSources && metaFeatureLink.source === cpyCls.source ? this._pageFilter.getActiveSource(filterValues) : metaFeatureLink.source,
+	// 						},
+	// 					);
+	// 					metaFeatureLink.isHidden = isHidden;
+	// 					metaFeatureLink.$wrpLink.toggleVe(!isHidden);
+	// 				}
+	// 			});
 
-				metaTblRow.metasFeatureLinks.forEach(metaFeatureLink => metaFeatureLink.$dispComma.toggleVe(true));
-				const lastVisible = metaTblRow.metasFeatureLinks.filter(metaFeatureLink => !metaFeatureLink.isHidden).last();
-				if (lastVisible) lastVisible.$dispComma.hideVe();
-			});
-		};
+	// 			metaTblRow.metasFeatureLinks.forEach(metaFeatureLink => metaFeatureLink.$dispComma.toggleVe(true));
+	// 			const lastVisible = metaTblRow.metasFeatureLinks.filter(metaFeatureLink => !metaFeatureLink.isHidden).last();
+	// 			if (lastVisible) lastVisible.$dispComma.hideVe();
+	// 		});
+	// 	};
 
-		$$`<table class="cls-tbl shadow-big w-100 mb-2">
-			<tbody>
-			<tr><th class="border" colspan="15"></th></tr>
-			<tr><th class="cls-tbl__disp-name" colspan="15">${cls.name}</th></tr>
-			<tr>
-				<th colspan="3"/> <!-- spacer to match the 3 default cols (level, prof, features) -->
-				${$tblGroupHeaders}
-			</tr>
-			<tr>
-				<th class="cls-tbl__col-level">Level</th>
-				<th class="cls-tbl__col-prof-bonus">Proficiency Bonus</th>
-				<th>Features</th>
-				${$tblHeaders}
-			</tr>
-			${metasTblRows.map(it => it.$row)}
-			<tr><th class="border" colspan="15"></th></tr>
-			</tbody>
-		</table>`.appendTo($wrpTblClass);
-		$wrpTblClass.showVe();
-	}
+	// 	$$`<table class="cls-tbl shadow-big w-100 mb-2">
+	// 		<tbody>
+	// 		<tr><th class="border" colspan="15"></th></tr>
+	// 		<tr><th class="cls-tbl__disp-name" colspan="15">${cls.name}</th></tr>
+	// 		<tr>
+	// 			<th colspan="3"/> <!-- spacer to match the 3 default cols (level, prof, features) -->
+	// 			${$tblGroupHeaders}
+	// 		</tr>
+	// 		<tr>
+	// 			<th class="cls-tbl__col-level">Level</th>
+	// 			<th class="cls-tbl__col-prof-bonus">Proficiency Bonus</th>
+	// 			<th>Features</th>
+	// 			${$tblHeaders}
+	// 		</tr>
+	// 		${metasTblRows.map(it => it.$row)}
+	// 		<tr><th class="border" colspan="15"></th></tr>
+	// 		</tbody>
+	// 	</table>`.appendTo($wrpTblClass);
+	// 	$wrpTblClass.showVe();
+	// }
 
 	_render_renderSidebar () {
-		const $wrpSidebar = $(`#statsprof`).empty();
+		const $wrpSidebar = $(`#classtable`).empty();
 		const cls = this.activeClass;
 
 		const $btnToggleSidebar = $(`<div class="cls-side__btn-toggle">[\u2012]</div>`)
@@ -932,7 +932,7 @@ class ClassesPage extends BaseComponent {
 			const rendered = [
 				equip.additionalFromBackground ? "<p>You start with the following items, plus anything provided by your background.</p>" : "",
 				equip.default && equip.default.length ? `<ul class="pl-4"><li>${equip.default.map(it => Renderer.get().render(it)).join("</li><li>")}</ul>` : "",
-				equip.goldAlternative != null ? `<p>Alternatively, you may start with ${Renderer.get().render(equip.goldAlternative)} gp to buy your own equipment.</p>` : "",
+				equip.goldAlternative != null ? `<p>You also start with ${Renderer.get().render(equip.goldAlternative)} Credits which you can keep and/or use to buy extra equipment.</p>` : "",
 			].filter(Boolean).join("");
 			const $dispRendered = $(`<div/>`);
 
@@ -1045,7 +1045,6 @@ class ClassesPage extends BaseComponent {
 		const cls = this.activeClass;
 
 		// region features/fluff
-		const $btnToggleFeatures = ComponentUiUtil.$getBtnBool(this, "isHideFeatures", {text: "Features", activeClass: "cls__btn-cf--active", isInverted: true}).title("Toggle Class Features");
 
 		const $btnToggleFeatureVariants = $(`<button class="btn btn-xs btn-default" title="Toggle Class Feature Options/Variants">Variants</button>`)
 			.click(() => {
@@ -1062,9 +1061,9 @@ class ClassesPage extends BaseComponent {
 		this.filterBox.on(FilterBox.EVNT_VALCHANGE, () => hkUpdateBtnFeatureVariants());
 		hkUpdateBtnFeatureVariants();
 
-		const $btnToggleFluff = ComponentUiUtil.$getBtnBool(this, "isShowFluff", {text: "Info"}).title("Toggle Class Info");
+		const $btnToggleFluff = ComponentUiUtil.$getBtnBool(this, "isShowFluff", {text: "Info", activeClass: "cls__btn-cf--active", isInverted: false}).title("Toggle Class Info");
 
-		$$`<div class="flex-v-center m-1 btn-group mr-3 no-shrink">${$btnToggleFeatures}${$btnToggleFeatureVariants}${$btnToggleFluff}</div>`.appendTo($wrp);
+		$$`<div class="flex-v-center m-1 btn-group mr-3 no-shrink"></div>`.appendTo($wrp);
 		// endregion
 
 		// region subclasses
@@ -1933,7 +1932,7 @@ ClassesPage._DEFAULT_STATE = {
 	feature: null,
 	isHideSidebar: false,
 	isHideFeatures: false,
-	isShowFluff: false,
+	isShowFluff: true,
 	isShowScSources: false,
 	isViewActiveScComp: false,
 	isViewActiveBook: false,

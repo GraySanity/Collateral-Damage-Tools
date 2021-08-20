@@ -15,5 +15,6 @@
 	"sidekick": "class-sidekick.json",
 	"sorcerer": "class-sorcerer.json",
 	"warlock": "class-warlock.json",
-	"wizard": "class-wizard.json"
+	"wizard": "class-wizard.json",
+	"egomancer": "class-egomancer.json"
 }
