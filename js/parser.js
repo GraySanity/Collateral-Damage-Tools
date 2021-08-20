@@ -1697,25 +1697,9 @@ Parser.prereqPatronToShort = function (patron) {
 // NOTE: These need to be reflected in omnidexer.js to be indexed
 Parser.OPT_FEATURE_TYPE_TO_FULL = {
 	AI: "Artificer Infusion",
-	ED: "Elemental Discipline",
-	EI: "Eldritch Invocation",
-	MM: "Metamagic",
 	"MV": "Maneuver",
-	"MV:B": "Maneuver, Battle Master",
-	"MV:C2-UA": "Maneuver, Cavalier V2 (UA)",
-	"AS:V1-UA": "Arcane Shot, V1 (UA)",
-	"AS:V2-UA": "Arcane Shot, V2 (UA)",
-	"AS": "Arcane Shot",
 	OTH: "Other",
-	"FS:F": "Fighting Style; Fighter",
-	"FS:B": "Fighting Style; Bard",
-	"FS:P": "Fighting Style; Paladin",
-	"FS:R": "Fighting Style; Ranger",
-	"PB": "Pact Boon",
-	"OR": "Onomancy Resonant",
-	"RN": "Rune Knight Rune",
-	"AF": "Alchemical Formula",
-	"S": "Song"
+	"PB": "Pact Boon"
 };
 
 Parser.optFeatureTypeToFull = function (type) {
@@ -3240,13 +3224,13 @@ Parser.getTagSource = function (tag, source) {
 };
 
 Parser.ITEM_TYPE_JSON_TO_ABV = {
+	"Mod": "Modification",
 	"Ammo": "Ammunition",
 	"AmmoR": "Uses Recoverable Ammunition",
 	"ArtT": "Artisan's Tools",
 	"Expl": "Explosive",
 	"Food": "Food and Drink",
 	"Gear": "Gear",
-	"Mod": "Modification",
 	"PGS" : "Physical Gaming Set",
 	"ArmorL": "Light Armor",
 	"ArmorM": "Medium Armor",

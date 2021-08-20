@@ -2841,7 +2841,7 @@ Renderer.utils = {
 						case "spellcasting2020": return isListMode ? "Spellcasting" : "Spellcasting or Pact Magic feature";
 						case "psionics": return isListMode ? "Psionics" : (isTextOnly ? Renderer.stripTags : Renderer.get().render.bind(Renderer.get()))("Psionic Talent feature or {@feat Wild Talent|UA2020PsionicOptionsRevisited} feat");
 						case "class" : return v.joinConjunct(", ");
-						case "Main Energy": return "Main Energy: "+v;
+						case "mainenergy": return "Main Energy: "+v;
 						default: throw new Error(`Unhandled key: ${k}`);
 					}
 				})

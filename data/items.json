@@ -104,12 +104,12 @@
 		"entries": [
 			"A small hovering vehicle, which can be used like a skateboard from the olden days.<br>You can use half a day of practice to learn how to use this item, and an extra two full days of practice to gain proficiency.",
 			"While using the hoverboard your movement speed becomes 8 meters, or double that when proficient.<br>You gain disadvantage on Dexterity Saving Throws, Dexterity based Skill Checks and Attack Rolls if you are riding the hoverboard while you aren't proficient in using it.",
-			"The hoverboard can hover over solid ground at a hight of XXXXXXXXX cm, and it cannot hover over liquids deeper than half a meter. It can hold a maximum of 250 kg.",
+			"The hoverboard can hover over solid ground at a hight of 25 cm, and it cannot hover over liquids deeper than half a meter. It can hold a maximum of 250 kg.",
 			{
 				"type": "entries",
 				"name": "Overdrive [X MP]",
 				"entries": [
-					"<br>You can overdrive the hoverboard to make it perform better.<br>For every point of maintenance you use on this item, it gains 2 meter movement, can fly an extra XXXXXX cm higher, and can hold 25 kg more."
+					"<br>You can overdrive the hoverboard to make it perform better.<br>For every point of maintenance you use on this item, it gains 2 meter movement, can fly an extra 25 cm higher, and can hold 25 kg more."
 				]
 			}
 		]

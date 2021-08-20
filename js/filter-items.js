@@ -229,7 +229,7 @@ class PageFilterItems extends PageFilterEquipment {
 
 		if (item.curse) item._fMisc.push("Cursed");
 		const isMundane = Renderer.item.isMundane(item);
-		item._fMisc.push(isMundane ? "Mundane" : "Magic");
+		item._fMisc.push(isMundane ? "Mundane" : "Special");
 		item._fIsMundane = isMundane;
 		if (item.ability) item._fMisc.push("Ability Score Adjustment");
 		if (item.charges) item._fMisc.push("Charges");

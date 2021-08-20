@@ -36,7 +36,7 @@ class PageFilterFeats extends PageFilter {
 			header: "Ability from",
 			items: ["General", "Multiclass", "Barbarian", "Bard", "Doctor", "Energenetic Specialist", "Engineer", "Martial Fighter", "Monk", "Ranger", "Rogue"]
 		});
-		this._prerequisiteFilter = new MultiFilter({header: "Prerequisite", filters: [this._otherPrereqFilter, this._levelFilter]});
+		this._prerequisiteFilter = new MultiFilter({header: "Prerequisite", filters: [this._otherPrereqFilter, this._levelFilter, this._energyPrereqFilter]});
 		this._benefitsFilter = new Filter({
 			header: "Benefits",
 			items: [
@@ -71,6 +71,8 @@ class PageFilterFeats extends PageFilter {
 			feat.toolProficiencies ? "Tool Proficiency" : null,
 		].filter(it => it);
 		feat._fMisc = [feat.mastery ? "Mastery" : null, feat.free ? "Free" : null].filter(it=>it);
+		feat._fMainenergy = [feat?.prerequisite?.[0]?.mainenergy ? feat.prerequisite[0].mainenergy : null].filter(it=>it);;
+		console.log(feat._fMainenergy);
 
 		feat._slAbility = ability.asText || VeCt.STR_NONE;
 		feat._slPrereq = prereqText;
@@ -89,7 +91,6 @@ class PageFilterFeats extends PageFilter {
 			this._sourceFilter,
 			this._asiFilter,
 			this._prerequisiteFilter,
-			this._energyPrereqFilter,
 			this._benefitsFilter,
 			this._miscFilter,
 		];
@@ -104,6 +105,7 @@ class PageFilterFeats extends PageFilter {
 			[
 				ft._fPrereqOther,
 				ft._fPrereqLevel,
+				ft._fMainenergy
 			],
 			ft._fBenifits,
 			ft._fMisc,
