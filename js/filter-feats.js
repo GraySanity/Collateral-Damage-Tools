@@ -71,7 +71,8 @@ class PageFilterFeats extends PageFilter {
 			feat.toolProficiencies ? "Tool Proficiency" : null,
 		].filter(it => it);
 		feat._fMisc = [feat.mastery ? "Mastery" : null, feat.free ? "Free" : null].filter(it=>it);
-		feat._fMainenergy = [feat?.prerequisite?.[0]?.mainenergy ? feat.prerequisite[0].mainenergy : null].filter(it=>it);;
+		console.log(feat.prerequisite);
+		feat._fMainenergy = [feat?.prerequisite?.[0]?.mainenergy ? feat.prerequisite.mainenergy : null].filter(it=>it);;
 		console.log(feat._fMainenergy);
 
 		feat._slAbility = ability.asText || VeCt.STR_NONE;

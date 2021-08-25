@@ -2701,6 +2701,7 @@ Renderer.utils = {
 		if (!prerequisites) return isListMode ? "\u2014" : "";
 
 		let cntPrerequisites = 0;
+		var joinervar = ", "
 		const listOfChoices = prerequisites.map(pr => {
 			return Object.entries(pr)
 				.sort(([kA], [kB]) => Renderer.utils._prereqWeights[kA] - Renderer.utils._prereqWeights[kB])
@@ -2710,6 +2711,9 @@ Renderer.utils = {
 					cntPrerequisites += 1;
 
 					switch (k) {
+						case "joiner": {
+							joinervar = v.joiner
+							}
 						case "level": {
 							// a generic level requirement (as of 2020-03-11, homebrew only)
 							if (typeof v === "number") {
@@ -2717,8 +2721,8 @@ Renderer.utils = {
 								else return `${Parser.getOrdinalForm(v)} level`
 							} else if (!v.class && !v.subclass) {
 								if (isListMode) return `Lvl ${v.level}`
-								else return `${Parser.getOrdinalForm(v.level)} level`
-							}
+								else return `${Parser.getOrdinalForm(v.level)}`
+							};
 
 							const isSubclassVisible = v.subclass && v.subclass.visible;
 							const isClassVisible = v.class && (v.class.visible || isSubclassVisible); // force the class name to be displayed if there's a subclass being displayed
@@ -2747,7 +2751,7 @@ Renderer.utils = {
 							return isListMode ? v.map(x => x.toTitleCase()).join("/") : v.joinConjunct(", ", " or ");
 						case "otherSummary":
 							return isListMode ? (v.entrySummary || Renderer.stripTags(v.entry)) : (isTextOnly ? Renderer.stripTags(v.entry) : Renderer.get().render(v.entry));
-						case "other": return isListMode ? "Special" : (isTextOnly ? Renderer.stripTags(v) : Renderer.get().render(v));
+						case "other": return isListMode ? "Special" : (isTextOnly ? Renderer.stripTags(v) : Renderer.get().render("<br>"+v));
 						case "race": {
 							const parts = v.map((it, i) => {
 								if (isListMode) {
@@ -2840,17 +2844,17 @@ Renderer.utils = {
 						case "spellcasting": return isListMode ? "Spellcasting" : "The ability to cast at least one spell";
 						case "spellcasting2020": return isListMode ? "Spellcasting" : "Spellcasting or Pact Magic feature";
 						case "psionics": return isListMode ? "Psionics" : (isTextOnly ? Renderer.stripTags : Renderer.get().render.bind(Renderer.get()))("Psionic Talent feature or {@feat Wild Talent|UA2020PsionicOptionsRevisited} feat");
-						case "class" : return v.joinConjunct(", ");
-						case "mainenergy": return "Main Energy: "+v;
+						case "class" : return v.joinConjunct(joinervar);
+						case "mainenergy": return "<br><i>Main Energy: "+v+"</i>";
 						default: throw new Error(`Unhandled key: ${k}`);
 					}
 				})
 				.filter(Boolean)
-				.join(", ");
+				.join(joinervar);
 		}).filter(Boolean);
 
 		if (!listOfChoices.length) return isListMode ? "\u2014" : "";
-		return isListMode ? listOfChoices.join("/") : `${isSkipPrefix ? "" : `Prerequisite${cntPrerequisites === 1 ? "" : "s"}: `}${listOfChoices.joinConjunct("; ", " or ")}`;
+		return isListMode ? listOfChoices.join("&nbsp;&nbsp;&nbsp;or") : `${isSkipPrefix ? "" : `Prerequisite${cntPrerequisites === 1 ? "" : "s"}: `}${listOfChoices.joinConjunct("; ", "&nbsp;&nbsp;&nbsp;or ")}`;
 	},
 
 	getMediaUrl (entry, prop, mediaDir) {

@@ -725,9 +725,21 @@
 			"source": "CDPH",
 			"class": ["Energenetic Specialist"],
 			"prerequisite": [
+				{"mainenergy": "Dark"},
 				{
-					"mainenergy": ["Light", "Dark"],
+					"joiner":", ",
+					"mainenergy": "Light",
 					"other": "Matter Type: Not Full-Materialistic"
+				},
+				{
+					"joiner":" ",
+					"class":["Barbarian"],
+					"level": 5
+				},
+				{
+					"joiner":" ",
+					"class":["Doctor"],
+					"level": 6
 				}
 			],
 			"entries":["You have roughly learned how to use your Energy to teleport. You can only teleport to places with a low density of matter, so only to air/vacuum or other such areas, and this does cost an Action. <br>The Energy cost for teleporting is 2 + ¼ the distance in meter of Energy. You do not need to know or see where you end up, although it is strongly advised as ending up in a wall or object isn’t too good for your health. You cannot teleport into another creature. However, you can take other creatures with you, these cost an extra half the distance in meter of Energy you need to use."]
