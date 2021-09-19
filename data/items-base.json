@@ -41,7 +41,8 @@
 						"If you use a weapon that has the ammunition property to make a melee attack, you treat the weapon as an improvised weapon. A sling must be loaded to deal any damage when used in this way."
 					]
 				}
-			]
+			],
+			"template":"{{item.ammocap}} shots/clip"
 		},
 		{
 			"abbreviation": "craftable",

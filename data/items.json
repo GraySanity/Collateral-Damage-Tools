@@ -123,7 +123,41 @@
 		]
 	},
 	{
-		"name":""
+		"name":"Pistol",
+		"source": "CDPM",
+		"type": "WeaponRU",
+		"rarity": "none",
+		"weight": 1,
+		"value": 50,
+		"dmg1":"1d6+1",
+		"dmgType":"P",
+		"range": "0.5/15/40",
+		"ammocap": 12,
+		"gun": true,
+		"pistol": true,
+		"property":[
+			"ammofire"
+		]
+	},
+	{
+		"name":"SMG",
+		"source": "CDPM",
+		"type": "WeaponRU",
+		"rarity": "none",
+		"weight": 2,
+		"value": 80,
+		"dmg1":"1d6",
+		"dmgType":"P",
+		"range": "0.5/10/50",
+		"ammocap": 28,
+		"gun": true,
+		"SMG": true,
+		"property":[
+			"ammofire"
+		],
+		"entries":[
+			"+1 to Hit Bonus<br>Can shoot in an cone or line costing 7 ammunition.<br>Foldable"
+		]
 	}
 ],
 	"itemGroup": [
@@ -134,7 +168,8 @@
 			"scfType": "pressureguns",
 			"rarity": "none",
 			"items":[
-
+				"Pistol|CDPH",
+				"SMG|CDPH"
 			]
 		},
 		{
@@ -172,6 +207,16 @@
 			"source": "CDPH",
 			"type": "WeaponM",
 			"scfType": "meleeweapon",
+			"rarity": "none",
+			"items":[
+
+			]
+		},
+		{
+			"name": "Shields",
+			"source": "CDPH",
+			"type": "WeaponM",
+			"scfType": "shields",
 			"rarity": "none",
 			"items":[
 

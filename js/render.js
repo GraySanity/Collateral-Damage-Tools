@@ -5433,12 +5433,12 @@ Renderer.item = {
 
 			if (!renderedDmg2 && item.dmg2) renderedProperties.unshift(`alt. ${Renderer.item._renderDamage(item.dmg2)}`);
 
-			return `${item.dmg1 && renderedProperties.length ? " - " : ""}${renderedProperties.join(", ")}`
+			return `${item.dmg1 && renderedProperties.length ? "<br>" : ""}${renderedProperties.join("<br>")}`
 		} else {
 			const parts = [];
 			if (item.dmg2) parts.push(`alt. ${Renderer.item._renderDamage(item.dmg2)}`);
-			if (item.range) parts.push(`range ${item.range} ft.`);
-			return `${item.dmg1 && parts.length ? " - " : ""}${parts.join(", ")}`;
+			if (item.range) parts.push(`range: ${item.range} meter`);
+			return `${item.dmg1 && parts.length ? "<br>" : ""}${parts.join("<br>")}`;
 		}
 	},
 
@@ -6179,6 +6179,10 @@ Renderer.item = {
 				if (item.scfType ==="plasmalgun") {
 					Renderer.item._initFullEntries(item);
 					item._fullEntries.push({type: "wrapper", wrapped: "A gun that uses special high pressure gascans and high capacity powerbanks as ammunition, being able to fire white-blue-ish plasma at a high velocity.  Usually giving a well noticable electrical current *Wirr* and *Zoowm* when shot.", data: {[VeCt.ENTDATA_ITEM_MERGED_ENTRY_TAG]: "type"}});
+				}
+				if (item.scfType ==="shields") {
+					Renderer.item._initFullEntries(item);
+					item._fullEntries.push({type: "wrapper", wrapped: "A ", data: {[VeCt.ENTDATA_ITEM_MERGED_ENTRY_TAG]: "type"}});
 				}
 			} else {
 				if (item.scfType === "arcane") {
