@@ -3226,7 +3226,6 @@ Parser.getTagSource = function (tag, source) {
 Parser.ITEM_TYPE_JSON_TO_ABV = {
 	"Mod": "Modification",
 	"Ammo": "Ammunition",
-	"AmmoR": "Uses Recoverable Ammunition",
 	"ArtT": "Artisan's Tools",
 	"Expl": "Explosive",
 	"Food": "Food and Drink",
@@ -3238,7 +3237,8 @@ Parser.ITEM_TYPE_JSON_TO_ABV = {
 	"ArmorP": "Power Armor",
 	"INS": "Instrument",
 	"WeaponM": "Melee Weapon",
-	"WeaponR": "Ranged Weapon",
+	"WeaponRU": "Ranged Weapon",
+	"WeaponRR": "Ranged Weapon (Recoverable Ammunition)",
 	"Shield": "Shield",
 	"Other": "Other",
 	"Tool": "Tool",

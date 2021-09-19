@@ -121,7 +121,61 @@
 		"entries":[
 			
 		]
+	},
+	{
+		"name":""
 	}
 ],
-	"itemGroup": []
+	"itemGroup": [
+		{
+			"name": "Pressure Based Guns",
+			"source": "CDPH",
+			"type": "WeaponRU",
+			"scfType": "pressureguns",
+			"rarity": "none",
+			"items":[
+
+			]
+		},
+		{
+			"name": "Laser Based Guns",
+			"source": "CDPH",
+			"type": "WeaponRU",
+			"scfType": "laserguns",
+			"rarity": "none",
+			"items":[
+
+			]
+		},
+		{
+			"name": "Coil Based Guns",
+			"source": "CDPH",
+			"type": "WeaponRU",
+			"scfType": "coilguns",
+			"rarity": "none",
+			"items":[
+
+			]
+		},
+		{
+			"name": "Plasma Based Guns",
+			"source": "CDPH",
+			"type": "WeaponRU",
+			"scfType": "plasmaguns",
+			"rarity": "none",
+			"items":[
+
+			]
+		},
+		{
+			"name": "General Melee",
+			"source": "CDPH",
+			"type": "WeaponM",
+			"scfType": "meleeweapon",
+			"rarity": "none",
+			"items":[
+
+			]
+		}
+	]
 }
