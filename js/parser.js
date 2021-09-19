@@ -724,64 +724,23 @@ Parser._moneyToFull = function (it, prop, propMult, opts = {isShortForm: false, 
 };
 
 Parser._moneyToFullMultiCurrency = function (it, prop, propMult, {isShortForm, multiplier} = {}) {
-	if (it[prop]) {
-		const simplified = CurrencyUtil.doSimplifyCoins(
-			{
-				cp: it[prop] * (multiplier ?? 1),
-			},
-			{
-				currencyConversionId: it.currencyConversion,
-			},
-		);
+	if (it[prop]) return it[prop]+" credits"; 
 
-		const conversionTable = Parser.getCurrencyConversionTable(it.currencyConversion);
-
-		return [...conversionTable]
-			.reverse()
-			.filter(meta => simplified[meta.coin])
-			.map(meta => `${simplified[meta.coin].toLocaleString(undefined, {maximumFractionDigits: 5})} ${meta.coin}`)
-			.join(", ");
-	} else if (it[propMult]) return isShortForm ? `×${it[propMult]}` : `base value ×${it[propMult]}`;
-	return "";
 };
 
 Parser.DEFAULT_CURRENCY_CONVERSION_TABLE = [
 	{
-		coin: "cp",
+		coin: "cred",
 		mult: 1,
-	},
-	{
-		coin: "sp",
-		mult: 0.1,
-	},
-	{
-		coin: "gp",
-		mult: 0.01,
 		isFallback: true,
 	},
 ];
 Parser.FULL_CURRENCY_CONVERSION_TABLE = [
 	{
-		coin: "cp",
+		coin: "cred",
 		mult: 1,
-	},
-	{
-		coin: "sp",
-		mult: 0.1,
-	},
-	{
-		coin: "ep",
-		mult: 0.02,
-	},
-	{
-		coin: "gp",
-		mult: 0.01,
 		isFallback: true,
-	},
-	{
-		coin: "pp",
-		mult: 0.001,
-	},
+	}
 ];
 Parser.getCurrencyConversionTable = function (currencyConversionId) {
 	const fromBrew = currencyConversionId ? MiscUtil.get(BrewUtil.homebrewMeta, "currencyConversions", currencyConversionId) : null;
@@ -803,16 +762,11 @@ Parser.getCurrencyAndMultiplier = function (value, currencyConversionId) {
 	return conversionTable.last();
 };
 
-Parser.COIN_ABVS = ["cp", "sp", "ep", "gp", "pp","cred"];
+Parser.COIN_ABVS = ["cred"];
 Parser.COIN_ABV_TO_FULL = {
-	"cp": "copper pieces",
-	"sp": "silver pieces",
-	"ep": "electrum pieces",
-	"gp": "gold pieces",
-	"pp": "platinum pieces",
 	"cred": "credits"
 };
-Parser.COIN_CONVERSIONS = [1, 10, 50, 100, 1000];
+Parser.COIN_CONVERSIONS = [1];
 
 Parser.coinAbvToFull = function (coin) {
 	return Parser._parse_aToB(Parser.COIN_ABV_TO_FULL, coin);
@@ -821,27 +775,7 @@ Parser.coinAbvToFull = function (coin) {
 Parser.itemWeightToFull = function (item, isShortForm) {
 	if (item.weight) {
 		// Handle pure integers
-		if (Math.round(item.weight) === item.weight) return `${item.weight} lb.${(item.weightNote ? ` ${item.weightNote}` : "")}`;
-
-		// Attempt to render the amount as (a number +) a vulgar
-		const weightOunces = item.weight * 16;
-		const integerPart = Math.floor(item.weight);
-		const vulgarPart = weightOunces % 16;
-
-		let vulgarGlyph;
-		switch (vulgarPart) {
-			case 2: vulgarGlyph = "⅛"; break;
-			case 4: vulgarGlyph = "¼"; break;
-			case 6: vulgarGlyph = "⅜"; break;
-			case 8: vulgarGlyph = "½"; break;
-			case 10: vulgarGlyph = "⅝"; break;
-			case 12: vulgarGlyph = "¾"; break;
-			case 14: vulgarGlyph = "⅞"; break;
-		}
-		if (vulgarGlyph) return `${integerPart || ""}${vulgarGlyph} lb.${(item.weightNote ? ` ${item.weightNote}` : "")}`
-
-		// Fall back on decimal pounds or ounces
-		return `${item.weight < 1 ? item.weight * 16 : item.weight} ${item.weight < 1 ? "oz" : "lb"}.${(item.weightNote ? ` ${item.weightNote}` : "")}`
+		if (item.weight === item.weight) return `${item.weight} kg${(item.weightNote ? ` ${item.weightNote}` : "")}`;
 	}
 	if (item.weightMult) return isShortForm ? `×${item.weightMult}` : `base weight ×${item.weightMult}`;
 	return "";
@@ -907,9 +841,9 @@ Parser.coinValueToNumber = function (value) {
 		.toLowerCase();
 	const m = Parser._costSplitRegexp.exec(value);
 	if (!m) throw new Error(`Badly formatted value "${value}"`);
-	const ixCoin = Parser.COIN_ABVS.indexOf(m[3]);
-	if (!~ixCoin) throw new Error(`Unknown coin type "${m[3]}"`);
-	return Number(m[1]) * Parser.COIN_CONVERSIONS[ixCoin];
+	const ixCoin = Parser.COIN_ABVS.indexOf(m[0]);
+	if (!~ixCoin) throw new Error(`Unknown coin type "${m[0]}"`);
+	return Number(m[0]) * Parser.COIN_CONVERSIONS[ixCoin];
 };
 
 Parser.weightValueToNumber = function (value) {
@@ -3226,7 +3160,6 @@ Parser.getTagSource = function (tag, source) {
 Parser.ITEM_TYPE_JSON_TO_ABV = {
 	"Mod": "Modification",
 	"Ammo": "Ammunition",
-	"AmmoR": "Uses Recoverable Ammunition",
 	"ArtT": "Artisan's Tools",
 	"Expl": "Explosive",
 	"Food": "Food and Drink",
@@ -3238,7 +3171,8 @@ Parser.ITEM_TYPE_JSON_TO_ABV = {
 	"ArmorP": "Power Armor",
 	"INS": "Instrument",
 	"WeaponM": "Melee Weapon",
-	"WeaponR": "Ranged Weapon",
+	"WeaponRU": "Ranged Weapon",
+	"WeaponRR": "Ranged Weapon (Recoverable Ammunition)",
 	"Shield": "Shield",
 	"Other": "Other",
 	"Tool": "Tool",

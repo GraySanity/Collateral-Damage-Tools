@@ -5433,12 +5433,12 @@ Renderer.item = {
 
 			if (!renderedDmg2 && item.dmg2) renderedProperties.unshift(`alt. ${Renderer.item._renderDamage(item.dmg2)}`);
 
-			return `${item.dmg1 && renderedProperties.length ? " - " : ""}${renderedProperties.join(", ")}`
+			return `${item.dmg1 && renderedProperties.length ? "<br>" : ""}${renderedProperties.join("<br>")}`
 		} else {
 			const parts = [];
 			if (item.dmg2) parts.push(`alt. ${Renderer.item._renderDamage(item.dmg2)}`);
-			if (item.range) parts.push(`range ${item.range} ft.`);
-			return `${item.dmg1 && parts.length ? " - " : ""}${parts.join(", ")}`;
+			if (item.range) parts.push(`range: ${item.range} meter`);
+			return `${item.dmg1 && parts.length ? "<br>" : ""}${parts.join("<br>")}`;
 		}
 	},
 
@@ -6163,6 +6163,26 @@ Renderer.item = {
 				if (item.scfType === "holy") {
 					Renderer.item._initFullEntries(item);
 					item._fullEntries.push({type: "wrapper", wrapped: "A holy symbol is a representation of a god or pantheon. It might be an amulet depicting a symbol representing a deity, the same symbol carefully engraved or inlaid as an emblem on a shield, or a tiny box holding a fragment of a sacred relic. A cleric or paladin can use a holy symbol as a spellcasting focus. To use the symbol in this way, the caster must hold it in hand, wear it visibly, or bear it on a shield.", data: {[VeCt.ENTDATA_ITEM_MERGED_ENTRY_TAG]: "type"}});
+				}
+				if (item.scfType === "pressuregun") {
+					Renderer.item._initFullEntries(item);
+					item._fullEntries.push({type: "wrapper", wrapped: "A gun that uses a pressure based fireing system, usually by exploading a small amount of explosive inside the used ammunition to propell said ammunition foreward. Most give a loud *Bang* when shot.", data: {[VeCt.ENTDATA_ITEM_MERGED_ENTRY_TAG]: "type"}});
+				}
+				if (item.scfType === "coilgun") {
+					Renderer.item._initFullEntries(item);
+					item._fullEntries.push({type: "wrapper", wrapped: "A gun that uses magnetic or ferromagnetic based ammunition, and fires it by using strong electromagnetic coils. Usually giving a well noticable electrical current *Wirr* when shot.", data: {[VeCt.ENTDATA_ITEM_MERGED_ENTRY_TAG]: "type"}});
+				}
+				if (item.scfType === "lasergun") {
+					Renderer.item._initFullEntries(item);
+					item._fullEntries.push({type: "wrapper", wrapped: "A gun that uses high capacity powerbanks to fire a very strong laser for a brief moment. Usually giving a very quiet electrical current *Wirr* when shot.", data: {[VeCt.ENTDATA_ITEM_MERGED_ENTRY_TAG]: "type"}});
+				}
+				if (item.scfType ==="plasmalgun") {
+					Renderer.item._initFullEntries(item);
+					item._fullEntries.push({type: "wrapper", wrapped: "A gun that uses special high pressure gascans and high capacity powerbanks as ammunition, being able to fire white-blue-ish plasma at a high velocity.  Usually giving a well noticable electrical current *Wirr* and *Zoowm* when shot.", data: {[VeCt.ENTDATA_ITEM_MERGED_ENTRY_TAG]: "type"}});
+				}
+				if (item.scfType ==="shields") {
+					Renderer.item._initFullEntries(item);
+					item._fullEntries.push({type: "wrapper", wrapped: "A ", data: {[VeCt.ENTDATA_ITEM_MERGED_ENTRY_TAG]: "type"}});
 				}
 			} else {
 				if (item.scfType === "arcane") {
