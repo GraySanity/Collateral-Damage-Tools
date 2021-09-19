@@ -1,0 +1,176 @@
+{
+	"feat": [
+		{
+			"name": "name of ability",
+			"source": "CDPH",
+			"class": ["Martial Fighter"],
+			"prerequisite":
+			[{
+				"class":["classes and level requirements"]
+			}],
+			"entries":["text"]
+		},
+		{
+			"name": "Rage",
+			"source": "CDPH",
+			"class": ["Barbarian"],
+			"entries":["In battle, you fight with primal ferocity. On your turn, you can enter a rage as a Bonus Action. While raging, you gain the following benefits if you aren’t wearing Heavy Armor or Power Armor:",
+				"• You have advantage on Strength checks and Strength saves.",
+				"• When you make a melee attack, you gain +4 on your damage roll.",
+				"• You have resistance to bludgeoning, piercing, and slashing damage.",
+				"Your rage lasts for 1 minute. It ends early if you are knocked unconscious or if your turn ends and you haven’t attacked a hostile creature since your last turn or taken damage since then.<br>You can only do this once every two hours, and every time you do it more you get one exhaustion."]
+		},
+		{
+			"name": "Unarmored Brute Defense",
+			"source": "CDPH",
+			"class": ["Barbarian"],
+			"entries":["While you are not wearing any armor, your Armor Class equals <br>9 + Dexterity Modifier + Constitution Modifier"]
+		},
+		{
+			"name": "Reckless Attack",
+			"source": "CDPH",
+			"class": ["Barbarian"],
+			"entries":["You can throw aside all concern for defence to attack with fierce desperation. When you make your first attack on your turn, you can decide to attack recklessly. Doing so gives you advantage on melee attacks during this turn, but attack rolls against you have advantage until your next turn."]
+		},
+		{
+			"name": "Danger Sense",
+			"source": "CDPH",
+			"class": ["Barbarian"],
+			"entries":["You gain an uncanny sense of when things nearby aren’t as they should be, giving you an edge when you dodge away from danger. You have advantage on Dexterity Saves against effects that you can see, such as traps or explosives. To gain this benefit, you can’t be blinded, deafened, or incapacitated."]
+		},
+		{
+			"name": "Feral Instinct",
+			"source": "CDPH",
+			"class": ["Barbarian"],
+			"prerequisite": [
+				{
+					"feature": [
+						"{@feat Rage|CDPH}"
+					]
+				}
+			],
+			"entries":["Your instincts are so honed that you have advantage on initiative rolls. Additionally, if you are surprised at the beginning of combat and aren’t incapacitated, you can act normally on your first turn, but only if you enter your rage before doing anything else on that turn."]
+		},
+		{
+			"name": "Relentless Rage",
+			"source": "CDPH",
+			"class": ["Barbarian"],
+			"prerequisite": [
+				{
+					"feature": ["{@feat Rage|CDPH}"],
+					"class": ["Barbarian Level 6"]
+				}
+			],
+			"entries":["Your instincts are so honed that you have advantage on initiative rolls. Additionally, if you are surprised at the beginning of combat and aren’t incapacitated, you can act normally on your first turn, but only if you enter your rage before doing anything else on that turn."]
+		},
+		{
+			"name": "Frenzy",
+			"source": "CDPH",
+			"class": ["Barbarian"],
+			"prerequisite": [
+				{
+					"feature": ["{@feat Rage|CDPH}"]
+				}
+			],
+			"entries":["You can go into a frenzy when you rage. If you do so, for the duration of your rage you can make a single melee weapon attack or unarmed strike as a Bonus Action on each of your turns after this one.<br>While in this rage/frenzy, you also gain 1 additional damage die on any damage roll you make. When your rage ends, you suffer one level of exhaustion."]
+		},
+		{
+			"name": "Mindless Rage",
+			"source": "CDPH",
+			"class": ["Barbarian"],
+			"prerequisite": [
+				{
+					"feature": ["{@feat Rage|CDPH}"]
+				}
+			],
+			"entries":["You can’t be charmed or frightened while raging. If you are charmed or frightened when you enter your rage, the effect is suspended for the duration of the rage"]
+		},
+		{
+			"name": "Persistent Rage",
+			"source": "CDPH",
+			"class": ["Barbarian"],
+			"prerequisite": [
+				{
+					"feature": ["{@feat Rage|CDPH}"],
+					"class": ["Barbarian Level 4"]
+				}
+			],
+			"entries":["Your rage is so fierce that it ends early only if you fall unconscious or if you choose to end it. The duration of the rage is also increased to 5 minutes."]
+		},
+		{
+			"name": "Indomitable Might",
+			"source": "CDPH",
+			"class": ["Barbarian"],
+			"prerequisite": [
+				{
+					"class": ["Barbarian Level 3"]
+				}
+			],
+			"entries":["If your total for a Strength check is less than your Strength Ability Score, you can use that score in place of the total of the check."]
+		},
+		{
+			"name": "Determination of the Gods",
+			"source": "CDPH",
+			"class": ["Barbarian"],
+			"entries":["You can withstand wounds that would kill any normal person. You gain +1 HP every level (this does work retroactively)."]
+		},
+		{
+			"name": "Hard to Hit",
+			"source": "CDPH",
+			"class": ["Barbarian"],
+			"entries":["Your body has become a bit tougher to go through.<br>You gain 1 + 10% DR."]
+		},
+		{
+			"name": "Raging Hard",
+			"source": "CDPH",
+			"class": ["Barbarian"],
+			"prerequisite": [
+				{
+					"feature": ["{@feat Rage|CDPH}"],
+					"class": ["Barbarian Level 4"]
+				}
+			],
+			"entries":["You are able to brush off attacks a lot easier while in your rage. You gain 2 DR while you are in your rage."]
+		},
+		{
+			"name": "Who Needs Arms with Legs Like These",
+			"source": "CDPH",
+			"class": ["Barbarian"],
+			"entries":["You gain +1 meter movement when you are wearing light armor or no armor."]
+		},
+		{
+			"name": "Buff",
+			"source": "CDPH",
+			"class": ["Barbarian"],
+			"prerequisite": [
+				{
+					"class": ["Barbarian Level 12"]
+				}
+			],
+			"entries":["You are buff as hell. Your Strength and Constitution scores both increase by 4, and the maximum for those scores is now 10 higher."]
+		},
+		{
+			"name": "Rapid Regeneration",
+			"source": "CDPH",
+			"class": ["Barbarian"],
+			"prerequisite": [
+				{
+					"class": ["Barbarian Level 7"]
+				}
+			],
+			"entries":["Your stamina and grit has increased quite a lot, and while you knew good enough how to deal with wounds you got, now your body has learned that as well.<br>You regain 1 HP every turn while in a fight, or 4 HP every hour while not in a fight."]
+		},
+		{
+			"name": "Barbarian Mastery",
+			"source": "CDPH",
+			"class": ["Barbarian"],
+			"mastery": true,
+			"prerequisite": [
+				{
+					"class": ["Barbarian Level 16"]
+				}
+			],
+			"entries":["<i>Mastery</i><br><br>You gain 5 Max HP."]
+		}
+	]
+}
