@@ -37,12 +37,24 @@
 					"type": "entries",
 					"name": "Ammunition Firing",
 					"entries": [
-						"<br>You can use a weapon that has the ammunition property to make a ranged attack only if you have ammunition to fire from the weapon. Each time you attack with the weapon, you expend one piece of ammunition. Drawing the ammunition from a quiver, case, or other container is part of the attack. Loading a one-handed weapon requires a free hand. The ammunition of a firearm is destroyed upon use.",
-						"If you use a weapon that has the ammunition property to make a melee attack, you treat the weapon as an improvised weapon. A sling must be loaded to deal any damage when used in this way."
+						"<br>This weapon fires ammunition as part of using or attacking with it. Reloading this weapon requires both hands to be free, or to be used to hold said weapon. If you use this weapon to make a melee attack, you treat the weapon as an improvised weapon.<br>The ammunition that this weapon uses is destroyed upon use."
 					]
 				}
 			],
-			"template":"{{item.ammocap}} shots/clip"
+			"template":"{{item.ammocap}} shots/clip<br>Range: {{item.range}} m"
+		},
+		{
+			"abbreviation": "boltaction",
+			"source": "CDPH",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Bolt-Action",
+					"entries": [
+						"<br>This weapon uses a bold-action fireing mechanism. This means that to reload a new projectile into the chamber, you need to do kind of manually do this.<br>After shooting this weapon, you need to spend an Action to reload a bullet into the chamber<br>"
+					]
+				}
+			]
 		},
 		{
 			"abbreviation": "craftable",
@@ -52,11 +64,66 @@
 					"type": "entries",
 					"name": "Craftable Only",
 					"entries": [
-						"<br>This item cannot be aquired by shops or by other normal means.<br>This item can only be crafted and maintained by an Engineer with the required ability, or could be gotten (possibly without the maintenance requirements) by other special means."
+						"<br>This item cannot be aquired by shops or by other normal means.<br>This item can only be crafted and maintained by an Engineer with the required ability, or could be gotten (possibly without the maintenance requirements) by other special means.<br>"
 					]
 				}
 			]			
 
+		},
+		{
+			"abbreviation": "foldable",
+			"source": "CDPH",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Foldable Weapon",
+					"entries": [
+						"<br>Weapons with the Foldable trait can be disassembled into parts to make it easier to travel with. It costs two Actions and two Bonus Actions to assemble or disassemble.<br>"
+					]
+				}
+			]			
+
+		},
+		{
+			"abbreviation": "burstfire",
+			"source": "CDPH",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Burst Fire",
+					"entries": [
+						"<br>This weapon can shoot in an area originating from you with the Maximum Effective Range as length. If you use this area attack, then you need to make an attack roll. Anyone’s AC in that area that is lower than that attack roll gets hit. You roll a separate damage roll for everyone who was hit, moving clockwise.<br>You cannot add any Dexterity Based Bonusses to the attack or damage rolls when you attack this way.<br>Shooting this way is an option as you can shoot semi-automatically and just fire on a single target, but this is not the case if it is specified with “<b>only</b>” in the header, as this means that you can only use the area attack. <br>The area and cost (noted by “Burst Fire (<i> cost </i>) : <i>area</i> ” ) of this burst fire are also noted in the header."
+					]
+				}			
+			],
+			"template": "Burst Fire ({{item.burstcost}}): {{item.bursttype}}"			
+
+		},
+		{
+			"abbreviation": "heavy",
+			"source": "CDPH",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Heavy",
+					"entries": [
+						"<br>Weapons with the Heavy trait are more difficult to handle than most other weapons, and are as noted, very heavy.<br>You can only attack once per turn with this weapon, no matter the amount of Actions, Bonus Actions or Reactions you may have."
+					]
+				}			
+			]
+		},
+		{
+			"abbreviation": "unconventional",
+			"source": "CDPH",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Unconventional",
+					"entries": [
+						"<br>This is an unconventional weapon. Weapons with this trait are, like what it says on the tin, unconventional. They are rarely used, and a lot of modifications and attachments are not made for these kind of weapons."
+					]
+				}			
+			]
 		}
 	],
 	"itemType": [],

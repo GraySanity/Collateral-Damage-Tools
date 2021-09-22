@@ -3359,7 +3359,6 @@ Renderer.feat = {
 
 		const renderer = Renderer.get().setFirstSection(true);
 		const renderStack = [];
-		console.log(feat.prerequisite);
 		const prerequisite = Renderer.utils.getPrerequisiteHtml(feat.prerequisite);
 		Renderer.feat.mergeAbilityIncrease(feat);
 		renderStack.push(`
@@ -5437,7 +5436,6 @@ Renderer.item = {
 		} else {
 			const parts = [];
 			if (item.dmg2) parts.push(`alt. ${Renderer.item._renderDamage(item.dmg2)}`);
-			if (item.range) parts.push(`range: ${item.range} meter`);
 			return `${item.dmg1 && parts.length ? "<br>" : ""}${parts.join("<br>")}`;
 		}
 	},
@@ -5491,8 +5489,8 @@ Renderer.item = {
 				vehPartMiddle,
 
 				// region ~~Dammit Mercer~~ Additional fields present in EGW
-				travelCostFull ? `Personal Travel Cost: ${travelCostFull} per mile per passenger` : null,
-				shippingCostFull ? `Shipping Cost: ${shippingCostFull} per 100 pounds per mile` : null,
+				travelCostFull ? `Personal Travel Cost: ${travelCostFull} per kilometer per passenger` : null,
+				shippingCostFull ? `Shipping Cost: ${shippingCostFull} per 100 pounds per kilometer` : null,
 				// endregion
 
 				vehPartLower,
@@ -5500,8 +5498,16 @@ Renderer.item = {
 		}
 
 		const damage = damageParts.join(", ");
-		const damageType = item.dmgType ? Parser.dmgTypeToFull(item.dmgType) : "";
+		
 		const propertiesTxt = Renderer.item._getPropertiesText(item);
+		var damageType;
+
+		if(Array.isArray(item.dmgType))
+		{	item.dmgType.forEach(damagetype => damageType += Parser.dmgTypeToFull(damagetype)+"/");
+			// removes the last / and removes ""undifined" from the start of the string
+			damageType = damageType.substring(9, damageType.length - 1);
+		}
+		else {damageType = item.dmgType ? Parser.dmgTypeToFull(item.dmgType) : "";}
 
 		return [damage, damageType, propertiesTxt];
 	},
@@ -6392,7 +6398,10 @@ Renderer.item = {
 		return specificVariants;
 	},
 
-	isMundane (item) { return item.rarity === "none" || item.rarity === "unknown" || item._category === "basic"; },
+	//filter for throwing things in the "mundane", "modification", "drug", "special" (or "magic") group in the items page
+	isMundane (item) {return (item.rarity === "none" || item.rarity === "unknown" || item._category === "basic") && typeof item.MC !== "string"; },
+	isModification (item) {return item.MC !== "none" || item.MC !== "unknown" || item.MC !== "undefined" ;},
+	isDrug (item) {},
 
 	pGetFluff (item) {
 		return Renderer.utils.pGetFluff({

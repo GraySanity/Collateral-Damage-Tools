@@ -20,6 +20,9 @@ class ItemsPage extends ListPage {
 		this._$totalItems = null;
 
 		this._mundaneList = null;
+		this._maintanenceList = null;
+		this._drugsList = null;
+		this._specialList = null;
 		this._magicList = null;
 	}
 
@@ -390,6 +393,7 @@ class ItemsPage extends ListPage {
 			this.handleFilterChange.bind(this),
 		);
 
+		//for the "mundane", "magic" etc groups of item list
 		SortUtil.initBtnSortHandlers($("#filtertools-mundane"), this._mundaneList);
 		SortUtil.initBtnSortHandlers($("#filtertools-magic"), this._magicList);
 

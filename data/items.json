@@ -23,7 +23,6 @@
 				"class": "artificer|tce"
 			}
 		],
-		"wondrous": true,
 		"bonusSpellAttack": "+1",
 		"bonusSpellSaveDc": "+1",
 		"entries": [
@@ -31,17 +30,6 @@
 			"While holding this tool, you gain a +1 bonus to the spell attack rolls and the saving throw DCs of your artificer spells.",
 			"As an action, you can focus on the tool to channel your creative forces. Choose a cantrip that you don't know from any class list. For 8 hours, you can cast that cantrip, and it counts as an artificer cantrip for you. Once this property is used, it can't be used again until the next dawn."
 		]
-	},
-	{
-		"name": "Unbreakable Arrow",
-		"source": "CDPM",
-		"type": "Ammo",
-		"tier": "minor",
-		"rarity": "common",
-		"entries": [
-			"This arrow can't be broken, except when it is within an {@spell antimagic field}."
-		],
-		"hasFluffImages": true
 	},
 	{
 		"name": "Clean Up",
@@ -116,7 +104,7 @@
 	},
 	{
 		"name": "Sonic Screwdriver",
-		"source": "CDPH",
+		"source": "CDPM",
 		"type": "Tool",
 		"entries":[
 			
@@ -152,29 +140,313 @@
 		"ammocap": 28,
 		"gun": true,
 		"SMG": true,
+		"burstcost": 7,
+		"bursttype": "cone/line",
+		"property":[
+			"ammofire",
+			"foldable",
+			"burstfire"
+		],
+		"entries":[
+			"+1 to Hit Bonus"
+		]
+	},
+	{
+		"name":"Assault Rifle",
+		"source": "CDPM",
+		"type": "WeaponRU",
+		"rarity": "none",
+		"weight": 3.5,
+		"value": 180,
+		"dmg1":"1d8",
+		"dmgType":"P",
+		"range": "3/30/100",
+		"ammocap": 32,
+		"gun": true,
+		"assault rifle": true,
+		"burstcost": 8,
+		"bursttype": "cone/line",
+		"property":[
+			"ammofire",
+			"foldable",
+			"burstfire"
+		]
+	},
+	{
+		"name":"Shotgun",
+		"source": "CDPM",
+		"type": "WeaponRU",
+		"rarity": "none",
+		"weight": 3,
+		"value": 130,
+		"dmg1":"3d4",
+		"dmgType":"P",
+		"range": "1/20/50",
+		"ammocap": 6,
+		"gun": true,
+		"shotgun": true,
 		"property":[
 			"ammofire"
 		],
 		"entries":[
-			"+1 to Hit Bonus<br>Can shoot in an cone or line costing 7 ammunition.<br>Foldable"
+			"+1 to Hit Bonus"
+		]
+	},
+	{
+		"name":"Hunting Rifle",
+		"source": "CDPM",
+		"type": "WeaponRU",
+		"rarity": "none",
+		"weight": 4,
+		"value": 160,
+		"dmg1":"2d4",
+		"dmgType":"P",
+		"range": "5/150/250",
+		"ammocap": 12,
+		"gun": true,
+		"longrifle": true,
+		"property":[
+			"ammofire",
+			"boltaction"
+		]
+	},
+	{
+		"name":"Sniper Rifle",
+		"source": "CDPM",
+		"type": "WeaponRU",
+		"rarity": "none",
+		"weight": 6.5,
+		"value": 240,
+		"dmg1":"3d4",
+		"dmgType":"P",
+		"range": "5/300/800",
+		"ammocap": 8,
+		"gun": true,
+		"longrifle": true,
+		"property":[
+			"ammofire",
+			"foldable",
+			"boltaction"
+		]
+	},
+	{
+		"name":"LMG",
+		"source": "CDPM",
+		"type": "WeaponRU",
+		"rarity": "none",
+		"weight": 9,
+		"value": 350,
+		"dmg1":"3d4",
+		"dmgType":"P",
+		"range": "8/50/100",
+		"ammocap": 180,
+		"burstcost":30,
+		"bursttype": "cone/line <b>only</b>",
+		"gun": true,
+		"lmg": true,
+		"property":[
+			"ammofire",
+			"burstfire",
+			"heavy"
+		],
+		"entries":[
+			"+1 to Hit Bonus"
+		]
+	},
+	{
+		"name":"Coil Pistol",
+		"source": "CDPM",
+		"type": "WeaponRU",
+		"rarity": "none",
+		"weight": 1,
+		"value": 50,
+		"dmg1":"1d6+1",
+		"dmgType":"P",
+		"range": "0.5/18/40",
+		"ammocap": 8,
+		"gun": true,
+		"pistol": true,
+		"property":[
+			"ammofire"
+		]
+	},
+	{
+		"name":"Coil SMG",
+		"source": "CDPM",
+		"type": "WeaponRU",
+		"rarity": "none",
+		"weight": 2.5,
+		"value": 90,
+		"dmg1":"1d6",
+		"dmgType":"P",
+		"range": "0.5/10/60",
+		"ammocap": 24,
+		"gun": true,
+		"SMG": true,
+		"burstcost": 8,
+		"bursttype": "cone/line",
+		"property":[
+			"ammofire",
+			"foldable",
+			"burstfire"
+		],
+		"entries":[
+			"+1 to Hit Bonus"
+		]
+	},
+	{
+		"name":"Coil Assault Rifle",
+		"source": "CDPM",
+		"type": "WeaponRU",
+		"rarity": "none",
+		"weight": 4,
+		"value": 200,
+		"dmg1":"1d8+1",
+		"dmgType":"P",
+		"range": "3/30/100",
+		"ammocap": 24,
+		"gun": true,
+		"assault rifle": true,
+		"burstcost": 11,
+		"bursttype": "cone/line",
+		"property":[
+			"ammofire",
+			"burstfire"			
+		]
+	},
+	{
+		"name":"Coil Shotgun",
+		"source": "CDPM",
+		"type": "WeaponRU",
+		"rarity": "none",
+		"weight": 4.5,
+		"value": 180,
+		"dmg1":"5d4-5",
+		"dmgType":"P",
+		"range": "1/15/30",
+		"ammocap": 4,
+		"burstcost": 1,
+		"bursttype": "cone <b>only</b>",
+		"gun": true,
+		"shotgun": true,
+		"property":[
+			"ammofire",
+			"burstfire",
+			"boltaction",
+			"unconventional"
+		],
+		"entries":[
+			"+3 to Hit Bonus"
+		]
+	},
+	{
+		"name":"Slugger",
+		"source": "CDPM",
+		"type": "WeaponRU",
+		"rarity": "none",
+		"weight": 5,
+		"value": 360,
+		"dmg1":"5d4",
+		"dmgType":["P","B"],
+		"range": "1/15/30",
+		"ammocap": 4,
+		"burstcost": 1,
+		"bursttype": "cone <b>only</b>",
+		"gun": true,
+		"shotgun": true,
+		"property":[
+			"ammofire",
+			"burstfire",
+			"boltaction",
+			"unconventional"
+		],
+		"entries":[
+			"+3 to Hit Bonus"
+		]
+	},
+	{
+		"name":"Coil Hunting Rifle",
+		"source": "CDPM",
+		"type": "WeaponRU",
+		"rarity": "none",
+		"weight": 4.5,
+		"value": 175,
+		"dmg1":"2d6",
+		"dmgType":"P",
+		"range": "5/150/500",
+		"ammocap": 8,
+		"gun": true,
+		"longrifle": true,
+		"property":[
+			"ammofire",
+			"boltaction",
+			"foldable"
+		]
+	},
+	{
+		"name":"Coil Sniper Rifle",
+		"source": "CDPM",
+		"type": "WeaponRU",
+		"rarity": "none",
+		"weight": 8,
+		"value": 300,
+		"dmg1":"3d4+3",
+		"dmgType":"P",
+		"range": "5/500/2000",
+		"ammocap": 6,
+		"gun": true,
+		"longrifle": true,
+		"property":[
+			"ammofire",
+			"foldable",
+			"boltaction"
+		]
+	},
+	{
+		"name":"Coil LMG",
+		"source": "CDPM",
+		"type": "WeaponRU",
+		"rarity": "none",
+		"weight": 10.5,
+		"value": 340,
+		"dmg1":"3d4+1",
+		"dmgType":"P",
+		"range": "8/50/100",
+		"ammocap": 120,
+		"burstcost":30,
+		"bursttype": "cone/line <b>only</b>",
+		"gun": true,
+		"lmg": true,
+		"property":[
+			"ammofire",
+			"burstfire",
+			"heavy"
+		],
+		"entries":[
+			"+1 to Hit Bonus"
 		]
 	}
 ],
 	"itemGroup": [
 		{
 			"name": "Pressure Based Guns",
-			"source": "CDPH",
+			"source": "CDPM",
 			"type": "WeaponRU",
 			"scfType": "pressureguns",
 			"rarity": "none",
 			"items":[
-				"Pistol|CDPH",
-				"SMG|CDPH"
+				"Pistol|CDPM",
+				"SMG|CDPM",
+				"Assault Rifle|CDPM",
+				"Shotgun|CDPM",
+				"Hunting Rifle|CDPM",
+				"Sniper Rifle|CDPM",
+				"LMG|CDPM"
 			]
 		},
 		{
 			"name": "Laser Based Guns",
-			"source": "CDPH",
+			"source": "CDPM",
 			"type": "WeaponRU",
 			"scfType": "laserguns",
 			"rarity": "none",
@@ -184,17 +456,23 @@
 		},
 		{
 			"name": "Coil Based Guns",
-			"source": "CDPH",
+			"source": "CDPM",
 			"type": "WeaponRU",
 			"scfType": "coilguns",
 			"rarity": "none",
 			"items":[
-
+				"Coil Pistol|CDPM",
+				"Coil SMG|CDPM",
+				"Coil Assault Rifle|CDPM",
+				"Coil Shotgun|CDPM",
+				"Coil Hunting Rifle|CDPM",
+				"Coil Sniper Rifle|CDPM",
+				"Coil LMG|CDPM"
 			]
 		},
 		{
 			"name": "Plasma Based Guns",
-			"source": "CDPH",
+			"source": "CDPM",
 			"type": "WeaponRU",
 			"scfType": "plasmaguns",
 			"rarity": "none",
@@ -204,7 +482,7 @@
 		},
 		{
 			"name": "General Melee",
-			"source": "CDPH",
+			"source": "CDPM",
 			"type": "WeaponM",
 			"scfType": "meleeweapon",
 			"rarity": "none",
@@ -214,7 +492,7 @@
 		},
 		{
 			"name": "Shields",
-			"source": "CDPH",
+			"source": "CDPM",
 			"type": "WeaponM",
 			"scfType": "shields",
 			"rarity": "none",
