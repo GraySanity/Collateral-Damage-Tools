@@ -20,9 +20,7 @@ class ItemsPage extends ListPage {
 		this._$totalItems = null;
 
 		this._mundaneList = null;
-		this._maintanenceList = null;
-		this._drugsList = null;
-		this._specialList = null;
+		this._modificationList = null;
 		this._magicList = null;
 	}
 
@@ -36,6 +34,7 @@ class ItemsPage extends ListPage {
 		this._pageFilter.mutateAndAddToFilters(item, isExcluded);
 
 		const source = Parser.sourceJsonToAbv(item.source);
+		const MP = item.MP;
 		const type = item._typeListText.join(", ").toTitleCase();
 
 		if (item._fIsMundane) {
@@ -84,7 +83,53 @@ class ItemsPage extends ListPage {
 			);
 
 			return {mundane: listItem};
-		} else {
+		} 
+		else if (item._fIsModification)	{
+			const eleLi = e_({
+				tag: "div",
+				clazz: `lst__row flex-col ${isExcluded ? "lst__row--blacklisted" : ""}`,
+				click: (evt) => this._modificationList.doSelect(listItem, evt),
+				contextmenu: (evt) => ListUtil.openContextMenu(evt, this._modificationList, listItem),
+				children: [
+					e_({
+						tag: "a",
+						href: `#${hash}`,
+						clazz: "lst--border lst__row-inner",
+						children: [
+							e_({tag: "span", clazz: `col-3-5 pl-0 bold`, text: item.name}),
+							e_({tag: "span", clazz: `col-4`, text: type}),
+							e_({tag: "span", clazz: `col-1-5 text-center`, text: item.MP}),
+							e_({
+								tag: "span",
+								clazz: `col-1 text-center ${Parser.sourceJsonToColor(item.source)} pr-0`,
+								style: BrewUtil.sourceJsonToStylePart(item.source),
+								title: `${Parser.sourceJsonToFull(item.source)}${Renderer.utils.getSourceSubText(item)}`,
+								text: source,
+							}),
+						],
+					}),
+				],
+			});
+
+			const listItem = new ListItem(
+				itI,
+				eleLi,
+				item.name,
+				{
+					hash,
+					source,
+					type,
+					MP
+				},
+				{
+					uniqueId: item.uniqueId ? item.uniqueId : itI,
+					isExcluded,
+				},
+			);
+
+			return {modification: listItem};
+		}
+		else {
 			const eleLi = e_({
 				tag: "div",
 				clazz: `lst__row flex-col ${isExcluded ? "lst__row--blacklisted" : ""}`,
@@ -139,6 +184,7 @@ class ItemsPage extends ListPage {
 			return this._pageFilter.toDisplay(f, it);
 		}
 		this._mundaneList.filter(listFilter.bind(this));
+	//	this._modificationList.filter(listFilter.bind(this));
 		this._magicList.filter(listFilter.bind(this));
 		FilterBox.selectFirstVisible(this._dataList);
 	}
@@ -329,20 +375,32 @@ class ItemsPage extends ListPage {
 			syntax: this._listSyntax,
 			isBindFindHotkey: true,
 		});
+		this._modificationList = ListUtil.initList({
+			listClass: "modification",
+			fnSort: PageFilterItems.sortItems,
+			syntax: this._listSyntax,
+		});
 		this._magicList = ListUtil.initList({
 			listClass: "magic",
 			fnSort: PageFilterItems.sortItems,
 			syntax: this._listSyntax,
 		});
-		this._mundaneList.nextList = this._magicList;
+		this._mundaneList.nextList = this._modificationList;
+		this._modificationList.nextList = this._magicList;
 		this._magicList.prevList = this._mundaneList;
-		ListUtil.setOptions({primaryLists: [this._mundaneList, this._magicList]});
+		ListUtil.setOptions({primaryLists: [this._mundaneList, this._modificationList, this._magicList]});
 
 		const $elesMundaneAndMagic = $(`.ele-mundane-and-magic`);
 		$(`.side-label--mundane`).click(() => {
 			const filterValues = this._pageFilter.filterBox.getValues();
 			const curValue = MiscUtil.get(filterValues, "Miscellaneous", "Mundane");
 			this._pageFilter.filterBox.setFromValues({Miscellaneous: {Mundane: curValue === 1 ? 0 : 1}});
+			this.handleFilterChange();
+		});
+		$(`.side-label--modification`).click(() => {
+			const filterValues = this._pageFilter.filterBox.getValues();
+			const curValue = MiscUtil.get(filterValues, "Miscellaneous", "Modification");
+			this._pageFilter.filterBox.setFromValues({Miscellaneous: {Modification: curValue === 1 ? 0 : 1}});
 			this.handleFilterChange();
 		});
 		$(`.side-label--magic`).click(() => {
@@ -353,22 +411,41 @@ class ItemsPage extends ListPage {
 		});
 		const $outVisibleResults = $(`.lst__wrp-search-visible`);
 		const $wrpListMundane = $(`.itm__wrp-list--mundane`);
+		const $wrpListModification = $(`.itm__wrp-list--modification`);
 		const $wrpListMagic = $(`.itm__wrp-list--magic`);
+//VVV________________________________________________________________________________________VVV Add stuff for new Tab (like modification, mundane, magic etc.)
 		this._mundaneList.on("updated", () => {
 			const $elesMundane = $(`.ele-mundane`);
 
 			// Force-show the mundane list if there are no items on display
-			if (this._magicList.visibleItems.length) $elesMundane.toggleVe(!!this._mundaneList.visibleItems.length);
+			if (this._magicList.visibleItems.length && this._modificationList.visibleItems.length) $elesMundane.toggleVe(!!this._mundaneList.visibleItems.length);
 			else $elesMundane.showVe();
-			$elesMundaneAndMagic.toggleVe(!!(this._mundaneList.visibleItems.length && this._magicList.visibleItems.length));
+			$elesMundaneAndMagic.toggleVe(!!(this._mundaneList.visibleItems.length && this._modificationList.visibleItems.length && this._magicList.visibleItems.length));
 
-			const current = this._mundaneList.visibleItems.length + this._magicList.visibleItems.length;
-			const total = this._mundaneList.items.length + this._magicList.items.length;
+			const current = this._mundaneList.visibleItems.length + this._modificationList.visibleItems.length + this._magicList.visibleItems.length;
+			const total = this._mundaneList.items.length + this._modificationList.items.length + this._magicList.items.length;
 			$outVisibleResults.html(`${current}/${total}`);
 
 			// Collapse the mundane section if there are no magic items displayed
 			$wrpListMundane.toggleClass(`itm__wrp-list--empty`, this._mundaneList.visibleItems.length === 0);
 		});
+
+		this._modificationList.on("updated", () => {
+			// Force-show the modifcation list if there are no items on display
+			const $elesModification = $(`.ele-modification`);
+
+			if (this._magicList.visibleItems.length && this._mundaneList.visibleItems.length) $elesModification.toggleVe(!!this._modificationList.visibleItems.length);
+			else $elesModification.showVe();
+			$elesMundaneAndMagic.toggleVe(!!(this._mundaneList.visibleItems.length && this._modificationList.visibleItems.length && this._magicList.visibleItems.length));
+
+			const current = this._mundaneList.visibleItems.length + this._modificationList.visibleItems.length + this._magicList.visibleItems.length;
+			const total = this._mundaneList.items.length + this._modificationList.items.length + this._magicList.items.length;
+			$outVisibleResults.html(`${current}/${total}`);
+
+			// Collapse the mundane section if there are no magic items displayed
+			$wrpListModification.toggleClass(`itm__wrp-list--empty`, this._modificationList.visibleItems.length === 0);
+		});
+
 		this._magicList.on("updated", () => {
 			const $elesMundane = $(`.ele-mundane`);
 			const $elesMagic = $(`.ele-magic`);
@@ -377,10 +454,10 @@ class ItemsPage extends ListPage {
 			// Force-show the mundane list if there are no items on display
 			if (!this._magicList.visibleItems.length) $elesMundane.showVe();
 			else $elesMundane.toggleVe(!!this._mundaneList.visibleItems.length);
-			$elesMundaneAndMagic.toggleVe(!!(this._mundaneList.visibleItems.length && this._magicList.visibleItems.length));
+			$elesMundaneAndMagic.toggleVe(!!(this._mundaneList.visibleItems.length && this._modificationList.visibleItems.length && this._magicList.visibleItems.length));
 
-			const current = this._mundaneList.visibleItems.length + this._magicList.visibleItems.length;
-			const total = this._mundaneList.items.length + this._magicList.items.length;
+			const current = this._mundaneList.visibleItems.length + this._modificationList.visibleItems.length + this._magicList.visibleItems.length;
+			const total = this._mundaneList.items.length + this._modificationList.items.length + this._magicList.items.length;
 			$outVisibleResults.html(`${current}/${total}`);
 
 			// Collapse the magic section if there are no magic items displayed
@@ -395,6 +472,7 @@ class ItemsPage extends ListPage {
 
 		//for the "mundane", "magic" etc groups of item list
 		SortUtil.initBtnSortHandlers($("#filtertools-mundane"), this._mundaneList);
+		SortUtil.initBtnSortHandlers($("#filtertools-modification"), this._modificationList);
 		SortUtil.initBtnSortHandlers($("#filtertools-magic"), this._magicList);
 
 		this._listSub = ListUtil.initSublist({
@@ -409,11 +487,11 @@ class ItemsPage extends ListPage {
 		this._addItems(data);
 		BrewUtil.pAddBrewData()
 			.then(this._pHandleBrew.bind(this))
-			.then(() => BrewUtil.bind({lists: [this._mundaneList, this._magicList], pHandleBrew: this._pHandleBrew.bind(this)}))
+			.then(() => BrewUtil.bind({lists: [this._mundaneList, this._modificationList, this._magicList], pHandleBrew: this._pHandleBrew.bind(this)}))
 			.then(() => BrewUtil.pAddLocalBrewData())
 			.then(async () => {
 				BrewUtil.makeBrewButton("manage-brew");
-				BrewUtil.bind({lists: [this._mundaneList, this._magicList], filterBox: this._pageFilter.filterBox, sourceFilter: this._pageFilter.sourceFilter});
+				BrewUtil.bind({lists: [this._mundaneList, this._modificationList, this._magicList], filterBox: this._pageFilter.filterBox, sourceFilter: this._pageFilter.sourceFilter});
 				await ListUtil.pLoadState();
 				RollerUtil.addListRollButton();
 				ListUtil.addListShowHide();
@@ -432,12 +510,14 @@ class ItemsPage extends ListPage {
 						_weight: {name: "Weight", transform: it => Parser.itemWeightToFull(it)},
 						_value: {name: "Value", transform: it => Parser.itemValueToFullMultiCurrency(it)},
 						_entries: {name: "Text", transform: (it) => Renderer.item.getRenderedEntries(it, {isCompact: true}), flex: 3},
+						
 					},
 					{generator: ListUtil.basicFilterGenerator},
 					(a, b) => SortUtil.ascSort(a.name, b.name) || SortUtil.ascSort(a.source, b.source),
 				);
 
 				this._mundaneList.init();
+				this._modificationList.init();
 				this._magicList.init();
 				this._listSub.init();
 
@@ -463,14 +543,17 @@ class ItemsPage extends ListPage {
 			const listItem = this.getListItem(item, this._ixData);
 			if (!listItem) continue;
 			if (listItem.mundane) this._mundaneList.addItem(listItem.mundane);
+			if (listItem.modification) this._modificationList.addItem(listItem.modification);
 			if (listItem.magic) this._magicList.addItem(listItem.magic);
 		}
 
 		// populate table labels
 		$(`h3.ele-mundane span.side-label`).text("Mundane");
+		$(`h3.ele-modification span.side-label`).text("Modification");
 		$(`h3.ele-magic span.side-label`).text("Magic");
 
 		this._mundaneList.update();
+		this._modificationList.update();
 		this._magicList.update();
 
 		this._pageFilter.filterBox.render();
@@ -479,7 +562,7 @@ class ItemsPage extends ListPage {
 		ListUtil.setOptions({
 			itemList: this._dataList,
 			getSublistRow: this.getSublistItem.bind(this),
-			primaryLists: [this._mundaneList, this._magicList],
+			primaryLists: [this._mundaneList, this._modificationList, this._magicList],
 		});
 		ListUtil.bindAddButton();
 		ListUtil.bindSubtractButton();
