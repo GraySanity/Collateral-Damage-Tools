@@ -216,7 +216,7 @@ class PageFilterItems extends PageFilterEquipment {
 		this._bonusFilter = new Filter({header: "Bonus", items: ["Armor Class", "Proficiency Bonus", "Spell Attacks", "Spell Save DC", "Saving Throws", "Weapon Attack and Damage Rolls", "Weapon Attack Rolls", "Weapon Damage Rolls"]});
 		this._rechargeTypeFilter = new Filter({header: "Recharge Type", displayFn: Parser.itemRechargeToFull});
 		this._MCFilter = new Filter({header: "Maintenence Cost", displayFn: Parser.itemMaintenenceCostToFull});
-		this._miscFilter = new Filter({header: "Miscellaneous", items: ["Ability Score Adjustment", "Charges", "Cursed", "Grants Proficiency", "Has Images", "Has Info", "Modification", "Item Group", "Magic", "Mundane", "Sentient", "SRD"], isSrdFilter: true});
+		this._miscFilter = new Filter({header: "Miscellaneous", items: ["Ability Score Adjustment", "Charges", "Cursed", "Grants Proficiency", "Has Images", "Has Info", "Item Group", "Magic", "Mundane", "Sentient", "SRD"], isSrdFilter: true});
 		this._baseSourceFilter = new SourceFilter({header: "Base Source", selFn: null});
 		this._cabilityFilter = new Filter({header: "From Ability", displayFn: Parser.itemCabilityToFull});
 		this._baseItemFilter = new Filter({header: "Base Item", displayFn: this.constructor._getBaseItemDisplay.bind(this.constructor)});
@@ -229,10 +229,8 @@ class PageFilterItems extends PageFilterEquipment {
 
 		if (item.curse) item._fMisc.push("Cursed");
 		const isMundane = Renderer.item.isMundane(item);
-		const isModification = Renderer.item.isModification(item);
 		item._fMisc.push(isMundane ? "Mundane" : "Special");
 		item._fIsMundane = isMundane;
-		item._fIsModification = isModification;
 		if (item.ability) item._fMisc.push("Ability Score Adjustment");
 		if (item.charges) item._fMisc.push("Charges");
 		if (item.sentient) item._fMisc.push("Sentient");

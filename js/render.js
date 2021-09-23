@@ -5660,7 +5660,6 @@ Renderer.item = {
 	}),
 	_getRenderedEntries_handlerConvertNamesToItalics (item, baseName, str) {
 		if (item._fIsMundane) return str;
-		if (item._fIsModification) return str;
 
 		const stack = [];
 		let depth = 0;
@@ -6402,6 +6401,7 @@ Renderer.item = {
 	//filter for throwing things in the "mundane", "modification", "drug", "special" (or "magic") group in the items page
 	isMundane (item) {return (item.rarity === "none" || item.rarity === "unknown" || item._category === "basic") && typeof item.MC !== "string"; },
 	isModification (item) {return item.MC !== "none" || item.MC !== "unknown" || item.MC !== "undefined" ;},
+	isDrug (item) {},
 
 	pGetFluff (item) {
 		return Renderer.utils.pGetFluff({

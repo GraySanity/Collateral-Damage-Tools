@@ -244,7 +244,6 @@ class List {
 			this._$wrpList.children().detach();
 			for (let i = 0; i < len; ++i) this._$wrpList.append(this._filteredSortedItems[i].ele);
 		} else {
-			console.log(this._$wrpList[0]);
 			this._$wrpList[0].innerHTML = "";
 			const frag = document.createDocumentFragment();
 			for (let i = 0; i < len; ++i) frag.appendChild(this._filteredSortedItems[i].ele);
