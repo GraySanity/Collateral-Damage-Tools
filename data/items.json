@@ -124,8 +124,7 @@
 		"gun": true,
 		"pistol": true,
 		"property":[
-			"ammofire"
-		]
+			"ammofire"]
 	},
 	{
 		"name":"SMG",
@@ -145,11 +144,9 @@
 		"property":[
 			"ammofire",
 			"foldable",
-			"burstfire"
-		],
+			"burstfire"],
 		"entries":[
-			"+1 to Hit Bonus"
-		]
+			"<i>+1 to Hit Bonus</i>"]
 	},
 	{
 		"name":"Assault Rifle",
@@ -169,8 +166,7 @@
 		"property":[
 			"ammofire",
 			"foldable",
-			"burstfire"
-		]
+			"burstfire"]
 	},
 	{
 		"name":"Shotgun",
@@ -186,11 +182,9 @@
 		"gun": true,
 		"shotgun": true,
 		"property":[
-			"ammofire"
-		],
+			"ammofire"],
 		"entries":[
-			"+1 to Hit Bonus"
-		]
+			"<i>+1 to Hit Bonus</i>"]
 	},
 	{
 		"name":"Hunting Rifle",
@@ -207,8 +201,7 @@
 		"longrifle": true,
 		"property":[
 			"ammofire",
-			"boltaction"
-		]
+			"boltaction"]
 	},
 	{
 		"name":"Sniper Rifle",
@@ -226,8 +219,7 @@
 		"property":[
 			"ammofire",
 			"foldable",
-			"boltaction"
-		]
+			"boltaction"]
 	},
 	{
 		"name":"LMG",
@@ -247,11 +239,9 @@
 		"property":[
 			"ammofire",
 			"burstfire",
-			"heavy"
-		],
+			"heavy"],
 		"entries":[
-			"+1 to Hit Bonus"
-		]
+			"<i>+1 to Hit Bonus</i>"]
 	},
 	{
 		"name":"Coil Pistol",
@@ -267,8 +257,7 @@
 		"gun": true,
 		"pistol": true,
 		"property":[
-			"ammofire"
-		]
+			"ammofire"]
 	},
 	{
 		"name":"Coil SMG",
@@ -291,7 +280,7 @@
 			"burstfire"
 		],
 		"entries":[
-			"+1 to Hit Bonus"
+			"<i>+1 to Hit Bonus</i>"
 		]
 	},
 	{
@@ -335,7 +324,7 @@
 			"boltaction",
 			"unconventional"],
 		"entries":[
-			"+3 to Hit Bonus"]
+			"<i>+3 to Hit Bonus</i>"]
 	},
 	{
 		"name":"Slugger",
@@ -355,7 +344,7 @@
 			"boltaction",
 			"unconventional"],
 		"entries":[
-			"-1 to Hit Bonus<br><i>Ignores all flat DR.</i><br><i>Does double damage against objects.</i><br><br>A large shotgun-like firearm which fires large slugs of around 5 cm long and 3 cm in diameter at very high velocities.<br>",
+			"<i>-1 to Hit Bonus<br>Ignores all flat DR.<br>Does double damage against objects.</i><br><br>A large shotgun-like firearm which fires large slugs of around 5 cm long and 3 cm in diameter at very high velocities.<br>",
 		    "<br>"]
 	},
 	{
@@ -414,7 +403,7 @@
 			"burstfire",
 			"heavy"],
 		"entries":[
-			"+1 to Hit Bonus"]
+			"<i>+1 to Hit Bonus</i>"]
 	},
 	{
 		"name":"Laser Pistol",
@@ -431,7 +420,7 @@
 		"property":[
 			"foldable"],
 		"entries":[
-			"+1 to Hit Bonus"]
+			"<i>+1 to Hit Bonus</i>"]
 	},
 	{
 		"name":"Laser SMG",
@@ -467,7 +456,7 @@
 		"property":[
 			"burstfire"],
 		"entries":[
-			"+1 to Hit Bonus"]
+			"<i>+1 to Hit Bonus</i>"]
 	},
 	{
 		"name":"Laser Shotgun",
@@ -488,7 +477,7 @@
 			"foldable",
 			"unconventional"],
 		"entries":[
-			"+5 to Hit Bonus"]
+			"<i>+5 to Hit Bonus</i>"]
 	},
 	{
 		"name":"Laser Hunting Rifle",
@@ -505,7 +494,7 @@
 		"property":[
 			"foldable"],
 		"entries":[
-			"+2 to Hit Bonus"]
+			"<i>+2 to Hit Bonus</i>"]
 	},
 	{
 		"name":"Laser Sniper Rifle",
@@ -523,7 +512,7 @@
 			"foldable",
 			"boltaction"],
 		"entries":[
-			"+3 to Hit Bonus"]
+			"<i>+3 to Hit Bonus</i>"]
 	},
 	{
 		"name":"Laser LMG",
@@ -545,7 +534,7 @@
 			"unconventional",
 			"boltaction"],
 		"entries":[
-			"+2 to Hit Bonus<br><br>Basically a bulky and cheaply made Pulse Laser."]
+			"<i>+2 to Hit Bonus</i><br><br>Basically a bulky and cheaply made Pulse Laser."]
 	},
 	{
 		"name":"Plasma Pistol",
@@ -582,7 +571,7 @@
 			"ammofire",
 			"burstfire"],
 		"entries":[
-			"-1 to Hit Bonus"
+			"<i>-1 to Hit Bonus</i>"
 		]
 	},
 	{
@@ -618,7 +607,7 @@
 			"ammofire"
 		],
 		"entries":[
-			"+2 to Hit Bonus"]
+			"<i>+2 to Hit Bonus</i>"]
 	},
 	{
 		"name":"Plasma Hunting Rifle",
@@ -674,8 +663,7 @@
 			"heavy"
 		],
 		"entries":[
-			"-2 to Hit Bonus"
-		]
+			"<i>-2 to Hit Bonus</i>"]
 	},
 	{
 		"name":"Knife",
@@ -719,7 +707,7 @@
 		"property":[
 			"heavy"],
 		"entries":[
-			"-1 to Hit Bonus"]
+			"<i>-1 to Hit Bonus</i>"]
 	},
 	{
 		"name":"Axe",
@@ -743,7 +731,7 @@
 		"property":[
 			"heavy"],
 		"entries":[
-			"-2 to Hit Bonus"]
+			"<i>-2 to Hit Bonus</i>"]
 	},
 	{
 		"name":"Mace",
@@ -768,7 +756,7 @@
 			"heavy",
 			"twohand"],
 		"entries":[
-			"-3 to Hit Bonus"]
+			"<i>-3 to Hit Bonus</i>"]
 	},
 	{
 		"name":"Chainsaw",
@@ -785,7 +773,190 @@
 			"special",
 			"foldable"],
 		"entries":[
-			"-1 to Hit Bonus<br><i>-1 Meter Speed when wielded</i><br>"]
+			"<i>-1 to Hit Bonus<br>-1 Meter Speed when wielded</i><br>"]
+	},
+	{
+		"name": "Leather Armor",
+		"source": "CDPH",
+		"rarity": "common",
+		"type": "ArmorL",
+		"weight": 4,
+		"value": 200,
+		"ac": "Dexterity Modifier (max 3)",
+		"entries": ["Leather armor. Not the best protection, more stylish than anything else as it can be made into normal clothing like a jacket."]
+	},
+	{
+		"name": "Lexar Armor",
+		"source": "CDPH",
+		"rarity": "common",
+		"type": "ArmorL",
+		"weight": 2,
+		"value": 50,
+		"ac": "1 + Dexterity Modifier (max 2)",
+		"dr": 1,
+		"entries": ["A cheap but lightweight armor made of a polymer blend called Lexar&trade;.<br>It restricts your movement a bit, but also offers a slight amount of protection."]
+	},
+	{
+		"name": "Kevlar Armor",
+		"source": "CDPH",
+		"rarity": "common",
+		"type": "ArmorL",
+		"weight": 4,
+		"value": 120,
+		"ac": "2 + Dexterity Modifier (max 2)",
+		"dr": 2,
+		"entries": ["A Kevlar vest, made of the polymer kevlar.<br>It restrictis your movement a bit, but also offers some protection."]
+	},
+	{
+		"name": "Dyneema Armor",
+		"source": "CDPH",
+		"rarity": "common",
+		"type": "ArmorL",
+		"weight": 2,
+		"value": 120,
+		"ac": "Dexterity Modifier",
+		"dr": 3,
+		"entries": ["A piece of armor made of UHMWPE fibres. Also goes by it's trivial name: Dyneema Armor.<br>It doesn't restrict movement, and gives a small but noticable amount of protection as well."]
+	},
+	{
+		"name": "Carbon Fiber Armor",
+		"source": "CDPH",
+		"rarity": "common",
+		"type": "ArmorL",
+		"ac": "2x Dexterity Modifier (max 5)",
+		"dr": 1,
+		"entries": []
+	},
+	{
+		"name": "Stealth Armor",
+		"source": "CDPH",
+		"rarity": "very rare",
+		"type": "ArmorM",
+		"ac": "4",
+		"property":[
+			"special"],
+		"entries": ["<i>You gain advantage on Stealth Checks.</i>"]
+	},
+	{
+		"name": "Woven Iron",
+		"source": "CDPH",
+		"rarity": "common",
+		"type": "ArmorM",
+		"ac": "2",
+		"dr": 2,
+		"edr": 10,
+		"property":[
+			"iron",
+			"special"],
+		"entries": ["<i>This armor can be woven into normal clothes, making it not noticable as an armor.</i>"]
+	},
+	{
+		"name": "Woven Aluminium",
+		"source": "CDPH",
+		"rarity": "common",
+		"type": "ArmorM",
+		"ac": "3 + Dexterty Modifier (max 2)",
+		"dr": 3,
+		"property":[
+			"special"],
+		"entries": ["<i>This armor can be woven into normal clothes, making it not noticable as an armor.</i>"]
+	},
+	{
+		"name": "Fearmor",
+		"source": "CDPH",
+		"rarity": "common",
+		"type": "ArmorM",
+		"ac": "4",
+		"dr": 3,
+		"edr": 15,
+		"property":[
+			"iron"],
+		"entries": [""]
+	},
+	{
+		"name": "Osplir",
+		"source": "CDPH",
+		"rarity": "common",
+		"type": "ArmorM",
+		"ac": "4",
+		"dr": 3,
+		"resist": [
+			"acid"],
+		"entries": ["<i>This armor gives you resistance to acid damage.</i>"]
+	},
+	{
+		"name": "F9XS",
+		"source": "CDPH",
+		"rarity": "common",
+		"type": "ArmorM",
+		"ac": "4 + Dexterity Modifier (max 1)",
+		"dr": 5,
+		"entries": [""]
+	},
+	{
+		"name": "Chainmail",
+		"source": "CDPH",
+		"rarity": "uncommon",
+		"type": "ArmorH",
+		"ac": "5",
+		"dr": 3,
+		"edr": 20,
+		"property":[
+			"iron"],
+		"entries": [""]
+	},
+	{
+		"name": "Plate",
+		"source": "CDPH",
+		"rarity": "uncommon",
+		"type": "ArmorH",
+		"ac": "5",
+		"dr": 3,
+		"edr": 40,
+		"property":[
+			"iron"],
+		"entries": [""]
+	},
+	{
+		"name": "Fullsteel",
+		"source": "CDPH",
+		"rarity": "common",
+		"type": "ArmorH",
+		"ac": "3",
+		"dr": 8,
+		"entries": ["*not actually made of steel."]
+	},
+	{
+		"name": "F9",
+		"source": "CDPH",
+		"rarity": "common",
+		"type": "ArmorH",
+		"ac": "5 + Dexterity Modifier (max 1)",
+		"dr": 6,
+		"entries": [""]
+	},
+	{
+		"name": "F10P",
+		"source": "CDPH",
+		"rarity": "uncommon",
+		"type": "ArmorH",
+		"ac": "5",
+		"dr": 6,
+		"resist": [
+			"piercing",
+			"slashing"],
+		"entries": ["<i>This armor gives you resistance to piercing & slashing damage.</i>"]
+	},
+	{
+		"name": "F10B",
+		"source": "CDPH",
+		"rarity": "uncommon",
+		"type": "ArmorH",
+		"ac": "5",
+		"dr": 6,
+		"resist": [
+			"piercing"],
+		"entries": ["<i>This armor gives you resistance to bludgeoning damage.</i>"]
 	}
 
 ],
