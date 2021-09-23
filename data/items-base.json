@@ -57,6 +57,19 @@
 			]
 		},
 		{
+			"abbreviation": "twohand",
+			"source": "CDPH",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Two-Handed",
+					"entries": [
+						"<br>This weapon is so hefty and unhandy that you need both hands to use it correctly.<br>If you use this weapon without using two hands, and your Strength Score is more than 12, you gain a -5 to Hit Bonus and disadvantage on the attack roll.<br>If your Strength Score is 12 or less, than you automatically fail all attack rolls with it.<br>"
+					]
+				}
+			]
+		},
+		{
 			"abbreviation": "craftable",
 			"source": "CDPH",
 			"entries": [
@@ -121,6 +134,19 @@
 					"name": "Unconventional",
 					"entries": [
 						"<br>This is an unconventional weapon. Weapons with this trait are, like what it says on the tin, unconventional. They are rarely used, and a lot of modifications and attachments are not made for these kind of weapons."
+					]
+				}			
+			]
+		},
+		{
+			"abbreviation": "special",
+			"source": "CDPH",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Special",
+					"entries": [
+						"<br>This is a special weapon. Weapons with this trait cannot be modified.<br>"
 					]
 				}			
 			]

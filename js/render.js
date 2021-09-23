@@ -6170,6 +6170,22 @@ Renderer.item = {
 					Renderer.item._initFullEntries(item);
 					item._fullEntries.push({type: "wrapper", wrapped: "A holy symbol is a representation of a god or pantheon. It might be an amulet depicting a symbol representing a deity, the same symbol carefully engraved or inlaid as an emblem on a shield, or a tiny box holding a fragment of a sacred relic. A cleric or paladin can use a holy symbol as a spellcasting focus. To use the symbol in this way, the caster must hold it in hand, wear it visibly, or bear it on a shield.", data: {[VeCt.ENTDATA_ITEM_MERGED_ENTRY_TAG]: "type"}});
 				}
+			
+			} else {
+				if (item.scfType === "arcane") {
+					Renderer.item._initFullEntries(item);
+					item._fullEntries.push({type: "wrapper", wrapped: "An arcane focus is a special item designed to channel the power of arcane spells. A sorcerer, warlock, or wizard can use such an item as a spellcasting focus.", data: {[VeCt.ENTDATA_ITEM_MERGED_ENTRY_TAG]: "type"}});
+				}
+				if (item.scfType === "druid") {
+					Renderer.item._initFullEntries(item);
+					item._fullEntries.push({type: "wrapper", wrapped: "A druid can use this object as a spellcasting focus.", data: {[VeCt.ENTDATA_ITEM_MERGED_ENTRY_TAG]: "type"}});
+				}
+				if (item.scfType === "holy") {
+					Renderer.item._initFullEntries(item);
+
+					item._fullEntries.push({type: "wrapper", wrapped: "A holy symbol is a representation of a god or pantheon.", data: {[VeCt.ENTDATA_ITEM_MERGED_ENTRY_TAG]: "type"}});
+					item._fullEntries.push({type: "wrapper", wrapped: "A cleric or paladin can use a holy symbol as a spellcasting focus. To use the symbol in this way, the caster must hold it in hand, wear it visibly, or bear it on a shield.", data: {[VeCt.ENTDATA_ITEM_MERGED_ENTRY_TAG]: "type"}});
+				}
 				if (item.scfType === "pressuregun") {
 					Renderer.item._initFullEntries(item);
 					item._fullEntries.push({type: "wrapper", wrapped: "A gun that uses a pressure based fireing system, usually by exploading a small amount of explosive inside the used ammunition to propell said ammunition foreward. Most give a loud *Bang* when shot.", data: {[VeCt.ENTDATA_ITEM_MERGED_ENTRY_TAG]: "type"}});
@@ -6189,21 +6205,6 @@ Renderer.item = {
 				if (item.scfType ==="shields") {
 					Renderer.item._initFullEntries(item);
 					item._fullEntries.push({type: "wrapper", wrapped: "A ", data: {[VeCt.ENTDATA_ITEM_MERGED_ENTRY_TAG]: "type"}});
-				}
-			} else {
-				if (item.scfType === "arcane") {
-					Renderer.item._initFullEntries(item);
-					item._fullEntries.push({type: "wrapper", wrapped: "An arcane focus is a special item designed to channel the power of arcane spells. A sorcerer, warlock, or wizard can use such an item as a spellcasting focus.", data: {[VeCt.ENTDATA_ITEM_MERGED_ENTRY_TAG]: "type"}});
-				}
-				if (item.scfType === "druid") {
-					Renderer.item._initFullEntries(item);
-					item._fullEntries.push({type: "wrapper", wrapped: "A druid can use this object as a spellcasting focus.", data: {[VeCt.ENTDATA_ITEM_MERGED_ENTRY_TAG]: "type"}});
-				}
-				if (item.scfType === "holy") {
-					Renderer.item._initFullEntries(item);
-
-					item._fullEntries.push({type: "wrapper", wrapped: "A holy symbol is a representation of a god or pantheon.", data: {[VeCt.ENTDATA_ITEM_MERGED_ENTRY_TAG]: "type"}});
-					item._fullEntries.push({type: "wrapper", wrapped: "A cleric or paladin can use a holy symbol as a spellcasting focus. To use the symbol in this way, the caster must hold it in hand, wear it visibly, or bear it on a shield.", data: {[VeCt.ENTDATA_ITEM_MERGED_ENTRY_TAG]: "type"}});
 				}
 			}
 		}
@@ -6399,9 +6400,10 @@ Renderer.item = {
 	},
 
 	//filter for throwing things in the "mundane", "modification", "drug", "special" (or "magic") group in the items page
-	isMundane (item) {return (item.rarity === "none" || item.rarity === "unknown" || item._category === "basic") && typeof item.MC !== "string"; },
-	isModification (item) {return item.MC !== "none" || item.MC !== "unknown" || item.MC !== "undefined" ;},
-	isDrug (item) {},
+	
+	isMundane (item) {
+		const mundaneitems = ["none", "common", "uncommon", "basic", "rare", "very rare", "legendary"];
+		return (mundaneitems.includes(item.rarity)); },
 
 	pGetFluff (item) {
 		return Renderer.utils.pGetFluff({

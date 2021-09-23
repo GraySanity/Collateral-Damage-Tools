@@ -1719,7 +1719,7 @@ Parser.weightToFull = function (lbs, isSmallUnit) {
 	].filter(Boolean).join(", ");
 };
 
-Parser.ITEM_RARITIES = ["none", "common", "uncommon", "rare", "very rare", "legendary", "artifact", "unknown", "unknown (magic)", "other"];
+Parser.ITEM_RARITIES = ["none", "common", "uncommon", "rare", "very rare", "legendary", "artifact", "unknown", "unknown (magic)", "other", "special"];
 
 Parser.CAT_ID_CREATURE = 1;
 Parser.CAT_ID_SPELL = 2;
@@ -2356,93 +2356,6 @@ SRC_CDPH = "CDPH";
 SRC_DMG = "DMG";
 
 
-SRC_AL_PREFIX = "AL";
-
-SRC_ALCoS = `${SRC_AL_PREFIX}CurseOfStrahd`;
-SRC_ALEE = `${SRC_AL_PREFIX}ElementalEvil`;
-SRC_ALRoD = `${SRC_AL_PREFIX}RageOfDemons`;
-
-SRC_PS_PREFIX = "PS";
-
-SRC_PSA = `${SRC_PS_PREFIX}A`;
-SRC_PSI = `${SRC_PS_PREFIX}I`;
-SRC_PSK = `${SRC_PS_PREFIX}K`;
-SRC_PSZ = `${SRC_PS_PREFIX}Z`;
-SRC_PSX = `${SRC_PS_PREFIX}X`;
-SRC_PSD = `${SRC_PS_PREFIX}D`;
-
-SRC_UA_PREFIX = "UA";
-
-SRC_UAA = `${SRC_UA_PREFIX}Artificer`;
-SRC_UAEAG = `${SRC_UA_PREFIX}EladrinAndGith`;
-SRC_UAEBB = `${SRC_UA_PREFIX}Eberron`;
-SRC_UAFFR = `${SRC_UA_PREFIX}FeatsForRaces`;
-SRC_UAFFS = `${SRC_UA_PREFIX}FeatsForSkills`;
-SRC_UAFO = `${SRC_UA_PREFIX}FiendishOptions`;
-SRC_UAFT = `${SRC_UA_PREFIX}Feats`;
-SRC_UAGH = `${SRC_UA_PREFIX}GothicHeroes`;
-SRC_UAMDM = `${SRC_UA_PREFIX}ModernMagic`;
-SRC_UASSP = `${SRC_UA_PREFIX}StarterSpells`;
-SRC_UATMC = `${SRC_UA_PREFIX}TheMysticClass`;
-SRC_UATOBM = `${SRC_UA_PREFIX}ThatOldBlackMagic`;
-SRC_UATRR = `${SRC_UA_PREFIX}TheRangerRevised`;
-SRC_UAWA = `${SRC_UA_PREFIX}WaterborneAdventures`;
-SRC_UAVR = `${SRC_UA_PREFIX}VariantRules`;
-SRC_UALDR = `${SRC_UA_PREFIX}LightDarkUnderdark`;
-SRC_UARAR = `${SRC_UA_PREFIX}RangerAndRogue`;
-SRC_UAATOSC = `${SRC_UA_PREFIX}ATrioOfSubclasses`;
-SRC_UABPP = `${SRC_UA_PREFIX}BarbarianPrimalPaths`;
-SRC_UARSC = `${SRC_UA_PREFIX}RevisedSubclasses`;
-SRC_UAKOO = `${SRC_UA_PREFIX}KitsOfOld`;
-SRC_UABBC = `${SRC_UA_PREFIX}BardBardColleges`;
-SRC_UACDD = `${SRC_UA_PREFIX}ClericDivineDomains`;
-SRC_UAD = `${SRC_UA_PREFIX}Druid`;
-SRC_UARCO = `${SRC_UA_PREFIX}RevisedClassOptions`;
-SRC_UAF = `${SRC_UA_PREFIX}Fighter`;
-SRC_UAM = `${SRC_UA_PREFIX}Monk`;
-SRC_UAP = `${SRC_UA_PREFIX}Paladin`;
-SRC_UAMC = `${SRC_UA_PREFIX}ModifyingClasses`;
-SRC_UAS = `${SRC_UA_PREFIX}Sorcerer`;
-SRC_UAWAW = `${SRC_UA_PREFIX}WarlockAndWizard`;
-SRC_UATF = `${SRC_UA_PREFIX}TheFaithful`;
-SRC_UAWR = `${SRC_UA_PREFIX}WizardRevisited`;
-SRC_UAESR = `${SRC_UA_PREFIX}ElfSubraces`;
-SRC_UAMAC = `${SRC_UA_PREFIX}MassCombat`;
-SRC_UA3PE = `${SRC_UA_PREFIX}ThreePillarExperience`;
-SRC_UAGHI = `${SRC_UA_PREFIX}GreyhawkInitiative`;
-SRC_UATSC = `${SRC_UA_PREFIX}ThreeSubclasses`;
-SRC_UAOD = `${SRC_UA_PREFIX}OrderDomain`;
-SRC_UACAM = `${SRC_UA_PREFIX}CentaursMinotaurs`;
-SRC_UAGSS = `${SRC_UA_PREFIX}GiantSoulSorcerer`;
-SRC_UARoE = `${SRC_UA_PREFIX}RacesOfEberron`;
-SRC_UARoR = `${SRC_UA_PREFIX}RacesOfRavnica`;
-SRC_UAWGE = `${SRC_UA_PREFIX}WGE`;
-SRC_UAOSS = `${SRC_UA_PREFIX}OfShipsAndSea`;
-SRC_UASIK = `${SRC_UA_PREFIX}Sidekicks`;
-SRC_UAAR = `${SRC_UA_PREFIX}ArtificerRevisited`;
-SRC_UABAM = `${SRC_UA_PREFIX}BarbarianAndMonk`;
-SRC_UASAW = `${SRC_UA_PREFIX}SorcererAndWarlock`;
-SRC_UABAP = `${SRC_UA_PREFIX}BardAndPaladin`;
-SRC_UACDW = `${SRC_UA_PREFIX}ClericDruidWizard`;
-SRC_UAFRR = `${SRC_UA_PREFIX}FighterRangerRogue`;
-SRC_UACFV = `${SRC_UA_PREFIX}ClassFeatureVariants`;
-SRC_UAFRW = `${SRC_UA_PREFIX}FighterRogueWizard`;
-SRC_UAPCRM = `${SRC_UA_PREFIX}PrestigeClassesRunMagic`;
-SRC_UAR = `${SRC_UA_PREFIX}Ranger`;
-SRC_UA2020SC1 = `${SRC_UA_PREFIX}2020SubclassesPt1`;
-SRC_UA2020SC2 = `${SRC_UA_PREFIX}2020SubclassesPt2`;
-SRC_UA2020SC3 = `${SRC_UA_PREFIX}2020SubclassesPt3`;
-SRC_UA2020SC4 = `${SRC_UA_PREFIX}2020SubclassesPt4`;
-SRC_UA2020SC5 = `${SRC_UA_PREFIX}2020SubclassesPt5`;
-SRC_UA2020SMT = `${SRC_UA_PREFIX}2020SpellsAndMagicTattoos`;
-SRC_UA2020POR = `${SRC_UA_PREFIX}2020PsionicOptionsRevisited`;
-SRC_UA2020SCR = `${SRC_UA_PREFIX}2020SubclassesRevisited`;
-SRC_UA2020F = `${SRC_UA_PREFIX}2020Feats`;
-SRC_UA2021GL = `${SRC_UA_PREFIX}2021GothicLineages`;
-SRC_UA2021FF = `${SRC_UA_PREFIX}2021FolkOfTheFeywild`;
-SRC_UA2021DO = `${SRC_UA_PREFIX}2021DraconicOptions`;
-SRC_UA2021MoS = `${SRC_UA_PREFIX}2021MagesOfStrixhaven`;
-
 SRC_3PP_SUFFIX = " 3pp";
 
 AL_PREFIX = "Adventurers League: ";
@@ -2468,177 +2381,60 @@ Parser.SOURCE_JSON_TO_DATE[SRC_DMG] = "2014-12-09";
 
 
 Parser.SOURCES_ADVENTURES = new Set([
-	SRC_LMoP,
-	SRC_HotDQ,
-	SRC_RoT,
-	SRC_RoTOS,
-	SRC_PotA,
-	SRC_OotA,
-	SRC_CoS,
-	SRC_SKT,
-	SRC_TYP,
-	SRC_TYP_AtG,
-	SRC_TYP_DiT,
-	SRC_TYP_TFoF,
-	SRC_TYP_THSoT,
-	SRC_TYP_TSC,
-	SRC_TYP_ToH,
-	SRC_TYP_WPM,
-	SRC_ToA,
-	SRC_TTP,
-	SRC_WDH,
-	SRC_LLK,
-	SRC_WDMM,
-	SRC_KKW,
-	SRC_GoS,
-	SRC_HftT,
-	SRC_OoW,
-	SRC_DIP,
-	SRC_SLW,
-	SRC_SDW,
-	SRC_DC,
-	SRC_BGDIA,
-	SRC_LR,
-	SRC_EFR,
-	SRC_RMBRE,
-	SRC_IMR,
-	SRC_EGW_ToR,
-	SRC_EGW_DD,
-	SRC_EGW_FS,
-	SRC_EGW_US,
-	SRC_IDRotF,
-	SRC_CM,
-	SRC_HoL,
-
-	SRC_AWM,
 ]);
 Parser.SOURCES_CORE_SUPPLEMENTS = new Set(Object.keys(Parser.SOURCE_JSON_TO_FULL).filter(it => !Parser.SOURCES_ADVENTURES.has(it)));
 Parser.SOURCES_NON_STANDARD_WOTC = new Set([
-	SRC_OGA,
-	SRC_LLK,
-	SRC_LR,
-	SRC_TTP,
-	SRC_AWM,
-	SRC_IMR,
-	SRC_SADS,
-	SRC_MFF,
 ]);
 Parser.SOURCES_VANILLA = new Set([ // An opinionated set of source that could be considered "core-core"
 	SRC_CDPH,
-	SRC_DMG,
-	SRC_MM,
-	SRC_PHB,
-	SRC_SCAG,
-	SRC_TTP,
-	SRC_VGM,
-	SRC_XGE,
-	SRC_MTF,
-	SRC_SAC,
-	SRC_MFF,
-	SRC_SADS,
-	SRC_TCE,
-	SRC_SCREEN,
-	SRC_SCREEN_WILDERNESS_KIT,
+	SRC_DMG
 ]);
 Parser.SOURCES_AVAILABLE_DOCS_BOOK = {};
 [
 	SRC_CDPH,
-	SRC_PHB,
-	SRC_MM,
-	SRC_DMG,
-	SRC_SCAG,
-	SRC_VGM,
-	SRC_XGE,
-	SRC_MTF,
-	SRC_GGR,
-	SRC_AI,
-	SRC_ERLW,
-	SRC_RMR,
-	SRC_EGW,
-	SRC_MOT,
-	SRC_TCE,
-	SRC_VRGR,
+	SRC_DMG
+
 ].forEach(src => {
 	Parser.SOURCES_AVAILABLE_DOCS_BOOK[src] = src;
 	Parser.SOURCES_AVAILABLE_DOCS_BOOK[src.toLowerCase()] = src;
 });
 Parser.SOURCES_AVAILABLE_DOCS_ADVENTURE = {};
-[
-	SRC_LMoP,
-	SRC_HotDQ,
-	SRC_RoT,
-	SRC_PotA,
-	SRC_OotA,
-	SRC_CoS,
-	SRC_SKT,
-	SRC_TYP_AtG,
-	SRC_TYP_DiT,
-	SRC_TYP_TFoF,
-	SRC_TYP_THSoT,
-	SRC_TYP_TSC,
-	SRC_TYP_ToH,
-	SRC_TYP_WPM,
-	SRC_ToA,
-	SRC_TTP,
-	SRC_WDH,
-	SRC_LLK,
-	SRC_WDMM,
-	SRC_KKW,
-	SRC_GoS,
-	SRC_HftT,
-	SRC_OoW,
-	SRC_DIP,
-	SRC_SLW,
-	SRC_SDW,
-	SRC_DC,
-	SRC_BGDIA,
-	SRC_LR,
-	SRC_EFR,
-	SRC_RMBRE,
-	SRC_IMR,
-	SRC_EGW_ToR,
-	SRC_EGW_DD,
-	SRC_EGW_FS,
-	SRC_EGW_US,
-	SRC_IDRotF,
-	SRC_CM,
-	SRC_HoL,
-].forEach(src => {
+[].forEach(src => {
 	Parser.SOURCES_AVAILABLE_DOCS_ADVENTURE[src] = src;
 	Parser.SOURCES_AVAILABLE_DOCS_ADVENTURE[src.toLowerCase()] = src;
 });
 
 Parser.TAG_TO_DEFAULT_SOURCE = {
-	"spell": SRC_PHB,
-	"item": SRC_DMG,
-	"class": SRC_PHB,
-	"creature": SRC_MM,
-	"condition": SRC_PHB,
-	"disease": SRC_DMG,
-	"status": SRC_DMG,
-	"background": SRC_PHB,
-	"race": SRC_PHB,
-	"optfeature": SRC_PHB,
-	"reward": SRC_DMG,
-	"feat": SRC_PHB,
-	"psionic": SRC_UATMC,
-	"object": SRC_DMG,
-	"cult": SRC_MTF,
-	"boon": SRC_MTF,
-	"trap": SRC_DMG,
-	"hazard": SRC_DMG,
-	"deity": SRC_PHB,
-	"variantrule": SRC_DMG,
-	"vehicle": SRC_GoS,
-	"vehupgrade": SRC_GoS,
-	"action": SRC_PHB,
-	"classFeature": SRC_PHB,
-	"subclassFeature": SRC_PHB,
-	"table": SRC_DMG,
-	"language": SRC_PHB,
-	"charoption": SRC_MOT,
-	"recipe": SRC_HEROES_FEAST,
-	"itemEntry": SRC_DMG,
+	"spell": SRC_CDPH,
+	"item": SRC_CDPH,
+	"class":SRC_CDPH,
+	"creature": SRC_CDPH,
+	"condition": SRC_CDPH,
+	"disease": SRC_CDPH,
+	"status": SRC_CDPH,
+	"background": SRC_CDPH,
+	"race": SRC_CDPH,
+	"optfeature": SRC_CDPH,
+	"reward": SRC_CDPH,
+	"feat": SRC_CDPH,
+	"psionic": SRC_CDPH,
+	"object": SRC_CDPH,
+	"cult": SRC_CDPH,
+	"boon": SRC_CDPH,
+	"trap": SRC_CDPH,
+	"hazard":SRC_CDPH,
+	"deity":SRC_CDPH,
+	"variantrule": SRC_CDPH,
+	"vehicle": SRC_CDPH,
+	"vehupgrade": SRC_CDPH,
+	"action": SRC_CDPH,
+	"classFeature": SRC_CDPH,
+	"subclassFeature": SRC_CDPH,
+	"table": SRC_CDPH,
+	"language": SRC_CDPH,
+	"charoption": SRC_CDPH,
+	"recipe": SRC_CDPH,
+	"itemEntry": SRC_CDPH,
 
 	"song": SRC_CDPH,
 	"drug": SRC_CDPH,

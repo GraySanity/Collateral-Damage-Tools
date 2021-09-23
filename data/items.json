@@ -33,7 +33,7 @@
 	},
 	{
 		"name": "Clean Up",
-		"source": "CDPM",
+		"source": "CDPH",
 		"type": "Mod",
 		"cability": "WM",
 		"MC": "1 MP",
@@ -44,7 +44,7 @@
 	},
 	{
 		"name": "Redistributing Weight",
-		"source": "CDPM",
+		"source": "CDPH",
 		"type": "Mod",
 		"cability": "WM",
 		"MC": "0 MP",
@@ -55,7 +55,7 @@
 	},
 	{
 		"name": "Loosen the Trigger - (Ranged Weapons Only)",
-		"source": "CDPM",
+		"source": "CDPH",
 		"type": "Mod",
 		"cability": "WM",
 		"MC": "2 MP",
@@ -66,7 +66,7 @@
 	},
 	{
 		"name": "Sanding - (Melee Weapons Only)",
-		"source": "CDPM",
+		"source": "CDPH",
 		"type": "Mod",
 		"cability": "WM",
 		"MC": "2 MP",
@@ -77,7 +77,7 @@
 	},
 	{
 		"name": "Improvised Silencer - (Guns Only)",
-		"source": "CDPM",
+		"source": "CDPH",
 		"type": "Mod",
 		"cability": "IA",
 		"MC": "2 MP",
@@ -87,7 +87,7 @@
 	},
 	{
 		"name": "Hoverboard",
-		"source": "CDPM",
+		"source": "CDPH",
 		"type": "VEHL",
 		"entries": [
 			"A small hovering vehicle, which can be used like a skateboard from the olden days.<br>You can use half a day of practice to learn how to use this item, and an extra two full days of practice to gain proficiency.",
@@ -104,7 +104,7 @@
 	},
 	{
 		"name": "Sonic Screwdriver",
-		"source": "CDPM",
+		"source": "CDPH",
 		"type": "Tool",
 		"entries":[
 			
@@ -112,9 +112,9 @@
 	},
 	{
 		"name":"Pistol",
-		"source": "CDPM",
+		"source": "CDPH",
 		"type": "WeaponRU",
-		"rarity": "none",
+		"rarity": "common",
 		"weight": 1,
 		"value": 50,
 		"dmg1":"1d6+1",
@@ -129,9 +129,9 @@
 	},
 	{
 		"name":"SMG",
-		"source": "CDPM",
+		"source": "CDPH",
 		"type": "WeaponRU",
-		"rarity": "none",
+		"rarity": "common",
 		"weight": 2,
 		"value": 80,
 		"dmg1":"1d6",
@@ -153,9 +153,9 @@
 	},
 	{
 		"name":"Assault Rifle",
-		"source": "CDPM",
+		"source": "CDPH",
 		"type": "WeaponRU",
-		"rarity": "none",
+		"rarity": "common",
 		"weight": 3.5,
 		"value": 180,
 		"dmg1":"1d8",
@@ -174,9 +174,9 @@
 	},
 	{
 		"name":"Shotgun",
-		"source": "CDPM",
+		"source": "CDPH",
 		"type": "WeaponRU",
-		"rarity": "none",
+		"rarity": "common",
 		"weight": 3,
 		"value": 130,
 		"dmg1":"3d4",
@@ -194,9 +194,9 @@
 	},
 	{
 		"name":"Hunting Rifle",
-		"source": "CDPM",
+		"source": "CDPH",
 		"type": "WeaponRU",
-		"rarity": "none",
+		"rarity": "common",
 		"weight": 4,
 		"value": 160,
 		"dmg1":"2d4",
@@ -212,9 +212,9 @@
 	},
 	{
 		"name":"Sniper Rifle",
-		"source": "CDPM",
+		"source": "CDPH",
 		"type": "WeaponRU",
-		"rarity": "none",
+		"rarity": "uncommon",
 		"weight": 6.5,
 		"value": 240,
 		"dmg1":"3d4",
@@ -231,9 +231,9 @@
 	},
 	{
 		"name":"LMG",
-		"source": "CDPM",
+		"source": "CDPH",
 		"type": "WeaponRU",
-		"rarity": "none",
+		"rarity": "uncommon",
 		"weight": 9,
 		"value": 350,
 		"dmg1":"3d4",
@@ -255,9 +255,9 @@
 	},
 	{
 		"name":"Coil Pistol",
-		"source": "CDPM",
+		"source": "CDPH",
 		"type": "WeaponRU",
-		"rarity": "none",
+		"rarity": "common",
 		"weight": 1,
 		"value": 50,
 		"dmg1":"1d6+1",
@@ -272,9 +272,9 @@
 	},
 	{
 		"name":"Coil SMG",
-		"source": "CDPM",
+		"source": "CDPH",
 		"type": "WeaponRU",
-		"rarity": "none",
+		"rarity": "common",
 		"weight": 2.5,
 		"value": 90,
 		"dmg1":"1d6",
@@ -296,9 +296,9 @@
 	},
 	{
 		"name":"Coil Assault Rifle",
-		"source": "CDPM",
+		"source": "CDPH",
 		"type": "WeaponRU",
-		"rarity": "none",
+		"rarity": "common",
 		"weight": 4,
 		"value": 200,
 		"dmg1":"1d8+1",
@@ -316,9 +316,9 @@
 	},
 	{
 		"name":"Coil Shotgun",
-		"source": "CDPM",
+		"source": "CDPH",
 		"type": "WeaponRU",
-		"rarity": "none",
+		"rarity": "common",
 		"weight": 4.5,
 		"value": 180,
 		"dmg1":"5d4-5",
@@ -333,42 +333,36 @@
 			"ammofire",
 			"burstfire",
 			"boltaction",
-			"unconventional"
-		],
+			"unconventional"],
 		"entries":[
-			"+3 to Hit Bonus"
-		]
+			"+3 to Hit Bonus"]
 	},
 	{
 		"name":"Slugger",
-		"source": "CDPM",
+		"source": "CDPH",
 		"type": "WeaponRU",
-		"rarity": "none",
+		"rarity": "rare",
 		"weight": 5,
-		"value": 360,
-		"dmg1":"5d4",
+		"value": 380,
+		"dmg1":"4d4+1",
 		"dmgType":["P","B"],
-		"range": "1/15/30",
-		"ammocap": 4,
-		"burstcost": 1,
-		"bursttype": "cone <b>only</b>",
+		"range": "1/10/100",
+		"ammocap": 3,
 		"gun": true,
 		"shotgun": true,
 		"property":[
 			"ammofire",
-			"burstfire",
 			"boltaction",
-			"unconventional"
-		],
+			"unconventional"],
 		"entries":[
-			"+3 to Hit Bonus"
-		]
+			"-1 to Hit Bonus<br><i>Ignores all flat DR.</i><br><i>Does double damage against objects.</i><br><br>A large shotgun-like firearm which fires large slugs of around 5 cm long and 3 cm in diameter at very high velocities.<br>",
+		    "<br>"]
 	},
 	{
 		"name":"Coil Hunting Rifle",
-		"source": "CDPM",
+		"source": "CDPH",
 		"type": "WeaponRU",
-		"rarity": "none",
+		"rarity": "common",
 		"weight": 4.5,
 		"value": 175,
 		"dmg1":"2d6",
@@ -380,14 +374,13 @@
 		"property":[
 			"ammofire",
 			"boltaction",
-			"foldable"
-		]
+			"foldable"]
 	},
 	{
 		"name":"Coil Sniper Rifle",
-		"source": "CDPM",
+		"source": "CDPH",
 		"type": "WeaponRU",
-		"rarity": "none",
+		"rarity": "uncommon",
 		"weight": 8,
 		"value": 300,
 		"dmg1":"3d4+3",
@@ -399,14 +392,13 @@
 		"property":[
 			"ammofire",
 			"foldable",
-			"boltaction"
-		]
+			"boltaction"]
 	},
 	{
 		"name":"Coil LMG",
-		"source": "CDPM",
+		"source": "CDPH",
 		"type": "WeaponRU",
-		"rarity": "none",
+		"rarity": "uncommon",
 		"weight": 10.5,
 		"value": 340,
 		"dmg1":"3d4+1",
@@ -420,84 +412,478 @@
 		"property":[
 			"ammofire",
 			"burstfire",
+			"heavy"],
+		"entries":[
+			"+1 to Hit Bonus"]
+	},
+	{
+		"name":"Laser Pistol",
+		"source": "CDPH",
+		"type": "WeaponRU",
+		"rarity": "common",
+		"weight": 1,
+		"value": 45,
+		"dmg1":"1d6+1",
+		"dmgType":"La",
+		"range": "0.5/15/30",
+		"gun": true,
+		"pistol": true,
+		"property":[
+			"foldable"],
+		"entries":[
+			"+1 to Hit Bonus"]
+	},
+	{
+		"name":"Laser SMG",
+		"source": "CDPH",
+		"type": "WeaponRU",
+		"rarity": "common",
+		"weight": 2.5,
+		"value": 90,
+		"dmg1":"1d6",
+		"dmgType":"La",
+		"range": "0.5/10/50",
+		"gun": true,
+		"SMG": true,
+		"burstcost": 0,
+		"bursttype": "cone <b>only</b>",
+		"property":[
+			"burstfire"]
+	},
+	{
+		"name":"Laser Assault Rifle",
+		"source": "CDPH",
+		"type": "WeaponRU",
+		"rarity": "common",
+		"weight": 4,
+		"value": 160,
+		"dmg1":"1d8",
+		"dmgType":"La",
+		"range": "3/30/80",
+		"gun": true,
+		"assault rifle": true,
+		"burstcost": 0,
+		"bursttype": "cone/line",
+		"property":[
+			"burstfire"],
+		"entries":[
+			"+1 to Hit Bonus"]
+	},
+	{
+		"name":"Laser Shotgun",
+		"source": "CDPH",
+		"type": "WeaponRU",
+		"rarity": "uncommon",
+		"weight": 4.5,
+		"value": 230,
+		"dmg1":"3d4+2",
+		"dmgType":"La",
+		"range": "0/5/5",
+		"burstcost": 0,
+		"bursttype": "half-circle <b>only</b>",
+		"gun": true,
+		"shotgun": true,
+		"property":[
+			"burstfire",
+			"foldable",
+			"unconventional"],
+		"entries":[
+			"+5 to Hit Bonus"]
+	},
+	{
+		"name":"Laser Hunting Rifle",
+		"source": "CDPH",
+		"type": "WeaponRU",
+		"rarity": "common",
+		"weight": 4.5,
+		"value": 120,
+		"dmg1":"2d4",
+		"dmgType":"La",
+		"range": "5/100/200",
+		"gun": true,
+		"longrifle": true,
+		"property":[
+			"foldable"],
+		"entries":[
+			"+2 to Hit Bonus"]
+	},
+	{
+		"name":"Laser Sniper Rifle",
+		"source": "CDPH",
+		"type": "WeaponRU",
+		"rarity": "common",
+		"weight": 10,
+		"value": 260,
+		"dmg1":"3d4",
+		"dmgType":"La",
+		"range": "5/200/300",
+		"gun": true,
+		"longrifle": true,
+		"property":[
+			"foldable",
+			"boltaction"],
+		"entries":[
+			"+3 to Hit Bonus"]
+	},
+	{
+		"name":"Laser LMG",
+		"source": "CDPH",
+		"type": "WeaponRU",
+		"rarity": "uncommon",
+		"weight": 10,
+		"value": 320,
+		"dmg1":"3d4",
+		"dmgType":"La",
+		"range": "8/35/120",
+		"burstcost":0,
+		"bursttype": "cone/line <b>only</b>",
+		"gun": true,
+		"lmg": true,
+		"property":[
+			"burstfire",
+			"heavy",
+			"unconventional",
+			"boltaction"],
+		"entries":[
+			"+2 to Hit Bonus<br><br>Basically a bulky and cheaply made Pulse Laser."]
+	},
+	{
+		"name":"Plasma Pistol",
+		"source": "CDPH",
+		"type": "WeaponRU",
+		"rarity": "common",
+		"weight": 1,
+		"value": 60,
+		"dmg1":"1d4+2",
+		"dmgType":"PL",
+		"range": "0.5/15/40",
+		"ammocap": 12,
+		"gun": true,
+		"pistol": true,
+		"property":[
+			"ammofire"]
+	},
+	{
+		"name":"Plasma SMG",
+		"source": "CDPH",
+		"type": "WeaponRU",
+		"rarity": "uncommon",
+		"weight": 2.5,
+		"value": 100,
+		"dmg1":"1d6+1",
+		"dmgType":"PL",
+		"range": "0.5/10/50",
+		"ammocap": 24,
+		"gun": true,
+		"SMG": true,
+		"burstcost": 11,
+		"bursttype": "cone",
+		"property":[
+			"ammofire",
+			"burstfire"],
+		"entries":[
+			"-1 to Hit Bonus"
+		]
+	},
+	{
+		"name":"Plasma Assault Rifle",
+		"source": "CDPH",
+		"type": "WeaponRU",
+		"rarity": "uncommon",
+		"weight": 3.5,
+		"value": 240,
+		"dmg1":"1d8+1",
+		"dmgType":"PL",
+		"range": "3/30/100",
+		"ammocap": 8,
+		"gun": true,
+		"assault rifle": true,
+		"property":[
+			"ammofire"]
+	},
+	{
+		"name":"Plasma Shotgun",
+		"source": "CDPH",
+		"type": "WeaponRU",
+		"rarity": "uncommon",
+		"weight": 4,
+		"value": 180,
+		"dmg1":"2d4+2",
+		"dmgType":"PL",
+		"range": "1/8/20",
+		"ammocap": 6,
+		"gun": true,
+		"shotgun": true,
+		"property":[
+			"ammofire"
+		],
+		"entries":[
+			"+2 to Hit Bonus"]
+	},
+	{
+		"name":"Plasma Hunting Rifle",
+		"source": "CDPH",
+		"type": "WeaponRU",
+		"rarity": "uncommon",
+		"weight": 5,
+		"value": 180,
+		"dmg1":"2d4",
+		"dmgType":"PL",
+		"range": "5/100/200",
+		"ammocap": 6,
+		"gun": true,
+		"longrifle": true,
+		"property":[
+			"ammofire"]
+	},
+	{
+		"name":"Plasma Sniper Rifle",
+		"source": "CDPH",
+		"type": "WeaponRU",
+		"rarity": "rare",
+		"weight": 10,
+		"value": 350,
+		"dmg1":"2d6",
+		"dmgType":"PL",
+		"range": "5/200/300",
+		"ammocap": 4,
+		"gun": true,
+		"longrifle": true,
+		"property":[
+			"ammofire",
+			"foldable"]
+	},
+	{
+		"name":"Plasma LMG",
+		"source": "CDPH",
+		"type": "WeaponRU",
+		"rarity": "rare",
+		"weight": 9.5,
+		"value": 380,
+		"dmg1":"3d4+1",
+		"dmgType":"PL",
+		"range": "8/20/100",
+		"ammocap": 60,
+		"burstcost":20,
+		"bursttype": "cone/line <b>only</b>",
+		"gun": true,
+		"lmg": true,
+		"property":[
+			"ammofire",
+			"burstfire",
 			"heavy"
 		],
 		"entries":[
-			"+1 to Hit Bonus"
+			"-2 to Hit Bonus"
 		]
+	},
+	{
+		"name":"Knife",
+		"source": "CDPH",
+		"type": "WeaponM",
+		"rarity": "common",
+		"weight": 0.15,
+		"value": 1,
+		"dmg1":"1d6",
+		"dmgType":["S","P"]
+	},
+	{
+		"name":"Dagger",
+		"source": "CDPH",
+		"type": "WeaponM",
+		"rarity": "common",
+		"weight": 0.2,
+		"value": 5,
+		"dmg1":"1d6+2",
+		"dmgType":["S","P"]
+	},
+	{
+		"name":"Sword",
+		"source": "CDPH",
+		"type": "WeaponM",
+		"rarity": "uncommon",
+		"weight": 1.2,
+		"value": 200,
+		"dmg1":"1d6+2",
+		"dmgType":["S","P"]
+	},
+	{
+		"name":"Zweihander",
+		"source": "CDPH",
+		"type": "WeaponM",
+		"rarity": "uncommon",
+		"weight": 2.6,
+		"value": 350,
+		"dmg1":"3d6-1",
+		"dmgType":["S","P"],
+		"property":[
+			"heavy"],
+		"entries":[
+			"-1 to Hit Bonus"]
+	},
+	{
+		"name":"Axe",
+		"source": "CDPH",
+		"type": "WeaponM",
+		"rarity": "common",
+		"weight": 0.7,
+		"value": 80,
+		"dmg1":"2d4+2",
+		"dmgType":"S"
+	},
+	{
+		"name":"Waraxe",
+		"source": "CDPH",
+		"type": "WeaponM",
+		"rarity": "uncommon",
+		"weight": 2.6,
+		"value": 300,
+		"dmg1":"3d4+2",
+		"dmgType":"S",
+		"property":[
+			"heavy"],
+		"entries":[
+			"-2 to Hit Bonus"]
+	},
+	{
+		"name":"Mace",
+		"source": "CDPH",
+		"type": "WeaponM",
+		"rarity": "uncommon",
+		"weight": 2,
+		"value": 150,
+		"dmg1":"2d4",
+		"dmgType":"B"
+	},
+	{
+		"name":"Warhammer",
+		"source": "CDPH",
+		"type": "WeaponM",
+		"rarity": "uncommon",
+		"weight": 3.4,
+		"value": 300,
+		"dmg1":"4d4+1",
+		"dmgType":"B",
+		"property":[
+			"heavy",
+			"twohand"],
+		"entries":[
+			"-3 to Hit Bonus"]
+	},
+	{
+		"name":"Chainsaw",
+		"source": "CDPH",
+		"type": "WeaponM",
+		"rarity": "common",
+		"weight": 6.5,
+		"value": 400,
+		"dmg1":"4d4+1",
+		"dmgType":"S",
+		"property":[
+			"heavy",
+			"twohand",
+			"special",
+			"foldable"],
+		"entries":[
+			"-1 to Hit Bonus<br><i>-1 Meter Speed when wielded</i><br>"]
 	}
+
 ],
 	"itemGroup": [
 		{
 			"name": "Pressure Based Guns",
-			"source": "CDPM",
+			"source": "CDPH",
 			"type": "WeaponRU",
 			"scfType": "pressureguns",
 			"rarity": "none",
+			"entries":["A gun that uses a pressure based fireing system, usually by exploading a small amount of explosive inside the used ammunition to propell said ammunition foreward. Most give a loud *Bang* when shot."],
 			"items":[
-				"Pistol|CDPM",
-				"SMG|CDPM",
-				"Assault Rifle|CDPM",
-				"Shotgun|CDPM",
-				"Hunting Rifle|CDPM",
-				"Sniper Rifle|CDPM",
-				"LMG|CDPM"
+				"Pistol|CDPH",
+				"SMG|CDPH",
+				"Assault Rifle|CDPH",
+				"Shotgun|CDPH",
+				"Hunting Rifle|CDPH",
+				"Sniper Rifle|CDPH",
+				"LMG|CDPH"
 			]
 		},
 		{
 			"name": "Laser Based Guns",
-			"source": "CDPM",
+			"source": "CDPH",
 			"type": "WeaponRU",
 			"scfType": "laserguns",
 			"rarity": "none",
+			"entries":["A gun that uses high capacity powerbanks to fire a very strong laser for a brief moment. Usually giving a very quiet electrical current *Wirr* when shot."],
 			"items":[
-
+				"Laser Pistol|CDPH",
+				"Laser SMG|CDPH",
+				"Laser Assault Rifle|CDPH",
+				"Laser Shotgun|CDPH",
+				"Laser Hunting Rifle|CDPH",
+				"Laser Sniper Rifle|CDPH",
+				"Laser LMG|CDPH"
 			]
 		},
 		{
 			"name": "Coil Based Guns",
-			"source": "CDPM",
+			"source": "CDPH",
 			"type": "WeaponRU",
 			"scfType": "coilguns",
 			"rarity": "none",
+			"entries":["A gun that uses magnetic or ferromagnetic based ammunition, and fires it by using strong electromagnetic coils. Usually giving a well noticable electrical current *Wirr* when shot."],
 			"items":[
-				"Coil Pistol|CDPM",
-				"Coil SMG|CDPM",
-				"Coil Assault Rifle|CDPM",
-				"Coil Shotgun|CDPM",
-				"Coil Hunting Rifle|CDPM",
-				"Coil Sniper Rifle|CDPM",
-				"Coil LMG|CDPM"
+				"Coil Pistol|CDPH",
+				"Coil SMG|CDPH",
+				"Coil Assault Rifle|CDPH",
+				"Coil Shotgun|CDPH",
+				"Slugger|CDPH",
+				"Coil Hunting Rifle|CDPH",
+				"Coil Sniper Rifle|CDPH",
+				"Coil LMG|CDPH"
 			]
 		},
 		{
 			"name": "Plasma Based Guns",
-			"source": "CDPM",
+			"source": "CDPH",
 			"type": "WeaponRU",
 			"scfType": "plasmaguns",
 			"rarity": "none",
+			"entries": ["A gun that uses special high pressure gascans and high capacity powerbanks as ammunition, being able to fire white-blue-ish plasma at a high velocity.  Usually giving a well noticable electrical current *Wirr* and *Zoowm* when shot."],
 			"items":[
-
+				"Plasma Pistol|CDPH",
+				"Plasma SMG|CDPH",
+				"Plasma Assault Rifle|CDPH",
+				"Plasma Shotgun|CDPH",
+				"Plasma Hunting Rifle|CDPH",
+				"Plasma Sniper Rifle|CDPH",
+				"Plasma LMG|CDPH"
 			]
 		},
 		{
 			"name": "General Melee",
-			"source": "CDPM",
+			"source": "CDPH",
 			"type": "WeaponM",
 			"scfType": "meleeweapon",
 			"rarity": "none",
 			"items":[
-
+				"Knife|CDPH",
+				"Dagger|CDPH",
+				"Sword|CDPH",
+				"Zweihander|CDPH",
+				"Axe|CDPH",
+				"Waraxe|CDPH",
+				"Mace|CDPH",
+				"Warhammer|CDPH"
 			]
 		},
 		{
 			"name": "Shields",
-			"source": "CDPM",
+			"source": "CDPH",
 			"type": "WeaponM",
 			"scfType": "shields",
 			"rarity": "none",
 			"items":[
-
+				
 			]
 		}
 	]
