@@ -361,7 +361,7 @@ SourceUtil = {
 	},
 
 	_isNonstandardSourceWiz (source) {
-		return source.startsWith(SRC_UA_PREFIX) || source.startsWith(SRC_PS_PREFIX) || source.startsWith(SRC_AL_PREFIX) || Parser.SOURCES_NON_STANDARD_WOTC.has(source);
+		return source.startsWith(SRC_CDPH);
 	},
 
 	getFilterGroup (source) {

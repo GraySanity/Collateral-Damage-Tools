@@ -822,6 +822,8 @@
 		"name": "Carbon Fiber Armor",
 		"source": "CDPH",
 		"rarity": "common",
+		"weight": 4,
+		"value": 50,
 		"type": "ArmorL",
 		"ac": "2x Dexterity Modifier (max 5)",
 		"dr": 1,
@@ -832,16 +834,20 @@
 		"source": "CDPH",
 		"rarity": "very rare",
 		"type": "ArmorM",
+		"weight": 1,
+		"value": 400,
 		"ac": "4",
 		"property":[
 			"special"],
 		"entries": ["<i>You gain advantage on Stealth Checks.</i>"]
 	},
 	{
-		"name": "Woven Iron",
+		"name": "Woven Iron Armor",
 		"source": "CDPH",
 		"rarity": "common",
 		"type": "ArmorM",
+		"weight": 10,
+		"value": 80,
 		"ac": "2",
 		"dr": 2,
 		"edr": 10,
@@ -851,10 +857,12 @@
 		"entries": ["<i>This armor can be woven into normal clothes, making it not noticable as an armor.</i>"]
 	},
 	{
-		"name": "Woven Aluminium",
+		"name": "Woven Aluminium Armor",
 		"source": "CDPH",
 		"rarity": "common",
 		"type": "ArmorM",
+		"weight": 4,
+		"value": 75,
 		"ac": "3 + Dexterty Modifier (max 2)",
 		"dr": 3,
 		"property":[
@@ -862,10 +870,12 @@
 		"entries": ["<i>This armor can be woven into normal clothes, making it not noticable as an armor.</i>"]
 	},
 	{
-		"name": "Fearmor",
+		"name": "Fearmor Armor",
 		"source": "CDPH",
 		"rarity": "common",
 		"type": "ArmorM",
+		"weight": 8,
+		"value": 105,
 		"ac": "4",
 		"dr": 3,
 		"edr": 15,
@@ -874,30 +884,36 @@
 		"entries": [""]
 	},
 	{
-		"name": "Osplir",
+		"name": "Osplir Armor",
 		"source": "CDPH",
 		"rarity": "common",
 		"type": "ArmorM",
+		"weight": 14,
+		"value": 140,
 		"ac": "4",
-		"dr": 3,
+		"dr": 4,
 		"resist": [
 			"acid"],
-		"entries": ["<i>This armor gives you resistance to acid damage.</i>"]
+		"entries": ["<i>This armor gives you resistance to acid damage.</i><br><br>Osplir Armor, made from an alloy of Osmium, Platinum and Iridium."]
 	},
 	{
-		"name": "F9XS",
+		"name": "F9XS Armor",
 		"source": "CDPH",
 		"rarity": "common",
 		"type": "ArmorM",
+		"weight": 6,
+		"value": 240,
 		"ac": "4 + Dexterity Modifier (max 1)",
 		"dr": 5,
 		"entries": [""]
 	},
 	{
-		"name": "Chainmail",
+		"name": "Chainmail Armor",
 		"source": "CDPH",
 		"rarity": "uncommon",
 		"type": "ArmorH",
+		"weight": 9,
+		"value": 160,
 		"ac": "5",
 		"dr": 3,
 		"edr": 20,
@@ -906,10 +922,12 @@
 		"entries": [""]
 	},
 	{
-		"name": "Plate",
+		"name": "Plate Armor",
 		"source": "CDPH",
 		"rarity": "uncommon",
 		"type": "ArmorH",
+		"weight": 9.5,
+		"value": 310,
 		"ac": "5",
 		"dr": 3,
 		"edr": 40,
@@ -918,28 +936,34 @@
 		"entries": [""]
 	},
 	{
-		"name": "Fullsteel",
+		"name": "Fullsteel Armor",
 		"source": "CDPH",
 		"rarity": "common",
+		"weight": 8,
+		"value": 240,
 		"type": "ArmorH",
 		"ac": "3",
 		"dr": 8,
 		"entries": ["*not actually made of steel."]
 	},
 	{
-		"name": "F9",
+		"name": "F9 Armor",
 		"source": "CDPH",
 		"rarity": "common",
 		"type": "ArmorH",
+		"weight": 7.5,
+		"value": 300,
 		"ac": "5 + Dexterity Modifier (max 1)",
 		"dr": 6,
 		"entries": [""]
 	},
 	{
-		"name": "F10P",
+		"name": "F10P Armor",
 		"source": "CDPH",
 		"rarity": "uncommon",
 		"type": "ArmorH",
+		"weight": 9,
+		"value": 445,
 		"ac": "5",
 		"dr": 6,
 		"resist": [
@@ -948,14 +972,16 @@
 		"entries": ["<i>This armor gives you resistance to piercing & slashing damage.</i>"]
 	},
 	{
-		"name": "F10B",
+		"name": "F10B Armor",
 		"source": "CDPH",
 		"rarity": "uncommon",
 		"type": "ArmorH",
+		"weight": 9.5,
+		"value": 445,
 		"ac": "5",
 		"dr": 6,
 		"resist": [
-			"piercing"],
+			"bludgeoning"],
 		"entries": ["<i>This armor gives you resistance to bludgeoning, explosion & fall damage.</i>"]
 	},
 	{
@@ -963,24 +989,129 @@
 		"source": "CDPH",
 		"rarity": "very rare",
 		"type": "ArmorP",
+		"weight": 14,
+		"value": 760,
 		"ac": "4",
 		"dr": 9,
-		"entries": ["<i>-1 on Dexterity Score while wearing this.</i>"]
+		"entries": ["<i>-1 on Dexterity Score while wearing this.<br>This armor weighs 14 kg when you carry it, but wearing it lowers the strain to about 10 kg of carry weight.</i>"]
 	},
 	{
 		"name": "Heavy Power Armor",
 		"source": "CDPH",
 		"rarity": "very rare",
 		"type": "ArmorP",
-		"dr": 12,
-		"resist": [
-			"piercing",
-			"slashing",
-			"bludgeoning",
-			"explosion",
-			"fall"],
-		"entries": ["<i>-2 on Dexterity Score while wearing this.<br>This armor gives you resistance to: piercing, slashing, bludgeoning, explosion & fall damage."]
+		"weight": 26,
+		"value": 1200,
+		"entries": ["<i>-2 on Dexterity Score while wearing this.<br>This armor weighs 26 kg when you carry it, but wearing it lowers the strain to about 8 kg of carry weight.<br>This armor gives you resistance to: piercing, slashing, bludgeoning, explosion & fall damage."]
+	},
+	{
+		"name": "Oxwall Shield",
+		"source": "CDPH",
+		"rarity": "common",
+		"type": "Shield",
+		"weight": 0.5,
+		"value": 45,
+		"entries": ["<i>-1 on Constitution Modifier while using this.<br>This armor gives you resistance to: piercing, slashing, bludgeoning, explosion & fall damage."]
+	},
+	{
+		"name": "Standard Shield (Kinetic)",
+		"source": "CDPH",
+		"rarity": "common",
+		"type": "Shield",
+		"weight": 1,
+		"value": 45,
+		"dr": "2 + 10%",
+		"entries": ["<i>You gain this shields DR bonus against bludgeoning & explosion damage.</i>"]
+	},
+	{
+		"name": "Standard Shield (Energy)",
+		"source": "CDPH",
+		"rarity": "common",
+		"type": "Shield",
+		"dr": "2 + 10%",
+		"entries": ["<i>You gain this shields DR bonus against laser, plasma, cold plasma, electric, cold, heat damage and fire damage.</i>"]
+	},
+	{
+		"name": "Standard Shield (Energenetics)",
+		"source": "CDPH",
+		"rarity": "common",
+		"type": "Shield",
+		"dr": "2 + 10%",
+		"entries": ["<i>You gain this shields DR bonus against energenetic damage.</i>"]
+	},
+	{
+		"name": "Heavy Shield (Kinetic)",
+		"source": "CDPH",
+		"rarity": "common",
+		"type": "Shield",
+		"dr": "5 + 10%",
+		"entries": ["<i>You gain this shields DR bonus against bludgeoning & explosion damage.</i>"]
+	},
+	{
+		"name": "Heavy Shield (Energy)",
+		"source": "CDPH",
+		"rarity": "common",
+		"type": "Shield",
+		"dr": "5 + 10%",
+		"entries": ["<i>You gain this shields DR bonus against laser, plasma, cold plasma, electric, cold, heat damage and fire damage.</i>"]
+	},
+	{
+		"name": "Heavy Shield (Energenetics)",
+		"source": "CDPH",
+		"rarity": "common",
+		"type": "Shield",
+		"dr": "5 + 10%",
+		"entries": ["<i>You gain this shields DR bonus against energenetic damage.</i>"]
+	},
+	{
+		"name": "PSC Shield",
+		"source": "CDPH",
+		"rarity": "uncommon",
+		"type": "Shield",
+		"dr": "25%",
+		"entries": ["<i>You gain this shields DR bonus against laser, plasma, cold plasma, electric, cold, heat damage and fire damage.</i>"]
+	},
+	{
+		"name": "OPSC Shield",
+		"source": "CDPH",
+		"rarity": "very rare",
+		"type": "Shield",
+		"dr": "50%",
+		"entries": ["<i>You gain this shields DR bonus against laser, plasma, cold plasma, electric, cold, heat damage and fire damage.</i>"]
+	},
+	{
+		"name": "SP-CRAIKS Shield",
+		"source": "CDPH",
+		"rarity": "uncommon",
+		"type": "Shield",
+		"dr": "10 + 25%",
+		"entries": ["<i>You gain this shields DR bonus against explosion damage.</i>"]
+	},
+	{
+		"name": "ECM V0.8 Shield",
+		"source": "CDPH",
+		"rarity": "uncommon",
+		"type": "Shield",
+		"dr": "10%",
+		"entries": ["<i>You gain this shields DR bonus against energenetic damage.</i>"]
+	},
+	{
+		"name": "ECM V1.0 Shield",
+		"source": "CDPH",
+		"rarity": "common",
+		"type": "Shield",
+		"dr": "10 + 10%",
+		"entries": ["<i>You gain this shields DR bonus against energenetic damage.</i>"]
+	},
+	{
+		"name": "ECM V2.0 Shield",
+		"source": "CDPH",
+		"rarity": "common",
+		"type": "Shield",
+		"dr": "15 + 25%",
+		"entries": ["<i>You gain this shields DR bonus against energenetic damage.</i>"]
 	}
+
 
 ],
 	"itemGroup": [
@@ -1077,7 +1208,17 @@
 			"scfType": "shields",
 			"rarity": "none",
 			"items":[
-				
+				"Oxwall|CDPH",
+				"Standard Shield (Kinetic)|CDPH",
+				"Standard Shield (Energy)|CDPH",
+				"Standard Shield (Energenetic)|CDPH",
+				"Heavy Shield (Kinetic)|CDPH",
+				"Heavy Shield (Energy)|CDPH",
+				"Heavy Shield (Energenetic)|CDPH",
+				"PSC Shield|CDPH",
+				"SP-CRAIKS Shield|CDPH",
+				"ECM V0.8 Shield|CDPH",
+				"ECM V1.0 Shield|CDPH"
 			]
 		}
 	]

@@ -1997,7 +1997,7 @@ Parser.spVariantClassesToCurrentAndLegacy = function (fromVariantClassList) {
 	const current = [];
 	const legacy = [];
 	fromVariantClassList.forEach(cls => {
-		if (cls.definedInSource === SRC_UACFV) legacy.push(cls);
+		if (cls.definedInSource === SRC_CDPH) legacy.push(cls);
 		else current.push(cls);
 	});
 	return [current, legacy];
