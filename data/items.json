@@ -956,7 +956,30 @@
 		"dr": 6,
 		"resist": [
 			"piercing"],
-		"entries": ["<i>This armor gives you resistance to bludgeoning damage.</i>"]
+		"entries": ["<i>This armor gives you resistance to bludgeoning, explosion & fall damage.</i>"]
+	},
+	{
+		"name": "Light Power Armor",
+		"source": "CDPH",
+		"rarity": "very rare",
+		"type": "ArmorP",
+		"ac": "4",
+		"dr": 9,
+		"entries": ["<i>-1 on Dexterity Score while wearing this.</i>"]
+	},
+	{
+		"name": "Heavy Power Armor",
+		"source": "CDPH",
+		"rarity": "very rare",
+		"type": "ArmorP",
+		"dr": 12,
+		"resist": [
+			"piercing",
+			"slashing",
+			"bludgeoning",
+			"explosion",
+			"fall"],
+		"entries": ["<i>-2 on Dexterity Score while wearing this.<br>This armor gives you resistance to: piercing, slashing, bludgeoning, explosion & fall damage."]
 	}
 
 ],

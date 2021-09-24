@@ -2497,6 +2497,7 @@ Parser.DMGTYPE_JSON_TO_FULL = {
 	"EL": "electric",
 	"EX": "explosion",	
 	"F": "fire",
+	"Fa": "fall",
 	"H": "heat",
 	"K": "kinetic",
 	"KO": "knockout",

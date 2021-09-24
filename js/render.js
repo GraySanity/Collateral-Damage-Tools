@@ -5458,9 +5458,10 @@ Renderer.item = {
 
 		// armor
 		if (item.ac != null) {
-			const prefix = item.type === "S" ? "+" : "";
-			const suffix = item.type === "LA" || (item.type === "MA" && item.dexterityMax === null) ? " + Dex" : item.type === "MA" ? " + Dex (max 2)" : "";
-			damageParts.push(`AC ${prefix}${item.ac}${suffix}`);
+			damageParts.push(`AC: ${item.ac}`);
+		}
+		if (item.dr != null) {
+			damageParts.push(`DR: ${item.dr}`);
 		}
 		if (item.acSpecial != null) damageParts.push(item.ac != null ? item.acSpecial : `AC ${item.acSpecial}`);
 
@@ -5480,7 +5481,7 @@ Renderer.item = {
 			const vehPartLower = [
 				item.crew ? `Crew ${item.crew}` : null,
 				item.crewMin && item.crewMax ? `Crew ${item.crewMin}-${item.crewMax}` : null,
-				item.vehAc ? `AC ${item.vehAc}` : null,
+				item.vehAc ? `AC: ${item.vehAc}` : null,
 				item.vehHp ? `HP ${item.vehHp}${item.vehDmgThresh ? `, Damage Threshold ${item.vehDmgThresh}` : ""}` : null,
 			].filter(Boolean).join(", ");
 
@@ -5497,7 +5498,7 @@ Renderer.item = {
 			].filter(Boolean).join("<br>"));
 		}
 
-		const damage = damageParts.join(", ");
+		const damage = damageParts.join("<br>");
 		
 		const propertiesTxt = Renderer.item._getPropertiesText(item);
 		var damageType;
