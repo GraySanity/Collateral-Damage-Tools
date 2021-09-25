@@ -1238,7 +1238,7 @@
 		"type": "Gear",
 		"weight": 108,
 		"value": 450,
-		"entries":["The maximum length of sold hemp or silk rope. Can hold weight up to 500 Kg. Has an AC of 6, and will break when it takes any damage that isn't bludgeoning, fall, knockout, electromagnetic or consitution based damage."]
+		"entries":["The maximum length of commercially sold hemp or silk rope. Can hold weight up to 500 Kg. Has an AC of 6, and will break when it takes any damage that isn't bludgeoning, fall, knockout, electromagnetic or consitution based damage."]
 	},
 	{
 		"name": "Steel Cable (1m)",
@@ -1256,7 +1256,7 @@
 		"type": "Gear",
 		"weight": 64,
 		"value": 160,
-		"entries":["The maximum length of sold steel cable, which can also be used like rope, although it is difficult to use for grip when climbing. Can hold weight up to 1 tonne. Has an AC of 7, DR of 10, and will break when it takes any damage that isn't fire, fall, knockout, electromagnetic or consitution based damage.  Using this to climb will give disadvantage on Strength and Dexterity Saving Throws for climbing it as it is quite slippery."]
+		"entries":["The maximum length of commercially sold steel cable, which can also be used like rope, although it is difficult to use for grip when climbing. Can hold weight up to 1 tonne. Has an AC of 7, DR of 10, and will break when it takes any damage that isn't fire, fall, knockout, electromagnetic or consitution based damage.  Using this to climb will give disadvantage on Strength and Dexterity Saving Throws for climbing it as it is quite slippery."]
 	},
 	{
 		"name": "Carbon Cable (1m)",
@@ -1265,25 +1265,50 @@
 		"type": "Gear",
 		"weight": 0.15,
 		"value": 3.5,
-		"entries":["Some Carbonfibre cable, which can also be used like rope. Can hold weight up to 50 tonnes. Has an AC of 6, DR of 8, and will break when it takes any damage that isn't bludgeoning, fall, knockout, electromagnetic or consitution based damage."]
+		"entries":["1 Meter of Carbonfibre cable, which can also be used like rope. Can hold weight up to 50 tonnes. Has an AC of 6, DR of 8, and will break when it takes any damage that isn't bludgeoning, fall, knockout, electromagnetic or consitution based damage."]
 	},
 	{
 		"name": "Carbon Cable (360m)",
 		"source": "CDPH",
-		"rarity": "very rare",
+		"rarity": "uncommon",
 		"type": "Gear",
 		"weight": 54,
 		"value": 1260,
-		"entries":["Some Carbonfibre cable, which can also be used like rope. Can hold weight up to 50 tonnes. Has an AC of 6, DR of 8, and will break when it takes any damage that isn't bludgeoning, fall, knockout, electromagnetic or consitution based damage."]
+		"entries":["The maximum length of commercially sold Carbonfibre cable, which can also be used like rope. Can hold weight up to 50 tonnes. Has an AC of 6, DR of 8, and will break when it takes any damage that isn't bludgeoning, fall, knockout, electromagnetic or consitution based damage."]
 	},
 	{
 		"name": "Mobile Compact Personal Computer",
 		"source": "CDPH",
-		"rarity": "very rare",
+		"rarity": "common",
 		"type": "Gear",
 		"weight": 0.5,
 		"value": 200,
-		"entries":[""]
+		"entries":["A very small personal computer, small enough to take with you. Often used to communicate with others over long distances or to search the NoodleSoup for information.<br>Depending on the type and brand, they range from having a physical keyboard and mouse, to touchscreen, to 3D holographic projected screens whether monochromatic or in colour.<br>The given value and weight are also just estimations, as most of them are overpriced, and the costs heavily depend on the features the product has and the brand that made the product."]
+	},
+	{
+		"name": "Bracetop",
+		"source": "CDPH",
+		"rarity": "common",
+		"type": "Gear",
+		"weight": 0.5,
+		"value": 200,
+		"entries":["A {@item Mobile Compact Personal Computer|CDPH} in a bracelet, usually word around the wrist."]
+	},
+	{
+		"name": "Medkit",
+		"source": "CDPH",
+		"rarity": "common",
+		"type": "Gear",
+		"weight": 1,
+		"value": 40,
+		"entries":["XXXXXXXXXXXXXXXXXXXXXX"]
+	},
+	{
+		"name": "Personal Medkit",
+		"source": "CDPH",
+		"rarity": "special",
+		"type": "Gear",
+		"entries":["XXXXXXXXXXXXXXXXXXXXXXXXXXXX"]
 	}
 
 
