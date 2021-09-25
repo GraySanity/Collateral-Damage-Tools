@@ -30,6 +30,20 @@
 			"template": "<br>{{prop_name}} ({{item.edr}}DR vs energenetic damage)"
 		},
 		{
+			"abbreviation": "explosive",
+			"source": "CDPH",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Explosive",
+					"entries": [
+						"<br>Explosives can be used to damage creatures and things in a large radius, and are also extremely dangerous to the user. Thrown Explosives explode when the turn of the thrower is over. When someone gets hit by a grenade, then they need to throw a Dexterity Save (DC 15). They take full damage and the possible effect on a failed saving thorw, and half damage and no effect when they succeed their saving throw."
+					]
+				}
+			],
+			"template": "Range: {{item.range}} m Radius"
+		},
+		{
 			"abbreviation": "ammofire",
 			"source": "CDPH",
 			"entries": [

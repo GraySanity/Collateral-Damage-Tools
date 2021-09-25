@@ -2484,7 +2484,6 @@ Parser.DMGTYPE_JSON_TO_FULL = {
 	"B": "bludgeoning",
 	"C": "cold",
 	"CD": "constitution",
-	"EN": "energy",
 	"EG": "energenetic",
 	"EG:D": "dark",
 	"EG:L": "light",
@@ -2499,16 +2498,13 @@ Parser.DMGTYPE_JSON_TO_FULL = {
 	"F": "fire",
 	"Fa": "fall",
 	"H": "heat",
-	"K": "kinetic",
 	"KO": "knockout",
-	"L": "photonic",
 	"La": "laser",
 	"P": "piercing",
 	"PLC": "cold plasma",
 	"PL": "plasma",
 	"S": "slashing",
-	"T": "true damage",
-	"TE": "temperature"
+	"T": "true damage"
 };
 
 Parser.DMG_TYPES = ["acid", "bludgeoning", "cold", "constitution", "energy", "energenetic", "dark", "light", "time", "space", "chaos", "magic", "psychic", "electromagnetic", "electric", "explosion", "fire", "heat", "kinetic", "knockout", "photonic", "laser", "piercing", "cold plasma", "plasma", "slashing", "true damage", "temperature"];

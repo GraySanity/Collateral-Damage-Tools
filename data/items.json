@@ -1028,6 +1028,8 @@
 		"source": "CDPH",
 		"rarity": "common",
 		"type": "Shield",
+		"weight": 1,
+		"value": 65,
 		"dr": "2 + 10%",
 		"entries": ["<i>You gain this shields DR bonus against laser, plasma, cold plasma, electric, cold, heat damage and fire damage.</i>"]
 	},
@@ -1036,6 +1038,8 @@
 		"source": "CDPH",
 		"rarity": "common",
 		"type": "Shield",
+		"weight": 1,
+		"value": 75,
 		"dr": "2 + 10%",
 		"entries": ["<i>You gain this shields DR bonus against energenetic damage.</i>"]
 	},
@@ -1044,6 +1048,8 @@
 		"source": "CDPH",
 		"rarity": "common",
 		"type": "Shield",
+		"weight": 1.2,
+		"value": 90,
 		"dr": "5 + 10%",
 		"entries": ["<i>You gain this shields DR bonus against bludgeoning & explosion damage.</i>"]
 	},
@@ -1052,6 +1058,8 @@
 		"source": "CDPH",
 		"rarity": "common",
 		"type": "Shield",
+		"weight": 1,
+		"value": 110,
 		"dr": "5 + 10%",
 		"entries": ["<i>You gain this shields DR bonus against laser, plasma, cold plasma, electric, cold, heat damage and fire damage.</i>"]
 	},
@@ -1060,6 +1068,8 @@
 		"source": "CDPH",
 		"rarity": "common",
 		"type": "Shield",
+		"weight": 1,
+		"value": 120,
 		"dr": "5 + 10%",
 		"entries": ["<i>You gain this shields DR bonus against energenetic damage.</i>"]
 	},
@@ -1068,6 +1078,8 @@
 		"source": "CDPH",
 		"rarity": "uncommon",
 		"type": "Shield",
+		"weight": 1,
+		"value": 180,
 		"dr": "25%",
 		"entries": ["<i>You gain this shields DR bonus against laser, plasma, cold plasma, electric, cold, heat damage and fire damage.</i>"]
 	},
@@ -1076,6 +1088,8 @@
 		"source": "CDPH",
 		"rarity": "very rare",
 		"type": "Shield",
+		"weight": 1,
+		"value": 500,
 		"dr": "50%",
 		"entries": ["<i>You gain this shields DR bonus against laser, plasma, cold plasma, electric, cold, heat damage and fire damage.</i>"]
 	},
@@ -1084,6 +1098,8 @@
 		"source": "CDPH",
 		"rarity": "uncommon",
 		"type": "Shield",
+		"weight": 1,
+		"value": 265,
 		"dr": "10 + 25%",
 		"entries": ["<i>You gain this shields DR bonus against explosion damage.</i>"]
 	},
@@ -1092,6 +1108,8 @@
 		"source": "CDPH",
 		"rarity": "uncommon",
 		"type": "Shield",
+		"weight": 1,
+		"value": 60,
 		"dr": "10%",
 		"entries": ["<i>You gain this shields DR bonus against energenetic damage.</i>"]
 	},
@@ -1100,6 +1118,8 @@
 		"source": "CDPH",
 		"rarity": "common",
 		"type": "Shield",
+		"weight": 1,
+		"value": 120,
 		"dr": "10 + 10%",
 		"entries": ["<i>You gain this shields DR bonus against energenetic damage.</i>"]
 	},
@@ -1108,8 +1128,162 @@
 		"source": "CDPH",
 		"rarity": "common",
 		"type": "Shield",
+		"weight": 1,
+		"value": 285,
 		"dr": "15 + 25%",
 		"entries": ["<i>You gain this shields DR bonus against energenetic damage.</i>"]
+	},
+	{
+		"name": "High Explosive Grenade",
+		"source": "CDPH",
+		"rarity": "common",
+		"type": "Expl",
+		"weight": 1,
+		"value": 80,
+		"dmgType":"EX",
+		"dmg1": "4d6",
+		"range": 8,
+		"property":["explosive"]
+	},
+	{
+		"name": "Frag Grenade",
+		"source": "CDPH",
+		"rarity": "common",
+		"type": "Expl",
+		"weight": 1,
+		"value": 80,
+		"dmgType":["S","P"],
+		"dmg1": "3d4+8",
+		"range": 15,
+		"property":["explosive"]
+	},
+	{
+		"name": "Plasma Grenade",
+		"source": "CDPH",
+		"rarity": "uncommon",
+		"type": "Expl",
+		"weight": 1,
+		"value": 120,
+		"dmgType":"PL",
+		"dmg1": "5d4+5",
+		"range": 6,
+		"property":["explosive"]
+	},
+	{
+		"name": "Antimatter Grenade",
+		"source": "CDPH",
+		"rarity": "very rare",
+		"type": "Expl",
+		"weight": 1,
+		"value": 260,
+		"dmgType":"EX",
+		"dmg1": "4d6+12",
+		"range": 21,
+		"property":["explosive"],
+		"entries":["<i>1 turn cooking time</i>"]
+	},
+	{
+		"name": "Flashbang",
+		"source": "CDPH",
+		"rarity": "very rare",
+		"type": "Expl",
+		"weight": 1,
+		"value": 80,
+		"range": 8,
+		"property":["explosive"],
+		"entries":["All affected creatures get -3 and Disadvantage on Dexterity Saving Throws and Attack Rolls, and have halved speed until the start of their next turn."]
+	},
+	{
+		"name": "Smoke Grenade",
+		"source": "CDPH",
+		"rarity": "very rare",
+		"type": "Expl",
+		"weight": 1,
+		"value": 80,
+		"range": 5,
+		"property":["explosive"],
+		"entries":["<i>2 turns cooking time</i><br>Releases smoke, obscuring anything that is within or behind it. This smoke gives full cover without the DR bonus, meaning it gives +6 AC."]
+	},
+	{
+		"name": "Small Caltrop",
+		"source": "CDPH",
+		"rarity": "common",
+		"type": "Gear",
+		"weight": 0.05,
+		"value": 2,
+		"entries":["A big inconspicuous spike that is quite horrible to step in.<br>You cannot use it as caltrops effectively when you have only one, as you need 20 caltrops to use them effectively."]
+	},
+	{
+		"name": "Small Caltrops (bag of 20)",
+		"source": "CDPH",
+		"rarity": "common",
+		"type": "Gear",
+		"weight": 1,
+		"value": 40,
+		"entries":["Big inconspicuous spikes that are quite horrible to step in.<br>A single set can cover an circular area of 1 meter radius.<br>When someone moves over the ground into or through this space with them knowing the caltrops are there, than they need to make a Dexterity Saving Throw. On a fail, they take {@damage 2d4+2} piercing damage and can’t be damaged again by this set of caltrops.<br>Someone who steps into an area of caltrops without knowing they were there fails the Dexterity Saving Throw automatically."]
+	},
+	{
+		"name": "Rope (1m)",
+		"source": "CDPH",
+		"rarity": "common",
+		"type": "Gear",
+		"weight": 0.6,
+		"value": 2.5,
+		"entries":["1 Meter of hemp or silk rope. Can hold weight up to 500 Kg. Has an AC of 6, and will break when it takes any damage that isn't bludgeoning, fall, knockout, electromagnetic or consitution based damage."]
+	},
+	{
+		"name": "Rope (180m)",
+		"source": "CDPH",
+		"rarity": "common",
+		"type": "Gear",
+		"weight": 108,
+		"value": 450,
+		"entries":["The maximum length of sold hemp or silk rope. Can hold weight up to 500 Kg. Has an AC of 6, and will break when it takes any damage that isn't bludgeoning, fall, knockout, electromagnetic or consitution based damage."]
+	},
+	{
+		"name": "Steel Cable (1m)",
+		"source": "CDPH",
+		"rarity": "common",
+		"type": "Gear",
+		"weight": 0.8,
+		"value": 2,
+		"entries":["1 Meter of steel cable, which can also be used like rope, although it is difficult to use for grip when climbing. Can hold weight up to 1 tonne. Has an AC of 7, DR of 10, and will break when it takes any damage that isn't fire, fall, knockout, electromagnetic or consitution based damage. Using this to climb will give disadvantage on Strength and Dexterity Saving Throws for climbing it as it is quite slippery."]
+	},
+	{
+		"name": "Steel Cable (80m)",
+		"source": "CDPH",
+		"rarity": "commmon",
+		"type": "Gear",
+		"weight": 64,
+		"value": 160,
+		"entries":["The maximum length of sold steel cable, which can also be used like rope, although it is difficult to use for grip when climbing. Can hold weight up to 1 tonne. Has an AC of 7, DR of 10, and will break when it takes any damage that isn't fire, fall, knockout, electromagnetic or consitution based damage.  Using this to climb will give disadvantage on Strength and Dexterity Saving Throws for climbing it as it is quite slippery."]
+	},
+	{
+		"name": "Carbon Cable (1m)",
+		"source": "CDPH",
+		"rarity": "uncommon",
+		"type": "Gear",
+		"weight": 0.15,
+		"value": 3.5,
+		"entries":["Some Carbonfibre cable, which can also be used like rope. Can hold weight up to 50 tonnes. Has an AC of 6, DR of 8, and will break when it takes any damage that isn't bludgeoning, fall, knockout, electromagnetic or consitution based damage."]
+	},
+	{
+		"name": "Carbon Cable (360m)",
+		"source": "CDPH",
+		"rarity": "very rare",
+		"type": "Gear",
+		"weight": 54,
+		"value": 1260,
+		"entries":["Some Carbonfibre cable, which can also be used like rope. Can hold weight up to 50 tonnes. Has an AC of 6, DR of 8, and will break when it takes any damage that isn't bludgeoning, fall, knockout, electromagnetic or consitution based damage."]
+	},
+	{
+		"name": "Mobile Compact Personal Computer",
+		"source": "CDPH",
+		"rarity": "very rare",
+		"type": "Gear",
+		"weight": 0.5,
+		"value": 200,
+		"entries":[""]
 	}
 
 
