@@ -2239,6 +2239,146 @@ Renderer.getAbilityData = function (abArr) {
 	);
 };
 
+Renderer.getSetAbilityData = function (abArr) {
+	function doRenderOuter (abObj) {
+		const mainAbs = [];
+		const asCollection = [];
+		const areNegative = [];
+		const toConvertToText = [];
+		const toConvertToShortText = [];
+
+		if (abObj != null) {
+			handleAllAbilities(abObj);
+			handleAbilitiesChoose();
+			return new Renderer._AbilityData(toConvertToText.join("; "), toConvertToShortText.join("; "), asCollection, areNegative);
+		}
+
+		return new Renderer._AbilityData("", "", [], []);
+
+		function handleAllAbilities (abObj, targetList) {
+			MiscUtil.copy(Parser.ABIL_ABVS)
+				.sort((a, b) => SortUtil.ascSort(abObj[b] || 0, abObj[a] || 0))
+				.forEach(shortLabel => handleAbility(abObj, shortLabel, targetList));
+		}
+
+		function handleAbility (abObj, shortLabel, optToConvertToTextStorage) {
+			if (abObj[shortLabel] != null) {
+				const isNegMod = abObj[shortLabel] < 0;
+				const toAdd = `${shortLabel.uppercaseFirst()} ${(isNegMod ? "" : "")}${abObj[shortLabel]}`;
+
+				if (optToConvertToTextStorage) {
+					optToConvertToTextStorage.push(toAdd);
+				} else {
+					toConvertToText.push(toAdd);
+					toConvertToShortText.push(toAdd);
+				}
+
+				mainAbs.push(shortLabel.uppercaseFirst());
+				asCollection.push(shortLabel);
+				if (isNegMod) areNegative.push(shortLabel);
+			}
+		}
+
+		function handleAbilitiesChoose () {
+			if (abObj.choose != null) {
+				const ch = abObj.choose;
+				let outStack = "";
+				if (ch.weighted) {
+					const w = ch.weighted;
+					const froms = w.from.map(it => it.uppercaseFirst());
+					const isAny = froms.length === 6;
+					let cntProcessed = 0;
+
+					const areIncreaseShort = [];
+					const areIncrease = w.weights.filter(it => it >= 0).sort(SortUtil.ascSort).reverse().map(it => {
+						areIncreaseShort.push(`+${it}`);
+						if (isAny) return `${cntProcessed ? "choose " : ""}any ${cntProcessed++ ? `other ` : ""}+${it}`
+						return `one ${cntProcessed++ ? `other ` : ""}ability to increase by ${it}`;
+					});
+
+					const areReduceShort = [];
+					const areReduce = w.weights.filter(it => it < 0).map(it => -it).sort(SortUtil.ascSort).map(it => {
+						areReduceShort.push(`-${it}`);
+						if (isAny) return `${cntProcessed ? "choose " : ""}any ${cntProcessed++ ? `other ` : ""}-${it}`
+						return `one ${cntProcessed++ ? `other ` : ""}ability to decrease by ${it}`;
+					});
+
+					const startText = isAny
+						? `Choose `
+						: `From ${froms.joinConjunct(", ", " and ")} choose `;
+
+					const ptAreaIncrease = isAny
+						? areIncrease.concat(areReduce).join("; ")
+						: areIncrease.concat(areReduce).joinConjunct(", ", isAny ? "; " : " and ");
+					toConvertToText.push(`${startText}${ptAreaIncrease}`);
+					toConvertToShortText.push(`${isAny ? "Any combination " : ""}${areIncreaseShort.concat(areReduceShort).join("/")}${isAny ? "" : ` from ${froms.join("/")}`}`);
+				} else {
+					const allAbilities = ch.from.length === 6;
+					const allAbilitiesWithParent = isAllAbilitiesWithParent(ch);
+					let amount = ch.amount === undefined ? 1 : ch.amount;
+					amount = (amount < 0 ? "" : "+") + amount;
+					if (allAbilities) {
+						outStack += "any ";
+					} else if (allAbilitiesWithParent) {
+						outStack += "any other ";
+					}
+					if (ch.count != null && ch.count > 1) {
+						outStack += `${Parser.numberToText(ch.count)} `;
+					}
+					if (allAbilities || allAbilitiesWithParent) {
+						outStack += `${ch.count > 1 ? "unique " : ""}${amount}`;
+					} else {
+						for (let j = 0; j < ch.from.length; ++j) {
+							let suffix = "";
+							if (ch.from.length > 1) {
+								if (j === ch.from.length - 2) {
+									suffix = " or ";
+								} else if (j < ch.from.length - 2) {
+									suffix = ", ";
+								}
+							}
+							let thsAmount = ` ${amount}`;
+							if (ch.from.length > 1) {
+								if (j !== ch.from.length - 1) {
+									thsAmount = "";
+								}
+							}
+							outStack += ch.from[j].uppercaseFirst() + thsAmount + suffix;
+						}
+					}
+				}
+
+				if (outStack.trim()) {
+					toConvertToText.push(`Choose ${outStack}`);
+					toConvertToShortText.push(outStack.uppercaseFirst());
+				}
+			}
+		}
+
+		function isAllAbilitiesWithParent (chooseAbs) {
+			const tempAbilities = [];
+			for (let i = 0; i < mainAbs.length; ++i) {
+				tempAbilities.push(mainAbs[i].toLowerCase());
+			}
+			for (let i = 0; i < chooseAbs.from.length; ++i) {
+				const ab = chooseAbs.from[i].toLowerCase();
+				if (!tempAbilities.includes(ab)) tempAbilities.push(ab);
+				if (!asCollection.includes(ab.toLowerCase)) asCollection.push(ab.toLowerCase());
+			}
+			return tempAbilities.length === 6;
+		}
+	}
+
+	const outerStack = (abArr || [null]).map(it => doRenderOuter(it));
+	if (outerStack.length <= 1) return outerStack[0];
+	return new Renderer._AbilityData(
+		`Choose one of: ${outerStack.map((it, i) => `(${Parser.ALPHABET[i].toLowerCase()}) ${it.asText}`).join(" ")}`,
+		`${outerStack.map((it, i) => `(${Parser.ALPHABET[i].toLowerCase()}) ${it.asTextShort}`).join(" ")}`,
+		[...new Set(outerStack.map(it => it.asCollection).flat())],
+		[...new Set(outerStack.map(it => it.areNegative).flat())],
+	);
+};
+
 Renderer._AbilityData = function (asText, asTextShort, asCollection, areNegative) {
 	this.asText = asText;
 	this.asTextShort = asTextShort;
@@ -4098,6 +4238,7 @@ Renderer.race = {
 		const renderStack = [];
 
 		const ability = Renderer.getAbilityData(race.ability);
+		const setability = race.setability;
 		renderStack.push(`
 			${Renderer.utils.getExcludedTr(race, "race", UrlUtil.PG_RACES)}
 			${Renderer.utils.getNameTr(race, {page: UrlUtil.PG_RACES})}
@@ -4106,11 +4247,13 @@ Renderer.race = {
 				<table class="summary stripe-even-table">
 					<tr>
 						<th class="col-4 text-center">Ability Scores</th>
+						<th class="col-4 text-center">SE</th>
 						<th class="col-4 text-center">Size</th>
 						<th class="col-4 text-center">Speed</th>
 					</tr>
 					<tr>
-						<td class="text-center">${ability.asText}</td>
+						<td class="text-center">${ability.asText} </td>
+						<td class="text-center">${setability}</td>
 						<td class="text-center">${(race.size || [SZ_VARIES]).map(sz => Parser.sizeAbvToFull(sz)).join("/")}</td>
 						<td class="text-center">${Parser.getSpeedString(race)}</td>
 					</tr>

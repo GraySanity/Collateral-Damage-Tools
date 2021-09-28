@@ -2354,6 +2354,7 @@ SRC_5ETOOLS_TMP = "SRC_5ETOOLS_TMP"; // Temp source, used as a placeholder value
 
 SRC_CDPH = "CDPH";
 SRC_DMG = "DMG";
+SRC_TZH = "TZH";
 
 
 SRC_3PP_SUFFIX = " 3pp";
@@ -2369,15 +2370,18 @@ TftYP_NAME = "Tales from the Yawning Portal";
 Parser.SOURCE_JSON_TO_FULL = {};
 Parser.SOURCE_JSON_TO_FULL[SRC_CDPH] = "Collateral Damage Players Handbook";
 Parser.SOURCE_JSON_TO_FULL[SRC_DMG] = "Dungeon Master's Guide";
+Parser.SOURCE_JSON_TO_FULL[SRC_TZH] = "The Zenithian Hurdle"
 
 Parser.SOURCE_JSON_TO_ABV = {};
 Parser.SOURCE_JSON_TO_ABV[SRC_CDPH] = "CDPH";
 Parser.SOURCE_JSON_TO_ABV[SRC_DMG] = "DMG";
+Parser.SOURCE_JSON_TO_ABV[SRC_TZH] = "TZH";
 
 
 Parser.SOURCE_JSON_TO_DATE = {};
 Parser.SOURCE_JSON_TO_DATE[SRC_CDPH] = "2021-07-01";
 Parser.SOURCE_JSON_TO_DATE[SRC_DMG] = "2014-12-09";
+Parser.SOURCE_JSON_TO_DATE[SRC_TZH] = "2021-11-26";
 
 
 Parser.SOURCES_ADVENTURES = new Set([
@@ -2399,7 +2403,7 @@ Parser.SOURCES_AVAILABLE_DOCS_BOOK = {};
 	Parser.SOURCES_AVAILABLE_DOCS_BOOK[src.toLowerCase()] = src;
 });
 Parser.SOURCES_AVAILABLE_DOCS_ADVENTURE = {};
-[].forEach(src => {
+[SRC_TZH].forEach(src => {
 	Parser.SOURCES_AVAILABLE_DOCS_ADVENTURE[src] = src;
 	Parser.SOURCES_AVAILABLE_DOCS_ADVENTURE[src.toLowerCase()] = src;
 });
