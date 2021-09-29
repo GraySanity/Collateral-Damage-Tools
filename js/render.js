@@ -2837,164 +2837,175 @@ Renderer.utils = {
 	getClassabilHtml: (classabil) => {
 		return `From the ${classabil.class} Abilities`
 	},
-	getPrerequisiteHtml: (prerequisites, {isListMode = false, blacklistKeys = new Set(), isTextOnly = false, isSkipPrefix = false} = {}) => {
-		if (!prerequisites) return isListMode ? "\u2014" : "";
+	getPrerequisiteHtml: (preprerequisites, {isListMode = false, blacklistKeys = new Set(), isTextOnly = false, isSkipPrefix = false} = {}) => {
+		completelist = [isSkipPrefix ? "" : "Prerequisites: "];
+		for(i=0;i<preprerequisites.length;i++)
+		{
+			prerequisites=preprerequisites[i];
 
-		let cntPrerequisites = 0;
-		var joinervar = ", "
-		const listOfChoices = prerequisites.map(pr => {
-			return Object.entries(pr)
-				.sort(([kA], [kB]) => Renderer.utils._prereqWeights[kA] - Renderer.utils._prereqWeights[kB])
-				.map(([k, v]) => {
-					if (blacklistKeys.has(k)) return false;
+console.log(i);
+console.log("postprereq="+prerequisites);
+console.log("preprereq="+preprerequisites);
+console.log("preprereqlength="+preprerequisites.length);
+console.log("postprereqlength="+prerequisites.length);
+	
 
-					cntPrerequisites += 1;
 
-					switch (k) {
-						case "joiner": {
-							joinervar = v.joiner
-							}
-						case "level": {
-							// a generic level requirement (as of 2020-03-11, homebrew only)
-							if (typeof v === "number") {
-								if (isListMode) return `Lvl ${v}`
-								else return `${Parser.getOrdinalForm(v)} level`
-							} else if (!v.class && !v.subclass) {
-								if (isListMode) return `Lvl ${v.level}`
-								else return `${Parser.getOrdinalForm(v.level)}`
-							};
+			if (!prerequisites) return isListMode ? "\u2014" : "";
+			let cntPrerequisites = 0;
+			const listOfChoices = prerequisites.map(pr => {
+				return Object.entries(pr).map(([k, v]) => {
+						if (blacklistKeys.has(k)) return false;
 
-							const isSubclassVisible = v.subclass && v.subclass.visible;
-							const isClassVisible = v.class && (v.class.visible || isSubclassVisible); // force the class name to be displayed if there's a subclass being displayed
-							if (isListMode) {
-								const shortNameRaw = isClassVisible ? Renderer.utils._getPrerequisiteHtml_getShortClassName(v.class.name) : null;
-								return `${isClassVisible ? `${shortNameRaw.slice(0, 4)}${isSubclassVisible ? "*" : "."} ` : ""} Lvl ${v.level}`
-							} else {
-								let classPart = "";
-								if (isClassVisible && isSubclassVisible) classPart = ` ${v.class.name} (${v.subclass.name})`;
-								else if (isClassVisible) classPart = ` ${v.class.name}`;
-								else if (isSubclassVisible) classPart = ` &lt;remember to insert class name here&gt; (${v.subclass.name})`; // :^)
-								return `${Parser.getOrdinalForm(v.level)} level${isClassVisible ? ` ${classPart}` : ""}`
-							}
-						}
-						case "pact": return Parser.prereqPactToFull(v);
-						case "patron": return isListMode ? `${Parser.prereqPatronToShort(v)} patron` : `${v} patron`;
-						case "spell":
-							return isListMode
-								? v.map(x => x.split("#")[0].split("|")[0].toTitleCase()).join("/")
-								: v.map(sp => Parser.prereqSpellToFull(sp, {isTextOnly})).joinConjunct(", ", " or ");
-						case "feature":
-							return isListMode
-								? v.map(x => Renderer.stripTags(x).toTitleCase()).join("/")
-								: v.map(it => isTextOnly ? Renderer.stripTags(it) : Renderer.get().render(it)).joinConjunct(", ", " or ");
-						case "item":
-							return isListMode ? v.map(x => x.toTitleCase()).join("/") : v.joinConjunct(", ", " or ");
-						case "otherSummary":
-							return isListMode ? (v.entrySummary || Renderer.stripTags(v.entry)) : (isTextOnly ? Renderer.stripTags(v.entry) : Renderer.get().render(v.entry));
-						case "other": return isListMode ? "Special" : (isTextOnly ? Renderer.stripTags(v) : Renderer.get().render("<br>"+v));
-						case "race": {
-							const parts = v.map((it, i) => {
-								if (isListMode) {
-									return `${it.name.toTitleCase()}${it.subrace != null ? ` (${it.subrace})` : ""}`;
-								} else {
-									const raceName = it.displayEntry ? (isTextOnly ? Renderer.stripTags(it.displayEntry) : Renderer.get().render(it.displayEntry)) : i === 0 ? it.name.toTitleCase() : it.name;
-									return `${raceName}${it.subrace != null ? ` (${it.subrace})` : ""}`;
-								}
-							});
-							return isListMode ? parts.join("/") : parts.joinConjunct(", ", " or ");
-						}
-						case "ability": {
-							// `v` is an array or objects with str/dex/... properties; array is "OR"'d togther, object is "AND"'d together
+						cntPrerequisites += 1;
+console.log("k="+k);
+							switch (k) {
+								case "level": {
+									// a generic level requirement (as of 2020-03-11, homebrew only)
+									if (typeof v === "number") {
+										if (isListMode) return `Lvl ${v}`
+										else return `${Parser.getOrdinalForm(v)} level`
+									} else if (!v.class && !v.subclass) {
+										if (isListMode) return `Lvl ${v.level}`
+										else return `${Parser.getOrdinalForm(v.level)}`
+									};
 
-							let hadMultipleInner = false;
-							let hadMultiMultipleInner = false;
-							let allValuesEqual = null;
-
-							outer: for (const abMeta of v) {
-								for (const req of Object.values(abMeta)) {
-									if (allValuesEqual == null) allValuesEqual = req;
-									else {
-										if (req !== allValuesEqual) {
-											allValuesEqual = null;
-											break outer;
-										}
+									const isSubclassVisible = v.subclass && v.subclass.visible;
+									const isClassVisible = v.class && (v.class.visible || isSubclassVisible); // force the class name to be displayed if there's a subclass being displayed
+									if (isListMode) {
+										const shortNameRaw = isClassVisible ? Renderer.utils._getPrerequisiteHtml_getShortClassName(v.class.name) : null;
+										return `${isClassVisible ? `${shortNameRaw.slice(0, 4)}${isSubclassVisible ? "*" : "."} ` : ""} Lvl ${v.level}`
+									} else {
+										let classPart = "";
+										if (isClassVisible && isSubclassVisible) classPart = ` ${v.class.name} (${v.subclass.name})`;
+										else if (isClassVisible) classPart = ` ${v.class.name}`;
+										else if (isSubclassVisible) classPart = ` &lt;remember to insert class name here&gt; (${v.subclass.name})`; // :^)
+										return `${Parser.getOrdinalForm(v.level)} level${isClassVisible ? ` ${classPart}` : ""}`
 									}
 								}
-							}
+								case "pact": return Parser.prereqPactToFull(v);
+								case "patron": return isListMode ? `${Parser.prereqPatronToShort(v)} patron` : `${v} patron`;
+								case "spell":
+									return isListMode
+										? v.map(x => x.split("#")[0].split("|")[0].toTitleCase()).join("/")
+										: v.map(sp => Parser.prereqSpellToFull(sp, {isTextOnly})).joinConjunct(" & ", " and ");
+								case "feature":
+									return isListMode
+										? v.map(x => Renderer.stripTags(x).toTitleCase()).join("/")
+										: v.map(it => isTextOnly ? Renderer.stripTags(it) : Renderer.get().render(it)).joinConjunct(" & ", " and ");
+								case "item":
+									return isListMode ? v.map(x => x.toTitleCase()).join("/") : v.joinConjunct(" & ", " and ");
+								case "otherSummary":
+									return isListMode ? (v.entrySummary || Renderer.stripTags(v.entry)) : (isTextOnly ? Renderer.stripTags(v.entry) : Renderer.get().render(v.entry));
+								case "other": return isListMode ? "Special" : (isTextOnly ? Renderer.stripTags(v) : Renderer.get().render("<br>"+v));
+								case "race": {
+									const parts = v.map((it, i) => {
+										if (isListMode) {
+											return `${it.name.toTitleCase()}${it.subrace != null ? ` (${it.subrace})` : ""}`;
+										} else {
+											const raceName = it.displayEntry ? (isTextOnly ? Renderer.stripTags(it.displayEntry) : Renderer.get().render(it.displayEntry)) : i === 0 ? it.name.toTitleCase() : it.name;
+											return `${raceName}${it.subrace != null ? ` (${it.subrace})` : ""}`;
+										}
+									});
+									return isListMode ? parts.join("/") : parts.joinConjunct(" & ", " and ");
+								}
+								case "ability": {
+									// `v` is an array or objects with str/dex/... properties; array is "OR"'d togther, object is "AND"'d together
 
-							const abilityOptions = v.map(abMeta => {
-								if (allValuesEqual) {
-									const abList = Object.keys(abMeta);
-									hadMultipleInner = hadMultipleInner || abList.length > 1;
-									return isListMode ? abList.map(ab => ab.uppercaseFirst()).join(", ") : abList.map(ab => Parser.attAbvToFull(ab)).joinConjunct(", ", " and ");
-								} else {
-									const groups = {};
+									let hadMultipleInner = false;
+									let hadMultiMultipleInner = false;
+									let allValuesEqual = null;
 
-									Object.entries(abMeta).forEach(([ab, req]) => {
-										(groups[req] = groups[req] || []).push(ab);
+									outer: for (const abMeta of v) {
+										for (const req of Object.values(abMeta)) {
+											if (allValuesEqual == null) allValuesEqual = req;
+											else {
+												if (req !== allValuesEqual) {
+													allValuesEqual = null;
+													break outer;
+												}
+											}
+										}
+									}
+
+									const abilityOptions = v.map(abMeta => {
+										if (allValuesEqual) {
+											const abList = Object.keys(abMeta);
+											hadMultipleInner = hadMultipleInner || abList.length > 1;
+											return isListMode ? abList.map(ab => ab.uppercaseFirst()).join(", ") : abList.map(ab => Parser.attAbvToFull(ab)).joinConjunct(", ", " and ");
+										} else {
+											const groups = {};
+
+											Object.entries(abMeta).forEach(([ab, req]) => {
+												(groups[req] = groups[req] || []).push(ab);
+											});
+
+											let isMulti = false;
+											const byScore = Object.entries(groups)
+												.sort(([reqA], [reqB]) => SortUtil.ascSort(Number(reqB), Number(reqA)))
+												.map(([req, abs]) => {
+													hadMultipleInner = hadMultipleInner || abs.length > 1;
+													if (abs.length > 1) hadMultiMultipleInner = isMulti = true;
+
+													abs = abs.sort(SortUtil.ascSortAtts);
+													return isListMode
+														? `${abs.map(ab => ab.uppercaseFirst()).join(", ")} ${req}+`
+														: `${abs.map(ab => Parser.attAbvToFull(ab)).joinConjunct(", ", " and ")} ${req} or higher`;
+												});
+
+											return isListMode
+												? `${isMulti || byScore.length > 1 ? "(" : ""}${byScore.join(" & ")}${isMulti || byScore.length > 1 ? ")" : ""}`
+												: isMulti ? byScore.joinConjunct("; ", " and ") : byScore.joinConjunct(", ", " and ");
+										}
 									});
 
-									let isMulti = false;
-									const byScore = Object.entries(groups)
-										.sort(([reqA], [reqB]) => SortUtil.ascSort(Number(reqB), Number(reqA)))
-										.map(([req, abs]) => {
-											hadMultipleInner = hadMultipleInner || abs.length > 1;
-											if (abs.length > 1) hadMultiMultipleInner = isMulti = true;
-
-											abs = abs.sort(SortUtil.ascSortAtts);
-											return isListMode
-												? `${abs.map(ab => ab.uppercaseFirst()).join(", ")} ${req}+`
-												: `${abs.map(ab => Parser.attAbvToFull(ab)).joinConjunct(", ", " and ")} ${req} or higher`;
-										});
-
-									return isListMode
-										? `${isMulti || byScore.length > 1 ? "(" : ""}${byScore.join(" & ")}${isMulti || byScore.length > 1 ? ")" : ""}`
-										: isMulti ? byScore.joinConjunct("; ", " and ") : byScore.joinConjunct(", ", " and ");
-								}
-							});
-
-							// if all values were equal, add the "X+" text at the end, as the options render doesn't include it
-							if (isListMode) {
-								return `${abilityOptions.join("/")}${allValuesEqual != null ? ` ${allValuesEqual}+` : ""}`
-							} else {
-								const isComplex = hadMultiMultipleInner || hadMultipleInner || allValuesEqual == null;
-								const joined = abilityOptions.joinConjunct(
-									hadMultiMultipleInner ? " - " : hadMultipleInner ? "; " : ", ",
-									isComplex ? (isTextOnly ? ` /or/ ` : ` <i>or</i> `) : " or ",
-								);
-								return `${joined}${allValuesEqual != null ? ` ${allValuesEqual} or higher` : ""}`
-							}
-						}
-						case "proficiency": {
-							const parts = v.map(obj => {
-								return Object.entries(obj).map(([profType, prof]) => {
-									switch (profType) {
-										case "armor": {
-											return isListMode ? `Prof ${Parser.armorFullToAbv(prof)} armor` : `Proficiency with ${prof} armor`;
-										}
-										case "weapon": {
-											return isListMode ? `Prof ${Parser.weaponFullToAbv(prof)} weapon` : `Proficiency with a ${prof} weapon`;
-										}
-										default: throw new Error(`Unhandled proficiency type: "${profType}"`);
+									// if all values were equal, add the "X+" text at the end, as the options render doesn't include it
+									if (isListMode) {
+										return `${abilityOptions.join("/")}${allValuesEqual != null ? ` ${allValuesEqual}+` : ""}`
+									} else {
+										const isComplex = hadMultiMultipleInner || hadMultipleInner || allValuesEqual == null;
+										const joined = abilityOptions.joinConjunct(
+											hadMultiMultipleInner ? " - " : hadMultipleInner ? "; " : ", ",
+											isComplex ? (isTextOnly ? ` /or/ ` : ` <i>or</i> `) : " or ",
+										);
+										return `${joined}${allValuesEqual != null ? ` ${allValuesEqual} or higher` : ""}`
 									}
-								})
-							});
-							return isListMode ? parts.join("/") : parts.joinConjunct(", ", " or ");
-						}
-						case "spellcasting": return isListMode ? "Spellcasting" : "The ability to cast at least one spell";
-						case "spellcasting2020": return isListMode ? "Spellcasting" : "Spellcasting or Pact Magic feature";
-						case "psionics": return isListMode ? "Psionics" : (isTextOnly ? Renderer.stripTags : Renderer.get().render.bind(Renderer.get()))("Psionic Talent feature or {@feat Wild Talent|UA2020PsionicOptionsRevisited} feat");
-						case "class" : return v.joinConjunct(joinervar);
-						case "mainenergy": return "<br><i>Main Energy: "+v+"</i>";
-						default: throw new Error(`Unhandled key: ${k}`);
-					}
-				})
-				.filter(Boolean)
-				.join(joinervar);
-		}).filter(Boolean);
-
-		if (!listOfChoices.length) return isListMode ? "\u2014" : "";
-		return isListMode ? listOfChoices.join("&nbsp;&nbsp;&nbsp;or") : `${isSkipPrefix ? "" : `Prerequisite${cntPrerequisites === 1 ? "" : "s"}: `}${listOfChoices.joinConjunct("; ", "&nbsp;&nbsp;&nbsp;or ")}`;
+								}
+								case "proficiency": {
+									const parts = v.map(obj => {
+										return Object.entries(obj).map(([profType, prof]) => {
+											switch (profType) {
+												case "armor": {
+													return isListMode ? `Prof ${Parser.armorFullToAbv(prof)} armor` : `Proficiency with ${prof} armor`;
+												}
+												case "weapon": {
+													return isListMode ? `Prof ${Parser.weaponFullToAbv(prof)} weapon` : `Proficiency with a ${prof} weapon`;
+												}
+												default: throw new Error(`Unhandled proficiency type: "${profType}"`);
+											}
+										})
+									});
+									return isListMode ? parts.join("/") : parts.joinConjunct(", ", " or ");
+								}
+								case "spellcasting": return isListMode ? "Spellcasting" : "The ability to cast at least one spell";
+								case "spellcasting2020": return isListMode ? "Spellcasting" : "Spellcasting or Pact Magic feature";
+								case "psionics": return isListMode ? "Psionics" : (isTextOnly ? Renderer.stripTags : Renderer.get().render.bind(Renderer.get()))("Psionic Talent feature or {@feat Wild Talent|UA2020PsionicOptionsRevisited} feat");
+								case "class" : return v;
+								case "mainenergy": return "<br><i>Main Energy: "+v+"</i>";
+								default: throw new Error(`Unhandled key: ${k}`);
+							}
+						})
+						.filter(Boolean)
+						.join();
+				}).filter(Boolean);
+				console.log("listochoise: "+listOfChoices);
+				if (!listOfChoices.length) return isListMode ? "\u2014" : "";
+				
+				topush = isListMode ? listOfChoices.join(" and ") : `${listOfChoices.joinConjunct(" and ", " and ")}`;
+				completelist.push(topush);
+	}
+	console.log("clist: "+completelist);
+	return `${completelist[0]} ${completelist[2] ? `<br>` : ""}${completelist.slice(1).join("<br>or ")}`;
 	},
 
 	getMediaUrl (entry, prop, mediaDir) {

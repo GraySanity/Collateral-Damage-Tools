@@ -5,9 +5,20 @@
 			"source": "CDPH",
 			"class": ["Martial Fighter"],
 			"prerequisite":
-			[{
-				"class":["classes and level requirements"]
-			}],
+			[
+				[
+					{"class":"class and level requirements"},
+					{"class":"other class and level requirement"}
+				],
+				[
+					{"class":"class and level requirements 2"},
+					{"class":"other class and level requirement 2"}
+				],
+				[
+					{"class":"class and level requirements 3"},
+					{"class":"other class and level requirement 3"}
+				]
+			],
 			"entries":["text"]
 		},
 		{
@@ -379,7 +390,7 @@
 			"class": ["Doctor"],
 			"prerequisite": [
 				{
-					"feature": ["{@feat Professional Defibrillator|CDPH} and {@feat Support Class|CDPH}"]
+					"feature": ["{@feat Professional Defibrillator|CDPH}","{@feat Support Class|CDPH}"]
 				}
 			],
 			"entries":["You can stabilise others as a Bonus Action when you are within melee range of them. You also don’t need to throw medicine checks for stabilizing others, as it is guaranteed that you stabilize them as long as this is possible"]
@@ -731,5 +742,6 @@
 			],
 			"entries":["You have learned how to evade from an attack in a dire situation by “teleporting” away as a natural reflex. This does strain you a lot more than normal teleporting, and shows a visible trail of your energy from your start to end location. Using this ability costs 6 Energy, is a Free Action, and with it, you can move up to 5 meter. You cannot “teleport” through walls with this, but you can change the direction of your movement, which means that you can move around corners."]
 		}
+
 	]
 }
