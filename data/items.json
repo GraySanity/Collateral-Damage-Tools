@@ -852,8 +852,7 @@
 		"dr": 2,
 		"edr": 10,
 		"property":[
-			"iron",
-			"special"],
+			"iron"],
 		"entries": ["<i>This armor can be woven into normal clothes, making it not noticable as an armor.</i>"]
 	},
 	{
@@ -865,8 +864,6 @@
 		"value": 75,
 		"ac": "3 + Dexterty Modifier (max 2)",
 		"dr": 3,
-		"property":[
-			"special"],
 		"entries": ["<i>This armor can be woven into normal clothes, making it not noticable as an armor.</i>"]
 	},
 	{
