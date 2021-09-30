@@ -2838,6 +2838,8 @@ Renderer.utils = {
 		return `From the ${classabil.class} Abilities`
 	},
 	getPrerequisiteHtml: (preprerequisites, {isListMode = false, blacklistKeys = new Set(), isTextOnly = false, isSkipPrefix = false} = {}) => {
+		if(preprerequisites == undefined) {return};
+		addvar = "";
 		completelist = [isSkipPrefix ? "" : "Prerequisites: "];
 		for(i=0;i<preprerequisites.length;i++)
 		{
@@ -2860,6 +2862,7 @@ console.log("postprereqlength="+prerequisites.length);
 						cntPrerequisites += 1;
 console.log("k="+k);
 							switch (k) {
+								case "addit": {addvar = v} return;
 								case "level": {
 									// a generic level requirement (as of 2020-03-11, homebrew only)
 									if (typeof v === "number") {
@@ -2932,7 +2935,7 @@ console.log("k="+k);
 										if (allValuesEqual) {
 											const abList = Object.keys(abMeta);
 											hadMultipleInner = hadMultipleInner || abList.length > 1;
-											return isListMode ? abList.map(ab => ab.uppercaseFirst()).join(", ") : abList.map(ab => Parser.attAbvToFull(ab)).joinConjunct(", ", " and ");
+											return isListMode ? abList.map(ab => ab.uppercaseFirst()).join(" and ") : abList.map(ab => Parser.attAbvToFull(ab)).joinConjunct(" and ", " and ");
 										} else {
 											const groups = {};
 
@@ -2949,13 +2952,13 @@ console.log("k="+k);
 
 													abs = abs.sort(SortUtil.ascSortAtts);
 													return isListMode
-														? `${abs.map(ab => ab.uppercaseFirst()).join(", ")} ${req}+`
-														: `${abs.map(ab => Parser.attAbvToFull(ab)).joinConjunct(", ", " and ")} ${req} or higher`;
+														? `${abs.map(ab => ab.uppercaseFirst()).join(" and ")} ${req}+`
+														: `${abs.map(ab => Parser.attAbvToFull(ab)).joinConjunct(" and ", " and ")} ${req} or higher`;
 												});
 
 											return isListMode
 												? `${isMulti || byScore.length > 1 ? "(" : ""}${byScore.join(" & ")}${isMulti || byScore.length > 1 ? ")" : ""}`
-												: isMulti ? byScore.joinConjunct("; ", " and ") : byScore.joinConjunct(", ", " and ");
+												: isMulti ? byScore.joinConjunct("; ", " and ") : byScore.joinConjunct(" and ", " and ");
 										}
 									});
 
@@ -2965,7 +2968,7 @@ console.log("k="+k);
 									} else {
 										const isComplex = hadMultiMultipleInner || hadMultipleInner || allValuesEqual == null;
 										const joined = abilityOptions.joinConjunct(
-											hadMultiMultipleInner ? " - " : hadMultipleInner ? "; " : ", ",
+											hadMultiMultipleInner ? " - " : hadMultipleInner ? "; " : " and ",
 											isComplex ? (isTextOnly ? ` /or/ ` : ` <i>or</i> `) : " or ",
 										);
 										return `${joined}${allValuesEqual != null ? ` ${allValuesEqual} or higher` : ""}`
@@ -2985,12 +2988,12 @@ console.log("k="+k);
 											}
 										})
 									});
-									return isListMode ? parts.join("/") : parts.joinConjunct(", ", " or ");
+									return isListMode ? parts.join("/") : parts.joinConjunct(" and ", " or ");
 								}
 								case "spellcasting": return isListMode ? "Spellcasting" : "The ability to cast at least one spell";
 								case "spellcasting2020": return isListMode ? "Spellcasting" : "Spellcasting or Pact Magic feature";
 								case "psionics": return isListMode ? "Psionics" : (isTextOnly ? Renderer.stripTags : Renderer.get().render.bind(Renderer.get()))("Psionic Talent feature or {@feat Wild Talent|UA2020PsionicOptionsRevisited} feat");
-								case "class" : return v;
+								case "class" : return " "+v;
 								case "mainenergy": return "<br><i>Main Energy: "+v+"</i>";
 								default: throw new Error(`Unhandled key: ${k}`);
 							}
@@ -3000,12 +3003,13 @@ console.log("k="+k);
 				}).filter(Boolean);
 				console.log("listochoise: "+listOfChoices);
 				if (!listOfChoices.length) return isListMode ? "\u2014" : "";
-				
-				topush = isListMode ? listOfChoices.join(" and ") : `${listOfChoices.joinConjunct(" and ", " and ")}`;
+				(addvar=="") ? addvar = " and " : "" ;
+				topush = isListMode ? listOfChoices.join(addvar) : `${listOfChoices.joinConjunct(addvar,addvar)}`;
 				completelist.push(topush);
 	}
+
 	console.log("clist: "+completelist);
-	return `${completelist[0]} ${completelist[2] ? `<br>` : ""}${completelist.slice(1).join("<br>or ")}`;
+	return `${completelist[0]} ${completelist[2] ? `` : ""}${completelist.slice(1).join(""+addvar)}`;
 	},
 
 	getMediaUrl (entry, prop, mediaDir) {

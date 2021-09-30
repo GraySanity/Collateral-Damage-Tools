@@ -1,27 +1,6 @@
 {
 	"feat": [
 		{
-			"name": "name of ability",
-			"source": "CDPH",
-			"class": ["Martial Fighter"],
-			"prerequisite":
-			[
-				[
-					{"class":"class and level requirements"},
-					{"class":"other class and level requirement"}
-				],
-				[
-					{"class":"class and level requirements 2"},
-					{"class":"other class and level requirement 2"}
-				],
-				[
-					{"class":"class and level requirements 3"},
-					{"class":"other class and level requirement 3"}
-				]
-			],
-			"entries":["text"]
-		},
-		{
 			"name": "Rage",
 			"source": "CDPH",
 			"class": ["Barbarian"],
@@ -53,70 +32,50 @@
 			"name": "Feral Instinct",
 			"source": "CDPH",
 			"class": ["Barbarian"],
-			"prerequisite": [
-				{
-					"feature": [
-						"{@feat Rage|CDPH}"
-					]
-				}
-			],
+			"prerequisite": [[{"feature": ["{@feat Rage|CDPH}"]}]],
 			"entries":["Your instincts are so honed that you have advantage on initiative rolls. Additionally, if you are surprised at the beginning of combat and aren’t incapacitated, you can act normally on your first turn, but only if you enter your rage before doing anything else on that turn."]
 		},
 		{
 			"name": "Relentless Rage",
 			"source": "CDPH",
 			"class": ["Barbarian"],
-			"prerequisite": [
-				{
-					"feature": ["{@feat Rage|CDPH}"],
-					"class": ["Barbarian Level 6"]
-				}
-			],
+			"prerequisite": [[
+				{"feature": ["{@feat Rage|CDPH}"]},
+				{"class": "Barbarian Level 6"}
+			]],
 			"entries":["Your instincts are so honed that you have advantage on initiative rolls. Additionally, if you are surprised at the beginning of combat and aren’t incapacitated, you can act normally on your first turn, but only if you enter your rage before doing anything else on that turn."]
 		},
 		{
 			"name": "Frenzy",
 			"source": "CDPH",
 			"class": ["Barbarian"],
-			"prerequisite": [
-				{
-					"feature": ["{@feat Rage|CDPH}"]
-				}
-			],
+			"prerequisite": [[{"feature": ["{@feat Rage|CDPH}"]}]],
 			"entries":["You can go into a frenzy when you rage. If you do so, for the duration of your rage you can make a single melee weapon attack or unarmed strike as a Bonus Action on each of your turns after this one.<br>While in this rage/frenzy, you also gain 1 additional damage die on any damage roll you make. When your rage ends, you suffer one level of exhaustion."]
 		},
 		{
 			"name": "Mindless Rage",
 			"source": "CDPH",
 			"class": ["Barbarian"],
-			"prerequisite": [
-				{
-					"feature": ["{@feat Rage|CDPH}"]
-				}
-			],
+			"prerequisite": [[{"feature": ["{@feat Rage|CDPH}"]}]],
 			"entries":["You can’t be charmed or frightened while raging. If you are charmed or frightened when you enter your rage, the effect is suspended for the duration of the rage"]
 		},
 		{
 			"name": "Persistent Rage",
 			"source": "CDPH",
 			"class": ["Barbarian"],
-			"prerequisite": [
-				{
-					"feature": ["{@feat Rage|CDPH}"],
-					"class": ["Barbarian Level 4"]
-				}
-			],
+			"prerequisite": [[
+				{"feature": ["{@feat Rage|CDPH}"]},
+				{"class": "Barbarian Level 4"}
+			]],
 			"entries":["Your rage is so fierce that it ends early only if you fall unconscious or if you choose to end it. The duration of the rage is also increased to 5 minutes."]
 		},
 		{
 			"name": "Indomitable Might",
 			"source": "CDPH",
 			"class": ["Barbarian"],
-			"prerequisite": [
-				{
-					"class": ["Barbarian Level 3"]
-				}
-			],
+			"prerequisite": [[
+				{"class": "Barbarian Level 3"}
+			]],
 			"entries":["If your total for a Strength check is less than your Strength Ability Score, you can use that score in place of the total of the check."]
 		},
 		{
@@ -135,12 +94,10 @@
 			"name": "Raging Hard",
 			"source": "CDPH",
 			"class": ["Barbarian"],
-			"prerequisite": [
-				{
-					"feature": ["{@feat Rage|CDPH}"],
-					"class": ["Barbarian Level 4"]
-				}
-			],
+			"prerequisite": [[
+				{"feature": ["{@feat Rage|CDPH}"]},
+				{"class": "Barbarian Level 4"} 
+			]],
 			"entries":["You are able to brush off attacks a lot easier while in your rage. You gain 2 DR while you are in your rage."]
 		},
 		{
@@ -153,22 +110,14 @@
 			"name": "Buff",
 			"source": "CDPH",
 			"class": ["Barbarian"],
-			"prerequisite": [
-				{
-					"class": ["Barbarian Level 12"]
-				}
-			],
+			"prerequisite": [[{"class":"Barbarian Level 12"}]],
 			"entries":["You are buff as hell. Your Strength and Constitution scores both increase by 4, and the maximum for those scores is now 10 higher."]
 		},
 		{
 			"name": "Rapid Regeneration",
 			"source": "CDPH",
 			"class": ["Barbarian"],
-			"prerequisite": [
-				{
-					"class": ["Barbarian Level 7"]
-				}
-			],
+			"prerequisite": [[{"class":"Barbarian Level 7"}]],
 			"entries":["Your stamina and grit has increased quite a lot, and while you knew good enough how to deal with wounds you got, now your body has learned that as well.<br>You regain 1 HP every turn while in a fight, or 4 HP every hour while not in a fight."]
 		},
 		{
@@ -176,11 +125,7 @@
 			"source": "CDPH",
 			"class": ["Barbarian"],
 			"mastery": true,
-			"prerequisite": [
-				{
-					"class": ["Barbarian Level 16"]
-				}
-			],
+			"prerequisite": [[{"class": "Barbarian Level 16"}]],
 			"entries":["<i>Mastery</i><br><br>You gain 5 Max HP."]
 		},
 		{
@@ -194,92 +139,74 @@
 			"name": "Through the Fire and the Pain",
 			"source": "CDPH",
 			"class": ["Bard"],
-			"prerequisite": [
-				{
-					"feature": ["{@feat Musical Genius|CDPH}"]
-				}
-			],
+			"prerequisite": [[{"feature": ["{@feat Musical Genius|CDPH}"]}]],
 			"entries":["You have learned how to keep your composure while fighting. You do not need to make {@skill Pain Tolerance} rolls maintain your song if you are damaged anymore. "]
 		},
 		{
 			"name": "Heir of Sound",
 			"source": "CDPH",
 			"class": ["Bard"],
-			"prerequisite": [
-				{
-					"feature": ["{@feat Musical Genius|CDPH}"],
-					"class": ["Bard Level 5"]
-				}
-			],
+			"prerequisite": [[
+				{"feature": ["{@feat Musical Genius|CDPH}"]},
+				{"class": ["Bard Level 5"]}
+			]],
 			"entries":["You have honed your skills enough to improve on songs a bit, playing them more accurately and improving their effects. Every time you can learn a new song, you can now increase your level of a song you know to level 2 instead of getting a new song"]
 		},
 		{
 			"name": "Prodigy of Music",
 			"source": "CDPH",
 			"class": ["Bard"],
-			"prerequisite": [
-				{
-					"feature": ["{@feat Heir of Sound|CDPH}"],
-					"class": ["Bard Level 11"]
-				}
-			],
+			"prerequisite": [[
+				{"feature": ["{@feat Heir of Sound|CDPH}"]},
+				{"class": ["Bard Level 11"]}
+			]],
 			"entries":["You are slowly honing in the perfect melody and rhythm of the songs you know. Every time you can learn a new song, you can now increase your level of a song that you have level 2 skill in to level 3 instead of getting a new song."]
 		},
 		{
 			"name": "The Perfect Play",
 			"source": "CDPH",
 			"class": ["Bard"],
-			"prerequisite": [
-				{
-					"feature": ["{@feat Prodigy of Music|CDPH}"],
-					"class": ["Bard Level 16"]
-				}
-			],
+			"prerequisite": [[
+				{"feature": ["{@feat Prodigy of Music|CDPH}"]},
+				{"class": ["Bard Level 16"]}
+			]],
 			"entries":["You have perfected your skills to (near) full potential. You can choose 3 songs which you know and have level 3 skills in to increase in potential to level 4. You can also do this later if you do not have 3 songs with level 3 skill yet."]
 		},
 		{
 			"name": "8/4<sup>th</sup> Speed",
 			"source": "CDPH",
 			"class": ["Bard"],
-			"prerequisite": [
-				{
-					"feature": ["{@feat Musical Genius|CDPH}"],
-					"class": ["Bard Level 12"]
-				}
-			],
+			"prerequisite": [[
+				{"feature": ["{@feat Musical Genius|CDPH}"]},
+				{"class": ["Bard Level 12"]}
+			]],
 			"entries":["You have perfected your skills to (near) full potential. You can choose 3 songs which you know and have level 3 skills in to increase in potential to level 4. You can also do this later if you do not have 3 songs with level 3 skill yet."]
 		},
 		{
 			"name": "Jack of All Traits",
 			"source": "CDPH",
 			"class": ["Bard"],
-			"prerequisite": [
-				{
-					"class": ["Bard Level 2"]
-				}
-			],
+			"prerequisite": [[
+				{"class": ["Bard Level 2"]}
+			]],
 			"entries":["You can add half your Proficiency Bonus, rounded down, to any ability check you make where you don’t have Proficiency or Expertise in."]
 		},
 		{
 			"name": "Six-Minus Mentality",
 			"source": "CDPH",
 			"class": ["Bard"],
-			"prerequisite": [
-				{
-					"class": ["Bard Level 3"]
-				}
-			],
+			"prerequisite": [[
+				{"class": ["Bard Level 3"]}
+			]],
 			"entries":["You can learn to be just good enough in something to be proficient in it, although you can’t learn that many different things at the same time and you will forget things if you try to learn too much. This ability only works if you have access to any form of big reaching networks like the Internet.<br><br>You can choose two skills to be proficient in. You can use a Rest to change these proficiencies to other skills"]
 		},
 		{
 			"name": "Honin' Those Skills",
 			"source": "CDPH",
 			"class": ["Bard"],
-			"prerequisite": [
-				{
-					"class": ["Bard Level 2"]
-				}
-			],
+			"prerequisite": [[
+				{"class": ["Bard Level 2"]}
+			]],
 			"entries":["You gain expertise in two skills of your choice."]
 		},
 		{
@@ -305,11 +232,9 @@
 			"source": "CDPH",
 			"mastery": true,
 			"class": ["Bard"],
-			"prerequisite": [
-				{
-					"feature": ["{@feat The Perfect Play|CDPH}"]
-				}
-			],
+			"prerequisite": [[
+				{"feature": ["{@feat The Perfect Play|CDPH}"]}
+			]],
 			"entries":["<i>Mastery</i><br><br>You can increase a song to level 4"]
 		},
 		{
@@ -324,23 +249,19 @@
 			"source": "CDPH",
 			"free": true,
 			"class": ["Doctor"],
-			"prerequisite": [
-				{
-					"class": ["Doctor Level 3"]
-				}
-			],
+			"prerequisite": [[
+				{"class": ["Doctor Level 3"]}
+			]],
 			"entries":["<i>Free</i><br><br>You can make Drugs. While you cannot do anything with this ability yet, some abilities in this class lets you craft specific Drugs that affect people in different ways which can be seen in the list of Items. Drugs have no effect on Half-Materialistic, Fully-Energenetic or Mechanical creatures unless noted otherwise. Drugs that you make are usually carried in Injectors.<br><br>You can make Drugs in a Rest if you have access to any form of civilization. You start with the ability to maximally make 2 Drugs in a rest, but this can increase this with different abilities from this class. If you can make multiple different Drugs, then you can choose how many you make of each as long as the sum of all the Drugs that you make does not exceed the maximum amount of Drugs that you can make in a rest. All of your self-created Drugs expire after 48 hours, or when you start a Rest.<br><br>Using a Drug in an Injector on someone normally cost an Action, and can be done without needing to throw an Attack Roll if the person isn’t actively trying to dodge you. If you do need to make an Attack Roll, than this can be counted as a melee attack that you are not proficient in and does 0 damage."]
 		},
 		{
 			"name": "Permanent Student",
 			"source": "CDPH",
 			"class": ["Doctor"],
-			"prerequisite": [
-				{
-					"feature": ["{@feat Doctor Specialization|CDPH}"],
-					"class": ["Doctor Level 3"]
-				}
-			],
+			"prerequisite": [[
+				{"feature": ["{@feat Doctor Specialization|CDPH}"]},
+				{"class": ["Doctor Level 3"]}
+			]],
 			"entries":["You take one more type of creature to specialize healing in.<br>You also choose one more race to specialize in dealing with it.<br>You also can create 1 more Drug in a rest.<br><br><i>This ability can be taken multiple times.</i>"]
 		},
 		{
@@ -359,23 +280,19 @@
 			"name": "Fully Packed",
 			"source": "CDPH",
 			"class": ["Doctor"],
-			"prerequisite": [
-				{
-					"feature": ["{@feat Support Class|CDPH}"],
-					"class": ["Doctor Level 5"]
-				}
-			],
+			"prerequisite": [[
+				{"feature": ["{@feat Support Class|CDPH}"]},
+				{"class": ["Doctor Level 5"]}
+			]],
 			"entries":["You find a way to pack your Personal Medkits more efficiently, decreasing the size they take up and being able to carry more with you. You gain 2 more Personal Medkits."]
 		},
 		{
 			"name": "Bottom Lane",
 			"source": "CDPH",
 			"class": ["Doctor"],
-			"prerequisite": [
-				{
-					"feature": ["{@feat Support Class|CDPH}"]
-				}
-			],
+			"prerequisite": [[
+				{"feature": ["{@feat Support Class|CDPH}"]}
+			]],
 			"entries":["You can now heal for {@dice 1D10+2}+{@skill Medicine} skill with a Medkit and Personal Medkit.<br><br>You also gain another Personal Medkit."]
 		},
 		{
@@ -388,22 +305,19 @@
 			"name": "Kaysterimeno Thanatos",
 			"source": "CDPH",
 			"class": ["Doctor"],
-			"prerequisite": [
-				{
-					"feature": ["{@feat Professional Defibrillator|CDPH}","{@feat Support Class|CDPH}"]
-				}
-			],
+			"prerequisite": [[
+				{"feature": ["{@feat Professional Defibrillator|CDPH}"]},
+				{"feature": ["{@feat Support Class|CDPH}"]}
+			]],
 			"entries":["You can stabilise others as a Bonus Action when you are within melee range of them. You also don’t need to throw medicine checks for stabilizing others, as it is guaranteed that you stabilize them as long as this is possible"]
 		},
 		{
 			"name": "Quickfix",
 			"source": "CDPH",
 			"class": ["Doctor"],
-			"prerequisite": [
-				{
-					"feature": ["{@feat Support Class|CDPH}"]
-				}
-			],
+			"prerequisite": [[
+				{"feature": ["{@feat Support Class|CDPH}"]}
+			]],
 			"entries":["You can use your Bonus Action to heal someone with a Personal Medkit, assuming you saw their wounds before you started your turn. It is not possible heal someone with a Personal Medkit twice on the same turn."]
 		},
 		{
@@ -428,11 +342,9 @@
 			"name": "Biotic Synthesiser",
 			"source": "CDPH",
 			"class": ["Doctor"],
-			"prerequisite": [
-				{
-					"feature": ["{@feat Support Class|CDPH}"]
-				}
-			],
+			"prerequisite": [[
+				{"feature": ["{@feat Support Class|CDPH}"]}
+			]],
 			"entries":["You can create a specific antiserum or antivirus if you know what bacteria or virus you are making out for. You can only do this in a Rest and it costs you the use of a Personal Medkit until the next Rest. You also need to have access to scientific equipment and chemicals."]
 		},
 		{
@@ -451,24 +363,20 @@
 			"name": "A Moment of Reprise",
 			"source": "CDPH",
 			"class": ["Doctor"],
-			"prerequisite": [
-				{
-					"feature": ["{@feat A Moment of Rest|CDPH}"],
-					"class": ["Total Level 3"]
-				}
-			],
+			"prerequisite": [[
+				{"feature": ["{@feat A Moment of Rest|CDPH}"]},
+				{"class": ["Total Level 3"]}
+			]],
 			"entries":["The extra time for buffing with {@feat A Moment of Rest|CDPH} can be increased to around 35 minutes per person. This increases the buff to having the ability to roll 2 dices with advantage."]
 		},
 		{
 			"name": "The Calm Before the Storm",
 			"source": "CDPH",
 			"class": ["Doctor"],
-			"prerequisite": [
-				{
-					"feature": ["{@feat A Moment of Reprise|CDPH}"],
-					"class": ["Total Level 8"]
-				}
-			],
+			"prerequisite": [[
+				{"feature": ["{@feat A Moment of Reprise|CDPH}"]},
+				{"class": ["Total Level 8"]}
+			]],
 			"entries":["The extra time for buffing with {@feat A Moment of Rest|CDPH} or {@feat A Moment of Reprise|CDPH} can be increased to around an hour per person. This increases the buff to having the ability to roll 2 dices with advantage, and are able to auto-critical one dice roll that isn’t a death save."]
 		},
 		{
@@ -476,12 +384,10 @@
 			"source": "CDPH",
 			"class": ["Doctor"],
 			"mastery": true,
-			"prerequisite": [
-				{
-					"feature": ["{@feat Pharmaceutical Compounds|CDPH}"],
-					"class": ["Doctor Level 16"]
-				}
-			],
+			"prerequisite": [[
+				{"feature": ["{@feat Pharmaceutical Compounds|CDPH}"]},
+				{"class": ["Doctor Level 16"]}
+			]],
 			"entries":["<i>Mastery</i><br><br>You can create 1 more Drug in a rest."]
 		},
 		{
@@ -489,12 +395,10 @@
 			"source": "CDPH",
 			"class": ["Doctor"],
 			"mastery": true,
-			"prerequisite": [
-				{
-					"feature": ["{@feat Support Class|CDPH}"],
-					"class": ["Doctor Level 16"]
-				}
-			],
+			"prerequisite": [[
+				{"feature": ["{@feat Support Class|CDPH}"]},
+				{"class": ["Doctor Level 16"]}
+			]],
 			"entries":["<i>Mastery</i><br><br>In total, you can heal 2 more HP with Personal Medkits. You also gain 1 more Personal Medkit."]
 		},
 		{
@@ -508,91 +412,74 @@
 			"name": "Non-Localized Manipulation [Initiate]",
 			"source": "CDPH",
 			"class": ["Energenetic Specialist"],
-			"prerequisite": [
-				{
-					"feature": ["{@feat Energenetic Kickstart|CDPH}"]
-				}
-			],
+			"prerequisite": [[
+				{"feature": ["{@feat Energenetic Kickstart|CDPH}"]}
+			]],
 			"entries":["You have learned how to move things with your Energy. You can lift up and move objects and creatures that are up to your Energetic Specialist Level in Kg easily without the use of Energy. Doing this costs an Action.<br><br>The maximum force that you can put on things is than 10 times your Energetic Specialist Level in Newton by extrapolation. You can also use your Energy to increase this maximum by 3 Kg for every point of Energy you use. If you try to move an unwilling creature with this ability, than they need to make a Strength save against a DC of <i>5+Intelligence modifier+Wisdom</i> modifier."]
 		},
 		{
 			"name": "Non-Localized Manipulation [Adept]",
 			"source": "CDPH",
 			"class": ["Energenetic Specialist"],
-			"prerequisite": [
-				{
-					"feature": ["{@feat Non-Localized Manipulation [Initiate]|CDPH}"]
-				}
-			],
+			"prerequisite": [[
+				{"feature": ["{@feat Non-Localized Manipulation [Initiate]|CDPH}"]}
+			]],
 			"entries":["The maximum weight that you can lift with Non-Localized Manipulation (Energenetic Specialist) is now 3 times your Energenetic Specialist Level in Kg, and you can now increase this by 6 Kg for every point of Energy you use."]
 		},
 		{
 			"name": "Non-Localized Manipulation [Master]",
 			"source": "CDPH",
 			"class": ["Energenetic Specialist"],
-			"prerequisite": [
-				{
-					"feature": ["{@feat Non-Localized Manipulation [Adept]|CDPH}"]
-					
-				}
-			],
+			"prerequisite": [[
+				{"feature": ["{@feat Non-Localized Manipulation [Adept]|CDPH}"]}
+			]],
 			"entries":["The maximum weight that you can lift with Non-Localized Manipulation (Energenetic Specialist) is now 5 times your Energenetic Specialist Level in Kg, and you can now increase this by 8 Kg for every point of Energy you use."]
 		},
 		{
 			"name": "Holographic Energenetic Projections",
 			"source": "CDPH",
 			"class": ["Energenetic Specialist"],
-			"prerequisite": [
-				{
-					"feature": ["{@feat Energenetic Kickstart|CDPH}"]
-				}
-			],
+			"prerequisite": [[
+				{"feature": ["{@feat Energenetic Kickstart|CDPH}"]}
+			]],
 			"entries":["You can make holographic like projections. You cannot deal damage with these. The maximum size for these projections is around 27dm<sup>3</sup>(or liter) in an area of 1m<sup>3</sup>. Making such Holographic Projection and maintaining it cost an Action and 2 Energy."]
 		},
 		{
 			"name": "Energenetic Materializing",
 			"source": "CDPH",
 			"class": ["Energenetic Specialist"],
-			"prerequisite": [
-				{
-					"feature": ["{@feat  Energenetic Materializing|CDPH}"],
-					"class": ["Energenetic Specialist Level 6"]
-				}
-			],
+			"prerequisite": [[
+				{"feature": ["{@feat  Energenetic Materializing|CDPH}"]},
+				{"class": ["Energenetic Specialist Level 6"]}
+			]],
 			"entries":["From now on, if you use your {@feat Energenetic Materializing|CDPH} to create or maintain an object, than you can do so anywhere you can see within a 20 meter radius without the need to be in contact with it.<br><br>Although it cost 3 Energy to create the object without touching it, it doesn’t cost Energy anymore to maintain the object"]
 		},
 		{
 			"name": "High Energy Density Projectile",
 			"source": "CDPH",
 			"class": ["Energenetic Specialist"],
-			"prerequisite": [
-				{
-					"feature": ["{@feat Energenetic Kickstart|CDPH}"]
-				}
-			],
+			"prerequisite": [[
+				{"feature": ["{@feat Energenetic Kickstart|CDPH}"]}
+			]],
 			"entries":["You can throw a ball of Energy to a target. This is a form of Attack and does cost an Action to do so.<br>This attack does {@dice 1d4} damage for every point of Energy you use on this ability, to a maximum of your Energenetic Specialist Level of D4's damage. You need to make an Attack roll for this Attack.<br>You are proficient in this Attack roll, can add your <i>Dexterity Modifier</i> and add the lower of your <i>Wisdom Modifier</i> or <i>Intelligence Modifier</i> to the Attack roll.<br><br>When you target something that is farther than your normal range (your max Energy in meters) than you gain disadvantage on the roll that cannot be negated."]
 		},
 		{
 			"name": "Trans-Localized Manipulation",
 			"source": "CDPH",
 			"class": ["Energenetic Specialist"],
-			"prerequisite": [
-				{
-					"feature": ["{@feat Energenetic Kickstart|CDPH}"]
-				}
-			],
+			"prerequisite": [[
+				{"feature": ["{@feat Energenetic Kickstart|CDPH}"]}
+			]],
 			"entries":["You have roughly learned how to use your Energy to teleport. You can only teleport to places with a low density of matter, so only to air/vacuum or other such areas, and this does cost an Action. <br>The Energy cost for teleporting is 2 + ¼ the distance in meter of Energy. You do not need to know or see where you end up, although it is strongly advised as ending up in a wall or object isn’t too good for your health. You cannot teleport into another creature. However, you can take other creatures with you, these cost an extra half the distance in meter of Energy you need to use."]
 		},
 		{
 			"name": "Potential Recon",
 			"source": "CDPH",
 			"class": ["Energenetic Specialist"],
-			"prerequisite": [
-				{
-					"feature": ["{@feat Energenetic Kickstart|CDPH}"],
-					"class": ["Energenetic Specialist Level 6"]
-				}
-			],
+			"prerequisite": [[
+				{"feature": ["{@feat Energenetic Kickstart|CDPH}"]},
+				{"class": ["Energenetic Specialist Level 6"]}
+			]],
 			"entries":["You can try and specialize into the use of Energy that is made out of your Main Energy. You can now pick an Ability (or the Ability) from the Energy Type that is made from your Main Energy.<br>","<br>",
 				{
 					"type": "table",
@@ -658,12 +545,10 @@
 			"name": "Potential Prowess",
 			"source": "CDPH",
 			"class": ["Energenetic Specialist"],
-			"prerequisite": [
-				{
-					"feature": ["{@feat Energenetic Kickstart|CDPH}"],
-					"class": ["Energenetic Specialist Level 12"]
-				}
-			],
+			"prerequisite": [[
+				{"feature": ["{@feat Energenetic Kickstart|CDPH}"]},
+				{"class": ["Energenetic Specialist Level 12"]}
+			]],
 			"entries":["You can try and specialize into the use of Energy your Main Energy is made out of. You can now pick an Ability (or the Ability) from the Energy Type that your Main Energy is made out of.","<br>",
 				{
 					"type": "table",
@@ -735,11 +620,13 @@
 			"name": "Energenetic Evasion Reflex",
 			"source": "CDPH",
 			"class": ["Energenetic Specialist"],
-			"prerequisite": [
+			"prerequisite": [[
 				{"mainenergy": "Dark"},
-				{"mainenergy": "Light"},
+				{"addit": " or "},
+				{"mainenergy": "Light"}],
+				[{"addit": " and "},
 				{"other": "Matter Type: Not Full-Materialistic"}
-			],
+			]],
 			"entries":["You have learned how to evade from an attack in a dire situation by “teleporting” away as a natural reflex. This does strain you a lot more than normal teleporting, and shows a visible trail of your energy from your start to end location. Using this ability costs 6 Energy, is a Free Action, and with it, you can move up to 5 meter. You cannot “teleport” through walls with this, but you can change the direction of your movement, which means that you can move around corners."]
 		}
 

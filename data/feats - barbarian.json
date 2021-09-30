@@ -1,16 +1,6 @@
 {
 	"feat": [
 		{
-			"name": "name of ability",
-			"source": "CDPH",
-			"class": ["Martial Fighter"],
-			"prerequisite":
-			[{
-				"class":["classes and level requirements"]
-			}],
-			"entries":["text"]
-		},
-		{
 			"name": "Rage",
 			"source": "CDPH",
 			"class": ["Barbarian"],
@@ -42,70 +32,50 @@
 			"name": "Feral Instinct",
 			"source": "CDPH",
 			"class": ["Barbarian"],
-			"prerequisite": [
-				{
-					"feature": [
-						"{@feat Rage|CDPH}"
-					]
-				}
-			],
+			"prerequisite": [[{"feature": ["{@feat Rage|CDPH}"]}]],
 			"entries":["Your instincts are so honed that you have advantage on initiative rolls. Additionally, if you are surprised at the beginning of combat and aren’t incapacitated, you can act normally on your first turn, but only if you enter your rage before doing anything else on that turn."]
 		},
 		{
 			"name": "Relentless Rage",
 			"source": "CDPH",
 			"class": ["Barbarian"],
-			"prerequisite": [
-				{
-					"feature": ["{@feat Rage|CDPH}"],
-					"class": ["Barbarian Level 6"]
-				}
-			],
+			"prerequisite": [[
+				{"feature": ["{@feat Rage|CDPH}"]},
+				{"class": "Barbarian Level 6"}
+			]],
 			"entries":["Your instincts are so honed that you have advantage on initiative rolls. Additionally, if you are surprised at the beginning of combat and aren’t incapacitated, you can act normally on your first turn, but only if you enter your rage before doing anything else on that turn."]
 		},
 		{
 			"name": "Frenzy",
 			"source": "CDPH",
 			"class": ["Barbarian"],
-			"prerequisite": [
-				{
-					"feature": ["{@feat Rage|CDPH}"]
-				}
-			],
+			"prerequisite": [[{"feature": ["{@feat Rage|CDPH}"]}]],
 			"entries":["You can go into a frenzy when you rage. If you do so, for the duration of your rage you can make a single melee weapon attack or unarmed strike as a Bonus Action on each of your turns after this one.<br>While in this rage/frenzy, you also gain 1 additional damage die on any damage roll you make. When your rage ends, you suffer one level of exhaustion."]
 		},
 		{
 			"name": "Mindless Rage",
 			"source": "CDPH",
 			"class": ["Barbarian"],
-			"prerequisite": [
-				{
-					"feature": ["{@feat Rage|CDPH}"]
-				}
-			],
+			"prerequisite": [[{"feature": ["{@feat Rage|CDPH}"]}]],
 			"entries":["You can’t be charmed or frightened while raging. If you are charmed or frightened when you enter your rage, the effect is suspended for the duration of the rage"]
 		},
 		{
 			"name": "Persistent Rage",
 			"source": "CDPH",
 			"class": ["Barbarian"],
-			"prerequisite": [
-				{
-					"feature": ["{@feat Rage|CDPH}"],
-					"class": ["Barbarian Level 4"]
-				}
-			],
+			"prerequisite": [[
+				{"feature": ["{@feat Rage|CDPH}"]},
+				{"class": "Barbarian Level 4"}
+			]],
 			"entries":["Your rage is so fierce that it ends early only if you fall unconscious or if you choose to end it. The duration of the rage is also increased to 5 minutes."]
 		},
 		{
 			"name": "Indomitable Might",
 			"source": "CDPH",
 			"class": ["Barbarian"],
-			"prerequisite": [
-				{
-					"class": ["Barbarian Level 3"]
-				}
-			],
+			"prerequisite": [[
+				{"class": "Barbarian Level 3"}
+			]],
 			"entries":["If your total for a Strength check is less than your Strength Ability Score, you can use that score in place of the total of the check."]
 		},
 		{
@@ -124,12 +94,10 @@
 			"name": "Raging Hard",
 			"source": "CDPH",
 			"class": ["Barbarian"],
-			"prerequisite": [
-				{
-					"feature": ["{@feat Rage|CDPH}"],
-					"class": ["Barbarian Level 4"]
-				}
-			],
+			"prerequisite": [[
+				{"feature": ["{@feat Rage|CDPH}"]},
+				{"class": "Barbarian Level 4"} 
+			]],
 			"entries":["You are able to brush off attacks a lot easier while in your rage. You gain 2 DR while you are in your rage."]
 		},
 		{
@@ -142,22 +110,14 @@
 			"name": "Buff",
 			"source": "CDPH",
 			"class": ["Barbarian"],
-			"prerequisite": [
-				{
-					"class": ["Barbarian Level 12"]
-				}
-			],
+			"prerequisite": [[{"class":"Barbarian Level 12"}]],
 			"entries":["You are buff as hell. Your Strength and Constitution scores both increase by 4, and the maximum for those scores is now 10 higher."]
 		},
 		{
 			"name": "Rapid Regeneration",
 			"source": "CDPH",
 			"class": ["Barbarian"],
-			"prerequisite": [
-				{
-					"class": ["Barbarian Level 7"]
-				}
-			],
+			"prerequisite": [[{"class":"Barbarian Level 7"}]],
 			"entries":["Your stamina and grit has increased quite a lot, and while you knew good enough how to deal with wounds you got, now your body has learned that as well.<br>You regain 1 HP every turn while in a fight, or 4 HP every hour while not in a fight."]
 		},
 		{
@@ -165,11 +125,7 @@
 			"source": "CDPH",
 			"class": ["Barbarian"],
 			"mastery": true,
-			"prerequisite": [
-				{
-					"class": ["Barbarian Level 16"]
-				}
-			],
+			"prerequisite": [[{"class": "Barbarian Level 16"}]],
 			"entries":["<i>Mastery</i><br><br>You gain 5 Max HP."]
 		}
 	]

@@ -1,0 +1,25 @@
+{
+	"feat": [
+		{
+			"name": "name of ability",
+			"source": "CDPH",
+			"class": ["Martial Fighter"],
+			"prerequisite":
+			[
+				[
+					{"class":"class and level requirements"},
+					{"class":"other class and level requirement"}
+				],
+				[
+					{"class":"class and level requirements 2"},
+					{"class":"other class and level requirement 2"}
+				],
+				[
+					{"class":"class and level requirements 3"},
+					{"class":"other class and level requirement 3"}
+				]
+			],
+			"entries":["text"]
+		}
+	]
+}
