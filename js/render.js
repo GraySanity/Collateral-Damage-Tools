@@ -2845,13 +2845,6 @@ Renderer.utils = {
 		{
 			prerequisites=preprerequisites[i];
 
-console.log(i);
-console.log("postprereq="+prerequisites);
-console.log("preprereq="+preprerequisites);
-console.log("preprereqlength="+preprerequisites.length);
-console.log("postprereqlength="+prerequisites.length);
-	
-
 
 			if (!prerequisites) return isListMode ? "\u2014" : "";
 			let cntPrerequisites = 0;
@@ -2860,7 +2853,6 @@ console.log("postprereqlength="+prerequisites.length);
 						if (blacklistKeys.has(k)) return false;
 
 						cntPrerequisites += 1;
-console.log("k="+k);
 							switch (k) {
 								case "addit": {addvar = v} return;
 								case "level": {
@@ -3001,14 +2993,12 @@ console.log("k="+k);
 						.filter(Boolean)
 						.join();
 				}).filter(Boolean);
-				console.log("listochoise: "+listOfChoices);
 				if (!listOfChoices.length) return isListMode ? "\u2014" : "";
 				(addvar=="") ? addvar = " and " : "" ;
 				topush = isListMode ? listOfChoices.join(addvar) : `${listOfChoices.joinConjunct(addvar,addvar)}`;
 				completelist.push(topush);
 	}
 
-	console.log("clist: "+completelist);
 	return `${completelist[0]} ${completelist[2] ? `` : ""}${completelist.slice(1).join(""+addvar)}`;
 	},
 

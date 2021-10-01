@@ -628,7 +628,62 @@
 				{"other": "Matter Type: Not Full-Materialistic"}
 			]],
 			"entries":["You have learned how to evade from an attack in a dire situation by “teleporting” away as a natural reflex. This does strain you a lot more than normal teleporting, and shows a visible trail of your energy from your start to end location. Using this ability costs 6 Energy, is a Free Action, and with it, you can move up to 5 meter. You cannot “teleport” through walls with this, but you can change the direction of your movement, which means that you can move around corners."]
+		},
+		{
+			"name": "Backup Energy Reserves",
+			"mastery": true,
+			"source": "CDPH",
+			"class": ["Energenetic Specialist"],
+			"prerequisite": [[
+				{"other": "Matter Type: Not Full-Materialistic"}
+			]],
+			"entries":["You have learned how to use more of your energy without exhausting yourself. This does, however, come with a cost as you still put more strain on yourself than you are comfortable with. You lose 5 Max HP when you get this ability, but you gain 12 Max Energy as a result."]
+		},
+		{
+			"name": "Energenetics Control Mastery",
+			"mastery": true,
+			"source": "CDPH",
+			"class": ["Energenetic Specialist"],
+			"prerequisite": [[
+				{"class": "Energenetic Specialist Level 20"}
+			]],
+			"entries":["You have learned how to use more of your energy without exhausting yourself. This does, however, come with a cost as you still put more strain on yourself than you are comfortable with. You lose 5 Max HP when you get this ability, but you gain 12 Max Energy as a result."]
+		},
+		{
+			"name": "Potential Power",
+			"mastery": true,
+			"source": "CDPH",
+			"class": ["Energenetic Specialist"],
+			"prerequisite": [[
+				{"mainenergy": "Dark"},
+				{"addit": " or "},
+				{"mainenergy": "Light"}				
+			]],
+			"entries":["There generally is no limit anymore for how much you can use your Energy at once. This does include specific abilities that do give a limit. If an ability gives a limit that isn’t a limit of how much Energy you can use, then you can scale the limited amounts with the Energy cost of the ability. The only exception where you still need to abide to the maximum is with the ability High Energy Density Projectile (Energenetic Specialist).<br>Also, the attack roll for {@feat Unstabilized Planck Distribution|CDPH} (Energenetic Specialist) now becomes (1d20 + PROF + WIS_MOD + INT_MOD – ¼_ENERGY_USED_FOR_ATTACK)"]
+		},
+		{
+			"name": "Brute Force",
+			"mastery": true,
+			"source": "CDPH",
+			"class": ["Energenetic Specialist"],
+			"prerequisite": [[
+				{"mainenergy": "Dark"},
+				{"addit": " or "},
+				{"mainenergy": "Light"}				
+			]],
+			"entries":["You can help yourself and others with your Energy. You can give yourself (or someone else that you can see) {@dice 1d4} to a skill check for every 7 Energy you use on this ability. Or you can give an {@dice 1d4} bonus to an attack roll or saving throw for every 3 Energy used on this ability. The ability to use this given bonus ends after 15 seconds or 5 turns."]
+		},
+		{
+			"name": "Potential Shield",
+			"mastery": true,
+			"source": "CDPH",
+			"class": ["Energenetic Specialist"],
+			"prerequisite": [[
+				{"mainenergy": "Dark"},
+				{"addit": " or "},
+				{"mainenergy": "Light"}				
+			]],
+			"entries":["You can use your Reaction to create a shield made out of your Main Energy and use this to protect yourself from damage that isn’t from a massive source (like knifes, swords, cannonballs, a van). This Reaction can be used after an attack roll against you is made, but must be before the damage roll has been made. For every point of Energy that you use, you gain 4 DR against damage from energy sources (lasers, plasma, energenetics, etc.), and 2 DR for all other damage types that isn’t afflicted by a massive source. You cannot change how many points of Energy you use after you activated this ability. The effect and this DR ends at the start of your next turn."]
 		}
-
 	]
 }
