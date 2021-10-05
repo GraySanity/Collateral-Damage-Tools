@@ -651,7 +651,6 @@
 		},
 		{
 			"name": "Potential Power",
-			"mastery": true,
 			"source": "CDPH",
 			"class": ["Energenetic Specialist"],
 			"prerequisite": [[
@@ -663,7 +662,6 @@
 		},
 		{
 			"name": "Brute Force",
-			"mastery": true,
 			"source": "CDPH",
 			"class": ["Energenetic Specialist"],
 			"prerequisite": [[
@@ -675,7 +673,6 @@
 		},
 		{
 			"name": "Potential Shield",
-			"mastery": true,
 			"source": "CDPH",
 			"class": ["Energenetic Specialist"],
 			"prerequisite": [[
@@ -684,6 +681,390 @@
 				{"mainenergy": "Light"}				
 			]],
 			"entries":["You can use your Reaction to create a shield made out of your Main Energy and use this to protect yourself from damage that isn’t from a massive source (like knifes, swords, cannonballs, a van). This Reaction can be used after an attack roll against you is made, but must be before the damage roll has been made. For every point of Energy that you use, you gain 4 DR against damage from energy sources (lasers, plasma, energenetics, etc.), and 2 DR for all other damage types that isn’t afflicted by a massive source. You cannot change how many points of Energy you use after you activated this ability. The effect and this DR ends at the start of your next turn."]
+		},
+		{
+			"name": "Dimensional Phase Transition",
+			"source": "CDPH",
+			"class": ["Energenetic Specialist"],
+			"prerequisite": [[
+				{"mainenergy": "Dark"}			
+			]],
+			"entries":["You can change yourself into a shadow on a surface as an Action, and back as a Free Action.<br>You change into a 2 dimensional form on the surface of an object you touch when you use this ability.<br>The surface area you cover is around a third of your height (in meters) of m<sup>2</sup>. It costs 3 Energy to change into a shadow, 1 Energy to maintain your form, and it costs 1 Energy for every meter you move. Moving in this form doesn’t use your own movement for that turn. (The maximum amount you would be able to move with this ability, in a turn, while in this form, is 165 meter). You cannot Attack or interact normally with things while you are in this form, although you can still get damaged if you are hit by an energy based attack (laser, plasma, energenetic etc.), or if a (topological) hole is made on to you."]
+		},
+		{
+			"name": "Dimensional Phase Transition",
+			"source": "CDPH",
+			"class": ["Energenetic Specialist"],
+			"prerequisite": [[
+				{"mainenergy": "Dark"}			
+			]],
+			"entries":["You can change yourself into a shadow on a surface as an Action, and back as a Free Action.<br>You change into a 2 dimensional form on the surface of an object you touch when you use this ability.<br>The surface area you cover is around a third of your height (in meters) of m<sup>2</sup>. It costs 3 Energy to change into a shadow, 1 Energy to maintain your form, and it costs 1 Energy for every meter you move. Moving in this form doesn’t use your own movement for that turn. (The maximum amount you would be able to move with this ability, in a turn, while in this form, is 165 meter). You cannot Attack or interact normally with things while you are in this form, although you can still get damaged if you are hit by an energy based attack (laser, plasma, energenetic etc.), or if a (topological) hole is made on to you."]
+		},
+		{
+			"name": "Shadowing",
+			"source": "CDPH",
+			"class": ["Energenetic Specialist"],
+			"prerequisite": [[
+				{"mainenergy": "Dark"},
+				{"feature": ["{@feat Dimensional Phase Transition|CDPH}"]}			
+			]],
+			"entries":["You can now use your {@feat Dimensional Phase Transition|CDPH} as a Bonus Action instead of an Action"]
+		},
+		{
+			"name": "Anti-Phasic Matter Interactions",
+			"source": "CDPH",
+			"class": ["Energenetic Specialist"],
+			"prerequisite": [[
+				{"mainenergy": "Light"}			
+			]],
+			"entries":["You can make yourself (together with any objects that you are carrying) invisible as long as you are standing completely still. This costs 2 Energy and an Action every turn."]
+		},
+		{
+			"name": "Cloak & Dagger",
+			"source": "CDPH",
+			"class": ["Energenetic Specialist"],
+			"prerequisite": [[
+				{"mainenergy": "Light"},
+				{"feature": ["{@feat Anti-Phasic Matter Interactions|CDPH}"]}			
+			]],
+			"entries":["When you make yourself invisible using {@feat Anti-Phasic Matter Interactions|CDPH}, then it won’t cost Energy to maintain this invisibility as long as you are standing still and don’t Attack with your action. Or you can now spend 2 Energy to stay invisible while you Move that turn."]
+		},
+		{
+			"name": "Temporal Immunity",
+			"source": "CDPH",
+			"class": ["Energenetic Specialist"],
+			"prerequisite": [[
+				{"mainenergy": "Time"}			
+			]],
+			"entries":["You are fully immune for time dilations and anomalies in the time-space continuum from the timeline you are in. This also includes anything you touch or wear that isn’t a sentient or sapientcreature. You can also estimate how far from the end of the timeline you are in are."]
+		},
+		{
+			"name": "Clockworks of Fate",
+			"source": "CDPH",
+			"class": ["Energenetic Specialist"],
+			"prerequisite": [[
+				{"mainenergy": "Time"},
+				{"feature": ["{@feat Temporal Immunity|CDPH}"]}		
+			]],
+			"entries":["You can stop time for a very short amount. It costs an Action and 10 Energy to use this ability. Using this ability stops time for 3 seconds (or a turn).<br>This extra turn doesn’t give you an extra Reaction, nor does it let you regenerate your Energy points or HP, nor does it let other turn and time based effects happen. You can prolong the amount of stopped time by using this ability while you are already in stopped time, this costs an Action and 7 Energy. While in your stopped time, time doesn’t pass for anything or anyone in an enormously large range (1-3 lightyears) around you. You gain advantage on some (DM decided) skill checks and saving throws while this ability is active. Timeflow resumes instantly when this ability ends, which includes when you touch or attack a sentient creature.<br>When you use this ability, and the stopped time has ended, than you cannot use it again until for the next 10 minutes."]
+		},
+		{
+			"name": "17-21",
+			"source": "CDPH",
+			"class": ["Energenetic Specialist"],
+			"prerequisite": [[
+				{"mainenergy": "Time"},
+				{"feature": ["{@feat Clockworks of Fate|CDPH}"]}		
+			]],
+			"entries":["You can now use {@feat Clockworks of Fate|CDPH} as a Bonus Action, this also makes it so that you can prolong your stopped time with a Bonus Action instead of an Action. Furthermore, time does not resume when you attack someone anymore, and with this, you gain advantage on attack rolls you make in your stopped time. Also, instead of being unable to use this ability again until the next fight or next 10 minutes, you can now not use it again until the end of your next time-consuming turn."]
+		},
+		{
+			"name": "Time Injection",
+			"source": "CDPH",
+			"class": ["Energenetic Specialist"],
+			"prerequisite": [[
+				{"mainenergy": "Time"}
+			]],
+			"entries":["You can speed up time of an object or creatures as a Bonus Action. It costs 2 Energy for small objects (coins, pens, screws etc.) for every 3 years of age or 2 Energy for medium objects (soccer balls, chairs, doors etc.) and 3 for anything bigger for every 1 year of age. When you use this ability on an object or creature then it ages in the span of 1 turn. You can lessen this ageing amount to less than the 1 or 2 years, but this still costs the same amount of Energy as if you would use the ability in full. This ability does not work on sentient or sapient creatures."]
+		},
+		{
+			"name": "Spatial Distortion Immunity",
+			"source": "CDPH",
+			"class": ["Energenetic Specialist"],
+			"prerequisite": [[
+				{"mainenergy": "Space"}
+			]],
+			"entries":["You are fully immune for space distortions and anomalies."]
+		},
+		{
+			"name": "Spatial Intuition",
+			"source": "CDPH",
+			"class": ["Energenetic Specialist"],
+			"prerequisite": [[
+				{"mainenergy": "Space"}
+			]],
+			"entries":["You can feel the fabric of space and always know where you are when compared to other places you have been. You can recall the exact direction and distance from your current location to somewhere you have been as accurately as 10 cm when you are within 10 km from it, 0.5 meter when you are within 100 km, 1 meter when within 1 light second, and 10 meter for anything further."]
+		},
+		{
+			"name": "You are tearing me apart ....!",
+			"source": "CDPH",
+			"class": ["Energenetic Specialist"],
+			"prerequisite": [[
+				{"feature": ["{@feat Spatial Intuition|CDPH}"]},
+				{"mainenergy": "Space"}
+			]],
+			"entries":["You are able to quickly travel to a place that you know the exact location of. You can open a wormhole at a place in air or vacuum in an 8 meter radius around you to a place where you know the exact distance and direction of when compared to your current location. This wormhole has a 0.75 meter radius and it costs an Action and 6 Energy to open. It closes at the start of your next turn, or you can maintain it with a Free Action which costs 8 Energy per turn."]
+		},
+		{
+			"name": "Matter Resonator",
+			"source": "CDPH",
+			"class": ["Energenetic Specialist"],
+			"prerequisite": [[
+				{"mainenergy": "Space"}
+			]],
+			"entries":["You can feel matter existing around you, giving you a slight form of omnipresence. You can feel where things are and how they move in a 15 meter radius. This only works with massive things created out of normal matter. This means that you cannot feel very small objects, air, plasma, or any form of matter made from other energies."]
+		},
+		{
+			"name": "Spacial Force Projection",
+			"source": "CDPH",
+			"class": ["Energenetic Specialist"],
+			"prerequisite": [[
+				{"feature": ["{@feat Non-Localised Manipulation|CDPH}"]},
+				{"mainenergy": "Space"}
+			]],
+			"entries":["You are now able to use {@feat Non-Localised Manipulation|CDPH} on an area instead of only on an object. The maximum area of effect when you do this is around 2 m3, and the largest dimension of the area cannot be longer than twice the shortest dimension of the area."]
+		},
+		{
+			"name": "Reverse Entropic Energy Injection",
+			"source": "CDPH",
+			"class": ["Energenetic Specialist"],
+			"prerequisite": [[
+				{"mainenergy": "Chaos"}
+			]],
+			"entries":["You are able to repair with your Energy. You can spend a Bonus Action and 1 Energy to repair 15 cm of tear. Using this ability on non-mechanical creatures won’t have any healing effect, and using it on mechanical creatures heals them for {@dice 1d6+1}."]
+		},
+		{
+			"name": "Chaotic Energy Acquisition",
+			"source": "CDPH",
+			"class": ["Energenetic Specialist"],
+			"prerequisite": [[
+				{"mainenergy": "Chaos"}
+			]],
+			"entries":["You now regain 3 Energy every turn. Also, you now gain half your Energenetic Specialist Level more Energy for the point of Exhaustion that you get if you use your Energy when you run out, or use more than you have left."]
+		},
+		{
+			"name": "Entropic Control",
+			"source": "CDPH",
+			"class": ["Energenetic Specialist"],
+			"prerequisite": [[
+				{"mainenergy": "Chaos"}
+			]],
+			"entries":["You have learned how to control pure luck somewhat. As an Action, if you or someone you see need to make a purely luck based roll (like for in game rolling of dice, getting cards handed to you in a poker game etc.), than you can roll a second time and choose which dice the outcome will be. This doesn’t work if the roll of outcome has anything to do with Energenetics or things that aren’t normal matter."]
+		},
+		{
+			"name": "Devil’s Luck",
+			"source": "CDPH",
+			"class": ["Energenetic Specialist"],
+			"prerequisite": [[
+				{"feature": ["{@feat Entropic Control|CDPH}"]},
+				{"mainenergy": "Chaos"}
+			]],
+			"entries":["Your control over luck has increased to levels to where the term “control” is now correctly applicable. As an Action, when you or someone you see need to make a purely luck based roll, or get a purely luck based outcome on something, than you can try to directly manipulate and change the outcome to your will, instead of the effects of {@feat Entropic Control|CDPH}. How much you succeed and what the outcome becomes is solely based on the DM. This doesn’t work if the roll or outcome has anything to do with Energenetics or things that aren’t normal matter.Furthermore, you become immune to Critical Hits."]
+		},
+		{
+			"name": "Snake Eyes",
+			"source": "CDPH",
+			"class": ["Energenetic Specialist"],
+			"prerequisite": [[
+				{"feature": ["{@feat Entropic Control|CDPH}"]},
+				{"mainenergy": "Chaos"}
+			]],
+			"entries":["You have learned how to passively control your own luck when you fail things in the most horrible ways. If you critically fail a roll, than you are able to ignore the critical part. This effectively lets you able to change any critical fail you roll into an unnatural 1."]
+		},
+		{
+			"name": "Energenetic Substitution",
+			"source": "CDPH",
+			"free": true,
+			"class": ["Energenetic Specialist"],
+			"prerequisite": [[
+				{"mainenergy": "Magic"}
+			]],
+			"entries":["You can substitute the Energy you use to any other form of the normal Odin Energenetics tree, just in general. This allows you to branch out the use of your energy to different categories. Substituting your energy with another also changes its color, and with this, you can fully control the color of your Energy if you use it in a visible way. Using this substituted Energy is more exhausting however, increasing the cost and decreasing the effectiveness of abilities that you can get from other Energies."]
+		},
+		{
+			"name": "Normal Energy Injection",
+			"source": "CDPH",
+			"class": ["Energenetic Specialist"],
+			"prerequisite": [[
+				{"feature": ["{@feat Energenetic Substitution|CDPH}"]},
+				{"mainenergy": "Magic"}
+			]],
+			"entries":["You are able to use your energy to create natural effects for 2 Energy as an Action. This includes (but is not heavily limited by): creating medium winds (4 Beaufort), creating or dowsing a small fire, making things twice as heavy, instantly boiling or solidifying a body of water not bigger than 1 liter and being able to create a sound of around 100 Db. These effects can be scaled down, and other effects are possible if the DM agrees with the thought of effect."]
+		},
+		{
+			"name": "Form Magic",
+			"source": "CDPH",
+			"class": ["Energenetic Specialist"],
+			"prerequisite": [[
+				{"feature": ["{@feat Energenetic Substitution|CDPH}"]},
+				{"mainenergy": "Magic"}
+			]],
+			"entries":["You can change your form into another race or into an object that you have seen before. Your new form cannot be much larger than yourself, not smaller than an average pen, and the original object or race needs to be Full-Materialistic. Changing your form costs an Action and 5 Energy, which means that this is also the cost to turn back to normal.<br>Your Stats change in the following way if you do this: <br>• Your Strength becomes that of the object or creature.<br>• Your Dexterity and Charisma scores becomes the lower between your ability scores and the ability scores of that what you change into.<br>• Your other ability scores (Constitution, Intelligence and Wisdom) stay the same."]
+		},
+		{
+			"name": "Primal Magic (Potential Shield)",
+			"source": "CDPH",
+			"class": ["Energenetic Specialist"],
+			"prerequisite": [[
+				{"feature": ["{@feat Energenetic Substitution|CDPH}"]},
+				{"mainenergy": "Magic"}
+			]],
+			"entries":["You can use your Reaction to create a shield made out of your Main Energy and use this to protect yourself from damage that isn’t from a massive source (like knifes, swords, cannonballs, a van). This Reaction can be used after an attack roll against you is made, but must be before the damage roll has been made. For every point of Energy that you use, you gain 3 DR against damage from energy sources (lasers, plasma, energenetics, etc.), and 1 DR for all other damage types that isn’t afflicted by a massive source. You cannot change how many points of Energy you use after you activated this ability. The effect and this DR ends at the start of your next turn."]
+		},
+		{
+			"name": "Space Magic (You are tearing me apart ....!)",
+			"source": "CDPH",
+			"class": ["Energenetic Specialist"],
+			"prerequisite": [[
+				{"feature": ["{@feat Energenetic Substitution|CDPH}"]},
+				{"mainenergy": "Magic"}
+			]],
+			"entries":["You are able to quickly travel to a place that you know the exact location of. You can open a wormhole at a place in air or vacuum in an 5 meter radius around you to a place where you know the exact distance and direction of when compared to your current location. This wormhole has a 0.75 meter radius and it costs an Action and 8 Energy to open. It closes at the start of your next turn, or you can keep it open which costs 10 Energy per turn but does not cost an Action."]
+		},
+		{
+			"name": "Chaos Magic (Reverse Entropic Energy Injection)",
+			"source": "CDPH",
+			"class": ["Energenetic Specialist"],
+			"prerequisite": [[
+				{"feature": ["{@feat Energenetic Substitution|CDPH}"]},
+				{"mainenergy": "Magic"}
+			]],
+			"entries":["You are able to repair with your Energy. You can spend an Action and 2 Energy to repair 10 cm of tear. Using this ability on non-mechanical creatures won’t have any healing effect, and using it on mechanical creatures heals them for {@dice 1d4}."]
+		},
+		{
+			"name": "Time Magic (Time Injection)",
+			"source": "CDPH",
+			"class": ["Energenetic Specialist"],
+			"prerequisite": [[
+				{"feature": ["{@feat Energenetic Substitution|CDPH}"]},
+				{"mainenergy": "Magic"}
+			]],
+			"entries":["You can speed up time of an object or creatures as a Bonus Action. It costs 2 Energy for small objects (coins, pens, screws etc.) for every 2 years of age or 3 Energy for medium objects (soccer balls, chairs, doors etc.) for every 1 year of age.<br>When you use this ability on an object or creature then it ages in the span of 1 turn. You can lessen this ability to less than the 1 or 2 years, but this still costs the same amount of Energy as if you would use the ability in full. This ability does not work on sentient creatures."]
+		},
+		{
+			"name": "Psychic Magic (Telepathy)",
+			"source": "CDPH",
+			"class": ["Energenetic Specialist"],
+			"prerequisite": [[
+				{"feature": ["{@feat Energenetic Substitution|CDPH}"]},
+				{"mainenergy": "Magic"}
+			]],
+			"entries":["You can communicate with other non-mechanical creatures. This is as free as an action as normal talking is. This is two way, which means the creature you are communicating with can respond. <br>You and the creature can only communicate in languages you know however. This ability does not cost any Energy to use.<br>This ability doesn’t work against creatures that have resistance against mental intrusions."]
+		},
+		{
+			"name": "Mind over Matter",
+			"source": "CDPH",
+			"class": ["Energenetic Specialist"],
+			"prerequisite": [[
+				{"mainenergy": "Psychic"}
+			]],
+			"entries":["You are completely immune against all attacks and abilities that use this form of energenetics. You are also immune against any form of mental intrusion or anomaly (Except for {@feat Telepathy|CDPH} which you can choose to ignore).<br>Also, you can control your emotional state perfectly, gaining proficiency on the Deception skill, or expertise if you already were proficient."]
+		},
+		{
+			"name": "Telepathy",
+			"source": "CDPH",
+			"class": ["Energenetic Specialist"],
+			"prerequisite": [[
+				{"mainenergy": "Psychic"}
+			]],
+			"entries":["You can communicate with other non-mechanical creatures. This is as free as an Action as normal talking is. This is two way, which means the creature you are communicating with can respond.<br>You and the creature can only communicate in languages you two know. This ability does not cost any Energy to use.<br>If a creature has resistance against mental intrusions, than you need to roll a Wisdom check against their Wisdom Ability Score."]
+		},
+		{
+			"name": "Crystal Mind",
+			"source": "CDPH",
+			"class": ["Energenetic Specialist"],
+			"prerequisite": [[
+				{"mainenergy": "Psychic"}
+			]],
+			"entries":["You can read the mind of others as an Action. If you try to use this ability on an unwilling creature or a creature who has resistance against mental intrusions, than they need to make a Wisdom Saving Throw against a DC of 7 + Proficiency + Intelligence Ability Score Modifier + Wisdom Ability Score Modifier. The result of this save resets after 6 hours. When they succeed, than they are immune to you using this ability on them. <br>When they fail, than you can read their mind and memories. You are in an unconscious type of trance while you are doing this, and do not register anything that is happening around you. You can snap out of your trance and out of the other persons mind on will. When you read someone’s memory, then you experience everything about said memory that they know. And although you are able to do this, it is still near impossible to guess the emotional state of the target by just probing their memories."]
+		},
+		{
+			"name": "Dream of a Black Swan",
+			"source": "CDPH",
+			"class": ["Energenetic Specialist"],
+			"prerequisite": [[
+				{"feature": ["{@feat Telepathy|CDPH}"]},
+				{"mainenergy": "Psychic"}
+			]],
+			"entries":["You are able to effectively change other creatures their mindset, emotional state and or overall mood and are able to create mental effects. Using this ability costs an Action and at least 2 Energy. If you use this ability on a unwilling creature or a creature that has resistance against mental intrusions or anomalies, than they need to make a Wisdom Saving Throw, and the DC they need to succeed on is:5 + Proficiency + Intelligence Ability Score Modifier + Wisdom Ability Score Modifier + 1 per 3 extra Energy used. <br>The outcome of this roll resets after 30 minutes. If they succeed, then they are immune to you using this ability on them. If they fail, then you are able to do one of the following things: change their general mood, change their emotional state, change their mindset on something (as long as it wouldn’t directly harm them), put them to sleep, force them awake, or something else that falls in this category and the DM agrees with. The effect stops after the saving throw is reset, after which the person can remember everything he did in the affected time, but may or may not know that you are responsible. It also ends when you actively work against the effect that you gave (like changing someone friendly towards you and constantly being overly mean while the person is affected). "]
+		},
+		{
+			"name": "Maintenance",
+			"source": "CDPH",
+			"free": true,
+			"class": ["Engineer"],
+			"entries":["This class is partially specialized in making things, let it be weapons or utility items. But making these things is only half of the work, as most unprofessionally made machines and items will break down quite quickly if they are not maintained.<br>You have a pool of points called Maintenance Points, MP for short, which you can allocate to items that you make with Abilities from this class. <br>You have 6 MP that you can allocate, and you can increase this with some Abilities in this class. If you create or get something that needs allocated MP, than you can allocate it immediately if you have enough unallocated MP left. You can reallocate your MP every 24 hours and in a Rest.<br>If you don’t allocate MP into an item that needs it, then said item or said part of an item stops working until you allocated the needed MP into it again. <br>The amount of allocated MP an item needs can be seen on the header of said ability/item."]
+		},
+		{
+			"name": "Multitask Master",
+			"source": "CDPH",
+			"class": ["Engineer"],
+			"prerequisite":[[
+				{"class": "Engineer Level 4"}
+			]],
+			"entries":["You have learned how to multitask when maintaining your things, which lets you maintain more things in the same amount of time.<br>You gain 6 more MP that you can allocate, upping your total to 12 MP."]
+		},
+		{
+			"name": "Efficient Prioritization",
+			"source": "CDPH",
+			"class": ["Engineer"],
+			"prerequisite":[[
+				{"feature": ["{@feat Multitask Master|CDPH}"]},
+				{"class": "Engineer Level 10"}
+			]],
+			"entries":["You have learned how to prioritize specific things when you do your maintenance. Making sure you do the most important stuff first, and reducing redundant work lets you maintain even more things in the same amount of time.<br>You gain 8 more MP that you can allocate, upping your total to 20 MP."]
+		},
+		{
+			"name": "Puzzle Master",
+			"source": "CDPH",
+			"class": ["Engineer"],
+			"entries":["You are proficient at creating new things from blueprints, and have become quite knowledgeable how to take machinery apart. You gain proficiency when you try replicate some form of electronics or machinery, and expertise when you try to disassemble something while you have Mechanics Tools. The amount of time it takes to replicate objects depends on the object, and can range from a few minutes to a few days."]
+		},
+		{
+			"name": "Magister Horologium Opus",
+			"source": "CDPH",
+			"class": ["Engineer"],
+			"entries":["You are able to create small things that may be of use, like a lockpick, flashlight or simple timer. It costs 3 to 5 minutes to make such small usable item. If you want to make something, then you need to throw a {@skill Mechanical Manipulation} Check against a DC that is based on how physically difficult it is to make the object. Every time you roll to create an item, the DC for creating the same and similar items increases until your next rest."]
+		},
+		{
+			"name": "Deus Intus Machina",
+			"source": "CDPH",
+			"class": ["Engineer"],
+			"prerequisite":[[
+				{"class": "Engineer Level 5"},
+				{"feature":["{@feat Magister Horologium Opus|CDPH}"]}
+			]],
+			"entries":["You have learned how to make larger things, including improvised tools and weaponlikes. Items made with this ability need to be maintained, and the maintenance points needed differs per item. You can only create items with this ability in a Rest and you need to have access to Mechanics Tools and a good source of scrap and materials (this means that you cannot create these items if you are stranded in the middle of a desert). A list of example items that you can make with this ability can be seen in the {items list}. You are able to make other things that are not on this example list, but you need to discuss this with the DM if you thought of something."]
+		},
+		{
+			"name": "Fraudulentus Naturae",
+			"source": "CDPH",
+			"class": ["Engineer"],
+			"prerequisite":[[
+				{"class": "Engineer Level 8"},
+				{"feature":["{@feat Deus Intus Machine|CDPH}"]},
+				{"other": "{@skill Energenetics} Skill Expertise and Intelligence Score of 15 or higher"}
+			]],
+			"entries":["You have learned how to use energenetic theories into your crafts, being able to create effects and items, while niche, far superior than ever before. Items made with this ability need to be maintained, and the Maintenance Points needed differs per item. You can only create items with this ability in a Rest and you need to have access to Mechanics Tools. A list of items that you can make with this ability can be seen at the end of this Class. You are able to make other things that are not on this example list, but you need to discuss this with the DM if you thought of something. "]
+		},
+		{
+			"name": "Builders League United",
+			"source": "CDPH",
+			"class": ["Engineer"],
+			"entries":["You are an expert at repairing things. You nowhave expertise when repairing things while you use your Mechanics Tools, and still have normal proficiency when you need to improvise with tools.<br>You can also Heal/Repair mechanical creatures using your Mechanics Tools as an Action. You can heal {@dice 2d4}+{@skill Mechanical Manipulation}. The total health you can repair per Rest is 10+2xEngineer Level, at which point your spare parts and materials are running too low to effectively repair or create anything."]
+		},
+		{
+			"name": "Little Helper",
+			"source": "CDPH",
+			"class": ["Engineer"],
+			"entries":["You gain a small robot companion that helps you with things. This companion can for example be a mechanical version of any small animal (maximum medium dog sized) or a higher tech version of a commercial RC drone. You can choose if this companion is sapient or not. <br>If it isn’t sapient, than it only has an Action and Reaction, you can fully control it as a Bonus Action, and it will execute any simple command given to it without thinking until you give it another command. If it is sapient, than you won’t have any direct control over it, but it will still try to execute any command given to it to the best extend of its abilities, and will try to help you actively. It shares your Initiative/Turn as it monitors and reacts to your vitals for your current emotional state. Its stats are described in Appendix C.<br>What your companion can do depends on what it is, but it can always give or remove half your Proficiency Bonus on any D20 roll that isn’t a Death Save while it is within 1 meter of someone as a Reaction."]
+		},
+		{
+			"name": "Big Helper",
+			"source": "CDPH",
+			"class": ["Engineer"],
+			"prerequisite":[[
+				{"class": "Engineer Level 8"},
+				{"level": 10},
+				{"feature":["{@feat Little Helper|CDPH}"]}
+			]],
+			"entries":["You have learned from your experience with your mechanical companion how to create a larger robot while still keeping the thing stable. You can now change your Little Helper into a new form. Its form doesn’t need to be like an animal anymore, and the limit of how big you can make your companion is now around the size of a bear. You can choose to transfer the AI core of your Little Helper if had Sapience, or put in a new AI, or put in none at all. The effects of sapience and non-sapience are described in the {@feat Little Helper|CDPH} ability. Its stats are described in Appendix C. What your companion can do still depends on what it is, but it can always give or remove half your Proficiency Bonus on any D20 roll while it is within 1 meter of someone as a Reaction."]
+		},
+		{
+			"name": "Power Armor Master",
+			"source": "CDPH",
+			"class": ["Engineer"],
+			"entries":["You gain proficiency in Power Armor."]
 		}
 	]
 }

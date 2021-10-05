@@ -2590,6 +2590,7 @@ DataUtil = {
 	_MULTI_SOURCE_PROP_TO_INDEX_NAME: {
 		"monster": "index.json",
 		"spell": "index.json",
+		"feature":"index.json",
 		"monsterFluff": "fluff-index.json",
 		"spellFluff": "fluff-index.json",
 		"class": "index.json",
@@ -2967,13 +2968,13 @@ DataUtil = {
 							found = true;
 							// if the creature already has a greater sense of this type, do nothing
 							if (Number(m[1]) < sense.type) {
-								copyTo.senses[i] = `${sense.type} ${sense.range} ft.`;
+								copyTo.senses[i] = `${sense.type} ${sense.range} m`;
 							}
 							break;
 						}
 					}
 
-					if (!found) copyTo.senses.push(`${sense.type} ${sense.range} ft.`);
+					if (!found) copyTo.senses.push(`${sense.type} ${sense.range} m`);
 				});
 			}
 
@@ -3691,6 +3692,7 @@ DataUtil = {
 
 		doPostLoad: function (data) {
 			const PRINT_ORDER = [
+				SRC_CDPH,
 				SRC_PHB,
 				SRC_DMG,
 				SRC_SCAG,

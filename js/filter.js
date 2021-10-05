@@ -2242,7 +2242,7 @@ class SourceFilter extends Filter {
 	}
 
 	_doSetPinsSrd () {
-		SourceFilter._SRD_SOURCES = SourceFilter._SRD_SOURCES || new Set([SRC_PHB, SRC_MM, SRC_DMG]);
+		SourceFilter._SRD_SOURCES = SourceFilter._SRD_SOURCES || new Set([SRC_CDPH, SRC_TZH, SRC_PHB, SRC_MM, SRC_DMG]);
 
 		Object.keys(this._state).forEach(k => this._state[k] = SourceFilter._SRD_SOURCES.has(k) ? 1 : 0);
 

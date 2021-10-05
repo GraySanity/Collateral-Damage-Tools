@@ -1,8 +1,89 @@
 {
 	"monster": [
 		{
+			"name": "Tribal Pollop",
+			"size": "M",
+			"type": "plant",
+			"source": "CDPH",
+			"matterenergy": [
+				{
+					"matterenergy": [
+						"MF"
+					]
+				},
+				{
+					"matterenergy": [
+						"ES"
+					]
+				}
+			],
+			"ac": [
+				8
+			],
+			"dr": [
+				"0"
+			],
+			"hp": {
+				"formula": "2d6+7",
+				"average": 14
+			},
+			"speed": {
+				"walk": "3"
+			},
+			"str": 7,
+			"dex": 11,
+			"con": 10,
+			"int": 10,
+			"wis": 10,
+			"cha": 11,
+			"passive": 10,
+			"cr": "1/4",
+			"languages": [
+				"Musi"
+			],
+			"save": {
+				"dex": "+2",
+				"con": "+2"
+			},
+			"vulnerable": [
+				"cold"
+			],
+			"trait": [
+				{
+					"name": "Plant Life",
+					"entries": [
+						"Pollops are sentient plants which can, like most other creatures, control most of their body. Pollops don’t have legs or arms, but they stand on a bunch of thick tentacle like vines which they can use as arms for manipulating things as well. Because of this, they don’t have hands or fingers, but will still be able to manipulate most things normally that don’t directly need fingers to use. Also, they can hold quite a lot things at once, as they aren’t limited by two arms and hands."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Unarmed Strike",
+					"entries": [
+						"{@atk mw} {@hit 2} to hit, reach 0.5 m, one target. {@h}3 ({@damage 1d4+1}) bludgeoning damage."
+					]
+				}
+			],
+			"miscTags": [
+				"MW"
+			],
+			"damageTags": [
+				"B"
+			],
+			"environment": [
+				"desert",
+				"forest",
+				"grassland",
+				"jungle",
+				"mountainous",
+				"oceanic",
+				"swamp"
+			],
+			"group": "Pollop"
+		},
+		{
 			"name": "Ancient Deep Crow",
-			"source": "AI",
+			"source": "CDPH",
 			"page": 211,
 			"size": "H",
 			"type": "monstrosity",
@@ -22,7 +103,7 @@
 				"formula": "15d12 + 90"
 			},
 			"speed": {
-				"walk": 20,
+				"walk": 3.5,
 				"fly": 80
 			},
 			"str": 23,

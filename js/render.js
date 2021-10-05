@@ -1058,7 +1058,7 @@ function Renderer () {
 	};
 
 	this._renderBonusSpeed = function (entry, textStack, meta, options) {
-		textStack[0] += entry.value === 0 ? "\u2014" : `${entry.value < 0 ? "" : "+"}${entry.value} ft.`;
+		textStack[0] += entry.value === 0 ? "\u2014" : `${entry.value < 0 ? "" : "+"}${entry.value} m`;
 	};
 
 	this._renderDice = function (entry, textStack, meta, options) {
@@ -2993,6 +2993,7 @@ Renderer.utils = {
 						.filter(Boolean)
 						.join();
 				}).filter(Boolean);
+	//			console.log(listOfChoices);
 				if (!listOfChoices.length) return isListMode ? "\u2014" : "";
 				(addvar=="") ? addvar = " and " : "" ;
 				topush = isListMode ? listOfChoices.join(addvar) : `${listOfChoices.joinConjunct(addvar,addvar)}`;
@@ -5619,7 +5620,7 @@ Renderer.item = {
 
 		// vehicles
 		if (item.vehSpeed || item.capCargo || item.capPassenger || item.crew || item.crewMin || item.crewMax || item.vehAc || item.vehHp || item.vehDmgThresh || item.travelCost || item.shippingCost) {
-			const vehPartUpper = item.vehSpeed ? `Speed: ${Parser.numberToVulgar(item.vehSpeed)} mph` : null;
+			const vehPartUpper = item.vehSpeed ? `Speed: ${Parser.numberToVulgar(item.vehSpeed)} km/h` : null;
 
 			const vehPartMiddle = item.capCargo || item.capPassenger ? `Carrying Capacity: ${[item.capCargo ? `${Parser.numberToFractional(item.capCargo)} ton${item.capCargo === 0 || item.capCargo > 1 ? "s" : ""} cargo` : null, item.capPassenger ? `${item.capPassenger} passenger${item.capPassenger === 1 ? "" : "s"}` : null].filter(Boolean).join(", ")}` : null;
 
@@ -6859,7 +6860,7 @@ Renderer.vehicle = {
 				${veh.capCrew != null ? `<div><b>Creature Capacity</b> ${Renderer.vehicle.getShipCreatureCapacity(veh)}</div>` : ""}
 				${veh.capCargo != null ? `<div><b>Cargo Capacity</b> ${Renderer.vehicle.getShipCargoCapacity(veh)}</div>` : ""}
 				${veh.pace != null ? `<div><b>Travel Pace</b> ${veh.pace} miles per hour (${veh.pace * 24} miles per day)</div>
-				<div class="ve-muted ve-small help-subtle ml-2" title="Based on &quot;Special Travel Pace,&quot; DMG p242">[<b>Speed</b> ${veh.pace * 10} ft.]</div>` : ""}
+				<div class="ve-muted ve-small help-subtle ml-2" title="Based on &quot;Special Travel Pace,&quot; DMG p242">[<b>Speed</b> ${veh.pace * 10} m]</div>` : ""}
 			</td></tr>`;
 		},
 	},
@@ -6955,7 +6956,7 @@ Renderer.vehicle = {
 				<div><b>Cargo Capacity</b> ${Parser.weightToFull(veh.capCargo)}</div>
 				<div><b>Armor Class</b> ${dexMod === 0 ? `19` : `${19 + dexMod} (19 while motionless)`}</div>
 				<div><b>Hit Points</b> ${veh.hp.hp} (damage threshold ${veh.hp.dt}, mishap threshold ${veh.hp.mt})</div>
-				<div><b>Speed</b> ${veh.speed} ft.</div>
+				<div><b>Speed</b> ${veh.speed} m</div>
 				<div class="ve-muted ve-small help-subtle ml-2" title="Based on &quot;Special Travel Pace,&quot; DMG p242">[<b>Travel Pace</b> ${Math.floor(veh.speed / 10)} miles per hour (${Math.floor(veh.speed * 24 / 10)} miles per day)]</div>
 			</td></tr>
 			${Renderer.vehicle._getAbilitySection(veh)}
@@ -7200,7 +7201,7 @@ Renderer.recipe = {
 
 							let scaled = base * scaleFactor;
 							if (Math.abs(scaled - Math.round(scaled)) < 0.1) {
-								scaled = Math.round(scaled);
+								scaled = scaled;
 							}
 							obj[k] = scaled;
 						});

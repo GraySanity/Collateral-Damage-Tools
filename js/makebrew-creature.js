@@ -1475,7 +1475,7 @@ class CreatureBuilder extends Builder {
 					delete this._state.speed[prop];
 					if (prop === "fly") delete this._state.speed.canHover
 				} else {
-					const speed = UiUtil.strToInt(speedRaw);
+					const speed = speedRaw;
 					const condition = $iptCond.val().trim();
 					this._state.speed[prop] = (condition ? {number: speed, condition: condition} : speed);
 					if (prop === "fly") this._state.speed.canHover = !!(condition && /(^|[^a-zA-Z])hover([^a-zA-Z]|$)/i.exec(condition));
@@ -1498,7 +1498,7 @@ class CreatureBuilder extends Builder {
 
 			return $$`<div class="flex-v-center mb-2">
 			<span class="mr-2 mkbru__sub-name--33">${name}</span>
-			<div class="flex-v-center">${$iptSpeed}<span class="mr-2">ft.</span>${$iptCond}</div>
+			<div class="flex-v-center">${$iptSpeed}<span class="mr-2">m</span>${$iptCond}</div>
 			</div>`;
 		};
 
@@ -1940,7 +1940,7 @@ class CreatureBuilder extends Builder {
 							if (feet == null) return;
 
 							const curr = $iptSenses.val().trim();
-							const toAdd = `${sense} ${feet} ft.`;
+							const toAdd = `${sense} ${feet} m`;
 							$iptSenses.val(curr ? `${curr}, ${toAdd}` : toAdd);
 
 							doUpdateState();
@@ -2690,7 +2690,7 @@ class CreatureBuilder extends Builder {
 									.typeahead({source: Parser.DMG_TYPES});
 								const $stageMelee = $$`<div class="flex-col"><hr class="hr-3">
 								<div class="bold mb-2">Melee</div>
-								<div class="flex-v-center mb-2"><span class="mr-2 no-shrink">Melee Range (ft.)</span>${$iptMeleeRange}</div>
+								<div class="flex-v-center mb-2"><span class="mr-2 no-shrink">Melee Range (m)</span>${$iptMeleeRange}</div>
 								<div class="flex-v-center mb-2">${$iptMeleeDamDiceCount}<span class="mr-2">d</span>${$iptMeleeDamDiceNum}${$iptMeleeDamBonus}${$iptMeleeDamType}</div>
 								</div>`;
 
@@ -2704,8 +2704,8 @@ class CreatureBuilder extends Builder {
 								const $stageRanged = $$`<div class="flex-col"><hr class="hr-3">
 								<div class="bold mb-2">Ranged</div>
 								<div class="flex-v-center mb-2">
-									<span class="mr-2 no-shrink">Short Range (ft.)</span>${$iptRangedShort}
-									<span class="mr-2 no-shrink">Long Range (ft.)</span>${$iptRangedLong}
+									<span class="mr-2 no-shrink">Short Range (m)</span>${$iptRangedShort}
+									<span class="mr-2 no-shrink">Long Range (m)</span>${$iptRangedLong}
 								</div>
 								<div class="flex-v-center mb-2">${$iptRangedDamDiceCount}<span class="mr-2">d</span>${$iptRangedDamDiceNum}${$iptRangedDamBonus}${$iptRangedDamType}</div>
 								</div>`.hideVe();
@@ -2778,14 +2778,14 @@ class CreatureBuilder extends Builder {
 									const ptAtk = `{@atk ${[melee ? "mw" : null, ranged ? "rw" : null].filter(Boolean).join(",")}}`;
 									const ptHit = `{@hit ${pb + abilMod}} to hit`;
 									const ptRange = [
-										melee ? `reach ${UiUtil.strToInt($iptMeleeRange.val(), 5, {fallbackOnNaN: 5})} ft.` : null,
+										melee ? `reach ${UiUtil.strToInt($iptMeleeRange.val(), 5, {fallbackOnNaN: 5})} m` : null,
 										ranged ? (() => {
 											const vShort = UiUtil.strToInt($iptRangedShort.val(), null, {fallbackOnNaN: null});
 											const vLong = UiUtil.strToInt($iptRangedLong.val(), null, {fallbackOnNaN: null});
 											if (!vShort && !vLong) return `unlimited range`;
-											if (!vShort) return `range ${vLong}/${vLong} ft.`;
-											if (!vLong) return `range ${vShort}/${vShort} ft.`;
-											return `range ${vShort}/${vLong} ft.`;
+											if (!vShort) return `range ${vLong}/${vLong} m`;
+											if (!vLong) return `range ${vShort}/${vShort} m`;
+											return `range ${vShort}/${vLong} m`;
 										})() : null,
 									].filter(Boolean).join(" or ");
 
@@ -3083,7 +3083,7 @@ class CreatureBuilder extends Builder {
 			})
 			.appendTo($rowInner);
 
-		this._legendaryGroupCache.filter(it => it.source).forEach((g, i) => this._$selLegendaryGroup.append(`<option value="${i}">${g.name}${g.source === SRC_MM ? "" : ` [${Parser.sourceJsonToAbv(g.source)}]`}</option>`));
+		this._legendaryGroupCache.filter(it => it.source).forEach((g, i) => this._$selLegendaryGroup.append(`<option value="${i}">${g.name}${g.source === SRC_CDPH ? "" : ` [${Parser.sourceJsonToAbv(g.source)}]`}</option>`));
 
 		this._handleLegendaryGroupChange();
 
