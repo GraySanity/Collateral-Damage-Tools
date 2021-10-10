@@ -1065,6 +1065,13 @@
 			"source": "CDPH",
 			"class": ["Engineer"],
 			"entries":["You gain proficiency in Power Armor."]
+		},
+		{
+			"name": "Active Weapon Systems",
+			"source": "CDPH",
+			"class": ["Engineer"],
+			"maintenance"
+			"entries":["You gain proficiency in Power Armor."]
 		}
 	]
 }
