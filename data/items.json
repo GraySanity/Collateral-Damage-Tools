@@ -1249,7 +1249,7 @@
 	{
 		"name": "Steel Cable (80m)",
 		"source": "CDPH",
-		"rarity": "commmon",
+		"rarity": "common",
 		"type": "Gear",
 		"weight": 64,
 		"value": 160,
