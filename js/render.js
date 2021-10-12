@@ -2893,6 +2893,7 @@ Renderer.utils = {
 								case "otherSummary":
 									return isListMode ? (v.entrySummary || Renderer.stripTags(v.entry)) : (isTextOnly ? Renderer.stripTags(v.entry) : Renderer.get().render(v.entry));
 								case "other": return isListMode ? "Special" : (isTextOnly ? Renderer.stripTags(v) : Renderer.get().render("<br>"+v));
+								case "maintenance": return " " + v + " MP";
 								case "race": {
 									const parts = v.map((it, i) => {
 										if (isListMode) {

@@ -36,6 +36,7 @@
 		"source": "CDPH",
 		"type": "Mod",
 		"cability": "WM",
+		"rarity": "WM MOD",
 		"MC": "1 MP",
 		"entries": [
 			"You keep your weapon extremely clean on the daily." ,
@@ -47,6 +48,7 @@
 		"source": "CDPH",
 		"type": "Mod",
 		"cability": "WM",
+		"rarity": "WM MOD",
 		"MC": "0 MP",
 		"entries": [
 			"You redistribute the weight of your weapon to make it more handleable.", 
@@ -58,6 +60,7 @@
 		"source": "CDPH",
 		"type": "Mod",
 		"cability": "WM",
+		"rarity": "WM MOD",
 		"MC": "2 MP",
 		"entries": [
 			"You loosen the trigger of your firearm, making it more responsive for firing on reaction.",
@@ -69,6 +72,7 @@
 		"source": "CDPH",
 		"type": "Mod",
 		"cability": "WM",
+		"rarity": "WM MOD",
 		"MC": "2 MP",
 		"entries": [
 			"You sand your weapon on the daily to keep it as sharp as it can be, making it better at cutting through armor.",
@@ -80,6 +84,7 @@
 		"source": "CDPH",
 		"type": "Mod",
 		"cability": "IA",
+		"rarity": "IA MOD",
 		"MC": "2 MP",
 		"entries": [
 			"You add an improvised silencer to the barrel of your weapon, making it a lot quiter when you shoot with it.<br>This effects all gun types that aren't based on energenetic damage, but works the best on pressure based guns."

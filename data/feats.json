@@ -1070,8 +1070,391 @@
 			"name": "Active Weapon Systems",
 			"source": "CDPH",
 			"class": ["Engineer"],
-			"maintenance": 0,
-			"entries":["You gain proficiency in Power Armor."]
+			"maintenance": 2,
+			"prerequisite":[[
+			{"class": ["Engineer Level 5"]},
+			{"maintenance": 2 }
+			]],
+			"entries":["You can install weapon systems on your Little Helper (as long as it isn’t Tiny) or on Power Armor. You can choose if it is a melee or ranged weapon, and if ranged which kind of weapon it is. This weapon has the “unconventional” trait. While melee weapon installation can be done in such a way that it is fully invisible from the outside while sheathed, ranged weapon installation cannot, and will always be partially visible to people who know what to look for.<br>An installed melee weapon does {@dice 2d8} for small or uncontrolled melee weapons like daggers or chainsaws, or {@dice 2d10} + 1.5 x Strength Modifier damage for anything else. You can add your proficiency to its attack roll if it is on your power armor.<br>An installed ranged weapon has the range and damage of the normal weapon. You can add your proficiency to your attack rolls with this weapon, and the weapons don’t consume any ammo except for energy, which you should have plenty of. The weapon only works as long as your power armor is working completely fine. You cannot and do not need to reload this ranged weapon, but effects from weapon mechanics like Bolt-Action still effect its performance and how the weapon works.<br>Attacking with this weapon system costs an Attack Action."]
+		},
+		{
+			"name": "Predictive Targeting Sensors",
+			"source": "CDPH",
+			"class": ["Engineer"],
+			"prerequisite":[[
+			{"feature": ["{@feat Active Weapon Systems|CDPH}"]}
+			]],
+			"entries":["You gain expertise with your attack rolls made with installed weapons with {@feat Active Weapon Systems|CDPH} instead of just proficient."]
+		},
+		{
+			"name": "Watchmaker",
+			"source": "CDPH",
+			"class": ["Engineer"],
+			"prerequisite":[[
+			{"feature": ["{@feat Puzzle Master|CDPH}"]}
+			]],
+			"entries":["You have learned how to improve or “improve” weapons with modifications. You need your Mechanics Tools and quite some time to do this, which means it can only be done in a Rest. Only one modification can be done in a day, Modifications can be changed or removed in the same way that you add them, and weapons can only have one Modification at the same time. The modifications that you can add to weapons that do not have the “special” trait can be seen {@filter here|items|rarity=WM MOD}."]
+		},
+		{
+			"name": "Improvised Attachments",
+			"source": "CDPH",
+			"class": ["Engineer"],
+			"prerequisite":[[
+			{"feature": ["{@feat Watchmaker|CDPH}"]},
+			{"level": 4}
+			]],
+			"entries":["You have learned how to create and apply improvised attachments to your weapons. These modifications can only be added to guns, and cannot get added to special or improvised weapons. Also, weapons and armors you modify can now have up to two modifications at once.<br>The additional list of modifications you can add to your weapons with {@feat Watchmaker|CDPH} can be seen {@filter here|items|rarity=IA MOD|WM MOD}."]
+		},
+		{
+			"name": "Advanced Attachments",
+			"source": "CDPH",
+			"class": ["Engineer"],
+			"prerequisite":[[
+			{"feature": ["{@feat Improvised Attachments|CDPH}"]}
+			]],
+			"entries":["You modify your weapon in more advanced ways, and have thought of a few new attachments. These modifications cannot get added to special or improvised weapons.<br>Weapons and armors you modify can now have up to three modifications at once. The additional list of modifications you can add to your weapons with {@feat Watchmaker|CDPH} can be seen {@filter here|items|rarity=AA MOD;IA MOD;WM MOD}."]
+		},
+		{
+			"name": "Experimental Attachments",
+			"source": "CDPH",
+			"class": ["Engineer"],
+			"prerequisite":[[
+			{"feature": ["{@feat Advanced Attachments|CDPH}"]},
+			{"class": "Engineer Level 10"}
+			]],
+			"entries":["You have come up with some modifications for normal weapons that are stable at best, highly destructive for anything around it at worst. Only people with this Ability can use weapons with these modifications, anyone else can’t use the weapon the way it is supposed to making it an improvised weapon for them. You cannot improve special, unconventional or improvised weapons with this ability. A weapon or armor can only have one of these modifications. You can only add these modifications in downtime as only a rest isn’t long enough, because you also need to gather quite an amount of supplies to add these modifications. The additional list of modifications you can add to your weapons with {@feat Watchmaker|CDPH} with consideration of these restrictions can be seen {@filter here|items|rarity=EA MOD; AA MOD;IA MOD;WM MOD}."]
+		},
+		{
+			"name": "Defensive Cover",
+			"source": "CDPH",
+			"class": ["Engineer"],
+			"entries":["Cover now gives 1 extra AC and the DR that you get from Cover is now doubled"]
+		},
+		{
+			"name": "Hack & Slash",
+			"source": "CDPH",
+			"class": ["Engineer"],
+			"entries":["You have learned how to hack electronic systems, networks and some machines from the outside as long as you can make a form of connection. To do this, you need to make a {@skill Computers} check against a DC that is dependent on how secured the system is. When you succeed, you can browse through the system, looking for devices or files, and maybe even change some things. This doesn’t mean that you can’t get noticed however and you may need to make more checks because of this.You also learn how to read binary without problems."]
+		},
+		{
+			"name": "Hack the World",
+			"source": "CDPH",
+			"class": ["Engineer"],
+			"prerequisite":[[
+				{"feature": ["{@feat Hack & Slash|CDPH}"]},
+				{"class": "Engineer Level 3"}
+			]],
+			"entries":["When you hack into something, you have learned how to cover yourself up completely. It is now impossible to track which and where a system is getting invaded from solely said something alone.<br>You also gain proficiency in the {@skill Computers} skill, or expertise if you were already proficient."]
+		},
+		{
+			"name": "SAVE the World",
+			"source": "CDPH",
+			"class": ["Engineer"],
+			"prerequisite":[[
+				{"feature": ["{@feat Hack & Slash|CDPH}"]},
+				{"class": "Engineer Level 4"}
+			]],
+			"entries":["You have learned how to easily strip most data of an electronic system, network or machine. If you succeeded hacking into something, than you can try to copy and download every file that a part of said system has to a storage device you have or upload it to an cloud-like storage, and you need to make a {@skill Computers} Check to do this. Neither way removes files and only copies them. You are more easily visible to people and things looking for you on the system while this is happening. Also, downloading the data to a storage device is a lot quicker than uploading it, but uploading can be activated and done in the background even if you disconnect from the system. Both ways of acquiring the data can be stopped only if the person trying to stop this succeeds a {@skill Computers} Check against the one you threw when you started the transfer."]
+		},
+		{
+			"name": "Nuke Protocol",
+			"source": "CDPH",
+			"class": ["Engineer"],
+			"prerequisite":[[
+				{"feature": ["{@feat Hack the World|CDPH}"]},
+				{"class": "Engineer Level 8"}
+			]],
+			"entries":["You are able to destroy entire electronic systems when you are hacked into them. If you hacked into a system, than you can roll a Computers Check against a DC based on the internal security of the device. If you fail, you will get kicked out of the system entirely. For the system it is clear that someone infiltrated and it becomes harder to hack again for you, permanently increasing its security based DC by {@dice 1d4+2} for you. If you succeed however, then you are able to start nuking the system one part at a time. When you start it, you can choose if the destruction eventually spreads over the entire system or internal network, or if it only destroys a specific part.<br>While it can be stopped when started, you or anyone else trying this needs to succeed an Intelligence Check against your {@skill Computers} Check that you threw to stop this, and can repeat this roll only once every few minutes."]
+		},
+		{
+			"name": "Maintenance Mastery",
+			"source": "CDPH",
+			"class": ["Engineer"],
+			"mastery": true,
+			"prerequisite":[[
+				{"class": "Engineer Level 16"}
+			]],
+			"entries":["You gain 2 more MP that you can allocate."]
+		},
+		{
+			"name": "Second Wind",
+			"source": "CDPH",
+			"class": ["Martial Fighter"],
+			"prerequisite":[[
+				{"class": "Martial Fighter Level 3"}
+			]],
+			"entries":["You have learned how to strengthen yourself while in battle. You can use your bonus action to heal yourself for 4 HP, which you can use once every 10 turns of a fight. You also heal 4 HP every hour when not in a fight."]
+		},
+		{
+			"name": "Stalwart",
+			"source": "CDPH",
+			"class": ["Martial Fighter"],
+			"entries":["You have gained enough experience to improve your chances to overcome some incredible odds.<br>You can reroll one save or attack per Rest with advantage. You can do this after knowing if the first roll is a fail or not."]
+		},
+		{
+			"name": "Intransigent",
+			"source": "CDPH",
+			"class": ["Martial Fighter"],
+			"prerequisite":[[
+				{"feature":["{@feat Stalward|CDPH}"]},
+				{"class": "Martial Fighter Level 3"}
+			]],
+			"entries":["You are able to extend your stamina a bit for when you need to give it your all.<br>You can now use Stalwart two times per Rest."]
+		},
+		{
+			"name": "Determination",
+			"source": "CDPH",
+			"class": ["Multiclass"],
+			"prerequisite":[[
+				{"class": "Martial Fighter Level 8"}
+			],[{"class": "Egomancer Level X"}]],
+			"entries":["You are able to more easily stabilize yourself when needed. When throwing death saves, you only need to throw 2 successes to get stabilized again instead of 3."]
+		},
+		{
+			"name": "Resolute",
+			"source": "CDPH",
+			"class": ["Martial Fighter"],
+			"prerequisite":[[
+				{"feature": ["{@feat Intransigent|CDPH}"]},
+				{"class": "Martial Fighter Level 9"}]],
+			"entries":["You can force yourself to overcome any important obstacle in your way. You can now use {@feat Stalwart|CDPH} twice every hour."]
+		},
+		{
+			"name": "Eye of the Tiger",
+			"source": "CDPH",
+			"class": ["Martial Fighter"],
+			"entries":["You are better able at hitting people in their weak spots. Your crit range with melee attacks is now 1 lower. Also, you are now Proficient in {@skill Perception} and on sight based Insight, or expertise in {@skill Perception} if you were already Proficient."]
+		},
+		{
+			"name": "Superior Critical",
+			"source": "CDPH",
+			"class": ["Martial Fighter"],
+			"prerequisite":[[
+				{"feature":["{@feat Eye of the Tiger|CDPH}"]},
+				{"class": "Martial Fighter Level 3"}
+			]],
+			"entries":["You have really learned how to hit people where it hurts more easily.<br>Your crit range with melee attacks is now 1 lower"]
+		},
+		{
+			"name": "Remarkable Athlete",
+			"source": "CDPH",
+			"class": ["Martial Fighter"],
+			"entries":["You can add half your Proficiency (rounded up) to any Strength, Dexterity or Constitution based check if you are not proficient in that skill.<br>Also, you gain Expertise in an Ability Score Save that you were already Proficient in."]
+		},
+		{
+			"name": "Manoeuvres",
+			"source": "CDPH",
+			"class": ["Martial Fighter"],
+			"entries":["You have learned how to do fancy moves with your weapons. You can now semi-confidently do stuff like disarming people, trying to jump over people if you have a semi-long weapon like a sword, feigning, making someone fall over etc. If you want to do some fancy stuff, than you need to make a Dexterity check against a DC depending on the situation. If you do something that affects others, than the DC is around 10, depending on what you do, and depending if they have this ability as well or {@feat Martial Arts|CDPH}, as the DC is than their Dexterity or Strength score, whichever is higher. If you do something that only affects you, than the DC would normally be around 12, depending on what you want to do"]
+		},
+		{
+			"name": "Manoeuvrable Block",
+			"source": "CDPH",
+			"class": ["Martial Fighter"],
+			"prerequisite":[[{"feature":["{@feat Manoeuvres|CDPH}"]}]],
+			"entries":["You are able to quickly react and block ranged attacks that aren’t sneak attacks.<br>When you take the Dodge action while you are wielding a melee weapon, then you get a DR Bonus equal to your Attack Roll Bonus of said weapon to any ranged attack that hits you until the start of your next turn, and you get an AC Bonus equal to half your Attack Roll Bonus of said weapon to any melee attack that hits you until the start of your next turn."]
+		},
+		{
+			"name": "Honourable Distance",
+			"source": "CDPH",
+			"class": ["Martial Fighter"],
+			"entries":["It is now easier for you to push people away. The damage threshold for pushing people is now 2 less. You can now also choose to do 2 less damage with an attack if you hit someone, and push them an extra meter instead."]
+		},
+		{
+			"name": "Centered Mass",
+			"source": "CDPH",
+			"class": ["Martial Fighter"],
+			"prerequisite":[[
+				{"class": "Martial Fighter Level 3"}
+			]],
+			"entries":["You have learned how to use your mass when manoeuvring in fights.<br>You get a bonus +3 on attack and damage rolls with melee weapons and on manoeuvres, and ignore 5 DR."]
+		},
+		{
+			"name": "Centered Edge",
+			"source": "CDPH",
+			"class": ["Martial Fighter"],
+			"prerequisite":[[
+				{"feature":["{@feat Martial Expertise|CDPH}"]},
+				{"class": "Martial Fighter Level 10"}
+			]],
+			"entries":["You have learned how to be more consistent when attacking.<br>You can now choose to, instead of throwing your damage dice, to just take the average of the dice rounded up."]
+		},
+		{
+			"name": "Martial Expertise",
+			"source": "CDPH",
+			"class": ["Martial Fighter"],
+			"prerequisite":[[
+				{"feature":["{@feat Manoeuvres|CDPH}"]}
+			]],
+			"entries":["You are extremely experienced in fighting with melee weapons, and are now able to use them even more proficiently then before.<br>Instead of getting your Dexterity Score Modifier as a bonus for attack rolls and 1.5 times your Strength Score Modifier as a bonus for your damage rolls for melee weapons, you now get 2 times your Dexterity Score Modifier as a bonus for attack rolls and 2 times your Strength Score Modifier for damage rolls.<br>You can now also use 2 times your Dexterity Score Modifier instead of 2 times your Strength Score Modifier if the melee weapon can do piercing or slashing damage."]
+		},
+		{
+			"name": "Quick Dodge",
+			"source": "CDPH",
+			"class": ["Martial Fighter"],
+			"entries":["You have learned how to include more freedom of movement when doing things, making it easier to dodge out of the way of things.<br>You can now use the Dodge Action as a Bonus Action."]
+		},
+		{
+			"name": "Metropolis Espcape",
+			"source": "CDPH",
+			"class": ["Martial Fighter"],
+			"entries":["You can now Dash as a Bonus Action instead of an Action. If do this, then you can’t Dash as an Action as well that turn. You can also Dash as a Free Action at the cost of one Exhaustion."]
+		},
+		{
+			"name": "Weapon Specialization",
+			"source": "CDPH",
+			"class": ["Martial Fighter"],
+			"prerequisite":[[
+				{"feature":["{@feat Manoeuvres|CDPH}"]}
+			]],
+			"entries":["You can specialize into the use of specific weapons, which lets you use them more effectively. You gain +1 to throws to make Manoeuvres, and you can choose one of the following specializations:<br><br>• Dual Wielding Specialization:<br>You can now dual wield weapons effectively. Because of this, if you used your Action for a melee attacked, then you can use your Bonus Action to make an attack with the weapon that you didn’t use.<br><br>• Bludgeoning Specialization:<br>You can now use bludgeoning based weapons like maces more efficiently. You now deal double bludgeoning damage to obstacles with melee weapons, and ignore 5 DR when dealing bludgeoning damage with melee weapons.<br><br>• Slashing Specialization:<br>You are able to use purely slashing based weapons like axes more effectively. If you use a melee weapon that can only do slashing damage, than your crit range gets lowered by 1 for attacks with that weapon.<br><br>• Piercing Specialization:<br>You are able to use weapons that can do piercing damage more effectively. You now gain Expertise in melee attacks with melee weapons that can do piercing damage as long as you don’t dual wield them."]
+		},
+		{
+			"name": "Martial Mastery",
+			"source": "CDPH",
+			"class": ["Martial Fighter"],
+			"mastery": true,
+			"prerequisite":[[
+				{"class":"Martial Fighter Level 18"}
+			]],
+			"entries":["On weapons that do purely bludgeoning damage, you gain 2+5% DR.<br>On weapons that do purely slashing damage, you gain +1 Damage.<br>On weapons that do any form of piercing damage, you gain +1 to Hit."]
+		},
+		{
+			"name": "Unarmored Monk Defense",
+			"source": "CDPH",
+			"class": ["Monk"],
+			"entries":["While you are wearing no armor, your AC equals 9 + Dexterity Score Modifier + Wisdom Score Modifier."]
+		},
+		{
+			"name": "Martial Arts",
+			"source": "CDPH",
+			"class": ["Monk"],
+			"entries":["Your practice of martial arts gives you mastery of combat styles that use unarmed strikes or monk weapons, which is any Melee Weapon that don’t have the Heavy trait. This weapon only does bludgeoning damage while you use it as a Monk Weapon. You gain the following benefits while you are unarmed or wielding only monk weapons and you aren’t wearing armor:<br>• You can use your Dexterity Score Modifier instead of your Strength Score Modifier for the damage bonus of your unarmed strikes.<br>• You can add your Strength and Dexterity Score Modifier to the attack rolls of your unarmed attacks and attacks with your monk weapon.<br>• You can roll a {@dice d8} in place of the normal damage of your unarmed strike or monk weapon.<br>• When you use the Attack Action with an unarmed strike or a monk weapon on your turn, then you can make one unarmed strike as a Bonus Action."]
+		},
+		{
+			"name": "Inner Control",
+			"free": true,
+			"source": "CDPH",
+			"class": ["Monk"],
+			"entries":["You slowly gain full control over some internal processes of your body, and because of this you start to harness Ki. Your maximum Ki points are 10 + Monk Level, and you regain all Ki when you finish a rest. You can spend these Ki points to fuel various abilities.<br>Some of your Ki features require your target to make a saving throw to resist the feature’s effects. <br>The saving throw DC is calculated as follows:<br>Ki Save DC = 8 + Proficiency Bonus + Wisdom Score Modifier."]
+		},
+		{
+			"name": "Pure Life",
+			"source": "CDPH",
+			"class": ["Monk"],
+			"entries":["You gain better control over the majority and most important body processes. You gain the following abilities that you can do as an Action depending if your species supports it:<br>• You automatically succeed on Constitution saving throws to hold your breath, and gain advantage on every subsequent save for this before you catch your breath again.<br>• You can spend 1 Ki point to stop your heartbeat.<br>You can restart your heartbeat with 1 Ki point, or for free when you stopped it with this ability.<br>(Saving throws for a stopped heartbeat will be the same as for holding your breath) <br>• You can speed up or slow down your metabolic functions. You are able to speed it up, spending more energy to warm yourself, or slow it down when you need to conserve energy and to cool down more easily. <br>• You can spend 3 Ki points to undo a point of Exhaustion.<br>• You can spend 3 Ki point to heal cutting/flesh wounds and broken bones, healing yourself for 1d10 HP.<br>You are also able to do things that are not on this list if the DM accepts the effect.<br>(species unique stuff wip)"]
+		},
+		{
+			"name": "Patient Defense",
+			"source": "CDPH",
+			"class": ["Monk"],
+			"entries":["You can spend 1 Ki point to take the Dodge Action as a Free Action on your turn."]
+		},
+		{
+			"name": "Step of the Wind",
+			"source": "CDPH",
+			"class": ["Monk"],
+			"entries":["You can spend 1 Ki point to take the Dash Action as a Bonus Action on your turn, your jump distance is doubled for the turn, and difficult terrain doesn’t affect you for the turn. You also gain advantage on any {@skill acrobatics} rolls you make this turn."]
+		},
+		{
+			"name": "Unhindered Movement",
+			"source": "CDPH",
+			"mastery": true,
+			"class": ["Monk"],
+			"prerequisite":[[{"other": "Max Ki points is equal or higher than 3"}]],
+			"entries":["You can permanently forgo 3 Max Ki points to be more nimble, permanently gaining 1 Dexterity Score, 1 Max Dexterity Score, and 1 meter of movement speed."]
+		},
+		{
+			"name": "Gracefull Fall",
+			"source": "CDPH",
+			"class": ["Monk"],
+			"entries":["You can use your Reaction when you fall to reduce any falling damage you take by anamount equal to 5 x Monk Level."]
+		},
+		{
+			"name": "Deflect Missles",
+			"source": "CDPH",
+			"class": ["Monk"],
+			"entries":["You can use your Reaction to deflect or catch something shot or thrown at you when you are hit by a ranged weapon attack that isn’t a gun. When you do so, the damage you take from the attack is reduced by {@dice 1d10} + Dexterity Score Modifier + Monk Level.<br>If you reduce the damage to 0, you can catch the missile if it is small enough for you to hold in one hand and you have at least one hand free. If you catch something in this way, you can spend 1 Ki point to make ranged attack with the weapon or piece of ammunition you just caught, as part of the same Reaction. You make this attack with proficiency, regardless of your weapon proficiencies, and the missile counts as a monk weapon for the attack."]
+		},
+		{
+			"name": "Stunning Strike",
+			"source": "CDPH",
+			"class": ["Monk"],
+			"entries":["You know how to hit the problematic spots for most creatures with uncanny strength and precision. When you hit another creature with a unarmed strike, you can spend 1 Ki point to attempt a stunning strike. The target must succeed on a Constitution Save against your {@feat Inner Control|CDPH|Ki Save DC} or be stunned until the end of your next turn. You can use this ability once per turn."]
+		},
+		{
+			"name": "Evasion",
+			"source": "CDPH",
+			"class": ["Monk"],
+			"prerequisite":[[
+				{"class": "Monk Level 6"},
+				{"level": 6}
+			]],
+			"entries":["Your instinctive agility lets you dodge out of the way of certain area effects, or foresee and strengthen yourself for “undodgeable” attacks. You can spend your Reaction and 1 Ki point to succeed on any Constitution Save or Dexterity Save as long as you don’t throw a 1. If you use this ability on an Attack with guaranteed damage without the need of a Constitution Save or Dexterity Save, then that damage is halved."]
+		},
+		{
+			"name": "Stillness of Mind",
+			"source": "CDPH",
+			"class": ["Monk"],
+			"prerequisite":[[{"feature":["{@feat Pure Life|CDPH}"]}]],
+			"entries":["You can use your Action to end one effect on yourself that is causing you to be charmed, frightened, or any other anomalous mental effect."]
+		},
+		{
+			"name": "Purity of Body",
+			"source": "CDPH",
+			"class": ["Monk"],
+			"prerequisite":[[{"feature":["{@feat Pure Life|CDPH}"]}]],
+			"entries":["Your mastery over your body makes you immune to disease and toxic."]
+		},
+		{
+			"name": "Perfect Self",
+			"source": "CDPH",
+			"class": ["Monk"],
+			"prerequisite":[[{"class":"Monk Level 8"}]],
+			"entries":["When you roll for initiative and have less than 5 Ki points remaining, then you regain Ki points until you have 5 remaining."]
+		},
+		{
+			"name": "Diamond Soul",
+			"source": "CDPH",
+			"class": ["Monk"],
+			"prerequisite":[[{"class":"Monk Level 10"},
+				{"level":14}]],
+			"entries":["Your mastery of Ki grants you proficiency in all Ability Score Saving throws. Additionally, whenever you make a Saving Throw, you can spend 2 Ki point to reroll it and take the new result."]
+		},
+		{
+			"name": "Open Hand Technique",
+			"source": "CDPH",
+			"class": ["Monk"],
+			"entries":["You can manipulate your enemy’s Ki when you hit them. Whenever you hit a creature with an unarmed strike or Monk weapon, you can impose one of the following effects on that target:<br>• It must succeed on a Dexterity Saving Throw or be knocked prone.<br>(This only works if the target is human or very humanoid)<br>• It must make a Strength saving throw. If it fails, you can push it up to 3 meter away from you.<br>• It can’t take Reactions or execute Hold Actions until the end of your next turn."]
+		},
+		{
+			"name": "Opportunist",
+			"source": "CDPH",
+			"class": ["Monk"],
+			"prerequisite":[[{"level":10}]],
+			"entries":["You can exploit a creature's momentary distraction when it is hit by an attack. Whenever acreature within melee range of you is hit by an attack made by a creature other than you, you can always use your Reaction to make a melee attack against that creature, even if you didn’t hold that as a Hold Action."]
+		},
+		{
+			"name": "Piercing Strike",
+			"source": "CDPH",
+			"class": ["Monk"],
+			"prerequisite":[[{"class": "Monk Level 3"}]],
+			"entries":["Your unarmed attacks and attacks with your monk weapon now ignore percentage based DR. You can also spend 3 Ki points and the ability to Attack more than once this turn to change your {@dice d8} unarmed or monk weapon damage to {@dice 3d6} for this turn, and make your next melee attack fully ignore DR. You cannot use this ability if you already attack this turn."]
+		},
+		{
+			"name": "Energy of the Gods",
+			"source": "CDPH",
+			"class": ["Monk"],
+			"prerequisite":[[{"class": "Monk Level 9"}]],
+			"entries":["If you have 6 or more Ki points left, than you can spend all your Ki points to stabilize yourself if you are throwing death saves, and remove all your fails on death saves. This is a Free Action."]
+		},
+		{
+			"name": "Body Mastery",
+			"source": "CDPH",
+			"class": ["Monk"],
+			"mastery": true,
+			"prerequisite":[[{"class": "Monk Level 16"}]],
+			"entries":["You get 2 more max Ki points.<br>Also, if you have {@feat Perfect Self|CDPH}, you will gain one more Ki point when getting Ki points from that Ability."]
 		}
 	]
 }
