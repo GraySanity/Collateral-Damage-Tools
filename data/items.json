@@ -99,7 +99,7 @@
 								"exact": 1
 							}
 						},
-						"Amplify – The object going through gets an increased speed depending on the mass and current speed of the object. This would normally increase the damage done by {@dice 2d4+4}, but can have other effects as well."
+						"Amplify – The object going through gets an increased speed depending on the mass and current speed of the object. This would normally increase the damage done by {@dice 2d4+4}, but can have other effects as well. This works with objects weighing up to 1 ton."
 					],
 					[
 						{
@@ -108,7 +108,7 @@
 								"exact": 2
 							}
 						},
-						"Block – The object gets completely stopped and blocked by the shield. No force is put on the shield (or its potential user), and only on the object that was blocked."
+						"Block – The object gets completely stopped and blocked by the shield. No force is put on the shield (or its potential user), and only on the object that was blocked. This works with objects weighing up to 80 kiloton."
 					],
 					[
 						{
@@ -126,11 +126,11 @@
 								"exact": 4
 							}
 						},
-						"Reflect – The object’s velocity gets inversed, making it go to the opposite direction with the speed it hit the shield with, with all the effects that entails."
+						"Reflect – The object’s velocity gets inversed, making it go to the opposite direction with the speed it hit the shield with, with all the effects that entails. This works with objects weighing up to 10 ton."
 					]			
 				]
 			},
-			"It costs 1 Maintenance Point to make this shield more stable, but it cannot be made permanently stable.<br>When maintained, you can choose which effects happens on the first two times the shield gets hit every 24 hours.<br>The damage added from the “Amplify” effect can be doubled when it is Maintain it as well, changing it to {@damage 4d4+8}."
+			"It costs 1 Maintenance Point to make this shield more stable, but it cannot be made permanently stable.<br>When maintained, you can choose which effects happens on the first two times the shield gets hit every 24 hours or maintanence cycle.<br>The damage added from the “Amplify” effect can be doubled when it is maintain it as well, changing it to {@damage 4d4+8}."
 		]
 	},
 	{
