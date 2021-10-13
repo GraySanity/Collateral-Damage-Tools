@@ -32,6 +32,270 @@
 		]
 	},
 	{
+		"name": "Holoprojector",
+		"source": "CDPH",
+		"type": "Gear",
+		"rarity": "Special",
+		"MC": "2 MP",
+		"entries": [
+			"A small machine with logo depicting the words <i><b>{@color <u>R-Tech</u>|9e3c3c}</b></i> on it.",
+			"The device seems to have three gel-like small orbs in it.<br>When one of the small orbs is removed from the Holoprojector for longer than {@dice 1d4} turns, than it creates a random hologram for {@dice 2d12} hours after which the orb has completely dissipated. <br>The hologram looks and acts completely real, and if it’s a thing or creature, it can move only within a radius of 200 meter within line of sight of the small orb bit originates from. It also makes sound that is accurate to the hologram, which with an {@skill perception} or {@skill insight} check (DC 20) can be traced back to the orb, which is the point the sound originates from.<br>One orb is created every day and the Holoprojector can keep up to three stable at the same time. It won’t make more if it’s full or can’t fit an orb in one of the 3 containers.",
+			"These Holoprojectors are very unstable, so every Hologram is random. The roll list for the given hologram can be seen in the DM's manual.",
+			"It costs 2 Maintenance Points to keep it stable. When doing so, you can change what each orb will project while maintaining it in a rest."
+			]
+	},
+	{
+		"name": "Physiprojector",
+		"source": "CDPH",
+		"type": "Gear",
+		"rarity": "Special",
+		"MC": "2 MP",
+		"entries": [
+			"A small red-ish machine with logo depicting the words <i><b>{@color <u>R-Tech</u>|9e3c3c}</b></i> on it.",
+			"The device seems to have three small orbs in it that lightly shock when touched.<br>When one of the small orbs is removed from the Holoprojector for longer than {@dice 1d4+1} turns, then it creates a random physical thing or event.<br>One orb is created every 2 days and the Physiprojector can keep up to three stable at the same time. It won’t make more if it’s full or can’t fit an orb in one of the 3 containers.",
+			"These Physiprojectors are prototypes and are always unstable. Every thing or event is random, and the roll list for the given thing/event can be seen in the DM's manual.",
+			"It costs 3 Maintenance Points to keep it &quot;stable&quot;, and with &quot;stable&quot being still not too stable.<br>When &quot;stableised&quot and in a rest, you can change the outcome of what the outcomes of the orbs would be, and change them to &quot;good&quot;, &quot;neutral&quot;, &quot;bad&quot; or &quot;catastrophic&quot;.",
+			"<br>This machine has two string based energenetic crystals in it, one chaos-based, and one space-based. Destroying the machine completely, and with it these crystals, will result in an insane explosion doing:<br>{@damage 100+10d10} energenetic damage within 2 meters,<br>{@damage 50+10d6} energenetic damage within 2-6 meters,<br>{@damage 20+5d4} energenetic damage within 6-20 meters,<br>and {@damage 10+4d4} explsosion damage within 20-60 meters."			
+		]
+	},
+	{
+		"name": "Physiprojector (Black)",
+		"source": "CDPH",
+		"type": "Gear",
+		"rarity": "Special",
+		"MC": "2 MP",
+		"entries": [
+			"A small greyish-black machine with logo depicting the words <i><b>{@color <u>R-Tech</u>|9e3c3c}</b></i> on it.",
+			"The device seems to have three small orbs in it that lightly shock when touched.<br>When one of the small orbs is removed from the Holoprojector for longer than {@dice 1d4+1} turns, then it creates a random physical thing or event.<br>One orb is created every 2 days and the Physiprojector can keep up to three stable at the same time. It won’t make more if it’s full or can’t fit an orb in one of the 3 containers.",
+			"This Physiprojectors is extremely unstable. Every thing or event is random, and the roll list for the given thing/event can be seen in the DM's manual, but is always catastrophic.",
+			"<br>This machine has two string based energenetic crystals in it, one chaos-based, and one space-based. Destroying the machine completely, and with it these crystals, will result in an insane explosion doing:<br>{@damage 100+10d10} energenetic damage within 2 meters,<br>{@damage 50+10d6} energenetic damage within 2-6 meters,<br>{@damage 20+5d4} energenetic damage within 6-20 meters,<br>and {@damage 10+4d4} explsosion damage within 20-60 meters."			
+		]
+	},
+	{
+		"name": "ABIR Shield",
+		"source": "CDPH",
+		"type": "Shield",
+		"rarity": "Special",
+		"MC": "1 MP",
+		"entries": [
+			"A weirdly looking shield of around 10-15 cm with a logo depicting the words <i><b>{@color <u>R-Tech</u>|9e3c3c}</b></i> on it.",
+			"The shield can be attached onto a piece of clothing, like most shields. When an attack hits or goes through the active shield, then they need to roll a d4 and the shield will do one of the following things depending on the outcome:",
+			{
+				"type": "table",
+				"caption": "Rollable Table Caption",
+				"colLabels": [
+					"{@dice d4}",
+					"Item"
+				],
+				"colStyles": [
+					"col-1 text-center",
+					"col-11"
+				],
+				"rows": [
+					[
+						{
+							"type": "cell",
+							"roll": {
+								"exact": 1
+							}
+						},
+						"Amplify – The object going through gets an increased speed depending on the mass and current speed of the object. This would normally increase the damage done by {@dice 2d4+4}, but can have other effects as well."
+					],
+					[
+						{
+							"type": "cell",
+							"roll": {
+								"exact": 2
+							}
+						},
+						"Block – The object gets completely stopped and blocked by the shield. No force is put on the shield (or its potential user), and only on the object that was blocked."
+					],
+					[
+						{
+							"type": "cell",
+							"roll": {
+								"exact": 3
+							}
+						},
+						"Ignore – The object going through the shield gets ignored by the shield and no effect happens."
+					],
+					[
+						{
+							"type": "cell",
+							"roll": {
+								"exact": 4
+							}
+						},
+						"Reflect – The object’s velocity gets inversed, making it go to the opposite direction with the speed it hit the shield with, with all the effects that entails."
+					]			
+				]
+			},
+			"It costs 1 Maintenance Point to make this shield more stable, but it cannot be made permanently stable.<br>When maintained, you can choose which effects happens on the first two times the shield gets hit every 24 hours.<br>The damage added from the “Amplify” effect can be doubled when it is Maintain it as well, changing it to {@damage 4d4+8}."
+		]
+	},
+	{
+		"name": "Metly’s Pistol ",
+		"source": "CDPH",
+		"type": "WeaponRU",
+		"rarity": "Special",
+		"MC": "4 MP",
+		"entries": [
+			"A classic looking pistol made out of steel and very hard wood. It shoots a random projectile when fired. What the pistol shoots depends on a d12.",
+			{
+				"type": "table",
+				"caption": "Rollable Table Caption",
+				"colLabels": [
+					"{@dice d12}",
+					"Projectile",
+					"Max Range",
+					"Damage/Effect"
+				],
+				"colStyles": [
+					"col-1 text-center",
+					"col-2",
+					"col-2",
+					"col-8"
+				],
+				"rows": [
+					[
+						{
+							"type": "cell",
+							"roll": {
+								"exact": 1
+							}
+						},
+						"Teleporting Projectile",
+						"15 Meter",
+						"randomly teleports shooter 5 meter in a random direction from the point of impact"
+
+					],
+					[
+						{
+							"type": "cell",
+							"roll": {
+								"exact": 2
+							}
+						},
+						"Exploding Projectile",
+						"11 Meter",
+						"{@damage 4d4+4} explosion damage in a 1 meter radius around impact"
+					],
+					[
+						{
+							"type": "cell",
+							"roll": {
+								"exact": 3
+							}
+						},
+						"Normal Bullet",
+						"15 Meter",
+						"{@damage 1d6+1} piercing damage"
+					],
+					[
+						{
+							"type": "cell",
+							"roll": {
+								"exact": 4
+							}
+						},
+						"Rubber Bullet",
+						"12 Meter",
+						"{@damage 1d6+1} bludgeoning damage and {@damage 1d6+1} knockout damage"
+					],
+					[
+						{
+							"type": "cell",
+							"roll": {
+								"exact": 5
+							}
+						},
+						"Fire Stream",
+						"7 Meter",
+						"{@damage 2d6-1} fire damage in an area (line) that also sets hit flammable objects aflame"
+					],
+					[
+						{
+							"type": "cell",
+							"roll": {
+								"exact": 6
+							}
+						},
+						"Laser",
+						"15 Meter",
+						"{@damage 1d6+1} laser damage"
+					],	
+					[
+						{
+							"type": "cell",
+							"roll": {
+								"exact": 7
+							}
+						},
+						"Plasma",
+						"12 Meter",
+						"{@damage 1d4+3} plasma damage"
+					],
+					[
+						{
+							"type": "cell",
+							"roll": {
+								"exact": 8
+							}
+						},
+						"Electric Arc",
+						"8 Meter",
+						"{@damage 1d6+1} electric damage to 3 random characters or things in a cone"
+					],
+					[
+						{
+							"type": "cell",
+							"roll": {
+								"exact": 9
+							}
+						},
+						"Cold Plasma",
+						"18 Meter",
+						"a slow bolt of cold plasma dealing {@damage 1d4+1} cold plasma damage"
+					],
+					[
+						{
+							"type": "cell",
+							"roll": {
+								"exact": 10
+							}
+						},
+						"Explosion",
+						"N.A.",
+						"creates an explosion at the end of the gun dealing {@damage 4d4+4} explosive damage in a 2 meter radius, and does half damage to the shooter"
+					],
+					[
+						{
+							"type": "cell",
+							"roll": {
+								"exact": 11
+							}
+						},
+						"Cold Air",
+						"9 Meter",
+						"{@damage 2d6-1} cold damage that condenses air and cools/freezes objects hit"
+					],
+					[
+						{
+							"type": "cell",
+							"roll": {
+								"exact": 12
+							}
+						},
+						"All of the Above",
+						"N.A.",
+						"unaimable - may the gods have mercy on you and anyone near you"
+					]	
+				]
+			},
+			"It costs 4 Maintenance Point to make this pistol stable.<br>When maintained, you can change what the pistol shoots at will with a dial on the side. What it shoots can be chosen out of the list."
+		]
+	},
+	{
 		"name": "Clean Up",
 		"source": "CDPH",
 		"type": "Mod",
@@ -1408,6 +1672,7 @@
 			"type": "WeaponM",
 			"scfType": "shields",
 			"rarity": "none",
+			"entries":["Shields are small objects, usually around 5 to 30 cm in diameter, that are used for protective purposes. They can usually be attached to a piece of clothing, and can be turned on or off as a bonus action."],
 			"items":[
 				"Oxwall|CDPH",
 				"Standard Shield (Kinetic)|CDPH",
