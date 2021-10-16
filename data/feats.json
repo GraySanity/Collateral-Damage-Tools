@@ -1459,12 +1459,144 @@
 			"entries":["You get 2 more max Ki points.<br>Also, if you have {@feat Perfect Self|CDPH}, you will gain one more Ki point when getting Ki points from that Ability."]
 		},
 		{
-			"name": "Body Mastery",
+			"name": "Chekov’s Very Intimidating Gun",
 			"source": "CDPH",
-			"class": ["Monk"],
+			"class": ["Ranger"],
+			"entries":["You notice how the use of a pistol often has a positive impact if people decline to take you up on an “offer”. You can use your pistol to gain advantage on intimidation. This can, of course depending on the situation, have quite substantial unwanted side effects."]
+		},
+		{
+			"name": "Let’s Get Critical",
+			"source": "CDPH",
+			"class": ["Ranger"],
+			"entries":["You have the ability to specifically aim for weak spots. You can choose to use your Bonus Action to gain disadvantage with attack rolls on this turn, which cannot be negated normally, which includes rolling more D20’s by other means. When you choose to use this ability, a hit will count as a critical hit, doubling the damage dice(s) you roll. When this ability is active, a natural 20 will not negate AC in the way it normally does.<br>(If you roll a 20+3 with this ability active, but the target has 25 AC, than it won’t be a hit.)"]
+		},
+		{
+			"name": "Bolt-Bonus",
+			"source": "CDPH",
+			"class": ["Ranger"],
+			"entries":["You can do bolt-loading/unloading as a Bonus Action instead of as an Action, meaning that weapons with the <i>Bolt-Action</i> trait don't effect you anymore."]
+		},
+		{
+			"name": "Deflector",
+			"source": "CDPH",
+			"class": ["Ranger"],
+			"entries":["You know how to use your gun to defend yourself from bullets without them damaging your gun (too much). You gain +2 AC while you are holding a gun that isn’t pistol with both of your hands (which you need to be able to shoot it in the first place), and you gain the ability to use the Evade Action as a Bonus Action instead if you do not hold a two-handed weapon."]
+		},
+		{
+			"name": "Deflector",
+			"source": "CDPH",
+			"class": ["Ranger"],
+			"entries":["You know how to use your gun to defend yourself from bullets without them damaging your gun (too much). You gain +2 AC while you are holding a gun that isn’t pistol with both of your hands (which you need to be able to shoot it in the first place), and you gain the ability to use the Evade Action as a Bonus Action instead if you do not hold a two-handed weapon."]
+		},
+		{
+			"name": "Faster Than His Shadow",
+			"source": "CDPH",
+			"class": ["Ranger"],
+			"entries":["Your reaction time lowers to the point that it is hard to see if you actually react or predicted something, although the results often prove that it isn’t the latter.<br>If you have your pistol in one of your hands, or in a holster that is easily accessible, and see someone that shoots a gun, then you can use your reaction to deflect the projectile. This will guarantee that the projectile will miss its original target (exceptions with the targeted projectile being something very massive).<br>But this will only work if your pistol and the gun that shoots the projectile that you want to deflect are both pressure/coil based, or are both plasma based.<br>Energenetic guns can work against pressure, coil, plasma and energenetic projectiles, but are very unreliable. Deflecting an arrow/bolt shot from a bow or crossbow always works with all of the types described (pressure, coil, plasma and energenetic).<br>You can use this three times per Rest. If you use it more, then you need to roll attack rolls against an AC of 20."]
+		},
+		{
+			"name": "Triggered",
+			"source": "CDPH",
+			"class": ["Ranger"],
+			"entries":["<i>“My trigger discipline is too strong, I can stand here not shooting you all day.”</i><br>You can feel a miss coming from a mile away. If you shoot at a target, but it would be a miss, you don’t even shoot anymore. You can still decide to shoot if you think it is going to be a miss, but you need to notify the DM before the attack roll."]
+		},
+		{
+			"name": "Jackhammer Chip Damage",
+			"source": "CDPH",
+			"class": ["Ranger"],
+			"prerequisite":[[
+				{"feature":["{@feat Let's Get Critical|CDPH}"]}
+			]],
+			"entries":["When you shoot with a long ranged gun, you can choose to take half of the maximum of your damage die(s) instead of rolling them. This cannot be used in conjunction with {@feat Let’s Get Critical|CDPH}.<br>Example: If your sniper has a damage of {@damage 3d4+3}, than you can choose to change that to 6+3 damage instead."]
+		},
+		{
+			"name": "Professionals Have Standards",
+			"source": "CDPH",
+			"class": ["Ranger"],
+			"prerequisite":[[
+				{"feature":["{@feat Let's Get Critical|CDPH}"]},
+				{"level": 18},
+				{"class": "Ranger Level 11"}
+			]],
+			"entries":["{@feat Let’s Get Critical|CDPH} doesn’t post disadvantage to you anymore, with the condition that you decide not to move this turn."]
+		},
+		{
+			"name": "Close Quarter Specialist",
+			"source": "CDPH",
+			"class": ["Ranger"],
+			"entries":["You can gain double advantage to hit a target when you shoot a the target while you are within melee range of the target. If you use this ability, your movement speed will be set to 0 until the end of your turn."]
+		},
+		{
+			"name": "Knockback Propelled Parry Maneuvers",
+			"source": "CDPH",
+			"class": ["Ranger"],
+			"prerequisite":[[
+				{"feature":["{@feat Close Quarter Specialist|CDPH}"]},
+				{"level": 5}
+			]],
+			"entries":["You gain +3 AC against the first melee attacks after you shot with a weapon with knockback at least once last turn."]
+		},
+		{
+			"name": "The Eye of the Emperor",
+			"source": "CDPH",
+			"class": ["Ranger"],
+			"entries":["You have learned where the weak spots of most armors are. All of your shots gain 10 DR-penetration when hitting a creature that is wearing a common type of armor."]
+		},
+		{
+			"name": "Dedicated Hitter",
+			"source": "CDPH",
+			"class": ["Ranger"],
+			"entries":["If you are within Melee Range of a target, and you use your Action to shoot, you can use your Bonus Action to make a melee attack with the ranged weapon you shot with. You are Proficient in this melee attack, and the damage this gives is {@damage 1d6}."]
+		},
+		{
+			"name": "Pistol Master",
+			"source": "CDPH",
+			"class": ["Ranger"],
+			"entries":["You are able to use your Bonus Action to shoot with your pistol."]
+		},
+		{
+			"name": "It’s Free Real Estate",
+			"source": "CDPH",
+			"class": ["Ranger"],
+			"prerequisite":[[
+				{"feature":["{@feat Pistol Master|CDPH}"]},
+				{"class": "Ranger Level 6"}
+			]],
+			"entries":["You are able to use your Bonus Action to shoot with your pistol."]
+		},
+		{
+			"name": "And Free Means Free",
+			"source": "CDPH",
+			"class": ["Ranger"],
+			"prerequisite":[[
+				{"feature":["{@feat It’s Free Real Estate|CDPH}"]},
+				{"class": "Ranger Level 13"}
+			]],
+			"entries":["Every turn, the first two times you shoot with your pistol don’t cost an Action."]
+		},
+		{
+			"name": "Prepare for Trouble and Make it Double",
+			"source": "CDPH",
+			"class": ["Ranger"],
+			"prerequisite":[[
+				{"feature":["{@feat Extra Conditioning|CDPH}"]},
+				{"feature":["{@feat The Eye of the Emperor|CDPH}"]},
+				{"feature":["{@feat Triggered|CDPH}"]}
+			]],
+			"entries":["Your ranged attacks now fully ignore percentage based Damage Reduction, and gain +3 damage."]
+		},
+		{
+			"name": "Magazine Hoarder",
+			"source": "CDPH",
+			"class": ["Ranger"],
+			"entries":["You now know how to scour for ammunition at markets and alleyway shops, and you have learned how to more easily take more ammunition with you. You can now take up to 5 extra magazines with you instead of just 2."]
+		},
+		{
+			"name": "Ranger Mastery",
+			"source": "CDPH",
 			"mastery": true,
-			"prerequisite":[[{"class": "Monk Level 16"}]],
-			"entries":["You get 2 more max Ki points.<br>Also, if you have {@feat Perfect Self|CDPH}, you will gain one more Ki point when getting Ki points from that Ability."]
+			"class": ["Ranger"],
+			"entries":["You gain +1 to Hit with ranged weapons, and you can take 1 extra magazine with you."]
 		}
 	]
 }
