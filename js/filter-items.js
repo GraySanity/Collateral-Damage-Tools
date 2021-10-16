@@ -23,8 +23,8 @@ class PageFilterEquipment extends PageFilter {
 			deselFn: (it) => it === "Specific Variant",
 			itemSortFn: null,
 		});
-		this._costFilter = new RangeFilter({header: "Cost", min: 0, max: 100, isAllowGreater: true, suffix: " gp"});
-		this._weightFilter = new RangeFilter({header: "Weight", min: 0, max: 100, isAllowGreater: true, suffix: " lb."});
+		this._costFilter = new RangeFilter({header: "Cost", min: 0, max: 1000, isAllowGreater: true, suffix: " credits"});
+		this._weightFilter = new RangeFilter({header: "Weight", min: 0, max: 100, isAllowGreater: true, suffix: " kg"});
 		this._focusFilter = new Filter({header: "Spellcasting Focus", items: [...Parser.ITEM_SPELLCASTING_FOCUS_CLASSES]});
 		this._damageTypeFilter = new Filter({header: "Weapon Damage Type", displayFn: it => Parser.dmgTypeToFull(it).uppercaseFirst(), itemSortFn: (a, b) => SortUtil.ascSortLower(Parser.dmgTypeToFull(a), Parser.dmgTypeToFull(b))});
 		this._miscFilter = new Filter({header: "Miscellaneous", items: ["Item Group", "SRD", "Has Images", "Has Info"], isSrdFilter: true});
@@ -62,7 +62,7 @@ class PageFilterEquipment extends PageFilter {
 			}
 		}
 
-		item._fValue = (item.value || 0) / 100;
+		item._fValue = item.value;
 	}
 
 	addToFilters (item, isExcluded) {

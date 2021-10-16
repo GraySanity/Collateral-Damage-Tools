@@ -37,6 +37,7 @@
 		"type": "Gear",
 		"rarity": "Special",
 		"MC": "2 MP",
+		"weight": 1,
 		"entries": [
 			"A small machine with logo depicting the words <i><b>{@color <u>R-Tech</u>|9e3c3c}</b></i> on it.",
 			"The device seems to have three gel-like small orbs in it.<br>When one of the small orbs is removed from the Holoprojector for longer than {@dice 1d4} turns, than it creates a random hologram for {@dice 2d12} hours after which the orb has completely dissipated. <br>The hologram looks and acts completely real, and if it’s a thing or creature, it can move only within a radius of 200 meter within line of sight of the small orb bit originates from. It also makes sound that is accurate to the hologram, which with an {@skill perception} or {@skill insight} check (DC 20) can be traced back to the orb, which is the point the sound originates from.<br>One orb is created every day and the Holoprojector can keep up to three stable at the same time. It won’t make more if it’s full or can’t fit an orb in one of the 3 containers.",
@@ -50,6 +51,7 @@
 		"type": "Gear",
 		"rarity": "Special",
 		"MC": "2 MP",
+		"weight": 1,
 		"entries": [
 			"A small red-ish machine with logo depicting the words <i><b>{@color <u>R-Tech</u>|9e3c3c}</b></i> on it.",
 			"The device seems to have three small orbs in it that lightly shock when touched.<br>When one of the small orbs is removed from the Holoprojector for longer than {@dice 1d4+1} turns, then it creates a random physical thing or event.<br>One orb is created every 2 days and the Physiprojector can keep up to three stable at the same time. It won’t make more if it’s full or can’t fit an orb in one of the 3 containers.",
@@ -64,6 +66,7 @@
 		"type": "Gear",
 		"rarity": "Special",
 		"MC": "2 MP",
+		"weight": 1,
 		"entries": [
 			"A small greyish-black machine with logo depicting the words <i><b>{@color <u>R-Tech</u>|9e3c3c}</b></i> on it.",
 			"The device seems to have three small orbs in it that lightly shock when touched.<br>When one of the small orbs is removed from the Holoprojector for longer than {@dice 1d4+1} turns, then it creates a random physical thing or event.<br>One orb is created every 2 days and the Physiprojector can keep up to three stable at the same time. It won’t make more if it’s full or can’t fit an orb in one of the 3 containers.",
@@ -77,6 +80,7 @@
 		"type": "Shield",
 		"rarity": "Special",
 		"MC": "1 MP",
+		"weight": 1,
 		"entries": [
 			"A weirdly looking shield of around 10-15 cm with a logo depicting the words <i><b>{@color <u>R-Tech</u>|9e3c3c}</b></i> on it.",
 			"The shield can be attached onto a piece of clothing, like most shields. When an attack hits or goes through the active shield, then they need to roll a d4 and the shield will do one of the following things depending on the outcome:",

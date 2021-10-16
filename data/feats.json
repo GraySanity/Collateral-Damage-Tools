@@ -412,9 +412,6 @@
 			"name": "Non-Localized Manipulation [Initiate]",
 			"source": "CDPH",
 			"class": ["Energenetic Specialist"],
-			"prerequisite": [[
-				{"feature": ["{@feat Energenetic Kickstart|CDPH}"]}
-			]],
 			"entries":["You have learned how to move things with your Energy. You can lift up and move objects and creatures that are up to your Energetic Specialist Level in Kg easily without the use of Energy. Doing this costs an Action.<br><br>The maximum force that you can put on things is than 10 times your Energetic Specialist Level in Newton by extrapolation. You can also use your Energy to increase this maximum by 3 Kg for every point of Energy you use. If you try to move an unwilling creature with this ability, than they need to make a Strength save against a DC of <i>5+Intelligence modifier+Wisdom</i> modifier."]
 		},
 		{
@@ -424,7 +421,7 @@
 			"prerequisite": [[
 				{"feature": ["{@feat Non-Localized Manipulation [Initiate]|CDPH}"]}
 			]],
-			"entries":["The maximum weight that you can lift with Non-Localized Manipulation (Energenetic Specialist) is now 3 times your Energenetic Specialist Level in Kg, and you can now increase this by 6 Kg for every point of Energy you use."]
+			"entries":["The maximum weight that you can lift with {@feat Non-Localized Manipulation [Initiate]|CDPH} is now 3 times your Energenetic Specialist Level in Kg, and you can now increase this by 6 Kg for every point of Energy you use."]
 		},
 		{
 			"name": "Non-Localized Manipulation [Master]",
@@ -433,15 +430,12 @@
 			"prerequisite": [[
 				{"feature": ["{@feat Non-Localized Manipulation [Adept]|CDPH}"]}
 			]],
-			"entries":["The maximum weight that you can lift with Non-Localized Manipulation (Energenetic Specialist) is now 5 times your Energenetic Specialist Level in Kg, and you can now increase this by 8 Kg for every point of Energy you use."]
+			"entries":["The maximum weight that you can lift with {@feat Non-Localized Manipulation [Initiate]|CDPH} is now 5 times your Energenetic Specialist Level in Kg, and you can now increase this by 8 Kg for every point of Energy you use."]
 		},
 		{
 			"name": "Holographic Energenetic Projections",
 			"source": "CDPH",
 			"class": ["Energenetic Specialist"],
-			"prerequisite": [[
-				{"feature": ["{@feat Energenetic Kickstart|CDPH}"]}
-			]],
 			"entries":["You can make holographic like projections. You cannot deal damage with these. The maximum size for these projections is around 27dm<sup>3</sup>(or liter) in an area of 1m<sup>3</sup>. Making such Holographic Projection and maintaining it cost an Action and 2 Energy."]
 		},
 		{
@@ -455,21 +449,31 @@
 			"entries":["From now on, if you use your {@feat Energenetic Materializing|CDPH} to create or maintain an object, than you can do so anywhere you can see within a 20 meter radius without the need to be in contact with it.<br><br>Although it cost 3 Energy to create the object without touching it, it doesn’t cost Energy anymore to maintain the object"]
 		},
 		{
+			"name": "Projected Energenetic Materializing",
+			"source": "CDPH",
+			"class": ["Energenetic Specialist"],
+			"prerequisite":[[
+				{"class": "Energenetic Specialist Level 6"},
+				{"feature": ["{@feat  Energenetic Materializing|CDPH}"]}
+			]],
+			"entries":["From now on, if you use your {@feat  Energenetic Materializing|CDPH} to create or maintain an object, than you can do so anywhere you can see within a 20 meter radius without the need to be in contact with it. And although it cost 3 Energy to create the object without touching it, it doesn’t cost Energy anymore to maintain the object."]
+		},
+		{
+			"name": "Unstabilized Planck Distribution",
+			"source": "CDPH",
+			"class": ["Energenetic Specialist"],
+			"entries":["You can make a continuous beam of energenetic energy to deal damage. This is a form of attack and does cost and Action to do so. This Attack always physically damages things, and because of that, it cannot deal knockout damage or be used in a softer of pushy sort of way, or at least not against full-materialistic creatures.<br>This attack does {@dice 1d6} damage per 2 Energy that you use on it, to a maximum use of your Energenetic Specialist Level of {@dice d6}’s damage. You are also able to hit multiple objects or creatures with this attack if not all of the damage of the attack has been done to the last targets. The maximum targets is your Proficiency-1.<br>If you use less than twice your Proficiency Bonus of Energy on this attack, than it is unable to miss under normal conditions. If you use more Energy on this attack, then you do need to make an attack roll to hit a target. You are proficient in the attack roll, gain your Intelligence Modifier and Wisdom Modifier more to hit, and gain half the amount of Energy you use less to hit. You are unable to have a normal Critical (a natural 20) on this attack.<br>In short, the attack roll when the hit isn't guaranteed is {@dice 1d20} + Proficiency Bonus + Wisdom Modifier + Intelligence Modifier – (½ x Energy used for the attack)."]
+		},
+		{
 			"name": "High Energy Density Projectile",
 			"source": "CDPH",
 			"class": ["Energenetic Specialist"],
-			"prerequisite": [[
-				{"feature": ["{@feat Energenetic Kickstart|CDPH}"]}
-			]],
 			"entries":["You can throw a ball of Energy to a target. This is a form of Attack and does cost an Action to do so.<br>This attack does {@dice 1d4} damage for every point of Energy you use on this ability, to a maximum of your Energenetic Specialist Level of D4's damage. You need to make an Attack roll for this Attack.<br>You are proficient in this Attack roll, can add your <i>Dexterity Modifier</i> and add the lower of your <i>Wisdom Modifier</i> or <i>Intelligence Modifier</i> to the Attack roll.<br><br>When you target something that is farther than your normal range (your max Energy in meters) than you gain disadvantage on the roll that cannot be negated."]
 		},
 		{
 			"name": "Trans-Localized Manipulation",
 			"source": "CDPH",
 			"class": ["Energenetic Specialist"],
-			"prerequisite": [[
-				{"feature": ["{@feat Energenetic Kickstart|CDPH}"]}
-			]],
 			"entries":["You have roughly learned how to use your Energy to teleport. You can only teleport to places with a low density of matter, so only to air/vacuum or other such areas, and this does cost an Action. <br>The Energy cost for teleporting is 2 + ¼ the distance in meter of Energy. You do not need to know or see where you end up, although it is strongly advised as ending up in a wall or object isn’t too good for your health. You cannot teleport into another creature. However, you can take other creatures with you, these cost an extra half the distance in meter of Energy you need to use."]
 		},
 		{
@@ -477,7 +481,6 @@
 			"source": "CDPH",
 			"class": ["Energenetic Specialist"],
 			"prerequisite": [[
-				{"feature": ["{@feat Energenetic Kickstart|CDPH}"]},
 				{"class": ["Energenetic Specialist Level 6"]}
 			]],
 			"entries":["You can try and specialize into the use of Energy that is made out of your Main Energy. You can now pick an Ability (or the Ability) from the Energy Type that is made from your Main Energy.<br>","<br>",
@@ -511,8 +514,8 @@
 								"name": "Full Matter Creation",
 								"source": "CDPH",
 								"class": ["Energenetic Specialist"],
-								"prerequisite": "{@feat Projected Energenetic Materialising|CDPH}",
-								"entries":["When you use Projected Energenetic Materialising, you can now choose to use 5 Energy instead of 3 to make something out of actual normal matter. Doing this lowers the area in which you can make things to a maximum of 1 kg in an volume of 10 by 10 by 10 cm (or 1 liter), and only lets you create non-complicated things like simple liquids, and things made from metals or plastics in not too complicated shapes (so no machines or electronics and the like).<br>Doing this also disables your ability to make your creation disappear again, as it is fully independent from you the moment it is created, as it is normal matter that is in no way connected to you anymore."]
+								"prerequisite": "{@feat Projected Energenetic Materializing|CDPH}",
+								"entries":["When you use Projected Energenetic Materializing, you can now choose to use 5 Energy instead of 3 to make something out of actual normal matter. Doing this lowers the area in which you can make things to a maximum of 1 kg in an volume of 10 by 10 by 10 cm (or 1 liter), and only lets you create non-complicated things like simple liquids, and things made from metals or plastics in not too complicated shapes (so no machines or electronics and the like).<br>Doing this also disables your ability to make your creation disappear again, as it is fully independent from you the moment it is created, as it is normal matter that is in no way connected to you anymore."]
 							}
 						],
 						[
@@ -546,7 +549,6 @@
 			"source": "CDPH",
 			"class": ["Energenetic Specialist"],
 			"prerequisite": [[
-				{"feature": ["{@feat Energenetic Kickstart|CDPH}"]},
 				{"class": ["Energenetic Specialist Level 12"]}
 			]],
 			"entries":["You can try and specialize into the use of Energy your Main Energy is made out of. You can now pick an Ability (or the Ability) from the Energy Type that your Main Energy is made out of.","<br>",
@@ -658,7 +660,7 @@
 				{"addit": " or "},
 				{"mainenergy": "Light"}				
 			]],
-			"entries":["There generally is no limit anymore for how much you can use your Energy at once. This does include specific abilities that do give a limit. If an ability gives a limit that isn’t a limit of how much Energy you can use, then you can scale the limited amounts with the Energy cost of the ability. The only exception where you still need to abide to the maximum is with the ability High Energy Density Projectile (Energenetic Specialist).<br>Also, the attack roll for {@feat Unstabilized Planck Distribution|CDPH} (Energenetic Specialist) now becomes (1d20 + PROF + WIS_MOD + INT_MOD – ¼_ENERGY_USED_FOR_ATTACK)"]
+			"entries":["There generally is no limit anymore for how much you can use your Energy at once. This does include specific abilities that do give a limit. If an ability gives a limit that isn’t a limit of how much Energy you can use, then you can scale the limited amounts with the Energy cost of the ability. The only exception where you still need to abide to the maximum is with the ability High Energy Density Projectile (Energenetic Specialist).<br>Also, the attack roll for {@feat Unstabilized Planck Distribution|CDPH} (Energenetic Specialist) now becomes {@dice 1d20} + Poficiency Bonus + Wisdom Modifier + Intelligence Modifier – (<b>¼</b> Energy used for the attack)"]
 		},
 		{
 			"name": "Brute Force",
@@ -966,7 +968,7 @@
 			"prerequisite": [[
 				{"mainenergy": "Psychic"}
 			]],
-			"entries":["You can read the mind of others as an Action. If you try to use this ability on an unwilling creature or a creature who has resistance against mental intrusions, than they need to make a Wisdom Saving Throw against a DC of 7 + Proficiency + Intelligence Ability Score Modifier + Wisdom Ability Score Modifier. The result of this save resets after 6 hours. When they succeed, than they are immune to you using this ability on them. <br>When they fail, than you can read their mind and memories. You are in an unconscious type of trance while you are doing this, and do not register anything that is happening around you. You can snap out of your trance and out of the other persons mind on will. When you read someone’s memory, then you experience everything about said memory that they know. And although you are able to do this, it is still near impossible to guess the emotional state of the target by just probing their memories."]
+			"entries":["You can read the mind of others as an Action. If you try to use this ability on an unwilling creature or a creature who has resistance against mental intrusions, than they need to make a Wisdom Saving Throw against a DC of 7 + Proficiency + Intelligence Modifier + Wisdom Modifier. The result of this save resets after 6 hours. When they succeed, than they are immune to you using this ability on them. <br>When they fail, than you can read their mind and memories. You are in an unconscious type of trance while you are doing this, and do not register anything that is happening around you. You can snap out of your trance and out of the other persons mind on will. When you read someone’s memory, then you experience everything about said memory that they know. And although you are able to do this, it is still near impossible to guess the emotional state of the target by just probing their memories."]
 		},
 		{
 			"name": "Dream of a Black Swan",
@@ -976,7 +978,7 @@
 				{"feature": ["{@feat Telepathy|CDPH}"]},
 				{"mainenergy": "Psychic"}
 			]],
-			"entries":["You are able to effectively change other creatures their mindset, emotional state and or overall mood and are able to create mental effects. Using this ability costs an Action and at least 2 Energy. If you use this ability on a unwilling creature or a creature that has resistance against mental intrusions or anomalies, than they need to make a Wisdom Saving Throw, and the DC they need to succeed on is:5 + Proficiency + Intelligence Ability Score Modifier + Wisdom Ability Score Modifier + 1 per 3 extra Energy used. <br>The outcome of this roll resets after 30 minutes. If they succeed, then they are immune to you using this ability on them. If they fail, then you are able to do one of the following things: change their general mood, change their emotional state, change their mindset on something (as long as it wouldn’t directly harm them), put them to sleep, force them awake, or something else that falls in this category and the DM agrees with. The effect stops after the saving throw is reset, after which the person can remember everything he did in the affected time, but may or may not know that you are responsible. It also ends when you actively work against the effect that you gave (like changing someone friendly towards you and constantly being overly mean while the person is affected). "]
+			"entries":["You are able to effectively change other creatures their mindset, emotional state and or overall mood and are able to create mental effects. Using this ability costs an Action and at least 2 Energy. If you use this ability on a unwilling creature or a creature that has resistance against mental intrusions or anomalies, than they need to make a Wisdom Saving Throw, and the DC they need to succeed on is:5 + Proficiency + Intelligence Modifier + Wisdom Modifier + 1 per 3 extra Energy used. <br>The outcome of this roll resets after 30 minutes. If they succeed, then they are immune to you using this ability on them. If they fail, then you are able to do one of the following things: change their general mood, change their emotional state, change their mindset on something (as long as it wouldn’t directly harm them), put them to sleep, force them awake, or something else that falls in this category and the DM agrees with. The effect stops after the saving throw is reset, after which the person can remember everything he did in the affected time, but may or may not know that you are responsible. It also ends when you actively work against the effect that you gave (like changing someone friendly towards you and constantly being overly mean while the person is affected). "]
 		},
 		{
 			"name": "Maintenance",
@@ -1286,7 +1288,7 @@
 			"prerequisite":[[
 				{"feature":["{@feat Manoeuvres|CDPH}"]}
 			]],
-			"entries":["You are extremely experienced in fighting with melee weapons, and are now able to use them even more proficiently then before.<br>Instead of getting your Dexterity Score Modifier as a bonus for attack rolls and 1.5 times your Strength Score Modifier as a bonus for your damage rolls for melee weapons, you now get 2 times your Dexterity Score Modifier as a bonus for attack rolls and 2 times your Strength Score Modifier for damage rolls.<br>You can now also use 2 times your Dexterity Score Modifier instead of 2 times your Strength Score Modifier if the melee weapon can do piercing or slashing damage."]
+			"entries":["You are extremely experienced in fighting with melee weapons, and are now able to use them even more proficiently then before.<br>Instead of getting your Dexterity Modifier as a bonus for attack rolls and 1.5 times your Strength Modifier as a bonus for your damage rolls for melee weapons, you now get 2 times your Dexterity Modifier as a bonus for attack rolls and 2 times your Strength Modifier for damage rolls.<br>You can now also use 2 times your Dexterity Modifier instead of 2 times your Strength Modifier if the melee weapon can do piercing or slashing damage."]
 		},
 		{
 			"name": "Quick Dodge",
@@ -1323,20 +1325,20 @@
 			"name": "Unarmored Monk Defense",
 			"source": "CDPH",
 			"class": ["Monk"],
-			"entries":["While you are wearing no armor, your AC equals 9 + Dexterity Score Modifier + Wisdom Score Modifier."]
+			"entries":["While you are wearing no armor, your AC equals 9 + Dexterity Modifier + Wisdom Modifier."]
 		},
 		{
 			"name": "Martial Arts",
 			"source": "CDPH",
 			"class": ["Monk"],
-			"entries":["Your practice of martial arts gives you mastery of combat styles that use unarmed strikes or monk weapons, which is any Melee Weapon that don’t have the Heavy trait. This weapon only does bludgeoning damage while you use it as a Monk Weapon. You gain the following benefits while you are unarmed or wielding only monk weapons and you aren’t wearing armor:<br>• You can use your Dexterity Score Modifier instead of your Strength Score Modifier for the damage bonus of your unarmed strikes.<br>• You can add your Strength and Dexterity Score Modifier to the attack rolls of your unarmed attacks and attacks with your monk weapon.<br>• You can roll a {@dice d8} in place of the normal damage of your unarmed strike or monk weapon.<br>• When you use the Attack Action with an unarmed strike or a monk weapon on your turn, then you can make one unarmed strike as a Bonus Action."]
+			"entries":["Your practice of martial arts gives you mastery of combat styles that use unarmed strikes or monk weapons, which is any Melee Weapon that don’t have the Heavy trait. This weapon only does bludgeoning damage while you use it as a Monk Weapon. You gain the following benefits while you are unarmed or wielding only monk weapons and you aren’t wearing armor:<br>• You can use your Dexterity Modifier instead of your Strength Modifier for the damage bonus of your unarmed strikes.<br>• You can add your Strength and Dexterity Modifier to the attack rolls of your unarmed attacks and attacks with your monk weapon.<br>• You can roll a {@dice d8} in place of the normal damage of your unarmed strike or monk weapon.<br>• When you use the Attack Action with an unarmed strike or a monk weapon on your turn, then you can make one unarmed strike as a Bonus Action."]
 		},
 		{
 			"name": "Inner Control",
 			"free": true,
 			"source": "CDPH",
 			"class": ["Monk"],
-			"entries":["You slowly gain full control over some internal processes of your body, and because of this you start to harness Ki. Your maximum Ki points are 10 + Monk Level, and you regain all Ki when you finish a rest. You can spend these Ki points to fuel various abilities.<br>Some of your Ki features require your target to make a saving throw to resist the feature’s effects. <br>The saving throw DC is calculated as follows:<br>Ki Save DC = 8 + Proficiency Bonus + Wisdom Score Modifier."]
+			"entries":["You slowly gain full control over some internal processes of your body, and because of this you start to harness Ki. Your maximum Ki points are 10 + Monk Level, and you regain all Ki when you finish a rest. You can spend these Ki points to fuel various abilities.<br>Some of your Ki features require your target to make a saving throw to resist the feature’s effects. <br>The saving throw DC is calculated as follows:<br>Ki Save DC = 8 + Proficiency Bonus + Wisdom Modifier."]
 		},
 		{
 			"name": "Pure Life",
@@ -1374,7 +1376,7 @@
 			"name": "Deflect Missles",
 			"source": "CDPH",
 			"class": ["Monk"],
-			"entries":["You can use your Reaction to deflect or catch something shot or thrown at you when you are hit by a ranged weapon attack that isn’t a gun. When you do so, the damage you take from the attack is reduced by {@dice 1d10} + Dexterity Score Modifier + Monk Level.<br>If you reduce the damage to 0, you can catch the missile if it is small enough for you to hold in one hand and you have at least one hand free. If you catch something in this way, you can spend 1 Ki point to make ranged attack with the weapon or piece of ammunition you just caught, as part of the same Reaction. You make this attack with proficiency, regardless of your weapon proficiencies, and the missile counts as a monk weapon for the attack."]
+			"entries":["You can use your Reaction to deflect or catch something shot or thrown at you when you are hit by a ranged weapon attack that isn’t a gun. When you do so, the damage you take from the attack is reduced by {@dice 1d10} + Dexterity Modifier + Monk Level.<br>If you reduce the damage to 0, you can catch the missile if it is small enough for you to hold in one hand and you have at least one hand free. If you catch something in this way, you can spend 1 Ki point to make ranged attack with the weapon or piece of ammunition you just caught, as part of the same Reaction. You make this attack with proficiency, regardless of your weapon proficiencies, and the missile counts as a monk weapon for the attack."]
 		},
 		{
 			"name": "Stunning Strike",
@@ -1447,6 +1449,14 @@
 			"class": ["Monk"],
 			"prerequisite":[[{"class": "Monk Level 9"}]],
 			"entries":["If you have 6 or more Ki points left, than you can spend all your Ki points to stabilize yourself if you are throwing death saves, and remove all your fails on death saves. This is a Free Action."]
+		},
+		{
+			"name": "Body Mastery",
+			"source": "CDPH",
+			"class": ["Monk"],
+			"mastery": true,
+			"prerequisite":[[{"class": "Monk Level 16"}]],
+			"entries":["You get 2 more max Ki points.<br>Also, if you have {@feat Perfect Self|CDPH}, you will gain one more Ki point when getting Ki points from that Ability."]
 		},
 		{
 			"name": "Body Mastery",
