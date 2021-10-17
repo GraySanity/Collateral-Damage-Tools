@@ -1596,7 +1596,139 @@
 			"source": "CDPH",
 			"mastery": true,
 			"class": ["Ranger"],
+			"prerequisite":[[
+				{"class": "Ranger Level 18"}
+			]],
 			"entries":["You gain +1 to Hit with ranged weapons, and you can take 1 extra magazine with you."]
+		},
+		{
+			"name": "Expertise",
+			"source": "CDPH",
+			"class": ["Rogue"],
+			"entries":["You can choose 2 skills that you are proficient in and get expertise in them instead."]
+		},
+		{
+			"name": "Expertise 2 Electric Boogaloo",
+			"source": "CDPH",
+			"class": ["Rogue"],
+			"prerequisite":[[
+				{"feature": ["{@feat Expertise|CDPH}"]},
+				{"class": "Rogue Level 4"}
+			]],
+			"entries":["You can choose another 2 skills that you are proficient in and get expertise in them instead."]
+		},
+		{
+			"name": "Muscle Memory Reflexes",
+			"source": "CDPH",
+			"class": ["Rogue"],
+			"prerequisite":[[
+				{"class": "Rogue Level 3"}
+			]],
+			"entries":["You now have 3 Reactions each turn, instead of 1."]
+		},
+		{
+			"name": "Sneak Attack",
+			"source": "CDPH",
+			"class": ["Rogue"],
+			"entries":["You can attack someone without them really noticing what happened or from where. You gain +4 damage on attacks you have advantage on, or when another friendly creature is withing melee range of the enemy you are attacking. Sneak attacks now also ignore flat DR."]
+		},
+		{
+			"name": "Slice & Dice",
+			"source": "CDPH",
+			"class": ["Rogue"],
+			"prerequisite":[[
+				{"class": "Rogue Level 12"}
+			]],
+			"entries":["You gain advantage on any attack roll against an enemy when you attack an enemy while another friendly creature is withing melee range of it. Also, you can now change your advantage with an attack roll into two separate attacks without advantage if you are attacking with a melee weapon."]
+		},
+		{
+			"name": "Cunning Action",
+			"source": "CDPH",
+			"class": ["Rogue"],
+			"entries":["You can use your Bonus Action to Hide or Dash."]
+		},
+		{
+			"name": "Uncanny Dodge",
+			"source": "CDPH",
+			"class": ["Rogue"],
+			"entries":["While you sometimes can’t evade an attack, you can position yourself in such a way that it won’t hit like intended. You can use your Reaction to halve the damage of an attack that you can see. When you use this ability on another creature than yourself, then that creature needs to be in melee range of you, and both you and the creature take half of the attacks damage."]
+		},
+		{
+			"name": "Reliable Talent",
+			"source": "CDPH",
+			"class": ["Rogue"],
+			"prerequisite":[[
+				{"class": "Rogue Level 8"}
+			]],
+			"entries":["Every skill check roll of a proficient skill where the D20 rolls less than 10 can now be considered to be a 10. When you critical fail a skill check you have expertise in, you can minimize the damage and change it to a normal fail, which will be handled like an unnatural 1."]
+		},
+		{
+			"name": "Blindsense",
+			"source": "CDPH",
+			"class": ["Rogue"],
+			"entries":["You know how to see without actual vision. You can see the area and location of enemies in a range of 5 meter range around you through sound and vibrations. This does not work through any sort of wall including glass."]
+		},
+		{
+			"name": "Slippery Mind",
+			"source": "CDPH",
+			"class": ["Rogue"],
+			"prerequisite":[[
+				{"class": "Rogue Level 5"}
+			]],
+			"entries":["You are now Expertise in Wisdom Saving Throws."]
+		},
+		{
+			"name": "Elusive",
+			"source": "CDPH",
+			"class": ["Rogue"],
+			"prerequisite":[[
+				{"class": "Rogue Level 5"},
+				{"feature": ["{@feat Blindsense|CDPH}"]}
+			]],
+			"entries":["Enemies that try to hit you never have advantage on attack rolls against you as long as you are conscious. These advantages do counteract disadvantages on the roll however."]
+		},
+		{
+			"name": "Stroke of Luck",
+			"source": "CDPH",
+			"class": ["Rogue"],
+			"prerequisite":[[
+				{"class": "Rogue Level 12"},
+				{"feature": ["{@feat Reliable Talent|CDPH}"]}
+			]],
+			"entries":["You have the ability to change a missed attack roll to a hit, or to change a skill check or a (not death) saving throw to a natural 20. You can only use this ability once per Rest."]
+		},
+		{
+			"name": "Ear for Deceit",
+			"source": "CDPH",
+			"class": ["Rogue"],
+			"entries":["When you do Insight checks to see if someone is lying, than every D20 roll under 8 can be considered 8 except for a 1. If you roll a 1 for this, than it is now considered a fail instead of a crit fail.<br>You also never gain wrong information out of your insight throws anymore."]
+		},
+		{
+			"name": "Eye for Detail",
+			"source": "CDPH",
+			"class": ["Rogue"],
+			"entries":["You are able to use your Bonus Action to search for a Hidden creature ({@skill perception} check), or to find clues or decipher things ({@skill investigation} check)."]
+		},
+		{
+			"name": "Insightful Fighting",
+			"source": "CDPH",
+			"class": ["Rogue"],
+			"prerequisite":[[
+				{"feature": ["{@feat Sneak Attack|CDPH}"]}
+			]],
+			"entries":["You can use your Bonus Action to contest an enemies {@skill deception} against your {@skill insight}. You need to be able to see this enemy. You can use your sneak attack against this enemy for a duration of 5 turns if you win the contest."]
+		},
+		{
+			"name": "Steady Eye",
+			"source": "CDPH",
+			"class": ["Rogue"],
+			"entries":["You can give yourself advantage on Perception and {@skill investigation} checks. Gaining advantage this way does cost you half of your total speed for the turn"]
+		},
+		{
+			"name": "Unerring Eye",
+			"source": "CDPH",
+			"class": ["Rogue"],
+			"entries":["You can feel if there are holograms or shapeshifters in a 10 meter radius around you that are not in their original form, as long as you are not blinded or deafened. You do not know where this comes from, or what its original form is."]
 		}
 	]
 }
