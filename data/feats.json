@@ -1729,6 +1729,58 @@
 			"source": "CDPH",
 			"class": ["Rogue"],
 			"entries":["You can feel if there are holograms or shapeshifters in a 10 meter radius around you that are not in their original form, as long as you are not blinded or deafened. You do not know where this comes from, or what its original form is."]
+		},
+		{
+			"name": "Insightful Manipulator",
+			"source": "CDPH",
+			"class": ["Rogue"],
+			"entries":["If you spend at least 1 minute observing or interacting with another creature outsidecombat, you can learn certain information about its capabilities compared to your own or someone you know. The DM tells you if the creature is your (of someone else’s) equal, superior, or inferior regarding 2 of the following characteristics of your choice:<br>• Dexterity Score<br>• Intelligence Score<br>• Wisdom Score<br>• Charisma Score<br>• Highest Class Level<br>• Highest Class Level Class<br>• It's Class or Classes<br>• Total Level<br>Sometimes, you might also realize you know a piece of the creature’s history or one of its personality traits, if it has any. You can use this ability again after another minute of observation."]
+		},
+		{
+			"name": "Misdirection",
+			"source": "CDPH",
+			"class": ["Rogue"],
+			"entries":["You can sometimes cause another creature to suffer an attack meant for you. When you are targeted by an attack while another creature is within melee range of you, than you can use your Reaction to have the attack target that creature instead of you."]
+		},
+		{
+			"name": "Mind of Chaos",
+			"source": "CDPH",
+			"class": ["Rogue"],
+			"entries":["Your thoughts and memories can’t be effectively read by telepathy or other means, unless you allow it. (This counts as immunity, but one that you can control yourself)"]
+		},
+		{
+			"name": "Skirmisher",
+			"source": "CDPH",
+			"class": ["Rogue"],
+			"entries":["You are difficult to pin down during a fight. You can move up to half your speed as a Reaction when an enemy ends its turn within melee range of you."]
+		},
+		{
+			"name": "Ambush Master",
+			"source": "CDPH",
+			"class": ["Rogue"],
+			"entries":["You excel at leading ambushes and acting first in a fight. You have advantage on initiative rolls. In addition, the first creature you hit during the firstround of a combat becomes easier for you and others to strike. Attack rolls against that target have advantage until the end of your next turn.<br>When using sided Initiative, you and any creature with this ability also gets a free turn at the start of a fight."]
+		},
+		{
+			"name": "Panache",
+			"source": "CDPH",
+			"class": ["Rogue"],
+			"entries":["Your charm becomes extraordinarily beguiling. As an action, you can make a Charisma (Persuasion) check contested by a creature’s Wisdom (Insight) check. The creature must be able to hear you, and the two of you must share a language.<br>If you succeed on the check and the creature is hostile to you, it has disadvantage on attack rolls against targets other than you. This effect lasts for 10 turns, until one of your companions attacks the target, or until you and the target are more than 12 meter apart.<br>If you succeed on the check and the creature isn’t hostile to you, it is charmed by you for 1 minute. <br>While charmed, it regards you as a friendly acquaintance. This effect ends immediately if you or your companions do anything harmful to it."]
+		},
+		{
+			"name": "Elegant Maneuver",
+			"source": "CDPH",
+			"class": ["Rogue"],
+			"entries":["You can use your Bonus Action on your turn to gain advantage on {@skill acrobatics} or {@skill athletics} checks you make during the same turn."]
+		},
+		{
+			"name": "Rogue Mastery",
+			"source": "CDPH",
+			"class": ["Rogue"],
+			"mastery": true,
+			"prerequisite":[[
+				{"class": "Rogue Level 18"}
+			]],
+			"entries":["You get one more Proficiency which you can put into a skill, or you can get Expertise in a skill you were already Proficient in. "]
 		}
 	]
 }
