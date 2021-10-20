@@ -1781,6 +1781,378 @@
 				{"class": "Rogue Level 18"}
 			]],
 			"entries":["You get one more Proficiency which you can put into a skill, or you can get Expertise in a skill you were already Proficient in. "]
+		},
+		{
+			"name": "Ability Score Improvement 1A",
+			"source": "CDPH",
+			"class": ["General"],
+			"entries":["You gain +1 ability score in an Ability Score of your choice."]
+		},
+		{
+			"name": "Ability Score Improvement 1B",
+			"source": "CDPH",
+			"class": ["General"],
+			"prerequisite":[[
+				{"feature": ["{@feat Ability Score Improvement 1A|CDPH}"]}
+			]],
+			"entries":["You gain +1 ability score in an Ability Score of your choice."]
+		},
+		{
+			"name": "Ability Score Improvement 2A",
+			"source": "CDPH",
+			"class": ["General"],
+			"prerequisite":[[
+				{"feature": ["{@feat Ability Score Improvement 1A|CDPH}"]}
+			]],
+			"entries":["You gain +2 ability score that you can spend in Ability Scores of your choice."]
+		},
+		{
+			"name": "Ability Score Improvement 2B",
+			"source": "CDPH",
+			"class": ["General"],
+			"prerequisite":[[
+				{"feature": ["{@feat Ability Score Improvement 2A|CDPH}"]}
+			]],
+			"entries":["You gain +2 ability score that you can spend in Ability Scores of your choice."]
+		},
+		{
+			"name": "Ability Score Improvement 2C",
+			"source": "CDPH",
+			"class": ["General"],
+			"prerequisite":[[
+				{"feature": ["{@feat Ability Score Improvement 2B|CDPH}"]}
+			]],
+			"entries":["You gain +2 ability score that you can spend in Ability Scores of your choice."]
+		},
+		{
+			"name": "Ability Score Improvement 3A",
+			"source": "CDPH",
+			"class": ["General"],
+			"prerequisite":[[
+				{"feature": ["{@feat Ability Score Improvement 2A|CDPH}"]}
+			]],
+			"entries":["You gain +3 ability score that you can spend in Ability Scores of your choice."]
+		},
+		{
+			"name": "Ability Score Improvement 3B",
+			"source": "CDPH",
+			"class": ["General"],
+			"prerequisite":[[
+				{"feature": ["{@feat Ability Score Improvement 3A|CDPH}"]}
+			]],
+			"entries":["You gain +3 ability score that you can spend in Ability Scores of your choice."]
+		},
+		{
+			"name": "Self Mastery",
+			"source": "CDPH",
+			"class": ["General"],
+			"prerequisite":[[
+				{"feature": ["{@feat Ability Score Improvement 3B|CDPH}"]}
+			]],
+			"mastery": true,
+			"entries":["You gain +1 ability score and +1 max ability score in an Ability Score of your choice."]
+		},
+		{
+			"name": "Skilled",
+			"source": "CDPH",
+			"class": ["General"],
+			"entries":["You gain proficiency in 3 skills of choice."]
+		},
+		{
+			"name": "Savage Attacker",
+			"source": "CDPH",
+			"class": ["General"],
+			"entries":["Physical actions like climbing, standing up or running for a long time are easier, and you automatically succeed the first Saving Throw that is required when doing these things for a long time. You also gain Proficiency in Athletics or Stamina, or Expertise in one if you were already Proficient in both."]
+		},
+		{
+			"name": "Keen Mind",
+			"source": "CDPH",
+			"class": ["General"],
+			"entries":["While you don’t have a photographic memory, you are able to recall almost everything that happened the last week. You also remember places and paths you have taken really well and don’t need to make Memory Throws for trying to recognize or remember these.<br>You also gain proficiency in {@skill memory}, or Expertise if you were already proficient."]
+		},
+		{
+			"name": "Pet Shop",
+			"source": "CDPH",
+			"class": ["General"],
+			"entries":["You gain the eyesight of an eagle. You can see up to 1 kilometer away with no difficulty, able to discern fine details as though looking at something no more than 30 meter away from you. <br>Additionally, twilight-ish amount of light doesn't impose debuffs on your sight based rolls anymore.<br>And you gain proficiency in {@skill perception} if you didn’t have that already."]
+		},
+		{
+			"name": "Actor",
+			"source": "CDPH",
+			"class": ["General"],
+			"entries":["You gain Advantage on {@skill deception} and {@skill performance} checks if you imitate someone else.<br>You can also imitate someone else’s voice quite well. You can make this mimicked voice almost identical if you heard someone talk for at least a conversation. Just a few words or a sentence sadly isn’t enough."]
+		},
+		{
+			"name": "Mass Panic Debater",
+			"source": "CDPH",
+			"class": ["General"],
+			"entries":["You gain proficiency in {@skill deception}, or expertise if you were already proficient. You also gain advantage on speech based {@skill deception} rolls."]
+		},
+		{
+			"name": "Nonstop Debater",
+			"source": "CDPH",
+			"class": ["General"],
+			"entries":["You gain proficiency in {@skill intimidation}, or expertise if you were already proficient. You also gain advantage on speech based {@skill intimidation} rolls."]
+		},
+		{
+			"name": "Rapid Reloader",
+			"source": "CDPH",
+			"class": ["General"],
+			"entries":["You can now reload your weapon in a single action instead of it taking up two."]
+		},
+		{
+			"name": "Argument Armementer",
+			"source": "CDPH",
+			"class": ["General"],
+			"entries":["You gain proficiency in {@skill performance}, or expertise if you were already proficient. You also gain advantage on speech based {@skill performance} rolls."]
+		},
+		{
+			"name": "Scrum Debater",
+			"source": "CDPH",
+			"class": ["General"],
+			"entries":["You gain proficiency in {@skill persuasion}, or expertise if you were already proficient. You also gain advantage on speech based {@skill persuasion} rolls."]
+		},
+		{
+			"name": "3L1T3 H4XXOR",
+			"source": "CDPH",
+			"class": ["General"],
+			"entries":["You gain proficiency in {@skill computers}, or expertise if you were already proficient."]
+		},
+		{
+			"name": "Alert",
+			"source": "CDPH",
+			"class": ["General"],
+			"entries":["You gain +5 Initiative (or your side gets +2 Initiative when using side Initiative) and you cannot get surprised. Also, no one gets advantage on an attack roll on you just because they are hidden."]
+		},
+		{
+			"name": "Heavy Lifter",
+			"source": "CDPH",
+			"class": ["General"],
+			"entries":["Your carrying capacity (including maximum load and maximum lift) is doubled, and you have advantage on Strength checks that you make to push, pull, lift, or break objects. Also, your maximum Strength Score is increased by 2."]
+		},
+		{
+			"name": "Charger",
+			"source": "CDPH",
+			"class": ["General"],
+			"entries":["You can use your Bonus Action when you Dashed this turn to push someone an extra 2 meters away if you win a Strength Contest with them. If you melee attack after you Dashed this turn and ran straight for at least 2 meters, than your attack gains +4 Damage."]
+		},
+		{
+			"name": "Linguist",
+			"source": "CDPH",
+			"class": ["General"],
+			"entries":["You know all languages that are often spoken by the common species, which are Common, Engi, Mantis, Musi, Rockmen, Turian. You also understand Zoltan, but you can't really speak it because of how the language sounds.<br>You can also make ciphers. You can learn others how to decipher them or they need to make an Intelligence Check against a DC of your Intelligence Score + Proficiency Bonus."]
+		},
+		{
+			"name": "Mobile",
+			"source": "CDPH",
+			"class": ["General"],
+			"entries":["Your movement speed is increased by 1 meter. Also, you now ignore difficult terrain if you Dash."]
+		},
+		{
+			"name": "Observant",
+			"source": "CDPH",
+			"class": ["General"],
+			"entries":["You can lipread humanoids who speak a language you know. You also gain +2 on your {@skill perception}, {@skill investigation} and {@skill insight}."]
+		},
+		{
+			"name": "Sharpshooter",
+			"source": "CDPH",
+			"class": ["General"],
+			"prerequisite":[[
+				{"level": 3}
+			]],
+			"entries":["Attacks with guns at a longer range than they are designed for don’t put Disadvantage on your attack rolls anymore. You can also do a special attack that give you -6 on your attack roll, and +3 on your damage roll."]
+		},
+		{
+			"name": "Sharpshooter",
+			"source": "CDPH",
+			"class": ["General"],
+			"prerequisite":[[
+				{"level": 3}
+			]],
+			"entries":["Attacks with guns at a longer range than they are designed for don’t put Disadvantage on your attack rolls anymore. You can also do a special attack that give you -6 on your attack roll, and +3 on your damage roll."]
+		},
+		{
+			"name": "Skulker",
+			"source": "CDPH",
+			"class": ["General"],
+			"entries":["You don’t lose your stealth when you miss with a melee attack, or with a silenced and not energy based gun. You now also gain 1 extra AC from any type of cover."]
+		},
+		{
+			"name": "Tavern Brawler",
+			"source": "CDPH",
+			"class": ["General"],
+			"entries":["You gain proficiency with improvised weapons and fists. Your fists now also do 1d4 + Strength Modifier damage."]
+		},
+		{
+			"name": "Tough",
+			"source": "CDPH",
+			"class": ["General"],
+			"entries":["You gain +1 HP per level. (This does work retroactively)"]
+		},
+		{
+			"name": "Skilled Pilot",
+			"source": "CDPH",
+			"class": ["General"],
+			"entries":["You now know how most FTL engines work. You also gain proficiency in using Standard FTL, Energenetic Warp and Standard Impulse of non-specialized ships if you didn’t have that already."]
+		},
+		{
+			"name": "Fanboy",
+			"source": "CDPH",
+			"class": ["General"],
+			"entries":["You know self-proclaimed knowledge about stuff of this multiverse. You can choose a game or category and you are in character allowed to know everything you know as a player. The DM won’t correct you if you are wrong in this Canon however."]
+		},
+		{
+			"name": "Critical Eye",
+			"source": "CDPH",
+			"class": ["General"],
+			"entries":["Your crit range with melee attacks is now 1 lower, making you crit on a 19 and 20, or even lower if you have other abilities that do this."]
+		},
+		{
+			"name": "Power Surge",
+			"source": "CDPH",
+			"class": ["General"],
+			"prerequisite":[[
+				{"level": 8}
+			]],
+			"entries":["You can steel yourself and try to push yourself to the limit when needed. Once per turn, you can choose to take an additional Action on top of your regular Action and Bonus Action. You can use this ability only once every day, or for 1 Exhaustion."]
+		},
+		{
+			"name": "Quick Thinking",
+			"source": "CDPH",
+			"class": ["General"],
+			"prerequisite":[[
+				{"other": "Highest Ability Score is larger than 16"}
+			]],
+			"entries":["You have learned how to focus yourself more, and do more things in quick succession.<br>You gain 1 extra Bonus Action every turn."]
+		},
+		{
+			"name": "Mobility Mastery",
+			"source": "CDPH",
+			"class": ["General"],
+			"prerequisite":[[
+				{"level": 20}
+			]],
+			"entries":["You gain 0.25 meter extra base Movement Speed."]
+		},
+		{
+			"name": "Running Hell",
+			"source": "CDPH",
+			"class": ["Multiclass", "Ranger", "Monk", "Martial Fighter"],
+			"prerequisite":[[
+				{"class": "Ranger Level 3"},
+				{"addit": " or "}],[
+				{"class": "Martial Fighter Level 2"}],[
+				{"class": "Monk Level 3"}
+			]],
+			"entries":["You get used to running over obstacles that are in your way. You gain +1 meter movement, and obstacles (desks, benches, chairs, railings and the like) can be easily jumped over without the need of a Dexterity save. Also, your long jumps now also add your Dexterity modifier to the maximum distance. And you can now also use your Bonus Action to get up from being prone, instead of using your Action."]
+		},
+		{
+			"name": "Extra Conditioning",
+			"source": "CDPH",
+			"class": ["Multiclass"],
+			"prerequisite":[[
+				{"feature": ["{@feat Running Hell|CDPH}"]}
+			]],
+			"entries":["You have adapted the way you move for the better, and have better conditioning than most people. You now have +1 meters movement. Also, while your climbing and swimming speed are still as slow as normal, it is a lot easier. Furthermore, climbing on hard to climb (not impossible to climb) surfaces has no impact on you and are as easy as any other climbable wall, and you won’t have any problems staying afloat when in water while you aren’t over encumbered. If that wasn’t enough, you gain advantage on your Constitution saves, and +1 DR."]
+		},
+		{
+			"name": "Own Created Luck",
+			"source": "CDPH",
+			"class": ["Multiclass", "Rogue", "Monk"],
+			"prerequisite":[[
+				{"class": "Rogue Level 9"},
+				{"addit": " or "}],[
+				{"class": "Monk Level 3"}
+			]],
+			"entries":["You don’t trust fate to give you the luck you need, that’s why you need to take it into your own hands.<br>When you make a D20 roll and have Disadvantage on the roll, you can spend 2 ki points (or your current or next Bonus Action when you are Rogue Level 9 or above) to cancel the disadvantages for that roll."]
+		},
+		{
+			"name": "Master Duelist",
+			"source": "CDPH",
+			"class": ["Multiclass"],
+			"prerequisite":[[
+				{"class": "Rogue Level 3"},
+				{"addit": " and "}],[
+				{"class": "Marial Fighter Level 3"}
+			]],
+			"entries":["Your mastery of the blade lets you turn failure into success in combat. If you miss witha melee attack roll, you can roll it again with advantage. Once you do so, you can’t use this feature again until the turn after the next attack that you missed."]
+		},
+		{
+			"name": "Predicted Movement",
+			"source": "CDPH",
+			"class": ["Multiclass"],
+			"prerequisite":[[
+				{"class": "Rogue Level 2"},
+				{"addit": " and "}],[
+				{"class": "Monk Level 3"}
+			]],
+			"entries":["You are able to use your Reaction in your own turn to shoot with your pistol."]
+		},
+		{
+			"name": "Suppressing the Bullets",
+			"source": "CDPH",
+			"class": ["Multiclass", "Ranger", "Monk"],
+			"prerequisite":[[
+				{"feature": ["{@feat Faster Than His Shadow|CDPH}"]},
+				{"addit": " and "}],[
+					{"feature": ["{@feat Pistol Master|CDPH}"]}],[
+					{"feature": ["{@feat Predicted Movement|CDPH}"]}
+			]],
+			"entries":["You can use {@feat Faster Than His Shadow|CDPH} 12 times per rest before needing to roll attack rolls to hit. You also do this as a Free Action now, instead of using your Reaction."]
+		},
+		{
+			"name": "Lightning Reflexes",
+			"source": "CDPH",
+			"class": ["Multiclass", "Martial Artist"],
+			"prerequisite":[[
+				{"addit": " or "},
+				{"feature": ["({@feat Predicted Movement|CDPH}"]},
+				{"class": ["Martial Artist Level 8)<br>"]}									
+			],[
+				{"level": 8},
+				{"addit": " and "}]],
+			"entries":["If you use the Dash action and someone tries to hit you with a Reaction, then they automatically miss if the attack requires an attack roll. If the attack needs a roll for half vs full damage, you automatically take half without needing to roll.<br>This ability only works for one person, if multiple people attack you at the same time, you can choose which attack you dodge."]
+		},
+		{
+			"name": "The Dance of the Handguns",
+			"source": "CDPH",
+			"class": ["Multiclass"],
+			"prerequisite":[[
+				{"addit": " and "},
+				{"class": ["Monk Level 3"]},
+				{"feature": ["{@feat Deflect Missles|CDPH}"]},
+				{"feature": ["{@feat Knockback Propelled Parry Maneuvres|CDPH}"]}
+			]],
+			"entries":["You have learned to be more efficient and precise with your {@feat Knockback Propelled Parry Maneuvres|CDPH}. You don’t need to have shot last turn to use your {@feat Knockback Propelled Parry Maneuvres|CDPH} (although if you use it you still shoot an unaimed shot once while using the ability) and the AC bonus of {@feat Knockback Propelled Parry Maneuvres|CDPH} is increased to +5. Also, if you are dual wielding pistols with knockback, and you are attack with a melee attack while {@feat Knockback Propelled Parry Maneuvers|CDPH} is already used that turn, than you can use your Reaction to gain the AC bonus against all other melee attacks that turn.<br>You do need to fire once with both pistols to be able to do this, and these shots cannot be aimed."]
+		},
+		{
+			"name": "Indomitable",
+			"source": "CDPH",
+			"class": ["Multiclass", "Barbarian", "Martial Fighter", "Monk"],
+			"prerequisite":[[
+				{"addit": " or "},
+				{"feature": ["{@feat Relentless Rage|CDPH}"]}],[
+				{"feature": ["{@feat Determination|CDPH}"]},
+				{"feature": ["{@feat Energy of the Gods|CDPH}"]}
+			]],
+			"entries":["You have gotten enough physical punishment to be able to go on even when you shouldn’t be able to. If your health gets dropped to or below 0, than you can choose to set it to 1 instead, and keep it on 1 until the start of the next turn.<br>You also gain 2 exhaustion when you use this ability, and you can only use it once per Rest."]
+		},
+		{
+			"name": "Lifelight",
+			"source": "CDPH",
+			"class": ["Multiclass", "Barbarian", "Martial Fighter", "Monk"],
+			"prerequisite":[[
+					{"addit": " and "},
+					{"level": 10},
+					{"addit": ""}
+				],[
+					{"class": ["(Barbarian Level 8"]},
+					{"addit": " or "},
+					{"class": ["Martial Fighter Level 10"]},
+					{"class": ["Monk Level 12)"]}
+				]],
+			"entries":["You are able to partially ignore wounds that would normally be fatal.<br>When your health drops to or below 0, you have the choice to ignore the effects of getting in a critical state and the need to throw death saves. Instead, your max HP get halved, and you gain 3 exhaustion. You can choose to give in at any moment, going into a critical state and start rolling death saves. Your HP resets to 0 again when you are stable again. You cannot use {@feat Indomitable|CDPH} after you used this ability.<br>All negative effects are removed in a Rest except for the halving of your Max HP, which only gets healed again in a longer period of extended downtime that takes at least 2.5 days."]
 		}
 	]
 }

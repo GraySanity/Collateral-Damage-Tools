@@ -2835,7 +2835,16 @@ Renderer.utils = {
 		return `${start}${end}`.toTitleCase();
 	},
 	getClassabilHtml: (classabil) => {
-		return `From the ${classabil.class} Abilities`
+		classabiltext = "";
+		for(i=0;i<classabil.class.length;i++){
+			if(i<classabil.class.length-2)
+			{	classabiltext += classabil.class[i] + ", ";		}
+			else if((i<classabil.class.length-1) && (i==classabil.class.length-2))
+			{	classabiltext += classabil.class[i] + " and ";	}
+			else	
+			{	classabiltext += classabil.class[i];			}
+		};
+		return `From the ${classabiltext} Abilities`;
 	},
 	getPrerequisiteHtml: (preprerequisites, {isListMode = false, blacklistKeys = new Set(), isTextOnly = false, isSkipPrefix = false} = {}) => {
 		if(preprerequisites == undefined) {return};
