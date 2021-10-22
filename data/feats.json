@@ -2139,13 +2139,12 @@
 			"entries":["You have gotten enough physical punishment to be able to go on even when you shouldn’t be able to. If your health gets dropped to or below 0, than you can choose to set it to 1 instead, and keep it on 1 until the start of the next turn.<br>You also gain 2 exhaustion when you use this ability, and you can only use it once per Rest."]
 		},
 		{
-			"name": "Lifelight",
+			"name": "LifelightXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
 			"source": "CDPH",
 			"class": ["Multiclass", "Barbarian", "Martial Fighter", "Monk"],
 			"prerequisite":[[
 					{"addit": " and "},
-					{"level": 10},
-					{"addit": ""}
+					{"level": 10}
 				],[
 					{"class": ["(Barbarian Level 8"]},
 					{"addit": " or "},
@@ -2153,6 +2152,66 @@
 					{"class": ["Monk Level 12)"]}
 				]],
 			"entries":["You are able to partially ignore wounds that would normally be fatal.<br>When your health drops to or below 0, you have the choice to ignore the effects of getting in a critical state and the need to throw death saves. Instead, your max HP get halved, and you gain 3 exhaustion. You can choose to give in at any moment, going into a critical state and start rolling death saves. Your HP resets to 0 again when you are stable again. You cannot use {@feat Indomitable|CDPH} after you used this ability.<br>All negative effects are removed in a Rest except for the halving of your Max HP, which only gets healed again in a longer period of extended downtime that takes at least 2.5 days."]
+		},
+		{
+			"name": "Useless Soul",
+			"source": "CDPH",
+			"class": ["Multiclass"],
+			"prerequisite":[[
+					{"addit": " and "},
+					{"class": ["Barbarian Level 4"]},
+					{"class": ["Monk Level 3"]}
+				]],
+			"entries":["You can now use 1.5 times your Strength Modifier and 1.5 times your Dexterity Modifier as your bonus for making an attack roll for punching."]
+		},
+		{
+			"name": "Charismatic Appearance",
+			"source": "CDPH",
+			"class": ["Multiclass"],
+			"prerequisite":[[
+					{"addit": " and "},
+					{"level": 12 },
+					{"feature": ["{@feat Honin' Those Skills|CDPH}"]},
+					{"class": ["{@feat Expertise 2 Electric Boogaloo|CDPH}"]},
+					{"class": ["Doctor Level 5"]}
+				]],
+			"entries":["Most people like your style. Whever it is because of your skills, or because of how you just are and behave, but it works wonders. Your Charisma score increase by 4, and the maximum of your Charisma score is now 30."]
+		},
+		{
+			"name": "Auto Targeting",
+			"source": "CDPH",
+			"class": ["Multiclass"],
+			"maintenance": 4,
+			"prerequisite":[[
+					{"addit": " and "},
+					{"feature": ["{@feat Advanced Attachments|CDPH}"]},
+					{"class": ["Ranger Level 5"]}
+				]],
+			"entries":["You can create an automatic targeter for your weapons. This attachments gives a +5 bonus on attack rolls and ignores most forms of Disadvantage that you can get on your attack rolls with this weapon. You can also use this attachment to force a 20 instead of rolling a D20 on an attack once per 2 hours. This “rolled” 20 isn’t a crit, nor can it be used together with {@feat Let’s Get Critical|CDPH}."]
+		},
+		{
+			"name": "Nameless Confidence",
+			"source": "CDPH",
+			"class": ["Multiclass"],
+			"prerequisite":[[
+					{"addit": " and "},
+					{"feature": ["{@feat Hack & Slash|CDPH}"]}],[
+					{"class": ["Rogue Level 4"]},
+					{"class": ["Engineer Level 6"]}
+				]],
+			"entries":["You have learned how to hack into most mechanical creatures, like AI-driven machines or Robots. You can try and hack into these kind of creatures at a maximum range of 15 meters. To do this, you need to throw a {@skill computers} check against a DC that depends on the security and Intelligence of the AI. For comparison, the DC of your little helper against these kind of hacks is <i>it’s</i> Intelligence Score + <i>your</i> Intelligence Modifier.<br>You gain advantage on this roll if you can plug your computer with which you are hacking directly into the mechanical creature.<br>If you fail, nothing happens and you cannot try again until 2 hours have passed.<br>If you succeed, you can control the mechanical creature and what it does to an extent. You cannot change the possible AI that was controlling the thing, and said AI would know everything you are doing with the robot, but it can’t do anything for the next 2 hours.<br>While you are controlling it, it can be seen as a non-sapient Little Helper."]
+		},
+		{
+			"name": "Energenetic Tesla Arc",
+			"source": "CDPH",
+			"class": ["Multiclass"],
+			"prerequisite":[[
+					{"addit": " and "},
+					{"feature": ["{@feat Unstabilized Planck Distribution|CDPH}"]}],[
+					{"feature": ["{@feat Non-Localized Manipulation [Initiate]|CDPH}"]},
+					{"class": ["Bard Level 3"]}
+				]],
+			"entries":["Instead of using your instrument to play songs you learned from the Learnable Songs list to create their effects, you now can use your Energy to create a Tesla Arc made from your main Energy to play the songs and get their effects.<br>Using this ability uses 2 Energy to maintain."]
 		}
 	]
 }
