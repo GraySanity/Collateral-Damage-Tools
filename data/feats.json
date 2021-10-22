@@ -2144,12 +2144,8 @@
 			"class": ["Multiclass", "Barbarian", "Martial Fighter", "Monk"],
 			"prerequisite":[[
 					{"addit": " and "},
-					{"level": 10}
-				],[
-					{"class": ["(Barbarian Level 8"]},
-					{"addit": " or "},
-					{"class": ["Martial Fighter Level 10"]},
-					{"class": ["Monk Level 12)"]}
+					{"level": 10},
+					{"class": ["(Barbarian Level 8, Martial Fighter Level 10 or Monk Level 12"]}
 				]],
 			"entries":["You are able to partially ignore wounds that would normally be fatal.<br>When your health drops to or below 0, you have the choice to ignore the effects of getting in a critical state and the need to throw death saves. Instead, your max HP get halved, and you gain 3 exhaustion. You can choose to give in at any moment, going into a critical state and start rolling death saves. Your HP resets to 0 again when you are stable again. You cannot use {@feat Indomitable|CDPH} after you used this ability.<br>All negative effects are removed in a Rest except for the halving of your Max HP, which only gets healed again in a longer period of extended downtime that takes at least 2.5 days."]
 		},
@@ -2212,6 +2208,123 @@
 					{"class": ["Bard Level 3"]}
 				]],
 			"entries":["Instead of using your instrument to play songs you learned from the Learnable Songs list to create their effects, you now can use your Energy to create a Tesla Arc made from your main Energy to play the songs and get their effects.<br>Using this ability uses 2 Energy to maintain."]
+		},
+		{
+			"name": "Peppersteak",
+			"source": "CDPH",
+			"class": ["Multiclass"],
+			"prerequisite":[[
+					{"class": "Bard Level 5 and (Monk Level 3, Martial Fighter Level 3 or Barbarian Level 3)"}],[
+				]],
+			"entries":["You have learned to sense energenetic flow in the background dimension, and with this, can feel things coming that you wouldn’t normally be able to.<br>If someone teleports to inside melee range or from within melee range of you with {@feat Trans-Localized Manipulation|CDPH} or {@feat Energenetic Evasion Reflex|CDPH}, than you can use your Reaction to try and hit them. They gain no AC or DR from their armor if you try to hit them this way.<br>You can also feel and try to hit people who use one of these abilities to teleport past you from outside to outside your melee range, as long as the line between their start and end point comes within melee range of you.<br>Also, you can now feel Full-Energenetic beings that are invisible and hit them with energenetic based attacks or melee attacks if you would come across any."]
+		},
+		{
+			"name": "Peppersteak",
+			"source": "CDPH",
+			"class": ["Multiclass"],
+			"prerequisite":[[
+					{"class": "Bard Level 5 and (Monk Level 3, Martial Fighter Level 3 or Barbarian Level 3)"}],[
+				]],
+			"entries":["You have learned to sense energenetic flow in the background dimension, and with this, can feel things coming that you wouldn’t normally be able to.<br>If someone teleports to inside melee range or from within melee range of you with {@feat Trans-Localized Manipulation|CDPH} or {@feat Energenetic Evasion Reflex|CDPH}, than you can use your Reaction to try and hit them. They gain no AC or DR from their armor if you try to hit them this way.<br>You can also feel and try to hit people who use one of these abilities to teleport past you from outside to outside your melee range, as long as the line between their start and end point comes within melee range of you.<br>Also, you can now feel Full-Energenetic beings that are invisible and hit them with energenetic based attacks or melee attacks if you would come across any."]
+		},
+		{
+			"name": "Useless Mind",
+			"source": "CDPH",
+			"class": ["Multiclass"],
+			"prerequisite":[[
+				{"addit": " and "},
+				{"class": "Barbarian Level 3"},
+				{"class": "Monk Level 4"}
+			]],
+			"entries":["You can now add both your Strength Modifier and your Dexterity Modifier as damage bonusses for punching."]
+		},
+		{
+			"name": "Injector Injector",
+			"source": "CDPH",
+			"class": ["Multiclass"],
+			"maintenance": 3,
+			"prerequisite":[[
+				{"addit": " and "},
+				{"feat": ["{@feat Pharmaceutical Compounds|CDPH}"]},
+				{"feat": ["{@feat Deus Intus Machina|CDPH}"]}
+			]],
+			"entries":["You can create a semi-automatic SMG like gun that can shoot Injectors that you can make with abilities in the Doctor Class. If you try to shoot someone who is fine with getting hit with it and didn’t attack last turn, you don’t need to make an attack roll. Otherwise, you do need to make an attack roll and you are proficient with it. This gun has the following stats:<br>Weapon Type: Injector Rifle<br>Minimum Effective Range (m):0<br>Maximum Effective Range (m):15<br>Maximum Total Range (m):30"]
+		},
+		{
+			"name": "Find the Exit",
+			"source": "CDPH",
+			"class": ["Multiclass"],
+			"prerequisite":[[
+				{"addit": " and "},
+				{"feat": ["{@feat Through the Fire and the Pain|CDPH}"]},
+				{"feat": ["{@feat Unarmored Monk Defence|CDPH}"]},
+				{"feat": ["{@feat Unhindered Movement|CDPH}"]}
+			]],
+			"entries":["You have learned to flow while playing songs, to the point that most forms of harm just avoid you just by luck and fate alone.<br>While playing a song, you can choose to use all your other Actions and Bonus Actions of the turn to remove all your DR this turn. When you do so, all said removed DR can be added to your current AC until the start of next turn.<br>If you play the song Megalovanaiacal Funk (Learnable Songs) on Level 4, than you can choose to ignore the current Level 4 effect. Instead of being able to play another song at the same time, you will be unable to be hit by anything that isn’t a critical hit or area of effect, and the Level 3 effect of the song still affects you."]
+		},
+		{
+			"name": "Reflectation",
+			"source": "CDPH",
+			"class": ["Multiclass"],
+			"prerequisite":[[
+				{"addit": " and "},
+				{"level": 8},
+				{"feat": ["{@feat Deflect Missle|CDPH}"]},
+				{"feat": ["{@feat Manoeuvrable Block|CDPH}"]}
+			]],
+			"entries":["You can use your Reaction to defend yourself or deflect something shot at you when you are hit by a ranged attack of a not Laser based gun. Youneed to be wielding a melee weapon to do this.<br>When you do so, the damage you take from the attack is reduced by 1D10 + Dexterity Modifier + Monk Level + Martial Fighter Level.<br>If you reduce the damage to 0, you can do the following depending on the situation:<br>It the ranged attack was a solid object, like that from a Coil or Pressure based gun, than you can reflect it. You can choose where or to who you reflect it. If you do this, you need to make a melee attack roll with your weapon with disadvantage.<br>You also need to make a ranged damage roll, which has the same base damage as the attackwhich you reflected.<br>If the attack is a heap of plasma, like that from Plasma based guns, and you have a melee weapon which conducts electricity, than you can store the static electricity from the attack into your weapon. You can add the base damage of the ranged attack to your next melee attack, and the bonus damage’s type is electric. This static electricity also dissipates after 5 minutes, or if the electricity conducting part of the weapon hits a surface that conducts electricity as well."]
+		},
+		{
+			"name": "Flow of Battle",
+			"source": "CDPH",
+			"class": ["Multiclass"],
+			"prerequisite":[[
+				{"addit": " or "},
+				{"class": "Martial Artist Level 3"},
+				{"class": "Monk Level 3"}
+			]],
+			"entries":["You are able to use the momentum of battle to your advantage, and focus on it to increase your effectiveness when fighting.<br>After every consecutive turn wherein you make a melee attack against an hostile opponent, you gainone Flow. If you have Rage (Barbarian) and are in this rage, your Flow increases by two instead.<br>When you end a turn wherein you did not made a melee attack against an hostile opponent, then your Flow resets to 0.<br>On melee attacks, you gain a {@dice 1d4} bonus on your Attack Roll and Damage Roll for every two Flow you have."]
+		},
+		{
+			"name": "Defensive Flow",
+			"source": "CDPH",
+			"class": ["Multiclass"],
+			"prerequisite":[[
+				{"addit": " and "},
+				{"level": 6},
+				{"feature": ["{@feat Flow of Battle|CDPH}"]}
+			]],
+			"entries":["You have learned to use your Flow to use it more defensively. You gain 1 DR and 1 AC against every creature you melee attacked last turn for every Flow you have.<br>Also, you can freely use 3 Flow to dodge a nonarea-of-effect attack completely. You need to do this before the outcome of the attack."]
+		},
+		{
+			"name": "Mobile Flow",
+			"source": "CDPH",
+			"class": ["Multiclass"],
+			"prerequisite":[[
+				{"addit": " and "},
+				{"level": 6},
+				{"feature": ["{@feat Flow of Battle|CDPH}"]}
+			]],
+			"entries":["You have learned how to use your Flow to become more mobile. You gain 0.5 meter extra movementfor every Flow that you have.<br>If you have 2 Flow or more, you gain advantage on Strength and Dexterity Saving Throws against attacks from the creatures you melee attacked last turn. If you have 3 Flow or more, you and these creatures also gain advantage on Strength andDexterity Saving throws against anything that isn’t an attack."]
+		},
+		{
+			"name": "Abserdation Mastery",
+			"source": "CDPH",
+			"class": ["Multiclass"],
+			"mastery": true,
+			"prerequisite":[[
+				{"addit": " and "},
+				{"class": "Barbarian Level 2"},
+				{"class": "Bard Level 2"},
+				{"class": "Doctor Level 2"},
+				{"class": "Energenetic Specialist Level 2"},
+				{"class": "Engineer Level 2"},
+				{"class": "Martial Fighter Level 2"},
+				{"class": "Monk Level 2"},
+				{"class": "Ranger Level 2"},
+				{"class": "Rogue Level 2"}
+			]],
+			"entries":["Your Proficiency Bonus goes up by 1."]
 		}
 	]
 }

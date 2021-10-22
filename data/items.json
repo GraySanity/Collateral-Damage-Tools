@@ -332,7 +332,7 @@
 		"MC": "2 MP",
 		"entries": [
 			"You loosen the trigger of your firearm, making it more responsive for firing on reaction.",
-			"Attack rolls with your weapon gain +2 to hit when you use your Hold Action to attack."
+			"Attack rolls with your weapon gain +2 to Hit when you use your Hold Action to attack."
 		]
 	},
 	{
@@ -356,6 +356,470 @@
 		"MC": "2 MP",
 		"entries": [
 			"You add an improvised silencer to the barrel of your weapon, making it a lot quiter when you shoot with it.<br>This effects all gun types that aren't based on energenetic damage, but works the best on pressure based guns."
+		]
+	},
+	{
+		"name": "Improvised Extended Magazine - (Guns Only)",
+		"source": "CDPH",
+		"type": "Mod",
+		"cability": "IA",
+		"rarity": "IA MOD",
+		"MC": "1 MP",
+		"entries": [
+			"Your weapon can hold twice as many shots before needing to reload it."
+		]
+	},
+	{
+		"name": "Improvised Laser Sight - (Guns only)",
+		"source": "CDPH",
+		"type": "Mod",
+		"cability": "IA",
+		"rarity": "IA MOD",
+		"MC": "2 MP",
+		"entries": [
+			"Your weapon can hold twice as many shots before needing to reload it."
+		]
+	},
+	{
+		"name": "Improvised Extended Barrel - (Guns only)",
+		"source": "CDPH",
+		"type": "Mod",
+		"cability": "IA",
+		"rarity": "IA MOD",
+		"MC": "3 MP",
+		"entries": [
+			"The minimum and maximum range of your weapon is multiplied by 1.5 (Non-Laser Weapons only) and your weapon gains +2 Damage (Coil and Laser only)."
+		]
+	},
+	{
+		"name": "Sawn Off - (Guns only) - (Cannot be used together with barrel extensions)",
+		"source": "CDPH",
+		"type": "Mod",
+		"cability": "IA",
+		"rarity": "IA MOD",
+		"entries": [
+			"Your weapon’s barrel is mostly removed making it more easily concealable, but it’s maximum effective an total range are both 0.5 meters now."
+		]
+	},
+	{
+		"name": "Improvised Stock - (Guns only)",
+		"source": "CDPH",
+		"type": "Mod",
+		"cability": "IA",
+		"rarity": "IA MOD",
+		"MC": "1 MP",
+		"entries": [
+			"Your weapon gains +4 to Hit as long as you didn’t move or took any Action or Bonus Action yet this turn. Firing a weapon with this modification changes your maximum movement to 0 until the start of your next turn."
+		]
+	},
+	{
+		"name": "Smoothed Armor",
+		"source": "CDPH",
+		"type": "Mod",
+		"cability": "IA",
+		"rarity": "IA MOD",
+		"entries": [
+			"Your Light Armor gets +1 AC."
+		]
+	},
+	{
+		"name": "Hardened Armor",
+		"source": "CDPH",
+		"type": "Mod",
+		"cability": "IA",
+		"rarity": "IA MOD",
+		"MC": "1 MP",
+		"entries": [
+			"Your Armor gets +1 to DR."
+		]
+	},
+	{
+		"name": "SSE - (Melee Weapons with Slicing or Piercing Damage only)",
+		"source": "CDPH",
+		"type": "Mod",
+		"cability": "AA",
+		"rarity": "AA MOD",
+		"MC": "3 MP",
+		"entries": [
+			"Sharpened Serrated Edge. You serrate the edge of your weapon. While this should not be allowed as for the Geneva convention of 177 BNC, these treaties are non-existent anymore as space colonization increased and new alien states were found. Your weapon gains -2 to Hit on attack rolls.<br>It also gets +4 Damage against most organic (carbon and silicon based) life."
+		]
+	},
+	{
+		"name": "Increased Mass - (Melee Weapons Only)",
+		"source": "CDPH",
+		"type": "Mod",
+		"cability": "AA",
+		"rarity": "AA MOD",
+		"entries": [
+			"While your weapon doesn’t do that much more damage, it’s easier to push people around with it now. Your weapon gains +1 Damage, and now only need to do half someone’s Strength Score of damage to push someone 1 meter. It is also 1.5 times as heavy."
+		]
+	},
+	{
+		"name": "Improvised Long Range Scopes - (Guns Only)",
+		"source": "CDPH",
+		"type": "Mod",
+		"cability": "AA",
+		"rarity": "AA MOD",
+		"MC": "2 MP",
+		"entries": [
+			"You add a medium to long range scope to your gun. This doubles the maximum total range of your gun. It can also be used as an improvised periscope."
+		]
+	},
+	{
+		"name": "Improvised IR Modification - (Laser based weapons only)",
+		"source": "CDPH",
+		"type": "Mod",
+		"cability": "AA",
+		"rarity": "AA MOD",
+		"MC": "3 MP",
+		"entries": [
+			"You modify your Laser based weapon quite a bit, including a large part of the amplification mechanism of the actual used laser. You change this into a far-IR based laser, which is invisible to most creatures. Your weapon gains -1 on to Hit rolls as it is harder to trace where you are firing."
+		]
+	},
+	{
+		"name": "Thickened Armor",
+		"source": "CDPH",
+		"type": "Mod",
+		"cability": "AA",
+		"rarity": "AA MOD",
+		"entries": [
+			"Your Medium, Heavy or Power Armor gets +2 DR."
+		]
+	},
+	{
+		"name": "Shaped Armor",
+		"source": "CDPH",
+		"type": "Mod",
+		"cability": "AA",
+		"rarity": "AA MOD",
+		"MC": "2 MP",
+		"entries": [
+			"Your Medium Armor gets +3 AC, or your Heavy or Power Armor gets +2 AC."
+		]
+	},
+	{
+		"name": "Improvised Bump Stock - (Cannot be used with other Stocks)",
+		"source": "CDPH",
+		"type": "Mod",
+		"cability": "AA",
+		"rarity": "AA MOD",
+		"MC": "2 MP",
+		"entries": [
+			"You make a bump stock for your gun and attach it.<br>This increases the rate at which you can fire your gun accurately quite a bit. If you fire your gun as your Action, then you can now also shoot with your gun as a Bonus Action on the same turn if the weapon doesn’t have the Bolt-Action trait. You do gain -4 to Hit if you fire this weapon after moving.<br>Firing a weapon with this modification changes your maximum movement to 0 until the start of your next turn."
+		]
+	},
+	{
+		"name": "Improvised Underbarrel Launcher (Non-pistol Coil & Plasma based guns only)",
+		"source": "CDPH",
+		"type": "Mod",
+		"cability": "AA",
+		"rarity": "AA MOD",
+		"MC": "4 MP",
+		"entries": [
+			"You attach an improvised underbarrel launcher to gun. You can now fire this modification as an Action. The barrel is 12 cm in diameter, and is as long as your weapon’s normal barrel. It can shoot anything that is non-magnetic, or is specifically made to be shot with an Underbarrel Launcher, like grenades. It does 2 bludgeoning damage if you hit someone with it that is within 2 meters of you, and it does 2 Knockout Damage if the target is more than 2 meters away. The maximum range of the modification heavily depends on the projectile that you fire with it, but estimates are around 5 meters with a 100 gram projectile, and 40 meters for a 3 kg projectile or grenades."
+		]
+	},
+	{
+		"name": "Iron Reinforcement",
+		"source": "CDPH",
+		"type": "Mod",
+		"cability": "AA",
+		"rarity": "AA MOD",
+		"MC": "1 MP",
+		"entries": [
+			"You can add solid iron reinforcement to your armor, giving +1 DR, making it a bit heavier and less maneuverable, but giving it +10 DR against Energenetic Damage, and changing Energenetic Damage to Heat Damage."
+		]
+	},
+	{
+		"name": "Plasma Torch - (Non-pistol Plasma based guns only)",
+		"source": "CDPH",
+		"type": "Mod",
+		"cability": "EA",
+		"rarity": "EA MOD",
+		"MC": "1 MP",
+		"entries": [
+			"You modify your plasma based gun so that it shoots a wide constant stream of plasma instead of a single shot. Because of this, your gun now does an damage over an area, which depends on the weapon type that you modified which can be seen below, but it always does Plasma damage.<br>The hit area won’t penetrate or go around cover normally, which means that people in full or 2/3 cover from you won’t get hit by a ranged attack made with this gun. You do not need to make an attack roll. Instead, everyone in the hit area will need to make a Dexterity or Constitution Saving throw against an DC of 10 + Attack Roll Bonus.<br>This plasma is able to set things aflame in the area of effect.",
+			{
+				"type": "table",
+				"caption": "Energenetic ",
+				"colLabels": [
+					"Weapon Type",
+					"Shots per Magazine",
+					"Maximum Range (m)",
+					"Damage",
+					"Other"
+				],
+				"colStyles": [
+					"col-2",
+					"col-3",
+					"col-3",
+					"col-3",
+					"col-5"
+				],
+				"rows": [
+					[
+						"SMG",
+						5,
+						8,
+						"{@damage 3d4}",
+						"+1 to Hit Bonus, Area (Cone) Only"
+					],
+					[
+						"Assault Rifle",
+						5,
+						15,
+						"{@damage 2d6+2}",
+						"Area (Line) Only"
+					],
+					[
+						"Shotgun",
+						5,
+						5,
+						"{@damage 4d4+1}",
+						"+3 to Hit Bonus, Area (Cone) Only, Foldable"
+					],
+					[
+						"Hunting Rifle",
+						4,
+						20,
+						"{@damage 2d6+2}",
+						"Area (Line) Only"
+					],
+					[
+						"Sniper Rifle",
+						3,
+						50,
+						"{@damage 4d4+1}",
+						"-2 to Hit Bonus, Area (Line) Only, Foldable"
+					],
+					[
+						"LMG",
+						3,
+						20,
+						"{@damage 3d4+1}",
+						"Area (Line) Only, Heavy"
+					]
+				]
+			}
+		]
+	},
+	{
+		"name": "Plasma Engulfing - (Metal Melee Weapon Only)",
+		"source": "CDPH",
+		"type": "Mod",
+		"cability": "EA",
+		"rarity": "EA MOD",
+		"MC": "5 MP",
+		"entries": [
+			"You place some plasma throwers on your weapon which engulfs the entirety of the main damaging part of the weapon in red hot plasma, which, although cold for your average plasma, still does quite a bit of extra damage to most things but without melting your weapon.<br>Your weapon gains +2 Plasma Damage if the weapon is a dagger, +4 if the weapon is any other weapon that doesn’t have the Heavy trait, and +6 if it is a weapon with the Heavy trait."
+		]
+	},
+	{
+		"name": "Computer Assisted Strike Control - (Melee Weapon Only)",
+		"source": "CDPH",
+		"type": "Mod",
+		"cability": "EA",
+		"rarity": "EA MOD",
+		"MC": "6 MP",
+		"entries": [
+			"You can adapt a melee weapon to make it help you use it in battle. By placing some processors, small sensors, and motors (for turning and torque) in it.<br>Your weapon’s to Hit modifier becomes +6, no matter the proficiency of the creature using it, or other possible modifiers that would change it, whether beneficial or not.<br>The Crit Range of the weapon also lowers by 1."
+		]
+	},
+	{
+		"name": "Automatic Bolt Action - (Guns with the Bolt Action trait only)",
+		"source": "CDPH",
+		"type": "Mod",
+		"cability": "EA",
+		"rarity": "EA MOD",
+		"MC": "3 MP",
+		"entries": [
+			"You remove the Bolt Action trait from a gun by fully automating the emptying and filling of the main chamber. This modification is quite small, and changes the weapon into a normal semi-automatic weapon. This does increase the amount of force needed to pull the trigger quite a lot. This is no real problem in situations that do not require quick reaction. But using your Hold Action to Attack something with this weapon now gives you a -8 to hit bonus."
+		]
+	},
+	{
+		"name": "Superlight Armor",
+		"source": "CDPH",
+		"type": "Mod",
+		"cability": "EA",
+		"rarity": "EA MOD",
+		"MC": "4 MP",
+		"entries": [
+			"You can remove the DR bonus of your Light Armor to add it to its AC twice."
+		]
+	},
+	{
+		"name": "Resistant Armor",
+		"source": "CDPH",
+		"type": "Mod",
+		"cability": "EA",
+		"rarity": "EA MOD",
+		"MC": "4 MP",
+		"entries": [
+			"You can add a form of resistance to your Medium Armor. The options for resistance that you can add are:<br>Bludgeoning, Piercing & Slashing, Plasma, Laser, Heat, Cold, Electric."
+		]
+	},
+	{
+		"name": "Superheavy Armor",
+		"source": "CDPH",
+		"type": "Mod",
+		"cability": "EA",
+		"rarity": "EA MOD",
+		"MC": "4 MP",
+		"entries": [
+			"You can remove the AC bonus of your Heavy Armor and add it to its DR. It is now also twice as heavy."
+		]
+	},
+	{
+		"name": "Specialized Armor",
+		"source": "CDPH",
+		"type": "Mod",
+		"cability": "EA",
+		"rarity": "EA MOD",
+		"MC": "3 MP",
+		"entries": [
+			"You can change Light Armor in such a way that it gives the edge in some specific situations. You can add advantage on a specific skill check. The skills where you can get advantage on are:<br>Acrobatics, Stealth, Stamina, Animal Handling, Deception, Intimidation, Performance."
+		]
+	},
+	{
+		"name": "Energy Cell Overload - (Energy Based Guns Only)",
+		"source": "CDPH",
+		"type": "Mod",
+		"cability": "EA",
+		"rarity": "EA MOD",
+		"entries": [
+			"A very expensive grenade.<br>You can overload an energy based weapon (a coil or plasma based weapon for example) to make it explode. This only works if the Energy Cell in the weapon is still partially full, and it costs 3 actions as long as the gun doesn’t get fired while priming the explosion, instead of taking a whole Rest like other modifications. To most it will be quite obvious that you are priming the explosion if they see you or are close to you. You need to see the weapon while priming, so it cannot be done behind yourback or on feeling alone. When primed, the gun will explode after {@dice 1+1d4} turns. The gun fully explodes and cannot be repaired to a functional state, if it can be repaired at all. The explosion has a radius of 6 meters. Everyone in the explosion radius need to roll a Constitution Save (DC of 21) and get {@damage 4d6+26} damage on a fail, or half on a success."
+		]
+	},
+	{
+		"name": "Improvised Cryosystem - (Pressure & Coil Based Guns Only)",
+		"source": "CDPH",
+		"type": "Mod",
+		"cability": "EA",
+		"rarity": "EA MOD",
+		"MC": "5 MP",
+		"entries": [
+			"This modification lets you shoot projectiles made out of “ice”.<br>You modify the bulk of your weapon for this modification. Only the barrel doesn’t need any changes made to it. You need special ammunition for this weapon, as well as an energy cell if you modified a pressure based gun. This special ammunition is a container of an highly pressurized and supercooled mix of oxygen and nitrogen that basically, when injected into the main chamber, solidifies and becomes a piece of ammunition that you shoot immediately afterward. You can carry 1 canaster which you can refill in a Rest if you have access to specialized venders in any capacity. The amount of rounds that you can shoot with a full canaster, together with other stats, is based on the weapon type that you modified, which can be seen down below. The weapon also changes in a few ways:<br>If the weapon was fully-automatic, then it practically becomes semi-automatic as the automatic firing rate is decreased drastically.<br>The weapons maximum effective range now also becomes it’s maximum range in general, as the ammunition sublimated too much after that point to do any significant damage.<br>Projectiles shot leave a trail of mist as it condenses the water in the air around it (For those who played TF2, it is like the Machina, but without the dye in the tracer).<br>The projectiles don’t usually bent when they hit something. They stay intact, break, or get pulverized after which they sublimate into oxygen and nitrogen within a few seconds to a minute or 2.<br>The damage type of the weapon can now be seen as Cold for overcoming resistance and immunity to Piercing damage.",
+			{
+				"type": "table",
+				"caption": "Energenetic ",
+				"colLabels": [
+					"Weapon Type",
+					"Maximum Range (m)",
+					"Maximum Range (m)",
+					"Maximum Range (m)",
+					"Damage",
+					"Ammo per Canaster",
+					"Other"
+				],
+				"colStyles": [
+					"col-2",
+					"col-3",
+					"col-3",
+					"col-3",
+					"col-3",
+					"col-3",
+					"col-3"
+				],
+				"rows": [
+					[
+						"Pistol",
+						0.5,
+						18,
+						18,
+						"{@damage 1d6+1}",
+						8,
+						""
+					],
+					[
+						"SMG",
+						0.5,
+						10,
+						10,
+						"{@damage 1d4}",
+						20,
+						""
+					],
+					[
+						"Assault Rifle",
+						3,
+						30,
+						30,
+						"{@damage 1d8+1}",
+						12,
+						""
+					],
+					[
+						"Hunting Rifle",
+						5,
+						150,
+						150,
+						"{@damage 2d6}",
+						6,
+						"Foldable"
+					],
+					[
+						"Sniper Rifle",
+						5,
+						500,
+						500,
+						"{@damage 3d4+3}",
+						5,
+						"Foldable"
+					],
+					[
+						"LMG",
+						12,
+						50,
+						50,
+						"2",
+						30,
+						"Can shoot as a Bonus Action if you didn't use any movement and used your Action to shoot with this firearm as well."
+					],
+					[
+						"Shotgun",
+						1,
+						5,
+						5,
+						"{@damage 3d4+2}",
+						4,
+						"+5 to Hit Bonus, Area (Half-Circle) Only, Only does Cold damage (Not only for overcoming resistances)"
+					]
+				]
+			}
+		
+		]
+	},
+	{
+		"name": "Wave Extender - (Pressure & Coil based guns only)",
+		"source": "CDPH",
+		"type": "Mod",
+		"cability": "EA",
+		"rarity": "EA MOD",
+		"MC": "10 MP",
+		"entries": [
+			"You change most of your gun for this modification, as almost every part needs to change at least a bit for this to work. This modification changes your solid projectiles into macro-scale wavefunctions.<br>This lessens the force that the projectile can give on a point as its kinetic energy gets spread over a larger volume when it hits something solid. The total damage of your weapon is halved because of this, and changes to True Damage instead of Piercing. On the other hand, it does ignore most types of cover (depending on the material, normally it ignores all effects of 1/3 and 2/3 cover, and the DR bonus from full cover), and the weapon gets 30 + 50% DR penetration."
+		]
+	},
+	{
+		"name": "M.I.H.C. - (Coil based guns only)",
+		"source": "CDPH",
+		"type": "Mod",
+		"cability": "EA",
+		"rarity": "EA MOD",
+		"MC": "5 MP",
+		"entries": [
+			"This modification lets you shoot projectiles made from molten iron.<br>You extend and overclock the barrel of a Coil based gun. The added extended barrel looks like it would belong to a plasma based gun. The barrel now not only propels the ammunition forward, it also warms it up, melting it with magnetic induction. This changes a few things of how the weapon works.<br>The gun’s damage now changes to Heat Damage, instead of being Piercing. Because of this, the projectiles sometimes starts fires when hitting flammable objects.<br>The maximum effective range of the weapon is now halved, as the blobs of liquid metal solidify and change course a bit after a certain amount of distance.<br>Also, because the projectiles are now liquid, the residue of the projectile is now a clump of metal (usually), instead of a (bent or fractured) metal rod.<br>This could, for example, be used to fill in a classic keyhole making it unusable, weld a metal trashcan to a non-flammable ground, boil a glass of water by shooting slow droplets of liquid metal into it and the like."
+		]
+	},
+	{
+		"name": "Self-Dispersing Matter - (Pressure & Coil Based Guns Only)",
+		"source": "CDPH",
+		"type": "Mod",
+		"cability": "EA",
+		"rarity": "EA MOD",
+		"MC": "5 MP",
+		"entries": [
+			"This modification is good for dealing knockout damage.<br>You change your gun to an almost unrecognizable state. This modification destabilizes the matter of the solid ammunition so much that it disperses the moment it hits something, dispersing the energy it puts out over a larger area of the thing you hit.<br>This doesn’t affect the total amount of damage at all, but does change all the damage output to knockout damage as the worst thing you can do with this gun is bruise someone badly. A dispersing projectile also fills the air with a gaseous form of the ammunition material used, which probably becomes quite toxic if you empty a magazine in a small space.<br>This weapon’s effective range is halved, as the projectiles are affected by changes in air much more than normal."
 		]
 	},
 	{
