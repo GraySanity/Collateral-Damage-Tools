@@ -304,7 +304,7 @@
 		"source": "CDPH",
 		"type": "Mod",
 		"cability": "WM",
-		"rarity": "WM MOD",
+		"rarity": "Special",
 		"MC": "1 MP",
 		"entries": [
 			"You keep your weapon extremely clean on the daily." ,
@@ -316,7 +316,7 @@
 		"source": "CDPH",
 		"type": "Mod",
 		"cability": "WM",
-		"rarity": "WM MOD",
+		"rarity": "Special",
 		"MC": "0 MP",
 		"entries": [
 			"You redistribute the weight of your weapon to make it more handleable.", 
@@ -328,7 +328,7 @@
 		"source": "CDPH",
 		"type": "Mod",
 		"cability": "WM",
-		"rarity": "WM MOD",
+		"rarity": "Special",
 		"MC": "2 MP",
 		"entries": [
 			"You loosen the trigger of your firearm, making it more responsive for firing on reaction.",
@@ -340,7 +340,7 @@
 		"source": "CDPH",
 		"type": "Mod",
 		"cability": "WM",
-		"rarity": "WM MOD",
+		"rarity": "Special",
 		"MC": "2 MP",
 		"entries": [
 			"You sand your weapon on the daily to keep it as sharp as it can be, making it better at cutting through armor.",
@@ -352,7 +352,7 @@
 		"source": "CDPH",
 		"type": "Mod",
 		"cability": "IA",
-		"rarity": "IA MOD",
+		"rarity": "Special",
 		"MC": "2 MP",
 		"entries": [
 			"You add an improvised silencer to the barrel of your weapon, making it a lot quiter when you shoot with it.<br>This effects all gun types that aren't based on energenetic damage, but works the best on pressure based guns."
@@ -363,7 +363,7 @@
 		"source": "CDPH",
 		"type": "Mod",
 		"cability": "IA",
-		"rarity": "IA MOD",
+		"rarity": "Special",
 		"MC": "1 MP",
 		"entries": [
 			"Your weapon can hold twice as many shots before needing to reload it."
@@ -374,7 +374,7 @@
 		"source": "CDPH",
 		"type": "Mod",
 		"cability": "IA",
-		"rarity": "IA MOD",
+		"rarity": "Special",
 		"MC": "2 MP",
 		"entries": [
 			"Your weapon can hold twice as many shots before needing to reload it."
@@ -385,7 +385,7 @@
 		"source": "CDPH",
 		"type": "Mod",
 		"cability": "IA",
-		"rarity": "IA MOD",
+		"rarity": "Special",
 		"MC": "3 MP",
 		"entries": [
 			"The minimum and maximum range of your weapon is multiplied by 1.5 (Non-Laser Weapons only) and your weapon gains +2 Damage (Coil and Laser only)."
@@ -396,7 +396,7 @@
 		"source": "CDPH",
 		"type": "Mod",
 		"cability": "IA",
-		"rarity": "IA MOD",
+		"rarity": "Special",
 		"entries": [
 			"Your weapon’s barrel is mostly removed making it more easily concealable, but it’s maximum effective an total range are both 0.5 meters now."
 		]
@@ -406,7 +406,7 @@
 		"source": "CDPH",
 		"type": "Mod",
 		"cability": "IA",
-		"rarity": "IA MOD",
+		"rarity": "Special",
 		"MC": "1 MP",
 		"entries": [
 			"Your weapon gains +4 to Hit as long as you didn’t move or took any Action or Bonus Action yet this turn. Firing a weapon with this modification changes your maximum movement to 0 until the start of your next turn."
@@ -417,7 +417,7 @@
 		"source": "CDPH",
 		"type": "Mod",
 		"cability": "IA",
-		"rarity": "IA MOD",
+		"rarity": "Special",
 		"entries": [
 			"Your Light Armor gets +1 AC."
 		]
@@ -427,7 +427,7 @@
 		"source": "CDPH",
 		"type": "Mod",
 		"cability": "IA",
-		"rarity": "IA MOD",
+		"rarity": "Special",
 		"MC": "1 MP",
 		"entries": [
 			"Your Armor gets +1 to DR."
@@ -438,7 +438,7 @@
 		"source": "CDPH",
 		"type": "Mod",
 		"cability": "AA",
-		"rarity": "AA MOD",
+		"rarity": "Special",
 		"MC": "3 MP",
 		"entries": [
 			"Sharpened Serrated Edge. You serrate the edge of your weapon. While this should not be allowed as for the Geneva convention of 177 BNC, these treaties are non-existent anymore as space colonization increased and new alien states were found. Your weapon gains -2 to Hit on attack rolls.<br>It also gets +4 Damage against most organic (carbon and silicon based) life."
@@ -449,7 +449,7 @@
 		"source": "CDPH",
 		"type": "Mod",
 		"cability": "AA",
-		"rarity": "AA MOD",
+		"rarity": "Special",
 		"entries": [
 			"While your weapon doesn’t do that much more damage, it’s easier to push people around with it now. Your weapon gains +1 Damage, and now only need to do half someone’s Strength Score of damage to push someone 1 meter. It is also 1.5 times as heavy."
 		]
@@ -459,7 +459,7 @@
 		"source": "CDPH",
 		"type": "Mod",
 		"cability": "AA",
-		"rarity": "AA MOD",
+		"rarity": "Special",
 		"MC": "2 MP",
 		"entries": [
 			"You add a medium to long range scope to your gun. This doubles the maximum total range of your gun. It can also be used as an improvised periscope."
@@ -470,7 +470,7 @@
 		"source": "CDPH",
 		"type": "Mod",
 		"cability": "AA",
-		"rarity": "AA MOD",
+		"rarity": "Special",
 		"MC": "3 MP",
 		"entries": [
 			"You modify your Laser based weapon quite a bit, including a large part of the amplification mechanism of the actual used laser. You change this into a far-IR based laser, which is invisible to most creatures. Your weapon gains -1 on to Hit rolls as it is harder to trace where you are firing."
@@ -481,7 +481,7 @@
 		"source": "CDPH",
 		"type": "Mod",
 		"cability": "AA",
-		"rarity": "AA MOD",
+		"rarity": "Special",
 		"entries": [
 			"Your Medium, Heavy or Power Armor gets +2 DR."
 		]
@@ -491,7 +491,7 @@
 		"source": "CDPH",
 		"type": "Mod",
 		"cability": "AA",
-		"rarity": "AA MOD",
+		"rarity": "Special",
 		"MC": "2 MP",
 		"entries": [
 			"Your Medium Armor gets +3 AC, or your Heavy or Power Armor gets +2 AC."
@@ -502,7 +502,7 @@
 		"source": "CDPH",
 		"type": "Mod",
 		"cability": "AA",
-		"rarity": "AA MOD",
+		"rarity": "Special",
 		"MC": "2 MP",
 		"entries": [
 			"You make a bump stock for your gun and attach it.<br>This increases the rate at which you can fire your gun accurately quite a bit. If you fire your gun as your Action, then you can now also shoot with your gun as a Bonus Action on the same turn if the weapon doesn’t have the Bolt-Action trait. You do gain -4 to Hit if you fire this weapon after moving.<br>Firing a weapon with this modification changes your maximum movement to 0 until the start of your next turn."
@@ -513,7 +513,7 @@
 		"source": "CDPH",
 		"type": "Mod",
 		"cability": "AA",
-		"rarity": "AA MOD",
+		"rarity": "Special",
 		"MC": "4 MP",
 		"entries": [
 			"You attach an improvised underbarrel launcher to gun. You can now fire this modification as an Action. The barrel is 12 cm in diameter, and is as long as your weapon’s normal barrel. It can shoot anything that is non-magnetic, or is specifically made to be shot with an Underbarrel Launcher, like grenades. It does 2 bludgeoning damage if you hit someone with it that is within 2 meters of you, and it does 2 Knockout Damage if the target is more than 2 meters away. The maximum range of the modification heavily depends on the projectile that you fire with it, but estimates are around 5 meters with a 100 gram projectile, and 40 meters for a 3 kg projectile or grenades."
@@ -524,7 +524,7 @@
 		"source": "CDPH",
 		"type": "Mod",
 		"cability": "AA",
-		"rarity": "AA MOD",
+		"rarity": "Special",
 		"MC": "1 MP",
 		"entries": [
 			"You can add solid iron reinforcement to your armor, giving +1 DR, making it a bit heavier and less maneuverable, but giving it +10 DR against Energenetic Damage, and changing Energenetic Damage to Heat Damage."
@@ -535,7 +535,7 @@
 		"source": "CDPH",
 		"type": "Mod",
 		"cability": "EA",
-		"rarity": "EA MOD",
+		"rarity": "Special",
 		"MC": "1 MP",
 		"entries": [
 			"You modify your plasma based gun so that it shoots a wide constant stream of plasma instead of a single shot. Because of this, your gun now does an damage over an area, which depends on the weapon type that you modified which can be seen below, but it always does Plasma damage.<br>The hit area won’t penetrate or go around cover normally, which means that people in full or 2/3 cover from you won’t get hit by a ranged attack made with this gun. You do not need to make an attack roll. Instead, everyone in the hit area will need to make a Dexterity or Constitution Saving throw against an DC of 10 + Attack Roll Bonus.<br>This plasma is able to set things aflame in the area of effect.",
@@ -608,7 +608,7 @@
 		"source": "CDPH",
 		"type": "Mod",
 		"cability": "EA",
-		"rarity": "EA MOD",
+		"rarity": "Special",
 		"MC": "5 MP",
 		"entries": [
 			"You place some plasma throwers on your weapon which engulfs the entirety of the main damaging part of the weapon in red hot plasma, which, although cold for your average plasma, still does quite a bit of extra damage to most things but without melting your weapon.<br>Your weapon gains +2 Plasma Damage if the weapon is a dagger, +4 if the weapon is any other weapon that doesn’t have the Heavy trait, and +6 if it is a weapon with the Heavy trait."
@@ -619,7 +619,7 @@
 		"source": "CDPH",
 		"type": "Mod",
 		"cability": "EA",
-		"rarity": "EA MOD",
+		"rarity": "Special",
 		"MC": "6 MP",
 		"entries": [
 			"You can adapt a melee weapon to make it help you use it in battle. By placing some processors, small sensors, and motors (for turning and torque) in it.<br>Your weapon’s to Hit modifier becomes +6, no matter the proficiency of the creature using it, or other possible modifiers that would change it, whether beneficial or not.<br>The Crit Range of the weapon also lowers by 1."
@@ -630,7 +630,7 @@
 		"source": "CDPH",
 		"type": "Mod",
 		"cability": "EA",
-		"rarity": "EA MOD",
+		"rarity": "Special",
 		"MC": "3 MP",
 		"entries": [
 			"You remove the Bolt Action trait from a gun by fully automating the emptying and filling of the main chamber. This modification is quite small, and changes the weapon into a normal semi-automatic weapon. This does increase the amount of force needed to pull the trigger quite a lot. This is no real problem in situations that do not require quick reaction. But using your Hold Action to Attack something with this weapon now gives you a -8 to hit bonus."
@@ -641,7 +641,7 @@
 		"source": "CDPH",
 		"type": "Mod",
 		"cability": "EA",
-		"rarity": "EA MOD",
+		"rarity": "Special",
 		"MC": "4 MP",
 		"entries": [
 			"You can remove the DR bonus of your Light Armor to add it to its AC twice."
@@ -652,7 +652,7 @@
 		"source": "CDPH",
 		"type": "Mod",
 		"cability": "EA",
-		"rarity": "EA MOD",
+		"rarity": "Special",
 		"MC": "4 MP",
 		"entries": [
 			"You can add a form of resistance to your Medium Armor. The options for resistance that you can add are:<br>Bludgeoning, Piercing & Slashing, Plasma, Laser, Heat, Cold, Electric."
@@ -663,7 +663,7 @@
 		"source": "CDPH",
 		"type": "Mod",
 		"cability": "EA",
-		"rarity": "EA MOD",
+		"rarity": "Special",
 		"MC": "4 MP",
 		"entries": [
 			"You can remove the AC bonus of your Heavy Armor and add it to its DR. It is now also twice as heavy."
@@ -674,7 +674,7 @@
 		"source": "CDPH",
 		"type": "Mod",
 		"cability": "EA",
-		"rarity": "EA MOD",
+		"rarity": "Special",
 		"MC": "3 MP",
 		"entries": [
 			"You can change Light Armor in such a way that it gives the edge in some specific situations. You can add advantage on a specific skill check. The skills where you can get advantage on are:<br>Acrobatics, Stealth, Stamina, Animal Handling, Deception, Intimidation, Performance."
@@ -685,7 +685,7 @@
 		"source": "CDPH",
 		"type": "Mod",
 		"cability": "EA",
-		"rarity": "EA MOD",
+		"rarity": "Special",
 		"entries": [
 			"A very expensive grenade.<br>You can overload an energy based weapon (a coil or plasma based weapon for example) to make it explode. This only works if the Energy Cell in the weapon is still partially full, and it costs 3 actions as long as the gun doesn’t get fired while priming the explosion, instead of taking a whole Rest like other modifications. To most it will be quite obvious that you are priming the explosion if they see you or are close to you. You need to see the weapon while priming, so it cannot be done behind yourback or on feeling alone. When primed, the gun will explode after {@dice 1+1d4} turns. The gun fully explodes and cannot be repaired to a functional state, if it can be repaired at all. The explosion has a radius of 6 meters. Everyone in the explosion radius need to roll a Constitution Save (DC of 21) and get {@damage 4d6+26} damage on a fail, or half on a success."
 		]
@@ -695,7 +695,7 @@
 		"source": "CDPH",
 		"type": "Mod",
 		"cability": "EA",
-		"rarity": "EA MOD",
+		"rarity": "Special",
 		"MC": "5 MP",
 		"entries": [
 			"This modification lets you shoot projectiles made out of “ice”.<br>You modify the bulk of your weapon for this modification. Only the barrel doesn’t need any changes made to it. You need special ammunition for this weapon, as well as an energy cell if you modified a pressure based gun. This special ammunition is a container of an highly pressurized and supercooled mix of oxygen and nitrogen that basically, when injected into the main chamber, solidifies and becomes a piece of ammunition that you shoot immediately afterward. You can carry 1 canaster which you can refill in a Rest if you have access to specialized venders in any capacity. The amount of rounds that you can shoot with a full canaster, together with other stats, is based on the weapon type that you modified, which can be seen down below. The weapon also changes in a few ways:<br>If the weapon was fully-automatic, then it practically becomes semi-automatic as the automatic firing rate is decreased drastically.<br>The weapons maximum effective range now also becomes it’s maximum range in general, as the ammunition sublimated too much after that point to do any significant damage.<br>Projectiles shot leave a trail of mist as it condenses the water in the air around it (For those who played TF2, it is like the Machina, but without the dye in the tracer).<br>The projectiles don’t usually bent when they hit something. They stay intact, break, or get pulverized after which they sublimate into oxygen and nitrogen within a few seconds to a minute or 2.<br>The damage type of the weapon can now be seen as Cold for overcoming resistance and immunity to Piercing damage.",
@@ -704,9 +704,9 @@
 				"caption": "Energenetic ",
 				"colLabels": [
 					"Weapon Type",
-					"Maximum Range (m)",
-					"Maximum Range (m)",
-					"Maximum Range (m)",
+					"Minimum Effective Range (m)",
+					"Maximum Effective Range (m)",
+					"Maximum Total Range (m)",
 					"Damage",
 					"Ammo per Canaster",
 					"Other"
@@ -794,7 +794,7 @@
 		"source": "CDPH",
 		"type": "Mod",
 		"cability": "EA",
-		"rarity": "EA MOD",
+		"rarity": "Special",
 		"MC": "10 MP",
 		"entries": [
 			"You change most of your gun for this modification, as almost every part needs to change at least a bit for this to work. This modification changes your solid projectiles into macro-scale wavefunctions.<br>This lessens the force that the projectile can give on a point as its kinetic energy gets spread over a larger volume when it hits something solid. The total damage of your weapon is halved because of this, and changes to True Damage instead of Piercing. On the other hand, it does ignore most types of cover (depending on the material, normally it ignores all effects of 1/3 and 2/3 cover, and the DR bonus from full cover), and the weapon gets 30 + 50% DR penetration."
@@ -805,7 +805,7 @@
 		"source": "CDPH",
 		"type": "Mod",
 		"cability": "EA",
-		"rarity": "EA MOD",
+		"rarity": "Special",
 		"MC": "5 MP",
 		"entries": [
 			"This modification lets you shoot projectiles made from molten iron.<br>You extend and overclock the barrel of a Coil based gun. The added extended barrel looks like it would belong to a plasma based gun. The barrel now not only propels the ammunition forward, it also warms it up, melting it with magnetic induction. This changes a few things of how the weapon works.<br>The gun’s damage now changes to Heat Damage, instead of being Piercing. Because of this, the projectiles sometimes starts fires when hitting flammable objects.<br>The maximum effective range of the weapon is now halved, as the blobs of liquid metal solidify and change course a bit after a certain amount of distance.<br>Also, because the projectiles are now liquid, the residue of the projectile is now a clump of metal (usually), instead of a (bent or fractured) metal rod.<br>This could, for example, be used to fill in a classic keyhole making it unusable, weld a metal trashcan to a non-flammable ground, boil a glass of water by shooting slow droplets of liquid metal into it and the like."
@@ -816,10 +816,298 @@
 		"source": "CDPH",
 		"type": "Mod",
 		"cability": "EA",
-		"rarity": "EA MOD",
+		"rarity": "Special",
 		"MC": "5 MP",
 		"entries": [
 			"This modification is good for dealing knockout damage.<br>You change your gun to an almost unrecognizable state. This modification destabilizes the matter of the solid ammunition so much that it disperses the moment it hits something, dispersing the energy it puts out over a larger area of the thing you hit.<br>This doesn’t affect the total amount of damage at all, but does change all the damage output to knockout damage as the worst thing you can do with this gun is bruise someone badly. A dispersing projectile also fills the air with a gaseous form of the ammunition material used, which probably becomes quite toxic if you empty a magazine in a small space.<br>This weapon’s effective range is halved, as the projectiles are affected by changes in air much more than normal."
+		]
+	},
+	{
+		"name": "Self-Dispersing Matter - (Pressure & Coil Based Guns Only)",
+		"source": "CDPH",
+		"type": "Mod",
+		"cability": "EA",
+		"rarity": "Special",
+		"MC": "5 MP",
+		"entries": [
+			"This modification is good for dealing knockout damage.<br>You change your gun to an almost unrecognizable state. This modification destabilizes the matter of the solid ammunition so much that it disperses the moment it hits something, dispersing the energy it puts out over a larger area of the thing you hit.<br>This doesn’t affect the total amount of damage at all, but does change all the damage output to knockout damage as the worst thing you can do with this gun is bruise someone badly. A dispersing projectile also fills the air with a gaseous form of the ammunition material used, which probably becomes quite toxic if you empty a magazine in a small space.<br>This weapon’s effective range is halved, as the projectiles are affected by changes in air much more than normal."
+		]
+	},
+	{
+		"name": "Diamond Breaker",
+		"source": "CDPH",
+		"type": "Gear",
+		"cability": "DIM",
+		"rarity": "Special",
+		"MC": "3 MP",
+		"entries": [
+			"You create a giant metal glove like item with a piercing spike that you can wear like a boxing glove. You cannot hold anything with the hand wearing it. While wearing this, any Strength Checks that you make using this item increase by 8.<br>You can also break or punch through most normal walls with this thing, up to a maximum of around 2 cm normal steel."
+		]
+	},
+	{
+		"name": "Improvised Plasma Cutter",
+		"source": "CDPH",
+		"type": "Tool",
+		"cability": "DIM",
+		"rarity": "Special",
+		"MC": "1 MP",
+		"entries": [
+			"You can create a Plasma Cutter that can burn through most materials. While it costs time to cut through most things, it can cut through most materials with a maximum thickness of around 6 cm. This flame is extremely hot, and will burn most things it comes in contact with, although it is hard to ignite things with it."
+		]
+	},
+	{
+		"name": "Improvised Grappling Hook",
+		"source": "CDPH",
+		"type": "Gear",
+		"cability": "DIM",
+		"rarity": "Special",
+		"MC": "1 MP",
+		"entries": [
+			"You can craft a grappling hook that you can use to get to high places, or to cross gaps. The hook can be shot into a wall or ceiling or it can be hooked behind a railing to give it grip for example. You can shoot this hook up to 30 meters high. The wire isaround 5 mm thick and made out of braided cheap metal wire. It can withstand up to 4 kilonewton, or 400 kg."
+		]
+	},
+	{
+		"name": "Improvised Scaling Grappling Hook",
+		"source": "CDPH",
+		"type": "Gear",
+		"cability": "DIM",
+		"rarity": "Special",
+		"MC": "3 MP",
+		"entries": [
+			"You can craft a grappling hook that you can use to get to high places, or to cross gaps. The hook canbe shot into a wall or ceiling or it can be hooked behind a railing to give it grip for example. You can shoot this hook up to 200 meters high. The wire is around 15 mm thick and made out of braided metal wire. It can withstand up to 20 kilonewton, or 2000 kg."
+		]
+	},
+	{
+		"name": "Improvised Neural Interface",
+		"source": "CDPH",
+		"type": "Gear",
+		"cability": "DIM",
+		"rarity": "Special",
+		"MC": "4 MP",
+		"entries": [
+			"You can craft a neural interface for you to connect to electronic devices or communicate with your Little Helper, and just general as a replacement of portable personal electronic devices like computers and phones.<br>The only problem is that you do need someone who knows how to install it, as the chances that you do know enough about augmentation is slim.<br>Because of this, you need a Player Character (whether that be you or someone else in your party) with a medicine score of at least 10, or a specialist in installing augmentations to install it."
+		]
+	},
+	{
+		"name": "Improvised Projected Electromagnetic Pulse Rifle",
+		"source": "CDPH",
+		"type": "WeaponRU",
+		"cability": "DIM",
+		"rarity": "Special",
+		"MC": "4 MP",
+		"entries": [
+			"You can create an Improvised Projected Electromagnetic Pulse Rifle, or PEMPR for short. This is a weapon that you are proficient with, and does {@damage 2d8} electromagnetic damage with a +2 to Hit bonus. It’s range is the same as a {@item Laser Assault Rifle|CDPH}. It’s projectile is invisible to most forms of detection, and travels at almost the speed of light. It won’t damage most organic lifeforms as it does electromagnetic damage. But on the other hand, electronic based items and creatures like robots are generally weak to it."
+		]
+	},
+	{
+		"name": "Improvised Holographic Projector ",
+		"source": "CDPH",
+		"type": "Gear",
+		"cability": "DIM",
+		"rarity": "Special",
+		"MC": "2 MP",
+		"entries": [
+			"You can create an item that can project a holograph of something or someone. It is a circular object of around 10 cm in diameter that flattens itself when projecting something. This hologram looks real, and needs an insight throw against a DC of around 14 (depending on the exact situation) to be able to figure out that it is a hologram. The hologram gets projected directly on and above the flattened projector. The projection doesn’t specifically float, so if it projects a person or object like a table, then said person or object does seem like it is standing directly on the ground. You do need a few photos or know the person or object well to be able to change it into a projection. The maximum area of the projection is around 2 by 2 by 2 meters."
+		]
+	},
+	{
+		"name": "Shield Overdrive",
+		"source": "CDPH",
+		"type": "Mod",
+		"cability": "DIM",
+		"rarity": "Special",
+		"MC": "2 MP",
+		"entries": [
+			"You can double the DR bonus of your shield. After 3 hits, it turns back to the normal DR amounts until you rest again (and maintained it). Incompatible with {@item Stable Shield Overdrive|CDPH} and {@item Unstable Shield Overdrive|CDPH}."
+		]
+	},
+	{
+		"name": "Unstable Shield Overdrive",
+		"source": "CDPH",
+		"type": "Mod",
+		"cability": "DIM",
+		"rarity": "Special",
+		"entries": [
+			"You can triple the DR bonus of your shield. After 3 hits, it turns off for the next 24 hours or until your next rest. It doesn’t cost maintenance points to turn it back on again in said rest, but you do need your Mechanics Tools. Incompatible with {@item Shield Overdrive|CDPH} and {@item Stable Shield Overdrive|CDPH}."
+		]
+	},
+	{
+		"name": "Shield Type Change",
+		"source": "CDPH",
+		"type": "Mod",
+		"cability": "DIM",
+		"rarity": "Special",
+		"entries": [
+			"You can change the type of Standard Shields and Heavy Shields. You can now change them between Kinetic, Energy or Energenetic."
+		]
+	},
+	{
+		"name": "Enthalpy Modifier",
+		"source": "CDPH",
+		"type": "Gear",
+		"cability": "FN",
+		"rarity": "Special",
+		"MC": "3 MP",
+		"entries": [
+			"You can create an object that can heat or cool an area to a set temperature. It is basically a small temperature controller that slowly but surely warms up or cools down an area of maximally the size of a standard room. The maximum and minimum temperature this machine can achieve in a roomare 125 °C and -25 °C respectively at a heating or cooling rate of around 2 °C per hour."
+		]
+	},
+	{
+		"name": "SCEC Power Source",
+		"source": "CDPH",
+		"type": "Gear",
+		"cability": "FN",
+		"rarity": "Special",
+		"MC": "4 MP",
+		"entries": [
+			"You can create a semi-infinite electrical power source out of a string connected energenetic crystal. You can create a recharger out of it for example, but you can also use it for other things.<br>Normally, it gives 2 to 8 kilowatts of power, but the specific amount shifts over time. If you create a recharger, than it will be able to recharge rechargeable power cells and batteries. An average power cell of a weapon or tool can be recharged in 3 to 9 hours."
+		]
+	},
+	{
+		"name": "Improvised Energenetic Weapons",
+		"source": "CDPH",
+		"type": "WeaponRU",
+		"cability": "FN",
+		"rarity": "Special",
+		"MC": "6 MP",
+		"entries": [
+			"You can create a Pistol or Long Rifle that shoots energenetic projectiles. The type of energenetic crystal, and with extension, the kind energenetic damage that your weapon does can be of one of the following types: <b>Dark</b>, <b>Light</b>, Space, Time, <br>Chaos</b>, Psychic, Entropy, and any type of Magic. While the types in bold are normally used, the other ones can be chosen. This weapon does counts as a typical Pistol or Hunting Rifle for proficiency, and you are proficient in using your own creations by definition.",
+			{
+				"type": "table",
+				"caption": "Energenetic ",
+				"colLabels": [
+					"Weapon Type",
+					"Minimum Effective Range (m)",
+					"Maximum Effective Range (m)",
+					"Maximum Total Range (m)",
+					"Damage",
+					"Other"
+				],
+				"colStyles": [
+					"col-5",
+					"col-3",
+					"col-3",
+					"col-3",
+					"col-3",
+					"col-3",
+					"col-3"
+				],
+				"rows": [
+					[
+						"Energenetic Pistol",
+						0.5,
+						30,
+						100,
+						"{@damage 1d8+2}",
+						""
+					],
+					[
+						"Energenetic Long Rifle",
+						5,
+						200,
+						2000,
+						"{@damage 3d6}",
+						"Bolt-Action"
+					]
+				]
+			}
+		]
+	},
+	{
+		"name": "Dimensional Stabilizer",
+		"source": "CDPH",
+		"type": "Gear",
+		"cability": "FN",
+		"rarity": "Special",
+		"MC": "5 MP",
+		"entries": [
+			"You can create a small, cylindrical machine of around 30 cm high and 15 cm diameter that stabilizes the time and space dimensions around you. Any change from the natural flow of time, and any change in the space dimension in a maximum radius of 15 meters around you will be neutralized and have no effect in this area if the item is on.<br>The radius of effect can be adjusted from 0.2 meters to 15 meters."
+		]
+	},
+	{
+		"name": "Energenetic Inhibitor",
+		"source": "CDPH",
+		"type": "Gear",
+		"cability": "FN",
+		"rarity": "Special",
+		"MC": "7 MP",
+		"entries": [
+			"You can create a small machine the size of a small backpack which you can turn on and off. If you turn it on, any form of energenetic flow in a 10 meter radius will be nullified, destroying any effect it would have. Also, using energenetics in a 20 meter radius around you now costs double the energy than it would normally. This effect can be felt by people who are well known in their use of energenetics.<br>This machine does have a limit on how much flow of energy it can nullify, and can break when its limits are heavily tested. In the worst case, it can blow up creating a very big and very devastating explosion."
+		]
+	},
+	{
+		"name": "Energenetic Matter Fabricator",
+		"source": "CDPH",
+		"type": "Gear",
+		"cability": "FN",
+		"rarity": "Special",
+		"MC": "5 MP",
+		"entries": [
+			"You can create a small machine that can create regular matter. You can normally only create raw stable chemical elements with this, but you can modify this machine a bit to create small amounts of horrible tasting food and water that can very poorly sustain 5 people. This machine can maximally create around 200 grams of material per hour."
+		]
+	},
+	{
+		"name": "Portable Improbability Drive",
+		"source": "CDPH",
+		"type": "Gear",
+		"cability": "FN",
+		"rarity": "Special",
+		"MC": "4 MP",
+		"entries": [
+			"You can make a Portable Improbability Drive. It looks like a small metal box, of around 15 by 25 cm ground surface, and 15 cm high. It has a switch to turn it on and off, and it runs on Entropy energy.<br>When turned on, it will give the following effect in a25 meter radius:<br>• All D20 rolls higher than 10 will get a +5 modifier to its roll.<br>• All D20 rolls from 6 to 10 will get a -5 modifier to its roll.<br>• All D20 rolls from 1 to 5 will be considered a natural 1, and with that, a crit fail.<br>• Some very improbable things can happen."
+		]
+	},
+	{
+		"name": "Stable Shied Overdrive",
+		"source": "CDPH",
+		"type": "Mod",
+		"cability": "FN",
+		"rarity": "Special",
+		"MC": "4 MP",
+		"entries": [
+			"You can double the DR bonus of your shield.<br>Incompatible with {@item Shield Overdrive|CDPH} and {@item Unstable Shield Overdrive|CDPH}."
+		]
+	},
+	{
+		"name": "Temporal Destabilizer",
+		"source": "CDPH",
+		"type": "Gear",
+		"cability": "FN",
+		"rarity": "Special",
+		"MC": "7 MP",
+		"entries": [
+			"You can create a small device (around 12 by 12 by 25 cm) with a very rudimentary Energenetic Crystal with Time Energy. After you use this item, you need to maintain it again, meaning you can use this item only once every 24 hours or rest, whichever is shorter. You can activate this item quickly, meaning that if you are holding it (or connected it to a quickly accessible portable device like a remote you are holding) you can use it as a bonus action or reaction.<br>Using this item stops time for 2 turns for everything in a 1 to 3 lightyear radius around you, that isn’t you.<br>You gain advantage on some (DM decided) skill checks, saving throws and attack rolls while time is stopped."
+		]
+	},
+	{
+		"name": "Spacetime Relocator",
+		"source": "CDPH",
+		"type": "Gear",
+		"cability": "FN",
+		"rarity": "Special",
+		"MC": "5 MP",
+		"entries": [
+			"You can create two small devices, a receiver (around 8 by 8 by 8 cm cube) and a relocator (5 by 5 by 3 cm sphere).<br>When you use the relocator, you and all creatures that are touching you teleport to space directly around the receiver cube.<br>The space you teleport to cannot be filled with other things or creatures, nor can it put you through walls. If it can’t fit all the creatures through, only you will teleport to the receiver. If it doesn’t fit you either, than it doesn’t do anything.<br>Because the high strain on the device, teleporting further than 1000 km with this item is a really bad idea, and has quite a big chance to explode the receiver and relocator if not done without active stabilization."
+		]
+	},
+	{
+		"name": "Light Redirector Shield",
+		"source": "CDPH",
+		"type": "Gear",
+		"cability": "FN",
+		"rarity": "Special",
+		"MC": "5 MP",
+		"entries": [
+			"You can make a shield that redirects light around itself in a 1 meter sphere, but amplifying a bit of that light to let it through, making anything inside it completely invisible to observers outside of the sphere while still being able to look out of it.<br>When correctly calibrated, you can make it work in such a way that it doesn’t make the ground underyou invisible as well, but it will still turn everything in a 1 meter radius around you invisible.<br>It won’t turn entire things invisible though, just the part inside of the sphere."
+		]
+	},
+	{
+		"name": "Time Bagel",
+		"source": "CDPH",
+		"type": "Food",
+		"rarity": "Legendary",
+		"entries": [
+			"XXXXXXXXXXXXXXXXXXXXXXXXXXX"
 		]
 	},
 	{

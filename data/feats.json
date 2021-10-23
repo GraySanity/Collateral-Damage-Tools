@@ -1026,7 +1026,7 @@
 				{"class": "Engineer Level 5"},
 				{"feature":["{@feat Magister Horologium Opus|CDPH}"]}
 			]],
-			"entries":["You have learned how to make larger things, including improvised tools and weaponlikes. Items made with this ability need to be maintained, and the maintenance points needed differs per item. You can only create items with this ability in a Rest and you need to have access to Mechanics Tools and a good source of scrap and materials (this means that you cannot create these items if you are stranded in the middle of a desert). A list of example items that you can make with this ability can be seen in the {items list}. You are able to make other things that are not on this example list, but you need to discuss this with the DM if you thought of something."]
+			"entries":["You have learned how to make larger things, including improvised tools and weaponlikes. Items made with this ability need to be maintained, and the maintenance points needed differs per item. You can only create items with this ability in a Rest and you need to have access to Mechanics Tools and a good source of scrap and materials (this means that you cannot create these items if you are stranded in the middle of a desert). A list of example items that you can make with this ability can be seen {@filter here|items|From Ability=DIM}. You are able to make other things that are not on this example list, but you need to discuss this with the DM if you thought of something."]
 		},
 		{
 			"name": "Fraudulentus Naturae",
@@ -1037,7 +1037,7 @@
 				{"feature":["{@feat Deus Intus Machine|CDPH}"]},
 				{"other": "{@skill Energenetics} Skill Expertise and Intelligence Score of 15 or higher"}
 			]],
-			"entries":["You have learned how to use energenetic theories into your crafts, being able to create effects and items, while niche, far superior than ever before. Items made with this ability need to be maintained, and the Maintenance Points needed differs per item. You can only create items with this ability in a Rest and you need to have access to Mechanics Tools. A list of items that you can make with this ability can be seen at the end of this Class. You are able to make other things that are not on this example list, but you need to discuss this with the DM if you thought of something. "]
+			"entries":["You have learned how to use energenetic theories into your crafts, being able to create effects and items, while niche, far superior than ever before. Items made with this ability need to be maintained, and the Maintenance Points needed differs per item. You can only create items with this ability in a Rest and you need to have access to Mechanics Tools. A list of items that you can make with this ability can be seen {@filter here|items|From Ability=FN}. You are able to make other things that are not on this example list, but you need to discuss this with the DM if you thought of something."]
 		},
 		{
 			"name": "Builders League United",
@@ -1095,7 +1095,7 @@
 			"prerequisite":[[
 			{"feature": ["{@feat Puzzle Master|CDPH}"]}
 			]],
-			"entries":["You have learned how to improve or “improve” weapons with modifications. You need your Mechanics Tools and quite some time to do this, which means it can only be done in a Rest. Only one modification can be done in a day, Modifications can be changed or removed in the same way that you add them, and weapons can only have one Modification at the same time. The modifications that you can add to weapons that do not have the “special” trait can be seen {@filter here|items|rarity=WM MOD}."]
+			"entries":["You have learned how to improve or “improve” weapons with modifications. You need your Mechanics Tools and quite some time to do this, which means it can only be done in a Rest. Only one modification can be done in a day, Modifications can be changed or removed in the same way that you add them, and weapons can only have one Modification at the same time. The modifications that you can add to weapons that do not have the “special” trait can be seen {@filter here|items|From Ability=WM}."]
 		},
 		{
 			"name": "Improvised Attachments",
@@ -1105,7 +1105,7 @@
 			{"feature": ["{@feat Watchmaker|CDPH}"]},
 			{"level": 4}
 			]],
-			"entries":["You have learned how to create and apply improvised attachments to your weapons. These modifications can only be added to guns, and cannot get added to special or improvised weapons. Also, weapons and armors you modify can now have up to two modifications at once.<br>The additional list of modifications you can add to your weapons with {@feat Watchmaker|CDPH} can be seen {@filter here|items|rarity=IA MOD|WM MOD}."]
+			"entries":["You have learned how to create and apply improvised attachments to your weapons. These modifications can only be added to guns, and cannot get added to special or improvised weapons. Also, weapons and armors you modify can now have up to two modifications at once.<br>The additional list of modifications you can add to your weapons with {@feat Watchmaker|CDPH} can be seen {@filter here|items|From Ability=IA}."]
 		},
 		{
 			"name": "Advanced Attachments",
@@ -1114,7 +1114,7 @@
 			"prerequisite":[[
 			{"feature": ["{@feat Improvised Attachments|CDPH}"]}
 			]],
-			"entries":["You modify your weapon in more advanced ways, and have thought of a few new attachments. These modifications cannot get added to special or improvised weapons.<br>Weapons and armors you modify can now have up to three modifications at once. The additional list of modifications you can add to your weapons with {@feat Watchmaker|CDPH} can be seen {@filter here|items|rarity=AA MOD;IA MOD;WM MOD}."]
+			"entries":["You modify your weapon in more advanced ways, and have thought of a few new attachments. These modifications cannot get added to special or improvised weapons.<br>Weapons and armors you modify can now have up to three modifications at once. The additional list of modifications you can add to your weapons with {@feat Watchmaker|CDPH} can be seen {@filter here|items|From Ability=AA}."]
 		},
 		{
 			"name": "Experimental Attachments",
@@ -1124,7 +1124,7 @@
 			{"feature": ["{@feat Advanced Attachments|CDPH}"]},
 			{"class": "Engineer Level 10"}
 			]],
-			"entries":["You have come up with some modifications for normal weapons that are stable at best, highly destructive for anything around it at worst. Only people with this Ability can use weapons with these modifications, anyone else can’t use the weapon the way it is supposed to making it an improvised weapon for them. You cannot improve special, unconventional or improvised weapons with this ability. A weapon or armor can only have one of these modifications. You can only add these modifications in downtime as only a rest isn’t long enough, because you also need to gather quite an amount of supplies to add these modifications. The additional list of modifications you can add to your weapons with {@feat Watchmaker|CDPH} with consideration of these restrictions can be seen {@filter here|items|rarity=EA MOD; AA MOD;IA MOD;WM MOD}."]
+			"entries":["You have come up with some modifications for normal weapons that are stable at best, highly destructive for anything around it at worst. Only people with this Ability can use weapons with these modifications, anyone else can’t use the weapon the way it is supposed to making it an improvised weapon for them. You cannot improve special, unconventional or improvised weapons with this ability. A weapon or armor can only have one of these modifications. You can only add these modifications in downtime as only a rest isn’t long enough, because you also need to gather quite an amount of supplies to add these modifications. The additional list of modifications you can add to your weapons with {@feat Watchmaker|CDPH} with consideration of these restrictions can be seen {@filter here|items|From Ability=EA}."]
 		},
 		{
 			"name": "Defensive Cover",
@@ -2139,7 +2139,7 @@
 			"entries":["You have gotten enough physical punishment to be able to go on even when you shouldn’t be able to. If your health gets dropped to or below 0, than you can choose to set it to 1 instead, and keep it on 1 until the start of the next turn.<br>You also gain 2 exhaustion when you use this ability, and you can only use it once per Rest."]
 		},
 		{
-			"name": "LifelightXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+			"name": "Lifelight",
 			"source": "CDPH",
 			"class": ["Multiclass", "Barbarian", "Martial Fighter", "Monk"],
 			"prerequisite":[[
@@ -2205,7 +2205,7 @@
 					{"addit": " and "},
 					{"feature": ["{@feat Unstabilized Planck Distribution|CDPH}"]}],[
 					{"feature": ["{@feat Non-Localized Manipulation [Initiate]|CDPH}"]},
-					{"class": ["Bard Level 3"]}
+					{"class": "Bard Level 3"}
 				]],
 			"entries":["Instead of using your instrument to play songs you learned from the Learnable Songs list to create their effects, you now can use your Energy to create a Tesla Arc made from your main Energy to play the songs and get their effects.<br>Using this ability uses 2 Energy to maintain."]
 		},
@@ -2214,16 +2214,7 @@
 			"source": "CDPH",
 			"class": ["Multiclass"],
 			"prerequisite":[[
-					{"class": "Bard Level 5 and (Monk Level 3, Martial Fighter Level 3 or Barbarian Level 3)"}],[
-				]],
-			"entries":["You have learned to sense energenetic flow in the background dimension, and with this, can feel things coming that you wouldn’t normally be able to.<br>If someone teleports to inside melee range or from within melee range of you with {@feat Trans-Localized Manipulation|CDPH} or {@feat Energenetic Evasion Reflex|CDPH}, than you can use your Reaction to try and hit them. They gain no AC or DR from their armor if you try to hit them this way.<br>You can also feel and try to hit people who use one of these abilities to teleport past you from outside to outside your melee range, as long as the line between their start and end point comes within melee range of you.<br>Also, you can now feel Full-Energenetic beings that are invisible and hit them with energenetic based attacks or melee attacks if you would come across any."]
-		},
-		{
-			"name": "Peppersteak",
-			"source": "CDPH",
-			"class": ["Multiclass"],
-			"prerequisite":[[
-					{"class": "Bard Level 5 and (Monk Level 3, Martial Fighter Level 3 or Barbarian Level 3)"}],[
+					{"class": "Bard Level 5 and (Monk Level 3, Martial Fighter Level 3 or Barbarian Level 3)"}
 				]],
 			"entries":["You have learned to sense energenetic flow in the background dimension, and with this, can feel things coming that you wouldn’t normally be able to.<br>If someone teleports to inside melee range or from within melee range of you with {@feat Trans-Localized Manipulation|CDPH} or {@feat Energenetic Evasion Reflex|CDPH}, than you can use your Reaction to try and hit them. They gain no AC or DR from their armor if you try to hit them this way.<br>You can also feel and try to hit people who use one of these abilities to teleport past you from outside to outside your melee range, as long as the line between their start and end point comes within melee range of you.<br>Also, you can now feel Full-Energenetic beings that are invisible and hit them with energenetic based attacks or melee attacks if you would come across any."]
 		},
@@ -2245,8 +2236,8 @@
 			"maintenance": 3,
 			"prerequisite":[[
 				{"addit": " and "},
-				{"feat": ["{@feat Pharmaceutical Compounds|CDPH}"]},
-				{"feat": ["{@feat Deus Intus Machina|CDPH}"]}
+				{"feature": ["{@feat Pharmaceutical Compounds|CDPH}"]},
+				{"feature": ["{@feat Deus Intus Machina|CDPH}"]}
 			]],
 			"entries":["You can create a semi-automatic SMG like gun that can shoot Injectors that you can make with abilities in the Doctor Class. If you try to shoot someone who is fine with getting hit with it and didn’t attack last turn, you don’t need to make an attack roll. Otherwise, you do need to make an attack roll and you are proficient with it. This gun has the following stats:<br>Weapon Type: Injector Rifle<br>Minimum Effective Range (m):0<br>Maximum Effective Range (m):15<br>Maximum Total Range (m):30"]
 		},
@@ -2256,9 +2247,9 @@
 			"class": ["Multiclass"],
 			"prerequisite":[[
 				{"addit": " and "},
-				{"feat": ["{@feat Through the Fire and the Pain|CDPH}"]},
-				{"feat": ["{@feat Unarmored Monk Defence|CDPH}"]},
-				{"feat": ["{@feat Unhindered Movement|CDPH}"]}
+				{"feature": ["{@feat Through the Fire and the Pain|CDPH}"]},
+				{"feature": ["{@feat Unarmored Monk Defence|CDPH}"]},
+				{"feature": ["{@feat Unhindered Movement|CDPH}"]}
 			]],
 			"entries":["You have learned to flow while playing songs, to the point that most forms of harm just avoid you just by luck and fate alone.<br>While playing a song, you can choose to use all your other Actions and Bonus Actions of the turn to remove all your DR this turn. When you do so, all said removed DR can be added to your current AC until the start of next turn.<br>If you play the song Megalovanaiacal Funk (Learnable Songs) on Level 4, than you can choose to ignore the current Level 4 effect. Instead of being able to play another song at the same time, you will be unable to be hit by anything that isn’t a critical hit or area of effect, and the Level 3 effect of the song still affects you."]
 		},
@@ -2269,8 +2260,8 @@
 			"prerequisite":[[
 				{"addit": " and "},
 				{"level": 8},
-				{"feat": ["{@feat Deflect Missle|CDPH}"]},
-				{"feat": ["{@feat Manoeuvrable Block|CDPH}"]}
+				{"feature": ["{@feat Deflect Missle|CDPH}"]},
+				{"feature": ["{@feat Manoeuvrable Block|CDPH}"]}
 			]],
 			"entries":["You can use your Reaction to defend yourself or deflect something shot at you when you are hit by a ranged attack of a not Laser based gun. Youneed to be wielding a melee weapon to do this.<br>When you do so, the damage you take from the attack is reduced by 1D10 + Dexterity Modifier + Monk Level + Martial Fighter Level.<br>If you reduce the damage to 0, you can do the following depending on the situation:<br>It the ranged attack was a solid object, like that from a Coil or Pressure based gun, than you can reflect it. You can choose where or to who you reflect it. If you do this, you need to make a melee attack roll with your weapon with disadvantage.<br>You also need to make a ranged damage roll, which has the same base damage as the attackwhich you reflected.<br>If the attack is a heap of plasma, like that from Plasma based guns, and you have a melee weapon which conducts electricity, than you can store the static electricity from the attack into your weapon. You can add the base damage of the ranged attack to your next melee attack, and the bonus damage’s type is electric. This static electricity also dissipates after 5 minutes, or if the electricity conducting part of the weapon hits a surface that conducts electricity as well."]
 		},
@@ -2326,5 +2317,6 @@
 			]],
 			"entries":["Your Proficiency Bonus goes up by 1."]
 		}
+		
 	]
 }

@@ -6562,7 +6562,7 @@ Renderer.item = {
 	//filter for throwing things in the "mundane", "modification", "drug", "special" (or "magic") group in the items page
 	
 	isMundane (item) {
-		const mundaneitems = ["none", "common", "uncommon", "basic", "rare", "very rare", "legendary"];
+		const mundaneitems = ["none", "common", "uncommon", "basic", "rare", "very rare"];
 		return (mundaneitems.includes(item.rarity)); },
 
 	pGetFluff (item) {
