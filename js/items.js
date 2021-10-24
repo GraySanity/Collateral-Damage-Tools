@@ -467,8 +467,8 @@ class ItemsPage extends ListPage {
 		}
 
 		// populate table labels
-		$(`h3.ele-mundane span.side-label`).text("Mundane");
-		$(`h3.ele-magic span.side-label`).text("Magic");
+		$(`h3.ele-mundane span.side-label`).text("Ordinary");
+		$(`h3.ele-magic span.side-label`).text("Special");
 
 		this._mundaneList.update();
 		this._magicList.update();

@@ -1661,7 +1661,7 @@
 				{"feature":["{@feat Pistol Master|CDPH}"]},
 				{"class": "Ranger Level 6"}
 			]],
-			"entries":["You are able to use your Bonus Action to shoot with your pistol."]
+			"entries":["Every turn, the first time you shoot with your pistol doesn’t cost an Action."]
 		},
 		{
 			"name": "And Free Means Free",
