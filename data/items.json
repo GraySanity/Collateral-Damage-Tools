@@ -1102,6 +1102,123 @@
 		]
 	},
 	{
+		"name": "Adrenaline Shot",
+		"source": "CDPH",
+		"type": "Drug",
+		"rarity": "common",
+		"entries": [
+			"Using an adrenaline shot on someone gives them an extra Action and Bonus Action next turn, and gives them double speed for the next 5 minutes. Afterward, for 5 minutes, the speed of the person is halved and they gain disadvantage on any Dexterity or Charisma based roll. Also they cannot take an Action on the turn that the positive effect ends, and they gain 1 Exhaustion. Extending the time of the Adrenaline Shot by giving another one extends the time until the debuffs happen, but doesn’t extend the time the buffs are applied. If you use an Adrenaline Shot on someone who is sleeping, than they wake up with the expected effects. If you use it on someone who is at 0 HP, than that person gains 1 HP and gains the expected positive effects for 5 turns after which no negative effects happen."
+		]
+	},
+	{
+		"name": "Medical Hypo",
+		"source": "CDPH",
+		"type": "Drug",
+		"rarity": "common",
+		"entries": [
+			"You can use this Injection as a Bonus Action. It heals for 11 HP instantly." 
+		]
+	},
+	{
+		"name": "Sedative Injection",
+		"source": "CDPH",
+		"type": "Drug",
+		"rarity": "uncommon",
+		"entries": [
+			"Using a Sedative Injection on someone does not do anything immediately.<br>It costs 30 seconds or 10 turns until it starts affecting an injected person. When it starts, said person needs to make a Constitution Save every turn, starting at a DC of 0 which increases by 1 every turn. This effect ends if they push through it to a DC of 20. They gain disadvantage on any Strength, Dexterity and Charisma based roll while they make Constitution Saves because of this, and they fall unconscious when they fail.<br>They wake up again after 30 minutes when they are not interrupted, after 5 minutes if they take anydamage, and they wake up instantly if they lose 20% or more of the HP the fell asleep with while they are asleep." 
+		]
+	},
+	{
+		"name": "Royal Jelly",
+		"source": "CDPH",
+		"type": "Drug",
+		"rarity": "rare",
+		"entries": [
+			"A Drug that cures you of most common diseases and for a short time makes you immune to most bacterial diseases. This immunity effect lasts for 12 hours. This Drug doesn’t work on toxins. While curing someone does need a full dose, the ability to make you or someone immune can be split into two parts of 5 hours each if needed. This means that you can also give 5 hour twice, or 12 hours immunity once per batch." 
+		]
+	},
+	{
+		"name": "Truth Serum",
+		"source": "CDPH",
+		"type": "Drug",
+		"rarity": "rare",
+		"entries": [
+			"You are sure that this is illegal, but sometimes extreme problems require extreme solutions.<br>Injecting this serum into someone makes it a lot harder for them to lie for 20 minutes. It isn’t impossible, and doesn’t work as good as intended, but at least it is now quite easy to spot a deliberate lie from the effected person as they gain -8 on deception and insight.<br>It should be noted that because of the chemical haze that they are in, any form of pressure to answer a certain way, or any leading questions are more often followed up which can lead to the affected person telling things that they think is completely true but really isn’t." 
+		]
+	},
+	{
+		"name": "Toxic Serum",
+		"source": "CDPH",
+		"type": "Drug",
+		"rarity": "rare",
+		"entries": [
+			"A basic toxin that slowly deals damage to someone.<br>When you inject someone with it the toxin will slowly get injected into the person as long as the injector pierces their skin. The moment the injector is pulled out the effect ends, which costs an Action to do. The person who is affected gets 7 toxic damage. As long as they haven’t pulled it out, they get damaged by one less damage the start of every turn until the given damage hits 0 at which point the injector is empty. An effected person doesn’t immediately die if they get to 0 HP by this effect. If the amount of toxic damage the injection does is less than 6, the effect ends and they become unconscious but stable. If it is more, the person dies or gains a fail on their death saves and the effect ends." 
+		]
+	},
+	{
+		"name": "Concoction of a Nobel Dream",
+		"source": "CDPH",
+		"type": "Drug",
+		"rarity": "very rare",
+		"entries": [
+			"An Injection that revives people.<br>You can only make one of these in a Rest with you as the materials that you need to make it are insanely hard to come by.<br>You can inject someone with this Concoction, but this only works on any creature that didn’t die by the chunky salsa rule. You also need to inject said person within 3 minutes of their death to make it work. Doing so gives the injected person 1 HP and makes them conscious again, after which they also can take their turn immediately." 
+		]
+	},
+	{
+		"name": "Ergogenic Stimulants",
+		"source": "CDPH",
+		"type": "Drug",
+		"rarity": "uncommon",
+		"entries": [
+			"A mix of drugs that improves overall stamina and endurance without mayor side effects.<br>This Drug works for 3 hours and gives +5 Max Hp, +5 HP and also gives +6 on Constitution." 
+		]
+	},
+	{
+		"name": "Joy",
+		"source": "CDPH",
+		"type": "Drug",
+		"rarity": "legendary",
+		"entries": [
+			"A mental drug that lets you feel nothing… at all. It gives a full ignorance’s bliss for everything. You know for sure that this drug is illegal. It works for 10 minutes and makes you immune to most mental abnormalities and intrusions. It is also the best painkiller you have ever seen as it removes any physical and mental pain someone has for the duration, including any form of emotion or caring for things. Other than that, it makes it extremely unclear if the effected person is telling the truth or not, but it also gives-10 on any {@skill stealth}, {@skill investigation}, {@skill animal handling} and {@skill insight}, and -20 to Charisma. It also gives +3 to Strength." 
+		]
+	},
+	{
+		"name": "Drug Cocktail",
+		"source": "CDPH",
+		"type": "Drug",
+		"rarity": "very rare",
+		"entries": [
+			"A non-lethal cocktail of different drugs that effect you in a positive way… mostly.<br>Also, you are quite sure this is pretty illegal to make and have, but oh well. When you inject someone with this it gives the following effects:<br>• +2 Strength for 10 minutes<br>• +2 Dexterity for 10 minutes<br>• -4 Constitution for 1 hour<br>• +2 Intelligence for 30 minutes<br>• +4 Wisdom for 1 hour<br>• +5 Charisma for 1 hour<br>• +1 meter speed for 10 minutes<br>• +5 Initiative for 1 hour<br>When the last good effect ends after 1 hour the aftermath starts. This gives -2 on every Ability Score for 2 hours. Also, you don’t really know how addictive this cocktail is, looking at how you mix quite a lot of very addictive drugs in it but in extremely sparse amounts.<br>Other Drugs from this class do not have any effect on any creature that is getting affected by this drug." 
+		]
+	},
+	{
+		"name": "Benign Chronos",
+		"source": "CDPH",
+		"type": "Drug",
+		"rarity": "legendary",
+		"entries": [
+			"This drug works for 15 minutes.<br>Using this drug enhances the dexterity and mental speed of people by an unimaginable amount, basically giving a very slight and limited form of precognition. This gives the following things to the affected creature:<br>• +6 to Dexterity Saving Throws<br>• +4 to Dexterity<br>• +3 Intelligence<br>• +5 {@skill perception}<br>• +4 {@skill stealth}<br>• +3 {@skill acrobatics}<br>It also lets creatures dodge undodgeable effects when affected. They can make Dexterity Saves when hit with undodgeable attacks and events like guaranteed-to-hit energenetic attacks or getting hit by lightning. You throw against a DC of 20 and fully dodge the attack if you succeed, not receiving any damage." 
+		]
+	},
+	{
+		"name": "Benign Chronos",
+		"source": "CDPH",
+		"type": "Drug",
+		"rarity": "legendary",
+		"entries": [
+			"This drug works for 15 minutes.<br>Using this drug enhances the dexterity and mental speed of people by an unimaginable amount, basically giving a very slight and limited form of precognition. This gives the following things to the affected creature:<br>• +6 to Dexterity Saving Throws<br>• +4 to Dexterity<br>• +3 Intelligence<br>• +5 {@skill perception}<br>• +4 {@skill stealth}<br>• +3 {@skill acrobatics}<br>It also lets creatures dodge undodgeable effects when affected. They can make Dexterity Saves when hit with undodgeable attacks and events like guaranteed-to-hit energenetic attacks or getting hit by lightning. You throw against a DC of 20 and fully dodge the attack if you succeed, not receiving any damage." 
+		]
+	},
+	{
+		"name": "Nanomachines",
+		"source": "CDPH",
+		"type": "Drug",
+		"rarity": "very rare",
+		"entries": [
+			"An Injection of healing nanomachines. It instantly heals for 17 HP, removes most forms of toxin out of the creature injected and makes them immune for toxins for the next hour.<br>This Injection, while you are not directly able to inject it into it, works on the hull of mechanical creatures and machines as well." 
+		]
+	},
+	{
 		"name": "Time Bagel",
 		"source": "CDPH",
 		"type": "Food",

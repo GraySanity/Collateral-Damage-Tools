@@ -2462,6 +2462,7 @@ Parser.ITEM_TYPE_JSON_TO_ABV = {
 	"Expl": "Explosive",
 	"Food": "Food and Drink",
 	"Gear": "Gear",
+	"Drug": "Drug",
 	"PGS" : "Physical Gaming Set",
 	"ArmorL": "Light Armor",
 	"ArmorM": "Medium Armor",

@@ -402,6 +402,111 @@
 			"entries":["<i>Mastery</i><br><br>In total, you can heal 2 more HP with Personal Medkits. You also gain 1 more Personal Medkit."]
 		},
 		{
+			"name": "Adrenaline Shot (Drug)",
+			"source": "CDPH",
+			"class": ["Doctor"],
+			"prerequisite": [[
+				{"class": ["Doctor Level 3"]}
+			]],
+			"entries":["You can make {@item Adrenaline Shot|CDPH|adrenaline shots}. You also can create 1 more Drug in a rest."]
+		},
+		{
+			"name": "Medical Hypo (Drug)",
+			"source": "CDPH",
+			"class": ["Doctor"],
+			"prerequisite": [[
+				{"class": ["Doctor Level 3"]}
+			]],
+			"entries":["You can make {@item Medical Hypo|CDPH|medical hypos} which can heal people. You also can create 1 more Drug in a rest. You also can create 1 more Drug in a rest."]
+		},
+		{
+			"name": "Sedative Injection (Drug)",
+			"source": "CDPH",
+			"class": ["Doctor"],
+			"prerequisite": [[
+				{"class": ["Doctor Level 3"]}
+			]],
+			"entries":["You can make {@item Sedative Injection|CDPH|sedative shots}."]
+		},
+		{
+			"name": "Liquid Royal Jelly (Drug)",
+			"source": "CDPH",
+			"class": ["Doctor"],
+			"prerequisite": [[
+				{"addit": " and "},
+				{"class": ["Doctor Level 3"]},
+				{"feature": ["{@feat Biotic Synthesiser|CDPH}"]}
+			]],
+			"entries":["You can make {@item Royal Jelly|CDPH|artificial royal jelly}. You also can create 1 more Drug in a rest."]
+		},
+		{
+			"name": "Truth Serum (Drug)",
+			"source": "CDPH",
+			"class": ["Doctor"],
+			"prerequisite": [[
+				{"class": ["Doctor Level 3"]}
+			]],
+			"entries":["You can make {@item Truth Serum|CDPH|}. You also can create 1 more Drug in a rest."]
+		},
+		{
+			"name": "Toxic Acupuncture (Drug)",
+			"source": "CDPH",
+			"class": ["Doctor"],
+			"prerequisite": [[
+				{"class": ["Doctor Level 3"]}
+			]],
+			"entries":["You can make {@item Toxic Serum|CDPH|toxic injections}. You also can create 1 more Drug in a rest."]
+		},
+		{
+			"name": "Concoction of a Nobel Dream (Drug)",
+			"source": "CDPH",
+			"class": ["Doctor"],
+			"prerequisite": [[
+				{"addit": " and "},
+				{"feature": ["{@feat Kaysterimeno Thanatos|CDPH}"]},
+				{"class": ["Doctor Level 5"]}
+			]],
+			"entries":["You can make {@item Concoction of a Nobel Dream|CDPH|an injection that revives people.}."]
+		},
+		{
+			"name": "Ergogenic Stimulants (Drug)",
+			"source": "CDPH",
+			"class": ["Doctor"],
+			"prerequisite": [[
+				{"class": ["Doctor Level 5"]}
+			]],
+			"entries":["You can make {@item Ergogenic Stimulants|CDPH}. You also can create 1 more Drug in a rest."]
+		},
+		{
+			"name": "Joyless Joy (Drug)",
+			"source": "CDPH",
+			"class": ["Doctor"],
+			"prerequisite": [[
+				{"class": ["Doctor Level 7"]}
+			]],
+			"entries":["You can make {@item Joy|CDPH}. You also can create 1 more Drug in a rest."]
+		},
+		{
+			"name": "Drug Cocktail (Drug)",
+			"source": "CDPH",
+			"class": ["Doctor"],
+			"prerequisite": [[
+				{"addit": " and "},
+				{"class": ["Doctor Level 7"]},
+				{"feature": ["{@feat Adrenaline Shot}"]}
+			]],
+			"entries":["You can make a {@item Drug Cocktail|CDPH}. You also can create 1 more Drug in a rest."]
+		},
+		{
+			"name": "Benign Chronos (Drug)",
+			"source": "CDPH",
+			"class": ["Doctor"],
+			"prerequisite": [[
+				{"class": ["Doctor Level 12"]}
+			]],
+			"entries":["You can make a Drug called {@item Benign Chronos|CDPH}. You can only make two of these in a Rest as the materials that you need to make it are insanely hard to come by."]
+		},
+		{
 			"name": "Energenetic Kickstart",
 			"source": "CDPH",
 			"class": ["Energenetic Specialist"],
@@ -639,7 +744,7 @@
 			"prerequisite": [[
 				{"other": "Matter Type: Not Full-Materialistic"}
 			]],
-			"entries":["You have learned how to use more of your energy without exhausting yourself. This does, however, come with a cost as you still put more strain on yourself than you are comfortable with. You lose 5 Max HP when you get this ability, but you gain 12 Max Energy as a result."]
+			"entries":["<i>Mastery</i><br><br>You have learned how to use more of your energy without exhausting yourself. This does, however, come with a cost as you still put more strain on yourself than you are comfortable with. You lose 5 Max HP when you get this ability, but you gain 12 Max Energy as a result."]
 		},
 		{
 			"name": "Energenetics Control Mastery",
@@ -649,7 +754,7 @@
 			"prerequisite": [[
 				{"class": "Energenetic Specialist Level 20"}
 			]],
-			"entries":["You have learned how to use more of your energy without exhausting yourself. This does, however, come with a cost as you still put more strain on yourself than you are comfortable with. You lose 5 Max HP when you get this ability, but you gain 12 Max Energy as a result."]
+			"entries":["<i>Mastery</i><br><br>You have learned how to use more of your energy without exhausting yourself. This does, however, come with a cost as you still put more strain on yourself than you are comfortable with. You lose 5 Max HP when you get this ability, but you gain 12 Max Energy as a result."]
 		},
 		{
 			"name": "Potential Power",
@@ -871,7 +976,7 @@
 			"prerequisite": [[
 				{"mainenergy": "Magic"}
 			]],
-			"entries":["You can substitute the Energy you use to any other form of the normal Odin Energenetics tree, just in general. This allows you to branch out the use of your energy to different categories. Substituting your energy with another also changes its color, and with this, you can fully control the color of your Energy if you use it in a visible way. Using this substituted Energy is more exhausting however, increasing the cost and decreasing the effectiveness of abilities that you can get from other Energies."]
+			"entries":["<i>Free</i><br><br>You can substitute the Energy you use to any other form of the normal Odin Energenetics tree, just in general. This allows you to branch out the use of your energy to different categories. Substituting your energy with another also changes its color, and with this, you can fully control the color of your Energy if you use it in a visible way. Using this substituted Energy is more exhausting however, increasing the cost and decreasing the effectiveness of abilities that you can get from other Energies."]
 		},
 		{
 			"name": "Normal Energy Injection",
@@ -985,7 +1090,7 @@
 			"source": "CDPH",
 			"free": true,
 			"class": ["Engineer"],
-			"entries":["This class is partially specialized in making things, let it be weapons or utility items. But making these things is only half of the work, as most unprofessionally made machines and items will break down quite quickly if they are not maintained.<br>You have a pool of points called Maintenance Points, MP for short, which you can allocate to items that you make with Abilities from this class. <br>You have 6 MP that you can allocate, and you can increase this with some Abilities in this class. If you create or get something that needs allocated MP, than you can allocate it immediately if you have enough unallocated MP left. You can reallocate your MP every 24 hours and in a Rest.<br>If you don’t allocate MP into an item that needs it, then said item or said part of an item stops working until you allocated the needed MP into it again. <br>The amount of allocated MP an item needs can be seen on the header of said ability/item."]
+			"entries":["<i>Free</i><br><br>This class is partially specialized in making things, let it be weapons or utility items. But making these things is only half of the work, as most unprofessionally made machines and items will break down quite quickly if they are not maintained.<br>You have a pool of points called Maintenance Points, MP for short, which you can allocate to items that you make with Abilities from this class. <br>You have 6 MP that you can allocate, and you can increase this with some Abilities in this class. If you create or get something that needs allocated MP, than you can allocate it immediately if you have enough unallocated MP left. You can reallocate your MP every 24 hours and in a Rest.<br>If you don’t allocate MP into an item that needs it, then said item or said part of an item stops working until you allocated the needed MP into it again. <br>The amount of allocated MP an item needs can be seen on the header of said ability/item."]
 		},
 		{
 			"name": "Multitask Master",
@@ -1176,7 +1281,7 @@
 			"prerequisite":[[
 				{"class": "Engineer Level 16"}
 			]],
-			"entries":["You gain 2 more MP that you can allocate."]
+			"entries":["<i>Mastery</i><br><br>You gain 2 more MP that you can allocate."]
 		},
 		{
 			"name": "Second Wind",
@@ -1319,7 +1424,7 @@
 			"prerequisite":[[
 				{"class":"Martial Fighter Level 18"}
 			]],
-			"entries":["On weapons that do purely bludgeoning damage, you gain 2+5% DR.<br>On weapons that do purely slashing damage, you gain +1 Damage.<br>On weapons that do any form of piercing damage, you gain +1 to Hit."]
+			"entries":["<i>Mastery</i><br><br>On weapons that do purely bludgeoning damage, you gain 2+5% DR.<br>On weapons that do purely slashing damage, you gain +1 Damage.<br>On weapons that do any form of piercing damage, you gain +1 to Hit."]
 		},
 		{
 			"name": "Unarmored Monk Defense",
@@ -1338,7 +1443,7 @@
 			"free": true,
 			"source": "CDPH",
 			"class": ["Monk"],
-			"entries":["You slowly gain full control over some internal processes of your body, and because of this you start to harness Ki. Your maximum Ki points are 10 + Monk Level, and you regain all Ki when you finish a rest. You can spend these Ki points to fuel various abilities.<br>Some of your Ki features require your target to make a saving throw to resist the feature’s effects. <br>The saving throw DC is calculated as follows:<br>Ki Save DC = 8 + Proficiency Bonus + Wisdom Modifier."]
+			"entries":["<i>Free</i><br><br>You slowly gain full control over some internal processes of your body, and because of this you start to harness Ki. Your maximum Ki points are 10 + Monk Level, and you regain all Ki when you finish a rest. You can spend these Ki points to fuel various abilities.<br>Some of your Ki features require your target to make a saving throw to resist the feature’s effects. <br>The saving throw DC is calculated as follows:<br>Ki Save DC = 8 + Proficiency Bonus + Wisdom Modifier."]
 		},
 		{
 			"name": "Pure Life",
@@ -1364,7 +1469,7 @@
 			"mastery": true,
 			"class": ["Monk"],
 			"prerequisite":[[{"other": "Max Ki points is equal or higher than 3"}]],
-			"entries":["You can permanently forgo 3 Max Ki points to be more nimble, permanently gaining 1 Dexterity Score, 1 Max Dexterity Score, and 1 meter of movement speed."]
+			"entries":["<i>Mastery</i><br><br>You can permanently forgo 3 Max Ki points to be more nimble, permanently gaining 1 Dexterity Score, 1 Max Dexterity Score, and 1 meter of movement speed."]
 		},
 		{
 			"name": "Gracefull Fall",
@@ -1456,7 +1561,7 @@
 			"class": ["Monk"],
 			"mastery": true,
 			"prerequisite":[[{"class": "Monk Level 16"}]],
-			"entries":["You get 2 more max Ki points.<br>Also, if you have {@feat Perfect Self|CDPH}, you will gain one more Ki point when getting Ki points from that Ability."]
+			"entries":["<i>Mastery</i><br><br>You get 2 more max Ki points.<br>Also, if you have {@feat Perfect Self|CDPH}, you will gain one more Ki point when getting Ki points from that Ability."]
 		},
 		{
 			"name": "Chekov’s Very Intimidating Gun",
@@ -1475,12 +1580,6 @@
 			"source": "CDPH",
 			"class": ["Ranger"],
 			"entries":["You can do bolt-loading/unloading as a Bonus Action instead of as an Action, meaning that weapons with the <i>Bolt-Action</i> trait don't effect you anymore."]
-		},
-		{
-			"name": "Deflector",
-			"source": "CDPH",
-			"class": ["Ranger"],
-			"entries":["You know how to use your gun to defend yourself from bullets without them damaging your gun (too much). You gain +2 AC while you are holding a gun that isn’t pistol with both of your hands (which you need to be able to shoot it in the first place), and you gain the ability to use the Evade Action as a Bonus Action instead if you do not hold a two-handed weapon."]
 		},
 		{
 			"name": "Deflector",
@@ -1599,7 +1698,7 @@
 			"prerequisite":[[
 				{"class": "Ranger Level 18"}
 			]],
-			"entries":["You gain +1 to Hit with ranged weapons, and you can take 1 extra magazine with you."]
+			"entries":["<i>Mastery</i><br><br>You gain +1 to Hit with ranged weapons, and you can take 1 extra magazine with you."]
 		},
 		{
 			"name": "Expertise",
@@ -1780,7 +1879,7 @@
 			"prerequisite":[[
 				{"class": "Rogue Level 18"}
 			]],
-			"entries":["You get one more Proficiency which you can put into a skill, or you can get Expertise in a skill you were already Proficient in. "]
+			"entries":["<i>Mastery</i><br><br>You get one more Proficiency which you can put into a skill, or you can get Expertise in a skill you were already Proficient in. "]
 		},
 		{
 			"name": "Ability Score Improvement 1A",
@@ -1850,7 +1949,7 @@
 				{"feature": ["{@feat Ability Score Improvement 3B|CDPH}"]}
 			]],
 			"mastery": true,
-			"entries":["You gain +1 ability score and +1 max ability score in an Ability Score of your choice."]
+			"entries":["<i>Mastery</i><br><br>You gain +1 ability score and +1 max ability score in an Ability Score of your choice."]
 		},
 		{
 			"name": "Skilled",
@@ -2268,7 +2367,7 @@
 		{
 			"name": "Flow of Battle",
 			"source": "CDPH",
-			"class": ["Multiclass"],
+			"class": ["Multiclass", "Monk", "Martial Artist"],
 			"prerequisite":[[
 				{"addit": " or "},
 				{"class": "Martial Artist Level 3"},
@@ -2279,7 +2378,7 @@
 		{
 			"name": "Defensive Flow",
 			"source": "CDPH",
-			"class": ["Multiclass"],
+			"class": ["Multiclass", "Monk", "Martial Artist"],
 			"prerequisite":[[
 				{"addit": " and "},
 				{"level": 6},
@@ -2290,7 +2389,7 @@
 		{
 			"name": "Mobile Flow",
 			"source": "CDPH",
-			"class": ["Multiclass"],
+			"class": ["Multiclass",  "Monk", "Martial Artist"],
 			"prerequisite":[[
 				{"addit": " and "},
 				{"level": 6},
@@ -2315,7 +2414,20 @@
 				{"class": "Ranger Level 2"},
 				{"class": "Rogue Level 2"}
 			]],
-			"entries":["Your Proficiency Bonus goes up by 1."]
+			"entries":["<i>Mastery</i><br><br>Your Proficiency Bonus goes up by 1."]
+		},
+		{
+			"name": "Nanomachines",
+			"source": "CDPH",
+			"class": ["Multiclass"],
+			"maintenance": 3,
+			"prerequisite":[[
+				{"addit": " and "},
+				{"feature": ["{@feat Pharmaceutical Compounds|CDPH}"]},
+				{"feature": ["{@feat Builders League United|CDPH}"]},
+				{"feature": ["{@feat Puzzle Master|CDPH}"]}
+			]],
+			"entries":["You can now create an Injection of healing {@item Nanomachines|CDPH}"]
 		}
 		
 	]
