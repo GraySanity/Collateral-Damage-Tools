@@ -3271,7 +3271,7 @@ DataUtil = {
 			for (const mon of data.monster) {
 				if (!mon.summonedBySpell) continue;
 				let [name, source] = mon.summonedBySpell.split("|");
-				source = source || SRC_PHB;
+				source = source || SRC_CDPH;
 				const hash = UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_SPELLS]({name, source});
 
 				let spell = null;
@@ -3478,7 +3478,7 @@ DataUtil = {
 			opts = opts || {};
 			if (opts.isLower) uid = uid.toLowerCase();
 			let [name, className, classSource, level, source, displayText] = uid.split("|").map(it => it.trim());
-			classSource = classSource || (opts.isLower ? SRC_PHB.toLowerCase() : SRC_PHB);
+			classSource = classSource || (opts.isLower ? SRC_CDPH.toLowerCase() : SRC_CDPH);
 			source = source || classSource;
 			level = Number(level)
 			return {
@@ -3501,7 +3501,7 @@ DataUtil = {
 			return [
 				f.name,
 				f.className,
-				f.classSource === SRC_PHB ? "" : f.classSource, // assume the class has PHB source
+				f.classSource === SRC_CDPH ? "" : f.classSource, // assume the class has PHB source
 				f.level,
 				f.source === f.classSource ? "" : f.source, // assume the class feature has the class source
 			].join("|").replace(/\|+$/, ""); // Trim trailing pipes
@@ -3516,8 +3516,8 @@ DataUtil = {
 			opts = opts || {};
 			if (opts.isLower) uid = uid.toLowerCase();
 			let [name, className, classSource, subclassShortName, subclassSource, level, source, displayText] = uid.split("|").map(it => it.trim());
-			classSource = classSource || (opts.isLower ? SRC_PHB.toLowerCase() : SRC_PHB);
-			subclassSource = subclassSource || (opts.isLower ? SRC_PHB.toLowerCase() : SRC_PHB);
+			classSource = classSource || (opts.isLower ? SRC_CDPH.toLowerCase() : SRC_CDPH);
+			subclassSource = subclassSource || (opts.isLower ? SRC_CDPH.toLowerCase() : SRC_CDPH);
 			source = source || subclassSource;
 			level = Number(level)
 			return {
@@ -3542,9 +3542,9 @@ DataUtil = {
 			return [
 				f.name,
 				f.className,
-				f.classSource === SRC_PHB ? "" : f.classSource, // assume the class has the PHB source
+				f.classSource === SRC_CDPH ? "" : f.classSource, // assume the class has the PHB source
 				f.subclassShortName,
-				f.subclassSource === SRC_PHB ? "" : f.subclassSource, // assume the subclass has the PHB source
+				f.subclassSource === SRC_CDPH ? "" : f.subclassSource, // assume the subclass has the PHB source
 				f.level,
 				f.source === f.subclassSource ? "" : f.source, // assume the feature has the same source as the subclass
 			].join("|").replace(/\|+$/, ""); // Trim trailing pipes
@@ -3666,7 +3666,7 @@ DataUtil = {
 		mergeHomebrewSubclassLookup (subclassLookup, homebrew) {
 			(homebrew.subclass || [])
 				.forEach(sc => {
-					const clSrc = sc.classSource || SRC_PHB;
+					const clSrc = sc.classSource || SRC_CDPH;
 					sc.shortName = sc.shortName || sc.name;
 					const target = MiscUtil.getOrSet(subclassLookup, clSrc, sc.className, {});
 					MiscUtil.set(target, sc.source, sc.shortName, {name: sc.name});
