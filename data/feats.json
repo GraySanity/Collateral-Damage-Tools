@@ -1314,7 +1314,7 @@
 			"class": ["Multiclass"],
 			"prerequisite":[[
 				{"class": "Martial Fighter Level 8"}
-			],[{"class": "Egomancer Level X"}]],
+				]],
 			"entries":["You are able to more easily stabilize yourself when needed. When throwing death saves, you only need to throw 2 successes to get stabilized again instead of 3."]
 		},
 		{
