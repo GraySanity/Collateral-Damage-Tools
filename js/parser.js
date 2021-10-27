@@ -663,10 +663,7 @@ Parser.sourceJsonToFull = function (source) {
 	return Parser._parse_aToB(Parser.SOURCE_JSON_TO_FULL, source).replace(/'/g, "\u2019");
 };
 Parser.sourceJsonToFullCompactPrefix = function (source) {
-	return Parser.sourceJsonToFull(source)
-		.replace(UA_PREFIX, UA_PREFIX_SHORT)
-		.replace(AL_PREFIX, AL_PREFIX_SHORT)
-		.replace(PS_PREFIX, PS_PREFIX_SHORT);
+	return Parser.sourceJsonToFull(source);
 };
 Parser.sourceJsonToAbv = function (source) {
 	source = Parser._getSourceStringFromSource(source);
@@ -2355,6 +2352,7 @@ SRC_5ETOOLS_TMP = "SRC_5ETOOLS_TMP"; // Temp source, used as a placeholder value
 SRC_CDPH = "CDPH";
 SRC_DMG = "DMG";
 SRC_TZH = "TZH";
+SRC_TftC = "TftC";
 
 
 SRC_3PP_SUFFIX = " 3pp";
