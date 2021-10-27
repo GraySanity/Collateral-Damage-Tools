@@ -1,6 +1,185 @@
 {
 	"monster": [
 		{
+			"name": "Malar - God of the Hunt",
+			"size": "M",
+			"type": "humanoid",
+			"source": "TZH",
+			"matterenergy": [
+				{
+					"matterenergy": [
+						"MS"
+					]
+				},
+				{
+					"matterenergy": [
+						"EH"
+					]
+				}
+			],
+			"ac": [
+				19
+			],
+			"dr": [
+				"7"
+			],
+			"hp": {
+				"special": "986"
+			},
+			"speed": {
+				"walk": "5",
+				"climb": "6.5"
+			},
+			"str": 17,
+			"dex": 32,
+			"con": 24,
+			"int": 21,
+			"wis": 29,
+			"cha": 16,
+			"passive": 19,
+			"damageTags": [
+				"B"
+			],
+			"group": "God",
+			"shortName": "Malar",
+			"languages": [
+				"Common",
+				"Uncommon",
+				"Ancient",
+				"Nature"
+			],
+			"languageTags": [
+				"C"
+			],
+			"save": {
+				"dex": "+26",
+				"wis": "+24"
+			},
+			"skill": {
+				"survival": "+39",
+				"stealth": "+41",
+				"stamina": "+22",
+				"insight": "+24",
+				"acrobatics": "+41"
+			},
+			"isNpc": true,
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Malar attacks with his claws 3 times, making an attack roll for each:{@atk mw} {@hit 26} to hit, reach 1 m, one target.{@h}{@damage 3d4 + 5} piercing/slashing damage."
+					]
+				},
+				{
+					"name": "Pocket Pistol",
+					"entries": [
+						"Malar attacks with his trusty pistol.{@atk rw} {@hit 26} to hit, range 0/20/2k m, one target.{@h}{@damage 2d10 + 11} piercing damage."
+					]
+				},
+				{
+					"name": "Long Shot",
+					"entries": [
+						"Malar attacks with one of his hunting rifles.{@atk rw} {@hit 26} to hit, range 5/2k/10k m, one target.{@h}{@damage 3d12 + 11} piercing damage."
+					]
+				}
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"isNamedCreature": true,
+			"trait": [
+				{
+					"name": "Quick one to Act",
+					"entries": [
+						"Malar can use Actions (with the exception of Long Shot) with his Bonus Action as well."
+					]
+				},
+				{
+					"name": "Muscle Memory Reflexes",
+					"entries": [
+						"You now have 3 Reactions each turn, instead of 1."
+					]
+				},
+				{
+					"name": "Ambush Master",
+					"entries": [
+						"You excel at leading ambushes and acting first in a fight. You have advantage on initiative rolls. In addition, the first creature you hit during the firstround of a combat becomes easier for you and others to strike. Attack rolls against that target have advantage until the end of your next turn.When using sided Initiative, you and any creature with this ability also gets a free turn at the start of a fight."
+					]
+				},
+				{
+					"name": "Blindsense",
+					"entries": [
+						"You know how to see without actual vision. You can see the area and location of enemies in a range of 5 meter range around you through sound and vibrations. This does not work through any sort of wall including glass."
+					]
+				},
+				{
+					"name": "Sneak Attack",
+					"entries": [
+						"You can attack someone without them really noticing what happened or from where. You gain +4 damage on attacks you have advantage on, or when another friendly creature is withing melee range of the enemy you are attacking. Sneak attacks now also ignore flat DR."
+					]
+				},
+				{
+					"name": "Uncanny Dodge",
+					"entries": [
+						"While you sometimes can't evade an attack, you can position yourself in such a way that it won't hit like intended. You can use your Reaction to halve the damage of an attack that you can see. When you use this ability on another creature than yourself, then that creature needs to be in melee range of you, and both you and the creature take half of the attacks damage."
+					]
+				},
+				{
+					"name": "Bolt-Bonus",
+					"entries": [
+						"You can do bolt-loading/unloading as a Bonus Action instead of as an Action, meaning that weapons with the Bolt-Action trait don't effect you anymore."
+					]
+				},
+				{
+					"name": "Let's Get Critical",
+					"entries": [
+						"You have the ability to specifically aim for weak spots. You can choose to use your Bonus Action to gain disadvantage with attack rolls on this turn, which cannot be negated normally, which includes rolling more D20's by other means. When you choose to use this ability, a hit will count as a critical hit, doubling the damage dice(s) you roll. When this ability is active, a natural 20 will not negate AC in the way it normally does.(If you roll a 20+3 with this ability active, but the target has 25 AC, than it won't be a hit.)"
+					]
+				},
+				{
+					"name": "Running Hell",
+					"entries": [
+						"You get used to running over obstacles that are in your way. You gain +1 meter movement, and obstacles (desks, benches, chairs, railings and the like) can be easily jumped over without the need of a Dexterity save. Also, your long jumps now also add your Dexterity modifier to the maximum distance. And you can now also use your Bonus Action to get up from being {@condition prone}, instead of using your Action."
+					]
+				}
+			],
+			"traitTags": [
+				"Sneak Attack"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"legendary": [
+				{
+					"name": "All out Attack",
+					"entries": [
+						"All damage rolls will roll the maximum value"
+					]
+				},
+				{
+					"name": "Done with the Action",
+					"entries": [
+						"Malar can teleport away from the fight as a free action."
+					]
+				},
+				{
+					"name": "A Swing and a Miss",
+					"entries": [
+						"Malar can use a free action to completely dodge a non-laser based ranged attack."
+					]
+				}
+			],
+			"legendaryHeader": [
+				"Malar can take 5 legendary actions per day, and can only use one once per turn."
+			],
+			"legendaryActions": 5
+		},
+		{
 			"name": "Tribal Pollop",
 			"size": "M",
 			"type": "plant",

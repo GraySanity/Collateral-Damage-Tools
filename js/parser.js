@@ -2359,29 +2359,25 @@ SRC_TZH = "TZH";
 
 SRC_3PP_SUFFIX = " 3pp";
 
-AL_PREFIX = "Adventurers League: ";
-AL_PREFIX_SHORT = "AL: ";
-PS_PREFIX = "Plane Shift: ";
-PS_PREFIX_SHORT = "PS: ";
-UA_PREFIX = "Unearthed Arcana: ";
-UA_PREFIX_SHORT = "UA: ";
-TftYP_NAME = "Tales from the Yawning Portal";
 
 Parser.SOURCE_JSON_TO_FULL = {};
 Parser.SOURCE_JSON_TO_FULL[SRC_CDPH] = "Collateral Damage Players Handbook";
 Parser.SOURCE_JSON_TO_FULL[SRC_DMG] = "Dungeon Master's Guide";
-Parser.SOURCE_JSON_TO_FULL[SRC_TZH] = "The Zenithian Hurdle"
+Parser.SOURCE_JSON_TO_FULL[SRC_TZH] = "The Zenithian Hurdle";
+Parser.SOURCE_JSON_TO_FULL[SRC_TftC] = "Tales from the City of White Nights and Dark Days";
 
 Parser.SOURCE_JSON_TO_ABV = {};
 Parser.SOURCE_JSON_TO_ABV[SRC_CDPH] = "CDPH";
 Parser.SOURCE_JSON_TO_ABV[SRC_DMG] = "DMG";
 Parser.SOURCE_JSON_TO_ABV[SRC_TZH] = "TZH";
+Parser.SOURCE_JSON_TO_ABV[SRC_TftC] = "TfTC";
 
 
 Parser.SOURCE_JSON_TO_DATE = {};
 Parser.SOURCE_JSON_TO_DATE[SRC_CDPH] = "2021-07-01";
 Parser.SOURCE_JSON_TO_DATE[SRC_DMG] = "2014-12-09";
 Parser.SOURCE_JSON_TO_DATE[SRC_TZH] = "2021-11-26";
+Parser.SOURCE_JSON_TO_DATE[SRC_TftC] = "2021-11-01";
 
 
 Parser.SOURCES_ADVENTURES = new Set([
