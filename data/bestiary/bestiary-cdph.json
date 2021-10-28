@@ -1,6 +1,168 @@
 {
 	"monster": [
 		{
+			"name": "Bane - God of Conquest",
+			"size": "M",
+			"type": "humanoid",
+			"source": "TZH",
+			"matterenergy": [
+				{
+					"matterenergy": [
+						"MS"
+					]
+				},
+				{
+					"matterenergy": [
+						"EH"
+					]
+				}
+			],
+			"ac": [
+				16
+			],
+			"dr": [
+				"9+33%"
+			],
+			"hp": {
+				"special": "596"
+			},
+			"speed": {
+				"walk": "5"
+			},
+			"str": 36,
+			"dex": 26,
+			"con": 28,
+			"int": 18,
+			"wis": 24,
+			"cha": 22,
+			"passive": 17,
+			"damageTags": [
+				"B"
+			],
+			"group": "God",
+			"shortName": "Bane",
+			"languages": [
+				"Common",
+				"Uncommon",
+				"Ancient"
+			],
+			"languageTags": [
+				"C"
+			],
+			"save": {
+				"con": "+24",
+				"str": "+28"
+			},
+			"isNpc": true,
+			"isNamedCreature": true,
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"stunned"
+			],
+			"legendary": [
+				{
+					"name": "Honorable End",
+					"entries": [
+						"Bane can choose to become immune for 1 minute, or until he attacks. He cannot do this if he attacked last turn. "
+					]
+				},
+				{
+					"name": "A Fight to the End",
+					"entries": [
+						"Bane can use a free action to gain 20+33% DR for the turn."
+					]
+				},
+				{
+					"name": "Weapon Return",
+					"entries": [
+						"Bane can use his free action to return a weapon back to him, as long as it is within 1 kilometer of him."
+					]
+				}
+			],
+			"legendaryHeader": [
+				"Malar can take 5 legendary actions per day, and can only use one once per turn."
+			],
+			"legendaryActions": 5,
+			"skill": {
+				"athletics": "+43",
+				"history": "+19",
+				"insight": "+37",
+				"intimidation": "+36",
+				"pain tolerance": "+39",
+				"stamina": "+39"
+			},
+			"trait": [
+				{
+					"name": "Danger Sense",
+					"entries": [
+						"You gain an uncanny sense of when things nearby aren't as they should be, giving you an edge when you dodge away from danger. You have advantage on Dexterity Saves against effects that you can see, such as traps or explosives. To gain this benefit, you can't be {@condition blinded}, {@condition deafened}, or {@condition incapacitated}."
+					]
+				},
+				{
+					"name": "Rapid Regeneration",
+					"entries": [
+						"Your stamina and grit has increased quite a lot, and while you knew good enough how to deal with wounds you got, now your body has learned that as well.You regain 1 HP every turn while in a fight, or 4 HP every hour while not in a fight."
+					]
+				},
+				{
+					"name": "Unarmored Brute Defense",
+					"entries": [
+						"While you are not wearing any armor, your Armor Class equals 9 + Dexterity Modifier + Constitution Modifier"
+					]
+				},
+				{
+					"name": "Ultimate Critical",
+					"entries": [
+						"Bane's Crit range is 15."
+					]
+				},
+				{
+					"name": "Superior Martial Knowledge",
+					"entries": [
+						"Any failed saving throw can be rethrown with advantage."
+					]
+				},
+				{
+					"name": "Pure Life",
+					"entries": [
+						"You gain better control over the majority and most important body processes. You gain the following abilities that you can do as an Action depending if your species supports it:• You automatically succeed on Constitution saving throws to hold your breath, and gain advantage on every subsequent save for this before you catch your breath again.• You can stop your heartbeat.You can restart your heartbeat.(Saving throws for a stopped heartbeat will be the same as for holding your breath) • You can speed up or slow down your metabolic functions. You are able to speed it up, spending more energy to warm yourself, or slow it down when you need to conserve energy and to cool down more easily. • You can spend undo a point of Exhaustion.• You can heal cutting/flesh wounds and broken bones, healing yourself for {@dice 1d10} HP.You are also able to do things that are not on this list if the DM accepts the effect.(species unique stuff wip)"
+					]
+				},
+				{
+					"name": "Flow of Battle",
+					"entries": [
+						"You are able to use the momentum of battle to your advantage, and focus on it to increase your effectiveness when fighting.After every consecutive turn wherein you make a melee attack against an hostile opponent, you gainone Flow. If you have Rage (Barbarian) and are in this rage, your Flow increases by two instead.When you end a turn wherein you did not made a melee attack against an hostile opponent, then your Flow resets to 0.On melee attacks, you gain a {@dice 1d4} bonus on your Attack Roll and Damage Roll for every two Flow you have.__________You have learned how to use your Flow to become more mobile. You gain 0.5 meter extra movementfor every Flow that you have.If you have 2 Flow or more, you gain advantage on Strength and Dexterity Saving Throws against attacks from the creatures you melee attacked last turn. If you have 3 Flow or more, you and these creatures also gain advantage on Strength andDexterity Saving throws against anything that isn't an attack.__________You have learned to use your Flow to use it more defensively. You gain 1 DR and 1 AC against every creature you melee attacked last turn for every Flow you have.Also, you can freely use 3 Flow to dodge a nonarea-of-effect attack completely. You need to do this before the outcome of the attack."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Mêjohg (Warhammer)",
+					"entries": [
+						"Bane attacks with his legendary warhammer Mêjohg.{@atk mw} {@hit 18} to hit, reach 2 m, one target. {@h}{@damage 4d8 + 26} bludgeoning damage.Can be thrown for {@damage 2d8 + 16} bludgeoning damage instead."
+					]
+				},
+				{
+					"name": "Nastafi (Sword)",
+					"entries": [
+						"Bane attacks twice with his legendary sword Nastafi.{@atk mw} {@hit 38} to hit, reach 1.5 m, one target. {@h}{@damage 2d12 + 10} slashing/piercing damage."
+					]
+				},
+				{
+					"name": "Bestér (Bow)",
+					"entries": [
+						"Bane shoots with his legendary bow Bestér.{@atk rw} {@hit 23} to hit, range 3/60/270 meter, one target. {@h}{@damage 5d6 + 8} damage."
+					]
+				}
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			]
+		},
+		{
 			"name": "Malar - God of the Hunt",
 			"size": "M",
 			"type": "humanoid",
@@ -24,7 +186,7 @@
 				"7"
 			],
 			"hp": {
-				"special": "986"
+				"special": "387"
 			},
 			"speed": {
 				"walk": "5",
@@ -96,6 +258,12 @@
 					"name": "Quick one to Act",
 					"entries": [
 						"Malar can use Actions (with the exception of Long Shot) with his Bonus Action as well."
+					]
+				},
+				{
+					"name": "Tracker",
+					"entries": [
+						"Malar can track anyone in the forest he is in if he is familiar with it."
 					]
 				},
 				{
