@@ -1228,6 +1228,61 @@
 		]
 	},
 	{
+		"name": "Backpack",
+		"source": "CDPH",
+		"type": "Gear",
+		"weight": "0.5",
+		"cost": "80", 
+		"rarity": "common",
+		"entries": [
+			"A backpack, for packing stuff. Makes taking stuff with you quite a bit easier. Can fit around 15 kg of stuff." 
+		]
+	},
+	{
+		"name": "Backpack",
+		"source": "CDPH",
+		"type": "Gear",
+		"weight": "0.5",
+		"cost": "80", 
+		"rarity": "common",
+		"entries": [
+			"A backpack, for packing stuff. Makes taking stuff with you quite a bit easier. Can fit around 15 kg of stuff." 
+		]
+	},
+	{
+		"name": "Duffel Bag",
+		"source": "CDPH",
+		"type": "Gear",
+		"weight": "2",
+		"cost": "300", 
+		"rarity": "uncommon",
+		"entries": [
+			"A duffel bag, for packing stuff. Makes taking stuff with you quite a bit easier. Can fit around 150 kg of stuff." 
+		]
+	},
+	{
+		"name": "Antigrav Backpack",
+		"source": "CDPH",
+		"type": "Gear",
+		"weight": "0.5",
+		"cost": "300", 
+		"rarity": "rare",
+		"entries": [
+			"A backpack, for packing stuff. Makes taking stuff with you quite a bit easier. Can fit around 15 kg of stuff. Anything in the backpack wont weigh you down." 
+		]
+	},
+	{
+		"name": "Antigrav Duffel Bag",
+		"source": "CDPH",
+		"type": "Gear",
+		"weight": "2",
+		"cost": "1000", 
+		"rarity": "very rare",
+		"entries": [
+			"A duffel bag, for packing stuff. Makes taking stuff with you quite a bit easier. Can fit around 150 kg of stuff. Anything in the backpack wont weigh you down." 
+		]
+	},
+	{
 		"name": "Hoverboard",
 		"source": "CDPH",
 		"type": "VEHL",
