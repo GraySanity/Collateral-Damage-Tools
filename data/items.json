@@ -1239,17 +1239,6 @@
 		]
 	},
 	{
-		"name": "Backpack",
-		"source": "CDPH",
-		"type": "Gear",
-		"weight": "0.5",
-		"cost": "80", 
-		"rarity": "common",
-		"entries": [
-			"A backpack, for packing stuff. Makes taking stuff with you quite a bit easier. Can fit around 15 kg of stuff." 
-		]
-	},
-	{
 		"name": "Duffel Bag",
 		"source": "CDPH",
 		"type": "Gear",
