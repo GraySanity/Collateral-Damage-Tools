@@ -348,10 +348,216 @@
 			"legendaryActions": 5
 		},
 		{
+			"name": "Bardic Tribal Pollop",
+			"size": "M",
+			"type": "plant",
+			"source": "TZH",
+			"matterenergy": [
+				{
+					"matterenergy": [
+						"MF"
+					]
+				},
+				{
+					"matterenergy": [
+						"ES"
+					]
+				}
+			],
+			"ac": [
+				12
+			],
+			"dr": [
+				"0"
+			],
+			"hp": {
+				"formula": "3d6 + 9",
+				"average": 19
+			},
+			"speed": {
+				"walk": "3.5"
+			},
+			"str": 10,
+			"dex": 14,
+			"con": 10,
+			"int": 14,
+			"wis": 13,
+			"cha": 15,
+			"passive": 11,
+			"cr": {
+				"cr": "3"
+			},
+			"languages": [
+				"Musi"
+			],
+			"save": {
+				"dex": "+4",
+				"con": "+2"
+			},
+			"vulnerable": [
+				"cold"
+			],
+			"trait": [
+				{
+					"name": "Plant Life",
+					"entries": [
+						"Pollops are sentient plants which can, like most other creatures, control most of their body. Pollops don’t have legs or arms, but they stand on a bunch of thick tentacle like vines which they can use as arms for manipulating things as well. Because of this, they don’t have hands or fingers, but will still be able to manipulate most things normally that don’t directly need fingers to use. Also, they can hold quite a lot things at once, as they aren’t limited by two arms and hands."
+					]
+				},
+				{
+					"name": "Defensive Cover",
+					"entries": [
+						"Cover now gives 1 extra AC and the DR that you get from Cover is now doubled. Also, 1/3 cover now counts as 2/3."
+					]
+				},
+				{
+					"name": "Muscial Specialist",
+					"entries": [
+						"This pollop is specialised in music and can play {@dice 1+1d2} of the following songs:",
+						"- Callio Serenus up to lvl 2",
+						"- Lord of Breath up to lvl 2",
+						"- Melody of the Moonsetting Healers lvl 1",
+						"- Megalovanaiacal Funk up to lvl 2",
+						"- Great Florious Days up to lvl 2",
+						"- Resonance Cascadium up to lvl 2",
+						"And the following songs as well:",
+						"- Golden Breeze up to lvl 2",
+						"- Song of Blizzards and Infernos Redirected",
+						"The same as Song of Blizzards and Infernos, but with being able to attack with it as well."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Unarmed Strike",
+					"entries": [
+						"{@atk mw} {@hit 3} to hit, reach 0.5 m, one target. {@damage 1d4+2} bludgeoning damage."
+					]
+				},
+				{
+					"name": "Song of Blizzards and Infernos Redirected",
+					"entries": [
+						"{@atk rw} {@hit 4} to hit, unlimited range, one target. {@h}5 ({@damage 1d6 + 2}) damage."
+					]
+				}
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"damageTags": [
+				"P"
+			],
+			"environment": [
+				"desert",
+				"forest",
+				"grassland",
+				"jungle",
+				"mountainous",
+				"oceanic",
+				"swamp"
+			],
+			"group": "Pollop"
+		},
+		{
+			"name": "Hunter Tribal Pollop",
+			"size": "M",
+			"type": "plant",
+			"source": "TZH",
+			"matterenergy": [
+				{
+					"matterenergy": [
+						"MF"
+					]
+				},
+				{
+					"matterenergy": [
+						"ES"
+					]
+				}
+			],
+			"ac": [
+				11
+			],
+			"dr": [
+				"0"
+			],
+			"hp": {
+				"formula": "3d6 + 9",
+				"average": 19
+			},
+			"speed": {
+				"walk": "3.5"
+			},
+			"str": 12,
+			"dex": 14,
+			"con": 10,
+			"int": 10,
+			"wis": 11,
+			"cha": 12,
+			"passive": 10,
+			"cr": "1",
+			"languages": [
+				"Musi"
+			],
+			"save": {
+				"dex": "+4",
+				"con": "+2"
+			},
+			"vulnerable": [
+				"cold"
+			],
+			"trait": [
+				{
+					"name": "Plant Life",
+					"entries": [
+						"Pollops are sentient plants which can, like most other creatures, control most of their body. Pollops don’t have legs or arms, but they stand on a bunch of thick tentacle like vines which they can use as arms for manipulating things as well. Because of this, they don’t have hands or fingers, but will still be able to manipulate most things normally that don’t directly need fingers to use. Also, they can hold quite a lot things at once, as they aren’t limited by two arms and hands."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Unarmed Strike",
+					"entries": [
+						"{@atk mw} {@hit 3} to hit, reach 0.5 m, one target. {@damage 1d4+2} bludgeoning damage."
+					]
+				},
+				{
+					"name": "Spear",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 3 m, one target. {@damage 1d8 + 2} piercing damage.Can be thrown, range: 6/30/60 m."
+					]
+				},
+				{
+					"name": "Bow",
+					"entries": [
+						"{@atk rw} {@hit 4} to hit, range: 3/50/100, one target. {@damage 1d6 + 2} piercing damage."
+					]
+				}
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"damageTags": [
+				"P"
+			],
+			"environment": [
+				"desert",
+				"forest",
+				"grassland",
+				"jungle",
+				"mountainous",
+				"oceanic",
+				"swamp"
+			],
+			"group": "Pollop"
+		},
+		{
 			"name": "Tribal Pollop",
 			"size": "M",
 			"type": "plant",
-			"source": "CDPH",
+			"source": "TZH",
 			"matterenergy": [
 				{
 					"matterenergy": [
@@ -407,7 +613,7 @@
 				{
 					"name": "Unarmed Strike",
 					"entries": [
-						"{@atk mw} {@hit 2} to hit, reach 0.5 m, one target. {@h}3 ({@damage 1d4+1}) bludgeoning damage."
+						"{@atk mw} {@hit 2} to hit, reach 0.5 m, one target. {@damage 1d4+1} bludgeoning damage."
 					]
 				}
 			],
