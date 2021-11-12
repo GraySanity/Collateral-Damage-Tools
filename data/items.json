@@ -300,6 +300,137 @@
 		]
 	},
 	{
+		"name": "Skeleton Key",
+		"source": "CDPH",
+		"type": "Tool",
+		"weight": 0.8,
+		"cost": 500,
+		"rarity": "Special",
+		"entries": [
+		"<i>Lockcracker, for when you <u>NEED</u> to get in!</i>",
+		"A small device which you can put on a lock, after which it will attach itself by pulling a ring of vacuum between rubbers at the sides.<br>When it is on a lock, you can activate the device by pressing the big button that’s on the device, after which it starts unlocking the physical key-based lock. When using this device, it will lock or unlock the lock it is placed on after 3x the locks DC of seconds (aka, the locks DC amount of turns), after which it will make a “ping” like sound. It needs the unlocked lock DC of hours to recharge before it can be used again."]
+	},
+	{
+		"name": "Skeleton Handshake",
+		"source": "CDPH",
+		"type": "Tool",
+		"weight": 0.4,
+		"cost": 1500,
+		"rarity": "Special",
+		"entries": [
+		"<i>Lockcracker, for when you <u>NEED</u> to get in!</i>",
+		"A small device which you can put on a digital lock, after which it will attach itself by pulling a ring of vacuum between rubbers at the sides.<br>When it is on a digital lock (like a card sweeper, numerical lock or ) you can activate the device by pressing the big button that’s on the device, after which it starts unlocking the lock. When using this device, it will lower the DC of the lock with 1 every 10 minutes it is placed on it. When the DC reaches 2 it will make a “ping” like sound."]
+	},
+	{
+		"name": "Stick of Destruction",
+		"source": "CDPH",
+		"type": "Gear",
+		"weight": 1,
+		"rarity": "Special",
+		"entries": [
+		"<i>W4IL: Wands for Interesting Lifes</i>",
+		"A stick of around 80 cm in length and roughly 5 cm in diameter. It looks like a normal wooden stick, but on a closer inspection you can see that there is running a slightly red glowing lines through the wood.<br>When you hit a dry object (this can be anything from a wooden or steel door, up to rockmen or a random wall or floor) with the stick, a (non-nicely shaped) hole will burst open with its force directed away from the hit. The size of the hole depends on the strength of the hit, and can be from around 5 by 5 cm with a very light hit to around 100 by 50 cm with a heavy hit. Larger holes are technically possible with unnaturally strong hits. <br>Every hit lowers the red glow of the glowing lines, and after 3 uses the lines aren’t visible anymore at which point it needs recharging. It recharges 1 use every 12 hours."]
+	},
+	{
+		"name": "Rod of Thermal Neutrality",
+		"source": "CDPH",
+		"type": "Gear",
+		"weight": 1,
+		"rarity": "Special",
+		"entries": [
+		"A glowing stick of around 60 cm in length and 7 cm in diameter made from two interwoven parts, one part bright red, one part bright turquoise. This stick is always 21.85 degrees Celsius (or 295K), always, no matter the situation. It also emits or absorbs heat, as it does thermally conduct."]
+	},
+	{
+		"name": "Immovable Rod",
+		"source": "CDPH",
+		"type": "Gear",
+		"weight": 1,
+		"MC": "1 MP",
+		"rarity": "Special",
+		"entries": [
+		"<i>W4IL: Wands for Interesting Lifes</i>",
+		"This flat iron rod has a button on one end. You can use an action to press the button, which causes the rod to become fixed in place. Until you or another creature uses an action to push the button again, the rod doesn’t move. The rod can hold up to 5,000 kg, or 50 kilonewton. More force causes the rod to deactivate out of its own. The rod doesn’t account for movement of the planet, solar system, galaxy, etc. It only compares to its own location in the space-dimensions.",
+		"With Maintenance it can be stabilized to let its location be compared to the closest gravitational pit (usually the planet it is on) and speed equal to the speed and angular velocities it has when the button was pushed."]
+	},
+	{
+		"name": "Deck of Aces",
+		"source": "CDPH",
+		"type": "Gear",
+		"weight": 0.1,
+		"rarity": "Special",
+		"entries": [
+		"<i>Gamble: for everything weird for gambling</i>",
+		"A deck of 29 cards, all aces, each of random card colour. When you add a standard playing cards to the deck and shuffle it normally (non-casino style), said cards turns into random aces as well.<br>When the deck contains more than 3 non-aces, this effect doesn’t work.<br>When the deck has less than 15 of the original cards, the effect stops until they are introduced again. "]
+	},
+	{
+		"name": "Average Dice Set",
+		"source": "CDPH",
+		"type": "Gear",
+		"weight": 0.1,
+		"rarity": "Special",
+		"entries": [
+		"<i>Gamble: for everything weird for gambling</i>",
+		"A set of dice consisting of two of each of the following: a coin, D4, D6, D8, D10, D12, D20 and D52, D100, D200, D1000. The effect this set has is consistent but independent per item, and the explanation will be done with a D4 of this set as an example.<br>If the D4 is thrown, it will roll on to a random number from 1 to 4, like any D4. But, instead of it always being random, every 4 rolls will have one of each number. This means that the first 4 times you roll this D4, it will always roll each number (1,2,3 and 4) once. After that it will do this again and again. The sequence of the numbers is random, it is only a certainty that for every 4 times it is rolled, it will land on one of each of its sides once."]
+	},
+	{
+		"name": "Killer Chess Pieces",
+		"source": "CDPH",
+		"type": "Gear",
+		"weight": 0.1,
+		"rarity": "Special",
+		"entries": [
+		"<i>Gamble: for everything weird for gambling</i>",
+		"A ordinary looking set of chess pieces, with the exception that most pieces have weirdly real weapons (pawns with knifes, bishops with glaives, knights with lances, rooks with cannons, kings with pistols and queens with snipers).<br>When you play chess with the whole set against someone else fairly, than the loser gets assaulted by the opponents remaining chess pieces."]
+	},
+	{
+		"name": "Book of Boring",
+		"source": "CDPH",
+		"type": "Gear",
+		"weight": 0.8,
+		"rarity": "Special",
+		"entries": [
+		"<i>Effect of the Day</i>",
+		"This is a small book with the title:<br><i><u>Feeding a Printer</u><br>A theoretical study of fixing and preventing the jamming of paper and 3D printers</i>. It has 34 pages in total.<br>When someone reads this book for three pages, they will need to make a wisdom save (DC 13), after 12 pages a wisdom save (DC 21) and after the whole book a wisdom save (DC 30). When you fail one of these wisdom saves the person reading it falls naturally asleep. The person can be easily awoken, but when not will sleep for 1.5 * 1D4 hours. This also counts when people clearly hear the amounts needed to make wisdom saves and fail them. Also, when someone cannot sleep for whatever reason but does fail a save, then said person will have a penalty of -5 on wisdom or charisma related rolls for the duration."]
+	},
+	{
+		"name": "Book of Fancy Explosions",
+		"source": "CDPH",
+		"type": "Gear",
+		"weight": 0.8,
+		"rarity": "Special",
+		"entries": [
+		"<i>Effect of the Day</i>",
+		"This is a big book with the title:<br><i><u>Fancy Explosions for Fancy People</u><br>When a dull entrance just isn’t enough.</i><br>It is a thick book of around 300 pages, but it has no page numbers or index.<br>When you open the book it creates a random explosion with the following factors:<br>{@dice D20} (Colour): 1 White, 2 Black, 3 Red, 4 Yellow, 5 Blue, 6 Green, 7 Purple, 8 Pink, 9 Grey, 10 Brown, 11 Bordeaux, 12 Cyan, 13 Orange, 14 Fuchsia, 15-20 repeat twice (until you have two colours).<br>{@dice D4} (Damage Target): 1 No one, 2 Only the reader, 3 Only others, 4 Both<br>{@dice D8} ({@damage 1D4} Damage of Damage Type): 1 Explosion, 2 Slashing/Piercing, 3 Light/Laser, 4 Psychic, 5 Random Energenetic, 6 Blinding (DC of CON {@dice 5*1D6} to be blinded), 7 Electric (+DC of CON {@dice 5*1D6} to be stunned), 8 Sleep (DC of CON {@dice 5*1D6} to fall asleep after one turn).<br>{@dice D4}: 1 Has fireworks, 2 Doesn’t have fireworks, 3 Has no sound but fireworks, 4 Has neither.<br>The radius of the explosion is {@damage 5D6} meter."]
+	},
+	{
+		"name": "Book of Fertilizer",
+		"source": "CDPH",
+		"type": "Gear",
+		"weight": 0.8,
+		"rarity": "Special",
+		"entries": [
+		"<i>Effect of the Day</i>",
+		"This is small book with the title:<br><i><u>The best plant growing guide there is!</u><br>Botanists hate this book!<br>91 out of 93 people without green fingers advice this book!</i><br>It is a book with 213 pages total. It has a strong green elastic band to keep the book shut.<br>Different pages in the book have explanations of different habitats and different biomes.<br>When the book gets opened on a page, random plants of the biome on said pages will grow around the (holder of) book which will slow down the further the distance from the (holder of) book.<br>The plants do not disappear out of their own when the book closes, but can be “eaten” away by plants made from another page."]
+	},
+	{
+		"name": "Fragile Elephant",
+		"source": "CDPH",
+		"type": "Food",
+		"weight": 0.2,
+		"rarity": "Special",
+		"entries": [
+		"A small white-blue elephant made of fragile china. It is a lot sturdier than one would expect, and only a few fragments break off when thrown or fallen onto the ground. When the Fragile Elephant breaks a bit, by getting hit with a hammer of falling onto the ground for example, everything ceramic in a 10 meter radius from the Fragile Elephant fragments into pieces, ranging from large shards to dust.<br>Ceramics include but are not limited to: Glass, Earthenware (Mugs and Plates), Ferrite (Cheap Permanent Magnets, and Magnetic core of electric transformers), Boron Oxide (For Body Armor stuff, Replacement for Steel Ball Bearings), and more.<br>This Elephant will break after it has been “used” 7 times, and it starts off being used twice."]
+	},
+	{
+		"name": "Inconspicuous Confetti Pills",
+		"source": "CDPH",
+		"type": "Food",
+		"weight": 0.005,
+		"rarity": "Special",
+		"entries": [
+		"A inconspicuous looking pill, which kinda looks like medicine, but also kinda looks like candy. Comes in a plethera of colours. The appearance of the pill determines what the pill does and can be seen in the DM's roll list."]
+	},
+	{
 		"name": "Clean Up",
 		"source": "CDPH",
 		"type": "Mod",
