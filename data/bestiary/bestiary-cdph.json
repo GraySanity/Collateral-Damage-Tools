@@ -348,6 +348,154 @@
 			"legendaryActions": 5
 		},
 		{
+			"name": "Betrynox",
+			"size": "S",
+			"type": "beast",
+			"source": "TZH",
+			"matterenergy": [
+				{
+					"matterenergy": [
+						"MF"
+					]
+				},
+				{
+					"matterenergy": [
+						"ES"
+					]
+				}
+			],
+			"ac": [
+				14
+			],
+			"dr": [
+				"0"
+			],
+			"hp": {
+				"formula": "3d4 + 8",
+				"average": 15
+			},
+			"speed": {
+				"walk": "5"
+			},
+			"str": 10,
+			"dex": 15,
+			"con": 10,
+			"int": 3,
+			"wis": 9,
+			"cha": 8,
+			"passive": 9,
+			"cr": "1",
+			"vulnerable": [],
+			"action": [
+				{
+					"name": "Claw Attack",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 0.5 m, one target. {@damage 1d4+2} slashing/piercing damage."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 2} to hit, reach 0.5 m, one target. {@damage 1d4+4} piercing damage."
+					]
+				}
+			],
+			"miscTags": [
+				"MW"
+			],
+			"damageTags": [
+				"P"
+			],
+			"environment": [
+				"forest",
+				"jungle"
+			]
+		},
+		{
+			"name": "Petergoj",
+			"size": "H",
+			"type": "beast",
+			"source": "TZH",
+			"matterenergy": [
+				{
+					"matterenergy": [
+						"MF"
+					]
+				},
+				{
+					"matterenergy": [
+						"ES"
+					]
+				}
+			],
+			"ac": [
+				4
+			],
+			"dr": [
+				"5"
+			],
+			"hp": {
+				"formula": "5d8 + 15",
+				"average": 42
+			},
+			"speed": {
+				"walk": "3"
+			},
+			"str": 18,
+			"dex": 14,
+			"con": 21,
+			"int": 2,
+			"wis": 6,
+			"cha": 5,
+			"passive": 8,
+			"cr": "5",
+			"action": [
+				{
+					"name": "Swipe",
+					"entries": [
+						"The Petergoj swipes with it's claws.{@atk mw} {@hit 5} to hit, half circle 1 m radius. {@damage 2d4+4} slashing/piercing damage."
+					]
+				},
+				{
+					"name": "Peck",
+					"entries": [
+						"The Petergoj tries to bite something with its beak.{@atk mw} {@hit 6} to hit, reach 1 m, one target. {@damage 3d6+8} piercing damage."
+					]
+				}
+			],
+			"miscTags": [
+				"MW"
+			],
+			"damageTags": [
+				"P"
+			],
+			"environment": [
+				"forest",
+				"jungle"
+			],
+			"save": {
+				"con": "+8",
+				"str": "+7"
+			},
+			"resist": [
+				"cold"
+			],
+			"bonus": [
+				{
+					"name": "Feathery Deterrant",
+					"entries": [
+						"The Petergoj can use it's bonus action to flap it's wings.Everyone in a 1.5 meter radius around the Petergoj needs to make a Strength Check and gets pushed away for an amount of meters equal "
+					]
+				},
+				{
+					"name": "Double Dash {@recharge 4}",
+					"entries": [
+						"The Petergoj can dash as its bonus action, gaining up to {@dice 1d6} meters of extra movement."
+					]
+				}
+			]
+		},
+		{
 			"name": "Bardic Tribal Pollop",
 			"size": "M",
 			"type": "plant",
@@ -437,7 +585,8 @@
 				{
 					"name": "Song of Blizzards and Infernos Redirected",
 					"entries": [
-						"{@atk rw} {@hit 4} to hit, unlimited range, one target. {@h}5 ({@damage 1d6 + 2}) damage."
+						"{@atk rw} range: 30, line (1 meter wide). Dex Save against DC of 15, {@damage 1d8 + 2} fire damage.",
+						"or {@atk rw} range: 300, sphere (1.5 meter radius). Con Save against DC of 13, {@damage 1d10 + 2} cold damage, or half at fail."
 					]
 				}
 			],
