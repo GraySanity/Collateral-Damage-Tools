@@ -390,7 +390,7 @@
 		"rarity": "Special",
 		"entries": [
 		"<i>Effect of the Day</i>",
-		"This is a small book with the title:<br><i><u>Feeding a Printer</u><br>A theoretical study of fixing and preventing the jamming of paper and 3D printers</i>. It has 34 pages in total.<br>When someone reads this book for three pages, they will need to make a wisdom save (DC 13), after 12 pages a wisdom save (DC 21) and after the whole book a wisdom save (DC 30). When you fail one of these wisdom saves the person reading it falls naturally asleep. The person can be easily awoken, but when not will sleep for 1.5 * 1D4 hours. This also counts when people clearly hear the amounts needed to make wisdom saves and fail them. Also, when someone cannot sleep for whatever reason but does fail a save, then said person will have a penalty of -5 on wisdom or charisma related rolls for the duration."]
+		"This is a small book with the title:<br><i><u><h4>Feeding a Printer</u><br><sup>A theoretical study of fixing and preventing the jamming of paper and 3D printers</h4></sup></i>. It has 34 pages in total.<br>When someone reads this book for three pages, they will need to make a wisdom save (DC 13), after 12 pages a wisdom save (DC 21) and after the whole book a wisdom save (DC 30). When you fail one of these wisdom saves the person reading it falls naturally asleep. The person can be easily awoken, but when not will sleep for 1.5 * 1D4 hours. This also counts when people clearly hear the amounts needed to make wisdom saves and fail them. Also, when someone cannot sleep for whatever reason but does fail a save, then said person will have a penalty of -5 on wisdom or charisma related rolls for the duration."]
 	},
 	{
 		"name": "Book of Fancy Explosions",
@@ -400,7 +400,7 @@
 		"rarity": "Special",
 		"entries": [
 		"<i>Effect of the Day</i>",
-		"This is a big book with the title:<br><i><u>Fancy Explosions for Fancy People</u><br>When a dull entrance just isn’t enough.</i><br>It is a thick book of around 300 pages, but it has no page numbers or index.<br>When you open the book it creates a random explosion with the following factors:<br>{@dice D20} (Colour): 1 White, 2 Black, 3 Red, 4 Yellow, 5 Blue, 6 Green, 7 Purple, 8 Pink, 9 Grey, 10 Brown, 11 Bordeaux, 12 Cyan, 13 Orange, 14 Fuchsia, 15-20 repeat twice (until you have two colours).<br>{@dice D4} (Damage Target): 1 No one, 2 Only the reader, 3 Only others, 4 Both<br>{@dice D8} ({@damage 1D4} Damage of Damage Type): 1 Explosion, 2 Slashing/Piercing, 3 Light/Laser, 4 Psychic, 5 Random Energenetic, 6 Blinding (DC of CON {@dice 5*1D6} to be blinded), 7 Electric (+DC of CON {@dice 5*1D6} to be stunned), 8 Sleep (DC of CON {@dice 5*1D6} to fall asleep after one turn).<br>{@dice D4}: 1 Has fireworks, 2 Doesn’t have fireworks, 3 Has no sound but fireworks, 4 Has neither.<br>The radius of the explosion is {@damage 5D6} meter."]
+		"This is a big book with the title:<br><i><u><h4>Fancy Explosions for Fancy People</u><br><sup>When a dull entrance just isn’t enough.</h4></sup></i><br>It is a thick book of around 300 pages, but it has no page numbers or index.<br>When you open the book it creates a random explosion with the following factors:<br>{@dice D20} (Colour): 1 White, 2 Black, 3 Red, 4 Yellow, 5 Blue, 6 Green, 7 Purple, 8 Pink, 9 Grey, 10 Brown, 11 Bordeaux, 12 Cyan, 13 Orange, 14 Fuchsia, 15-20 repeat twice (until you have two colours).<br>{@dice D4} (Damage Target): 1 No one, 2 Only the reader, 3 Only others, 4 Both<br>{@dice D8} ({@damage 1D4} Damage of Damage Type): 1 Explosion, 2 Slashing/Piercing, 3 Light/Laser, 4 Psychic, 5 Random Energenetic, 6 Blinding (DC of CON {@dice 5*1D6} to be blinded), 7 Electric (+DC of CON {@dice 5*1D6} to be stunned), 8 Sleep (DC of CON {@dice 5*1D6} to fall asleep after one turn).<br>{@dice D4}: 1 Has fireworks, 2 Doesn’t have fireworks, 3 Has no sound but fireworks, 4 Has neither.<br>The radius of the explosion is {@damage 5D6} meter."]
 	},
 	{
 		"name": "Book of Fertilizer",
@@ -410,7 +410,7 @@
 		"rarity": "Special",
 		"entries": [
 		"<i>Effect of the Day</i>",
-		"This is small book with the title:<br><i><u>The best plant growing guide there is!</u><br>Botanists hate this book!<br>91 out of 93 people without green fingers advice this book!</i><br>It is a book with 213 pages total. It has a strong green elastic band to keep the book shut.<br>Different pages in the book have explanations of different habitats and different biomes.<br>When the book gets opened on a page, random plants of the biome on said pages will grow around the (holder of) book which will slow down the further the distance from the (holder of) book.<br>The plants do not disappear out of their own when the book closes, but can be “eaten” away by plants made from another page."]
+		"This is small book with the title:<br><i><u><h4>The best plant growing guide there is!</u><br><sub>Botanists hate this book!</sub><br><sup>91 out of 93 people without green fingers advice this book!</h4></sup></i><br>It is a book with 213 pages total. It has a strong green elastic band to keep the book shut.<br>Different pages in the book have explanations of different habitats and different biomes.<br>When the book gets opened on a page, random plants of the biome on said pages will grow around the (holder of) book which will slow down the further the distance from the (holder of) book.<br>The plants do not disappear out of their own when the book closes, but can be “eaten” away by plants made from another page."]
 	},
 	{
 		"name": "Fragile Elephant",
@@ -420,6 +420,16 @@
 		"rarity": "Special",
 		"entries": [
 		"A small white-blue elephant made of fragile china. It is a lot sturdier than one would expect, and only a few fragments break off when thrown or fallen onto the ground. When the Fragile Elephant breaks a bit, by getting hit with a hammer of falling onto the ground for example, everything ceramic in a 10 meter radius from the Fragile Elephant fragments into pieces, ranging from large shards to dust.<br>Ceramics include but are not limited to: Glass, Earthenware (Mugs and Plates), Ferrite (Cheap Permanent Magnets, and Magnetic core of electric transformers), Boron Oxide (For Body Armor stuff, Replacement for Steel Ball Bearings), and more.<br>This Elephant will break after it has been “used” 7 times, and it starts off being used twice."]
+	},
+	{
+		"name": "Ecru Cone",
+		"source": "CDPH",
+		"type": "Food",
+		"weight": 0.2,
+		"rarity": "Special",
+		"entries": [
+		"<i><h4>OmegaMart!<br>You have no idea whats in store for you!</h4></sup></i>",
+		"An ecru coloured trafiic cone.<br>When placed, a liquid will spawn somewhere adjecent after {@dice 1+1d4} turns. The liquid that will spawn is one of the following:"]
 	},
 	{
 		"name": "Inconspicuous Confetti Pills",
@@ -1320,15 +1330,6 @@
 		"rarity": "very rare",
 		"entries": [
 			"A non-lethal cocktail of different drugs that effect you in a positive way… mostly.<br>Also, you are quite sure this is pretty illegal to make and have, but oh well. When you inject someone with this it gives the following effects:<br>• +2 Strength for 10 minutes<br>• +2 Dexterity for 10 minutes<br>• -4 Constitution for 1 hour<br>• +2 Intelligence for 30 minutes<br>• +4 Wisdom for 1 hour<br>• +5 Charisma for 1 hour<br>• +1 meter speed for 10 minutes<br>• +5 Initiative for 1 hour<br>When the last good effect ends after 1 hour the aftermath starts. This gives -2 on every Ability Score for 2 hours. Also, you don’t really know how addictive this cocktail is, looking at how you mix quite a lot of very addictive drugs in it but in extremely sparse amounts.<br>Other Drugs from this class do not have any effect on any creature that is getting affected by this drug." 
-		]
-	},
-	{
-		"name": "Benign Chronos",
-		"source": "CDPH",
-		"type": "Drug",
-		"rarity": "legendary",
-		"entries": [
-			"This drug works for 15 minutes.<br>Using this drug enhances the dexterity and mental speed of people by an unimaginable amount, basically giving a very slight and limited form of precognition. This gives the following things to the affected creature:<br>• +6 to Dexterity Saving Throws<br>• +4 to Dexterity<br>• +3 Intelligence<br>• +5 {@skill perception}<br>• +4 {@skill stealth}<br>• +3 {@skill acrobatics}<br>It also lets creatures dodge undodgeable effects when affected. They can make Dexterity Saves when hit with undodgeable attacks and events like guaranteed-to-hit energenetic attacks or getting hit by lightning. You throw against a DC of 20 and fully dodge the attack if you succeed, not receiving any damage." 
 		]
 	},
 	{
