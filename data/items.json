@@ -32,6 +32,18 @@
 		]
 	},
 	{
+		"name":"I.D.P.D. Pistol",
+		"source": "CDPH",
+		"type": "WeaponRU",
+		"rarity": "special",
+		"weight": 1,
+		"dmg1":"2d4+1",
+		"dmgType":"EG",
+		"range": "0.5/25/120",
+		"gun": true,
+		"pistol": true
+	},
+	{
 		"name": "Holoprojector",
 		"source": "CDPH",
 		"type": "Gear",
